@@ -39,13 +39,12 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
-    QLineEdit *lineEdit_2;
+    QLineEdit *accountInput;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
-    QLineEdit *lineEdit;
+    QLineEdit *pwdInput;
     QHBoxLayout *horizontalLayout_3;
-    QLabel *label_3;
-    QLineEdit *lineEdit_3;
+    QLineEdit *codeInput;
     QLabel *codeLabel;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
@@ -69,7 +68,7 @@ public:
         LoginButton->setGeometry(QRect(610, 400, 75, 23));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(560, 220, 221, 121));
+        layoutWidget->setGeometry(QRect(560, 220, 211, 131));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -80,14 +79,24 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
 
         horizontalLayout->addWidget(label);
 
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setEchoMode(QLineEdit::Password);
+        accountInput = new QLineEdit(layoutWidget);
+        accountInput->setObjectName(QStringLiteral("accountInput"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(accountInput->sizePolicy().hasHeightForWidth());
+        accountInput->setSizePolicy(sizePolicy1);
+        accountInput->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout->addWidget(lineEdit_2);
+        horizontalLayout->addWidget(accountInput);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -97,14 +106,18 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
+        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy);
 
         horizontalLayout_2->addWidget(label_2);
 
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setEchoMode(QLineEdit::Password);
+        pwdInput = new QLineEdit(layoutWidget);
+        pwdInput->setObjectName(QStringLiteral("pwdInput"));
+        sizePolicy1.setHeightForWidth(pwdInput->sizePolicy().hasHeightForWidth());
+        pwdInput->setSizePolicy(sizePolicy1);
+        pwdInput->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout_2->addWidget(lineEdit);
+        horizontalLayout_2->addWidget(pwdInput);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -112,18 +125,17 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        codeInput = new QLineEdit(layoutWidget);
+        codeInput->setObjectName(QStringLiteral("codeInput"));
+        sizePolicy1.setHeightForWidth(codeInput->sizePolicy().hasHeightForWidth());
+        codeInput->setSizePolicy(sizePolicy1);
 
-        horizontalLayout_3->addWidget(label_3);
-
-        lineEdit_3 = new QLineEdit(layoutWidget);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-
-        horizontalLayout_3->addWidget(lineEdit_3);
+        horizontalLayout_3->addWidget(codeInput);
 
         codeLabel = new QLabel(layoutWidget);
         codeLabel->setObjectName(QStringLiteral("codeLabel"));
+        codeLabel->setMinimumSize(QSize(50, 20));
+        codeLabel->setMaximumSize(QSize(50, 20));
         codeLabel->setScaledContents(true);
 
         horizontalLayout_3->addWidget(codeLabel);
@@ -155,10 +167,9 @@ public:
         pushButton->setText(QApplication::translate("ZhkuClientMain", "\350\256\277\351\227\256\344\273\262\346\201\272\345\256\230\347\275\221", Q_NULLPTR));
         LoginButton->setText(QApplication::translate("ZhkuClientMain", "\347\231\273\345\275\225", Q_NULLPTR));
         label->setText(QApplication::translate("ZhkuClientMain", "\350\264\246\345\217\267", Q_NULLPTR));
-        lineEdit_2->setText(QApplication::translate("ZhkuClientMain", "201810224331", Q_NULLPTR));
+        accountInput->setText(QApplication::translate("ZhkuClientMain", "201810224331", Q_NULLPTR));
         label_2->setText(QApplication::translate("ZhkuClientMain", "\345\257\206\347\240\201", Q_NULLPTR));
-        lineEdit->setText(QApplication::translate("ZhkuClientMain", "yujiecong1", Q_NULLPTR));
-        label_3->setText(QApplication::translate("ZhkuClientMain", "\351\252\214\350\257\201\347\240\201", Q_NULLPTR));
+        pwdInput->setText(QApplication::translate("ZhkuClientMain", "yujiecong1", Q_NULLPTR));
         codeLabel->setText(QApplication::translate("ZhkuClientMain", ".....", Q_NULLPTR));
         menu->setTitle(QApplication::translate("ZhkuClientMain", "\345\274\200\345\247\213", Q_NULLPTR));
     } // retranslateUi
