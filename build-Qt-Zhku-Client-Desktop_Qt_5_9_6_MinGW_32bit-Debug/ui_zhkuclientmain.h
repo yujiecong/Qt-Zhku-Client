@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -32,7 +33,6 @@ class Ui_ZhkuClientMain
 {
 public:
     QWidget *centralWidget;
-    QPushButton *pushButton;
     QTextBrowser *textBrowser;
     QPushButton *LoginButton;
     QWidget *layoutWidget;
@@ -46,6 +46,10 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLineEdit *codeInput;
     QLabel *codeLabel;
+    QCheckBox *checkBox;
+    QCheckBox *checkBox_2;
+    QPushButton *curriculumButton;
+    QLabel *curriculumLabel;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
     QMenu *menu;
@@ -57,18 +61,15 @@ public:
         ZhkuClientMain->resize(1060, 656);
         centralWidget = new QWidget(ZhkuClientMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 530, 91, 21));
         textBrowser = new QTextBrowser(centralWidget);
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(10, 0, 261, 491));
+        textBrowser->setGeometry(QRect(10, 0, 771, 321));
         LoginButton = new QPushButton(centralWidget);
         LoginButton->setObjectName(QStringLiteral("LoginButton"));
-        LoginButton->setGeometry(QRect(610, 400, 75, 23));
+        LoginButton->setGeometry(QRect(870, 400, 75, 23));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(560, 220, 211, 131));
+        layoutWidget->setGeometry(QRect(790, 140, 211, 131));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -143,6 +144,20 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_3);
 
+        checkBox = new QCheckBox(centralWidget);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setGeometry(QRect(910, 290, 71, 16));
+        checkBox->setChecked(true);
+        checkBox_2 = new QCheckBox(centralWidget);
+        checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
+        checkBox_2->setGeometry(QRect(820, 290, 71, 16));
+        checkBox_2->setChecked(true);
+        curriculumButton = new QPushButton(centralWidget);
+        curriculumButton->setObjectName(QStringLiteral("curriculumButton"));
+        curriculumButton->setGeometry(QRect(860, 460, 75, 23));
+        curriculumLabel = new QLabel(centralWidget);
+        curriculumLabel->setObjectName(QStringLiteral("curriculumLabel"));
+        curriculumLabel->setGeometry(QRect(70, 340, 661, 231));
         ZhkuClientMain->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(ZhkuClientMain);
         statusBar->setObjectName(QStringLiteral("statusBar"));
@@ -164,13 +179,16 @@ public:
     void retranslateUi(QMainWindow *ZhkuClientMain)
     {
         ZhkuClientMain->setWindowTitle(QApplication::translate("ZhkuClientMain", "ZhkuClientMain", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("ZhkuClientMain", "\350\256\277\351\227\256\344\273\262\346\201\272\345\256\230\347\275\221", Q_NULLPTR));
         LoginButton->setText(QApplication::translate("ZhkuClientMain", "\347\231\273\345\275\225", Q_NULLPTR));
         label->setText(QApplication::translate("ZhkuClientMain", "\350\264\246\345\217\267", Q_NULLPTR));
         accountInput->setText(QApplication::translate("ZhkuClientMain", "201810224331", Q_NULLPTR));
         label_2->setText(QApplication::translate("ZhkuClientMain", "\345\257\206\347\240\201", Q_NULLPTR));
         pwdInput->setText(QApplication::translate("ZhkuClientMain", "yujiecong1", Q_NULLPTR));
         codeLabel->setText(QApplication::translate("ZhkuClientMain", ".....", Q_NULLPTR));
+        checkBox->setText(QApplication::translate("ZhkuClientMain", "\350\207\252\345\212\250\347\231\273\345\275\225", Q_NULLPTR));
+        checkBox_2->setText(QApplication::translate("ZhkuClientMain", "\350\256\260\344\275\217\345\257\206\347\240\201", Q_NULLPTR));
+        curriculumButton->setText(QApplication::translate("ZhkuClientMain", "\350\257\276\350\241\250", Q_NULLPTR));
+        curriculumLabel->setText(QApplication::translate("ZhkuClientMain", "TextLabel", Q_NULLPTR));
         menu->setTitle(QApplication::translate("ZhkuClientMain", "\345\274\200\345\247\213", Q_NULLPTR));
     } // retranslateUi
 

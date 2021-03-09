@@ -23,6 +23,10 @@
 
 ## 更新
 
+- 2021年3月10日00:06:14 差一点做到拿到课表了
+    - reply不要 connect finished 贼慢
+    - qt 的正则脑子有泡
+    - 搬砖
 - 2021年3月8日22:16:29 已经拿到了登录权限
     - urlencode 的坑
     - qt post请求有坑
@@ -53,7 +57,7 @@ git clone this~
 
 ## 相关仓库
 
-- pyqt实现（会比较垃圾）[https://github.com/ZHKU-Robot/ZHKU-Client](https://github.com/ZHKU-Robot/ZHKU-Client)
+- 有个pyqt实现，不过实现的太垃圾，没放上来
 
 ## 维护者
 
