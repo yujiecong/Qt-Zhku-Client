@@ -1,2 +1,9 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>assets/login/logo.png</file>
+        <file>assets/login/password.svg</file>
+        <file>assets/login/user.svg</file>
+        <file>assets/login/validation.svg</file>
+        <file>assets/login/304866.jpg</file>
+    </qresource>
+</RCC>

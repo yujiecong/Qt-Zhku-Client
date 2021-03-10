@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\zhkuclientmain.o
+./debug\zhkuloginwidget.o
+./debug\strprocessing.o
+./debug\global.o
+./debug\getfocuslineedit.o
+./debug\qrc_loginassets.o
+./debug\moc_zhkuclientmain.o
+./debug\moc_zhkuloginwidget.o
+./debug\moc_getfocuslineedit.o
+);

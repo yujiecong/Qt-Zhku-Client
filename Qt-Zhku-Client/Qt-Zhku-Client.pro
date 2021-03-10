@@ -25,10 +25,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        zhkuclientmain.cpp
+        zhkuclientmain.cpp \
+    zhkuloginwidget.cpp \
+    strprocessing.cpp \
+    global.cpp \
+    getfocuslineedit.cpp
 
 HEADERS += \
-        zhkuclientmain.h
+        zhkuclientmain.h \
+    zhkuloginwidget.h \
+    global.h \
+    strprocessing.h \
+    getfocuslineedit.h
 
 FORMS += \
-        zhkuclientmain.ui
+        zhkuclientmain.ui \
+    zhkuloginwidget.ui
+
+RESOURCES += \
+    loginassets.qrc
