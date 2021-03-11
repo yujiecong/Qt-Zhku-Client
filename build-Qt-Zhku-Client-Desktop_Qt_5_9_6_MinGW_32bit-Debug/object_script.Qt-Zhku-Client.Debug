@@ -5,8 +5,10 @@ INPUT(
 ./debug\strprocessing.o
 ./debug\global.o
 ./debug\getfocuslineedit.o
+./debug\curriculumarrangementsubbtnwidget.o
 ./debug\qrc_loginassets.o
 ./debug\moc_zhkuclientmain.o
 ./debug\moc_zhkuloginwidget.o
 ./debug\moc_getfocuslineedit.o
+./debug\moc_curriculumarrangementsubbtnwidget.o
 );

@@ -5,5 +5,10 @@
         <file>assets/login/user.svg</file>
         <file>assets/login/validation.svg</file>
         <file>assets/login/304866.jpg</file>
+        <file>assets/arrow/Arrow Circle down 2 - 24px.svg</file>
+        <file>assets/arrow/Arrow Circle up 2 - 24px.svg</file>
+        <file>assets/btnIcon/安排.svg</file>
+        <file>assets/btnIcon/工作安排.svg</file>
+        <file>assets/btnIcon/会议安排.svg</file>
     </qresource>
 </RCC>

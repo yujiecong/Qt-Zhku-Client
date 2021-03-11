@@ -18,6 +18,9 @@ protected:
     virtual void focusOutEvent(QFocusEvent *e);
 private:
     QLabel *l=new QLabel(this);
+
+    const int picWidth=80;
+    const int picHeight=35;
 };
 
 #endif // GETFOCUSLINEEDIT_H

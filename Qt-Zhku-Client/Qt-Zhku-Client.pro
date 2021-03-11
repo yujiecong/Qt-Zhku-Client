@@ -22,25 +22,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
+UI_DIR=./UI
 SOURCES += \
         main.cpp \
         zhkuclientmain.cpp \
     zhkuloginwidget.cpp \
     strprocessing.cpp \
-    global.cpp \
-    getfocuslineedit.cpp
+    getfocuslineedit.cpp \
+    functable.cpp \
+    submenuwidget.cpp \
+    submenubtn.cpp
 
 HEADERS += \
         zhkuclientmain.h \
     zhkuloginwidget.h \
     global.h \
     strprocessing.h \
-    getfocuslineedit.h
+    getfocuslineedit.h \
+    functable.h \
+    submenuwidget.h \
+    submenubtn.h
 
 FORMS += \
         zhkuclientmain.ui \
-    zhkuloginwidget.ui
+    zhkuloginwidget.ui \
+    submenuwidget.ui \
+    submenubtn.ui \
+    submenubtn.ui
 
 RESOURCES += \
     loginassets.qrc

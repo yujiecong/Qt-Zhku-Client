@@ -2,9 +2,11 @@
 #define ZHKUCLIENTMAIN_H
 #include "global.h"
 #include <QMainWindow>
+#include <QStandardItemModel>
 #include <QtNetwork>
 
 #include "zhkuloginwidget.h"
+#include "functable.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -17,12 +19,13 @@ class ZhkuClientMain : public QMainWindow
 public:
     explicit ZhkuClientMain(QWidget *parent = 0);
     ~ZhkuClientMain();
-
-
     void init_();
+
 
 private slots:
     void getCurriculum();
+
+
 private:
     Ui::ZhkuClientMain *ui;
 
@@ -35,8 +38,7 @@ private:
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
 
-
-
+    FuncTable *curriculumArrangementTable;
 
 };
 

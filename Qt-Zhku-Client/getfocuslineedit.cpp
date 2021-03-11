@@ -2,7 +2,8 @@
 #include "QDebug"
 GetFocusLineEdit::GetFocusLineEdit(QWidget *parent):QLineEdit(parent)
 {
-
+    l->hide();
+    l->setScaledContents(1);
 }
 
 GetFocusLineEdit::~GetFocusLineEdit()
@@ -14,10 +15,10 @@ void GetFocusLineEdit::setPixmap(QPixmap &pc)
 {
 
     l->setPixmap(pc);
-    qDebug()<<this->x()+this->width()/2<<this->y();
-//    l->move(this->x()+this->width()/2,this->y());
-
-
+    pc.scaled(picWidth,picHeight,Qt::KeepAspectRatio);
+    l->setFixedSize(picWidth,picHeight);
+//    qDebug()<<this->x()+this->width()/2<<this->y();
+    l->move(this->width()/2-10,-2);
 }
 
 

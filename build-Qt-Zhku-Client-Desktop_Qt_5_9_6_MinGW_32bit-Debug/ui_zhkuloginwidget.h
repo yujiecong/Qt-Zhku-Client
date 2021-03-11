@@ -102,6 +102,7 @@ public:
         widget = new QWidget(frame);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setMinimumSize(QSize(320, 370));
+        widget->setMaximumSize(QSize(320, 370));
         widget->setStyleSheet(QLatin1String("QWidget#widget{\n"
 "background-color: rgba(250, 250, 250, 200);\n"
 "}\n"

@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\zhkuclientmain.o
+./release\zhkuloginwidget.o
+./release\strprocessing.o
+./release\getfocuslineedit.o
+./release\functable.o
+./release\submenuwidget.o
+./release\submenubtn.o
+./release\qrc_loginassets.o
+./release\moc_zhkuclientmain.o
+./release\moc_zhkuloginwidget.o
+./release\moc_getfocuslineedit.o
+./release\moc_functable.o
+./release\moc_submenuwidget.o
+./release\moc_submenubtn.o
+);

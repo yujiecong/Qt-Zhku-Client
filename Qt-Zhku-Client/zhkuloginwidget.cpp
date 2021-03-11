@@ -7,7 +7,8 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
-    loginInit();
+    show();
+//    loginInit();
 }
 QString ZhkuLoginWidget::xnxq=QString();
 ZhkuLoginWidget::~ZhkuLoginWidget()
@@ -212,8 +213,7 @@ void ZhkuLoginWidget::getCodeImg()
             QByteArray codeRaw=codeReply->readAll();
             QPixmap pixmap;
             pixmap.loadFromData(codeRaw);
-            qDebug()<<ui->codeInput->width()<<ui->codeInput->height();
-            pixmap.scaled(ui->codeInput->width(),ui->codeInput->height(),Qt::KeepAspectRatio);
+
             ui->codeInput->setPixmap(pixmap);
 
             codeImg->write(codeRaw);

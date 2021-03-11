@@ -1,6 +1,7 @@
 #include "zhkuclientmain.h"
 #include "ui_zhkuclientmain.h"
 #include <QDebug>
+#include <QMenu>
 
 
 
@@ -10,7 +11,9 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
 {
     ui->setupUi(this);
     init_();
-    connect(ui->curriculumButton,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
+
+
+
 }
 
 ZhkuClientMain::~ZhkuClientMain()
@@ -20,10 +23,18 @@ ZhkuClientMain::~ZhkuClientMain()
 
 void ZhkuClientMain::init_()
 {
-    hide();
-    zhkuloginManager->show();
+    //    hide();
+    curriculumArrangementTable=ui->curriculumArrangement;
 
+    curriculumArrangementTable->addSubBtn("教学安排表",":/assets/btnIcon/会议安排.svg","");
+    curriculumArrangementTable->addSubBtn("调/停课信息",":/assets/btnIcon/工作安排.svg","");
+
+    int pos=ui->MenuLayout->indexOf(curriculumArrangementTable);
+    ui->MenuLayout->insertWidget(pos+1,curriculumArrangementTable->subWidget);
+//    curriculumArrangementTable->subWidget->show();
+        connect(ui->curriculumButton,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
 }
+
 
 void ZhkuClientMain::getCurriculum()
 {
@@ -65,7 +76,7 @@ void ZhkuClientMain::getCurriculum()
         QNetworkReply *curriReply=manager.post(curriReq,postdata);
         connect(curriReply,&QNetworkReply::finished,[=](){
             QString curriUrlHtml=strProcessor.gbk2Utf8(curriReply->readAll());
-//            qDebug()<<curriUrlHtml;
+            //            qDebug()<<curriUrlHtml;
 
 
             QRegExp urlExp("Pri_StuSel_Drawimg.aspx\\?type=\\d{1}&w=\\d{,}&h=\\d{,}&xnxq=\\d{5}");
