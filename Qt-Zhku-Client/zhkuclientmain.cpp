@@ -23,16 +23,24 @@ ZhkuClientMain::~ZhkuClientMain()
 
 void ZhkuClientMain::init_()
 {
-    //    hide();
-    curriculumArrangementTable=ui->curriculumArrangement;
 
+    curriculumArrangementTable=ui->curriculumArrangement;
     curriculumArrangementTable->addSubBtn("教学安排表",":/assets/btnIcon/会议安排.svg","");
     curriculumArrangementTable->addSubBtn("调/停课信息",":/assets/btnIcon/工作安排.svg","");
 
     int pos=ui->MenuLayout->indexOf(curriculumArrangementTable);
     ui->MenuLayout->insertWidget(pos+1,curriculumArrangementTable->subWidget);
-//    curriculumArrangementTable->subWidget->show();
-        connect(ui->curriculumButton,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
+
+    studentRoll=ui->studentRoll;
+    studentRoll->addSubBtn("学籍管理规定",":/assets/btnIcon/管理.svg","");
+    studentRoll->addSubBtn("学籍档案",":/assets/btnIcon/档案.svg","");
+    studentRoll->addSubBtn("注册信息",":/assets/btnIcon/信息.svg","");
+    studentRoll->addSubBtn("毕业事宜",":/assets/btnIcon/毕业.svg","");
+    pos=ui->MenuLayout->indexOf(studentRoll);
+    ui->MenuLayout->insertWidget(pos+1,studentRoll->subWidget);
+
+    //connect all in
+    connect(ui->curriculumButton,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
 }
 
 

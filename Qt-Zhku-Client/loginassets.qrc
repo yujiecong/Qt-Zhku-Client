@@ -10,5 +10,11 @@
         <file>assets/btnIcon/安排.svg</file>
         <file>assets/btnIcon/工作安排.svg</file>
         <file>assets/btnIcon/会议安排.svg</file>
+        <file>assets/btnIcon/毕业.svg</file>
+        <file>assets/btnIcon/档案.svg</file>
+        <file>assets/btnIcon/管理.svg</file>
+        <file>assets/btnIcon/信息.svg</file>
+        <file>assets/btnIcon/学生.svg</file>
+        <file>assets/btnIcon/异常.svg</file>
     </qresource>
 </RCC>

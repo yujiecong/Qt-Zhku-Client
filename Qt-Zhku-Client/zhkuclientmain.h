@@ -39,6 +39,7 @@ private:
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
 
     FuncTable *curriculumArrangementTable;
+    FuncTable *studentRoll;
 
 };
 
