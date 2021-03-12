@@ -54,7 +54,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 171, 636));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 205, 636));
         scrollAreaWidgetContents->setStyleSheet(QLatin1String("QWidget#scrollAreaWidgetContents{\n"
 "background-color: rgb(0,6,56);\n"
 "}"));
@@ -79,7 +79,7 @@ public:
         horizontalLayout->addWidget(frame);
 
         horizontalLayout->setStretch(0, 1);
-        horizontalLayout->setStretch(1, 5);
+        horizontalLayout->setStretch(1, 4);
         ZhkuClientMain->setCentralWidget(centralWidget);
 
         retranslateUi(ZhkuClientMain);

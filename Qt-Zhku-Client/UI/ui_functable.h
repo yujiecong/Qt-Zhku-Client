@@ -36,18 +36,25 @@ public:
     {
         if (FuncTable->objectName().isEmpty())
             FuncTable->setObjectName(QStringLiteral("FuncTable"));
-        FuncTable->resize(153, 25);
+        FuncTable->resize(160, 38);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(FuncTable->sizePolicy().hasHeightForWidth());
+        FuncTable->setSizePolicy(sizePolicy);
+        FuncTable->setMinimumSize(QSize(0, 38));
+        FuncTable->setMaximumSize(QSize(16777215, 38));
         horizontalLayout = new QHBoxLayout(FuncTable);
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         curriculumArrangement = new QWidget(FuncTable);
         curriculumArrangement->setObjectName(QStringLiteral("curriculumArrangement"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(curriculumArrangement->sizePolicy().hasHeightForWidth());
-        curriculumArrangement->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(curriculumArrangement->sizePolicy().hasHeightForWidth());
+        curriculumArrangement->setSizePolicy(sizePolicy1);
         curriculumArrangement->setMinimumSize(QSize(153, 25));
         curriculumArrangement->setAutoFillBackground(false);
         curriculumArrangement->setStyleSheet(QStringLiteral("border-radius:10px"));
@@ -57,11 +64,11 @@ public:
         horizontalLayout_2->setContentsMargins(5, 0, 0, 0);
         iconLabel = new QLabel(curriculumArrangement);
         iconLabel->setObjectName(QStringLiteral("iconLabel"));
-        QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Maximum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(iconLabel->sizePolicy().hasHeightForWidth());
-        iconLabel->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(iconLabel->sizePolicy().hasHeightForWidth());
+        iconLabel->setSizePolicy(sizePolicy2);
         iconLabel->setMaximumSize(QSize(16, 16));
         iconLabel->setPixmap(QPixmap(QString::fromUtf8(":/assets/btnIcon/\345\256\211\346\216\222.svg")));
         iconLabel->setScaledContents(true);

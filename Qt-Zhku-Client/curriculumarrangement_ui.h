@@ -2,6 +2,7 @@
 #define CURRICULUMARRANGEMENT_UI_H
 
 #include <QWidget>
+// 课表查询页面的一个 ui
 
 namespace Ui {
 class CurriculumArrangement_Ui;

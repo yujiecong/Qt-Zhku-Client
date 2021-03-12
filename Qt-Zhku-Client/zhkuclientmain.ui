@@ -14,7 +14,7 @@
    <string>ZhkuClientMain</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,5">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
     <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="styleSheet">
@@ -37,7 +37,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>171</width>
+         <width>205</width>
          <height>636</height>
         </rect>
        </property>

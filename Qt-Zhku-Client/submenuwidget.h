@@ -6,6 +6,7 @@
 namespace Ui {
 class SubMenuWidget;
 }
+
 class SubMenuBtn;
 class SubMenuWidget : public QWidget
 {

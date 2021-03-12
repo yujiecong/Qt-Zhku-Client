@@ -129,8 +129,8 @@ void ZhkuClientMain::init_()
     l=QStringList()<<"修改个人密码"<<"查看个人登录日志"<<"文件下载";
     otherTable->setPix(":/assets/btnIcon/设置.svg");
     otherTable->addSubBtn(l,":/assets/btnIcon/设置.svg","");
-
-
+    QSpacerItem *item=new QSpacerItem(30,180);
+    ui->MenuLayout->addItem(item);
     //connect all in
 //    connect(ui->curriculumButton,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
 
@@ -178,8 +178,6 @@ void ZhkuClientMain::getCurriculum()
         connect(curriReply,&QNetworkReply::finished,[=](){
             QString curriUrlHtml=strProcessor.gbk2Utf8(curriReply->readAll());
             //            qDebug()<<curriUrlHtml;
-
-
             QRegExp urlExp("Pri_StuSel_Drawimg.aspx\\?type=\\d{1}&w=\\d{,}&h=\\d{,}&xnxq=\\d{5}");
             QString curriUrl;
             int pos2=curriUrlHtml.indexOf(urlExp);

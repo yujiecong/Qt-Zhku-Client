@@ -26,12 +26,13 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLabel *label_2;
+    QLabel *label_3;
 
     void setupUi(QWidget *SubMenuBtn)
     {
         if (SubMenuBtn->objectName().isEmpty())
             SubMenuBtn->setObjectName(QStringLiteral("SubMenuBtn"));
-        SubMenuBtn->resize(109, 37);
+        SubMenuBtn->resize(120, 37);
         horizontalLayout = new QHBoxLayout(SubMenuBtn);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label = new QLabel(SubMenuBtn);
@@ -57,6 +58,16 @@ public:
 
         horizontalLayout->addWidget(label_2);
 
+        label_3 = new QLabel(SubMenuBtn);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setMinimumSize(QSize(15, 15));
+        label_3->setMaximumSize(QSize(15, 15));
+        label_3->setLineWidth(2);
+        label_3->setPixmap(QPixmap(QString::fromUtf8(":/assets/arrow/Arrow Circle up 2 - 24px.svg")));
+        label_3->setScaledContents(true);
+
+        horizontalLayout->addWidget(label_3);
+
 
         retranslateUi(SubMenuBtn);
 
@@ -68,6 +79,7 @@ public:
         SubMenuBtn->setWindowTitle(QApplication::translate("SubMenuBtn", "Form", Q_NULLPTR));
         label->setText(QString());
         label_2->setText(QApplication::translate("SubMenuBtn", "TextLabel", Q_NULLPTR));
+        label_3->setText(QString());
     } // retranslateUi
 
 };

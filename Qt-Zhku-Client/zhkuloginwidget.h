@@ -30,9 +30,9 @@ private:
     QUrl zhkuHomeUrl=QUrl("http://jw.zhku.edu.cn/home.aspx");
     QUrl zhkuLoginCodeUrl=QUrl("http://jw.zhku.edu.cn/sys/ValidateCode.aspx");
     QUrl zhkuLoginHomeUrl=QUrl("http://jw.zhku.edu.cn/_data/login_home.aspx");
-        QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/wsxk/stu_xszx_rpt.aspx");
+    QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/wsxk/stu_xszx_rpt.aspx");
     static QString xnxq;
-        QFile *pointerCookies=nullptr;
+    QFile *pointerCookies=nullptr;
 };
 
 #endif // ZHKULOGINWIDGET_H

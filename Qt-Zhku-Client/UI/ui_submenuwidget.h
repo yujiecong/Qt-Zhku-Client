@@ -28,7 +28,7 @@ public:
     {
         if (SubMenuWidget->objectName().isEmpty())
             SubMenuWidget->setObjectName(QStringLiteral("SubMenuWidget"));
-        SubMenuWidget->resize(47, 80);
+        SubMenuWidget->resize(60, 93);
         verticalLayout = new QVBoxLayout(SubMenuWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
 

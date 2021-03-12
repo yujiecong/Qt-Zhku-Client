@@ -9,6 +9,8 @@
 #include "ui_functable.h"
 
 #include "submenubtn.h"
+
+// 主要界面的选择的一个按钮
 namespace Ui {
 class FuncTable;
 }
