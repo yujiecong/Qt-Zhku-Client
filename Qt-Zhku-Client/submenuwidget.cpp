@@ -28,9 +28,15 @@ void SubMenuWidget::changeSubBg(int pos)
         curPos=pos;
     }
     else{
-        v[pos]->isClicked=v[pos]->isClicked==1?0:1;
-        v[pos]->repaint();
+        if(v[pos]->subWidget->v.size()>0){
+
+            v[pos]->isClicked=v[pos]->isClicked=v[pos]->isClicked==1?0:1;
+
+        }
+        else{
+            v[pos]->isClicked=v[pos]->isClicked=1;
+
+        }
+     v[pos]->repaint();
     }
-
-
 }

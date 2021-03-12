@@ -31,7 +31,9 @@ SOURCES += \
     getfocuslineedit.cpp \
     functable.cpp \
     submenuwidget.cpp \
-    submenubtn.cpp
+    submenubtn.cpp \
+    curriculumarrangement_ui.cpp \
+
 
 HEADERS += \
         zhkuclientmain.h \
@@ -41,14 +43,18 @@ HEADERS += \
     getfocuslineedit.h \
     functable.h \
     submenuwidget.h \
-    submenubtn.h
+    submenubtn.h \
+    curriculumarrangement_ui.h \
+
 
 FORMS += \
         zhkuclientmain.ui \
     zhkuloginwidget.ui \
     submenuwidget.ui \
     submenubtn.ui \
-    submenubtn.ui
+    submenubtn.ui \
+    curriculumarrangement_ui.ui \
+    functable.ui
 
 RESOURCES += \
     loginassets.qrc

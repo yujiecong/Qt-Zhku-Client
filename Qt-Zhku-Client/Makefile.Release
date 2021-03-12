@@ -52,13 +52,15 @@ SOURCES       = main.cpp \
 		getfocuslineedit.cpp \
 		functable.cpp \
 		submenuwidget.cpp \
-		submenubtn.cpp release\qrc_loginassets.cpp \
+		submenubtn.cpp \
+		curriculumarrangement_ui.cpp release\qrc_loginassets.cpp \
 		release\moc_zhkuclientmain.cpp \
 		release\moc_zhkuloginwidget.cpp \
 		release\moc_getfocuslineedit.cpp \
 		release\moc_functable.cpp \
 		release\moc_submenuwidget.cpp \
-		release\moc_submenubtn.cpp
+		release\moc_submenubtn.cpp \
+		release\moc_curriculumarrangement_ui.cpp
 OBJECTS       = release/main.o \
 		release/zhkuclientmain.o \
 		release/zhkuloginwidget.o \
@@ -67,13 +69,15 @@ OBJECTS       = release/main.o \
 		release/functable.o \
 		release/submenuwidget.o \
 		release/submenubtn.o \
+		release/curriculumarrangement_ui.o \
 		release/qrc_loginassets.o \
 		release/moc_zhkuclientmain.o \
 		release/moc_zhkuloginwidget.o \
 		release/moc_getfocuslineedit.o \
 		release/moc_functable.o \
 		release/moc_submenuwidget.o \
-		release/moc_submenubtn.o
+		release/moc_submenubtn.o \
+		release/moc_curriculumarrangement_ui.o
 
 DIST          =  zhkuclientmain.h \
 		zhkuloginwidget.h \
@@ -82,14 +86,16 @@ DIST          =  zhkuclientmain.h \
 		getfocuslineedit.h \
 		functable.h \
 		submenuwidget.h \
-		submenubtn.h main.cpp \
+		submenubtn.h \
+		curriculumarrangement_ui.h main.cpp \
 		zhkuclientmain.cpp \
 		zhkuloginwidget.cpp \
 		strprocessing.cpp \
 		getfocuslineedit.cpp \
 		functable.cpp \
 		submenuwidget.cpp \
-		submenubtn.cpp
+		submenubtn.cpp \
+		curriculumarrangement_ui.cpp
 QMAKE_TARGET  = Qt-Zhku-Client
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Qt-Zhku-Client.exe
@@ -100,7 +106,7 @@ DESTDIR_TARGET = release\Qt-Zhku-Client.exe
 first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): UI/ui_zhkuclientmain.h UI/ui_zhkuloginwidget.h UI/ui_submenuwidget.h UI/ui_submenubtn.h $(OBJECTS) 
+$(DESTDIR_TARGET): UI/ui_zhkuclientmain.h UI/ui_zhkuloginwidget.h UI/ui_submenuwidget.h UI/ui_submenubtn.h UI/ui_curriculumarrangement_ui.h UI/ui_functable.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.Qt-Zhku-Client.Release  $(LIBS)
 
 qmake: FORCE
@@ -109,10 +115,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) Qt-Zhku-Client.zip $(SOURCES) $(DIST) Qt-Zhku-Client.pro ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\spec_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\qdevice.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\device_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\sanitize.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\gcc-base.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\g++-base.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\angle.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\qconfig.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3drender.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axbase.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axserver.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_charts.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_core.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_core_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_dbus.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designer.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gui.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_help.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_help_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_location.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_location_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_network.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_network_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_nfc.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_opengl.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_positioning.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quick.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_repparser.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_script.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_script_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scxml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sensors.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialport.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sql.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_svg.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_testlib.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uitools.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_websockets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_widgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_winextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt_functions.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\win32-g++\qmake.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exclusive_builds.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\toolchain.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\default_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\default_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\resolve_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exclusive_builds_post.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\default_post.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\build_pass.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qml_debug.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\precompile_header.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\warn_on.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\resources.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\moc.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\opengl.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\uic.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qmake_use.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\file_copies.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\windows.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\testcase_targets.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exceptions.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\yacc.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\lex.prf Qt-Zhku-Client.pro loginassets.qrc ..\..\..\QT596\5.9.6\mingw53_32\lib\qtmain.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Widgets.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Gui.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Network.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Core.prl   loginassets.qrc ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\data\dummy.cpp zhkuclientmain.h zhkuloginwidget.h global.h strprocessing.h getfocuslineedit.h functable.h submenuwidget.h submenubtn.h main.cpp zhkuclientmain.cpp zhkuloginwidget.cpp strprocessing.cpp getfocuslineedit.cpp functable.cpp submenuwidget.cpp submenubtn.cpp zhkuclientmain.ui zhkuloginwidget.ui submenuwidget.ui submenubtn.ui submenubtn.ui    
+	$(ZIP) Qt-Zhku-Client.zip $(SOURCES) $(DIST) Qt-Zhku-Client.pro ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\spec_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\qdevice.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\device_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\sanitize.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\gcc-base.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\g++-base.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\common\angle.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\qconfig.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3drender.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axbase.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axserver.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_charts.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_core.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_core_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_dbus.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designer.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gui.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_help.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_help_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_location.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_location_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_network.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_network_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_nfc.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_opengl.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_positioning.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quick.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_repparser.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_script.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_script_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scxml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sensors.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialport.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sql.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_svg.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_testlib.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uitools.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_websockets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_widgets.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_winextras.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xml.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt_functions.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\win32-g++\qmake.conf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exclusive_builds.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\toolchain.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\default_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\default_pre.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\resolve_config.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exclusive_builds_post.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\default_post.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\build_pass.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qml_debug.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\precompile_header.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\warn_on.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qt.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\resources.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\moc.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\opengl.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\uic.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\qmake_use.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\file_copies.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\win32\windows.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\testcase_targets.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\exceptions.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\yacc.prf ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\lex.prf Qt-Zhku-Client.pro loginassets.qrc ..\..\..\QT596\5.9.6\mingw53_32\lib\qtmain.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Widgets.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Gui.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Network.prl ..\..\..\QT596\5.9.6\mingw53_32\lib\Qt5Core.prl   loginassets.qrc ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\data\dummy.cpp zhkuclientmain.h zhkuloginwidget.h global.h strprocessing.h getfocuslineedit.h functable.h submenuwidget.h submenubtn.h curriculumarrangement_ui.h main.cpp zhkuclientmain.cpp zhkuloginwidget.cpp strprocessing.cpp getfocuslineedit.cpp functable.cpp submenuwidget.cpp submenubtn.cpp curriculumarrangement_ui.cpp zhkuclientmain.ui zhkuloginwidget.ui submenuwidget.ui submenubtn.ui submenubtn.ui curriculumarrangement_ui.ui functable.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\zhkuclientmain.o release\zhkuloginwidget.o release\strprocessing.o release\getfocuslineedit.o release\functable.o release\submenuwidget.o release\submenubtn.o release\qrc_loginassets.o release\moc_zhkuclientmain.o release\moc_zhkuloginwidget.o release\moc_getfocuslineedit.o release\moc_functable.o release\moc_submenuwidget.o release\moc_submenubtn.o
+	-$(DEL_FILE) release\main.o release\zhkuclientmain.o release\zhkuloginwidget.o release\strprocessing.o release\getfocuslineedit.o release\functable.o release\submenuwidget.o release\submenubtn.o release\curriculumarrangement_ui.o release\qrc_loginassets.o release\moc_zhkuclientmain.o release\moc_zhkuloginwidget.o release\moc_getfocuslineedit.o release\moc_functable.o release\moc_submenuwidget.o release\moc_submenubtn.o release\moc_curriculumarrangement_ui.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -147,9 +153,9 @@ compiler_moc_predefs_clean:
 release/moc_predefs.h: ../../../QT596/5.9.6/mingw53_32/mkspecs/features/data/dummy.cpp
 	g++ -fno-keep-inline-dllexport -O2 -std=gnu++11 -Wall -W -Wextra -dM -E -o release\moc_predefs.h ..\..\..\QT596\5.9.6\mingw53_32\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: release/moc_zhkuclientmain.cpp release/moc_zhkuloginwidget.cpp release/moc_getfocuslineedit.cpp release/moc_functable.cpp release/moc_submenuwidget.cpp release/moc_submenubtn.cpp
+compiler_moc_header_make_all: release/moc_zhkuclientmain.cpp release/moc_zhkuloginwidget.cpp release/moc_getfocuslineedit.cpp release/moc_functable.cpp release/moc_submenuwidget.cpp release/moc_submenubtn.cpp release/moc_curriculumarrangement_ui.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_zhkuclientmain.cpp release\moc_zhkuloginwidget.cpp release\moc_getfocuslineedit.cpp release\moc_functable.cpp release\moc_submenuwidget.cpp release\moc_submenubtn.cpp
+	-$(DEL_FILE) release\moc_zhkuclientmain.cpp release\moc_zhkuloginwidget.cpp release\moc_getfocuslineedit.cpp release\moc_functable.cpp release\moc_submenuwidget.cpp release\moc_submenubtn.cpp release\moc_curriculumarrangement_ui.cpp
 release/moc_zhkuclientmain.cpp: global.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QWidget \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qwidget.h \
@@ -433,6 +439,7 @@ release/moc_zhkuclientmain.cpp: global.h \
 		zhkuloginwidget.h \
 		functable.h \
 		submenuwidget.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qaction.h \
@@ -467,10 +474,9 @@ release/moc_zhkuclientmain.cpp: global.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h \
+		UI/ui_functable.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
+		curriculumarrangement_ui.h \
 		zhkuclientmain.h \
 		release/moc_predefs.h \
 		../../../QT596/5.9.6/mingw53_32/bin/moc.exe
@@ -970,6 +976,7 @@ release/moc_functable.cpp: ../../../QT596/5.9.6/mingw53_32/include/QtCore/QObjec
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
 		submenuwidget.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/QVariant \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
@@ -1012,10 +1019,8 @@ release/moc_functable.cpp: ../../../QT596/5.9.6/mingw53_32/include/QtCore/QObjec
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h \
+		UI/ui_functable.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
 		functable.h \
 		release/moc_predefs.h \
 		../../../QT596/5.9.6/mingw53_32/bin/moc.exe
@@ -1121,6 +1126,7 @@ release/moc_submenuwidget.cpp: ../../../QT596/5.9.6/mingw53_32/include/QtWidgets
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qfiledevice.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
+		submenubtn.h \
 		submenuwidget.h \
 		release/moc_predefs.h \
 		../../../QT596/5.9.6/mingw53_32/bin/moc.exe
@@ -1231,18 +1237,10 @@ release/moc_submenubtn.cpp: ../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QW
 		../../../QT596/5.9.6/mingw53_32/bin/moc.exe
 	D:\QT596\5.9.6\mingw53_32\bin\moc.exe $(DEFINES) --include release/moc_predefs.h -ID:/QT596/5.9.6/mingw53_32/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/QT596/5.9.6/mingw53_32/include -ID:/QT596/5.9.6/mingw53_32/include/QtWidgets -ID:/QT596/5.9.6/mingw53_32/include/QtGui -ID:/QT596/5.9.6/mingw53_32/include/QtANGLE -ID:/QT596/5.9.6/mingw53_32/include/QtNetwork -ID:/QT596/5.9.6/mingw53_32/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward submenubtn.h -o release\moc_submenubtn.cpp
 
-compiler_moc_source_make_all:
-compiler_moc_source_clean:
-compiler_uic_make_all: UI/ui_zhkuclientmain.h UI/ui_zhkuloginwidget.h UI/ui_submenuwidget.h UI/ui_submenubtn.h UI/ui_submenubtn.h
-compiler_uic_clean:
-	-$(DEL_FILE) UI\ui_zhkuclientmain.h UI\ui_zhkuloginwidget.h UI\ui_submenuwidget.h UI\ui_submenubtn.h UI\ui_submenubtn.h
-UI/ui_zhkuclientmain.h: zhkuclientmain.ui \
-		../../../QT596/5.9.6/mingw53_32/bin/uic.exe \
-		functable.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/QObject \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobject.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobjectdefs.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qnamespace.h \
+release/moc_curriculumarrangement_ui.cpp: ../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qwidget.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtguiglobal.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qglobal.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qconfig.h \
@@ -1264,7 +1262,14 @@ UI/ui_zhkuclientmain.h: zhkuclientmain.ui \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmutex.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qnumeric.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qversiontagging.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtgui-config.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgets-config.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobjectdefs.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qnamespace.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobject.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qstring.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qchar.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qbytearray.h \
@@ -1286,14 +1291,6 @@ UI/ui_zhkuclientmain.h: zhkuclientmain.ui \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qvarlengtharray.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcontainerfwd.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobject_impl.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QWidget \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qwidget.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtguiglobal.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtgui-config.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs_win.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmargins.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpaintdevice.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qrect.h \
@@ -1340,53 +1337,18 @@ UI/ui_zhkuclientmain.h: zhkuclientmain.ui \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qfiledevice.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
-		submenuwidget.h \
-		UI/ui_submenuwidget.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/QVariant \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qaction.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qicon.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qactiongroup.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QApplication \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qapplication.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qguiapplication.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qinputmethod.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QButtonGroup \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHeaderView \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qheaderview.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qframe.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qstyleoption.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvalidator.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtCore/qregularexpression.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qslider.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractslider.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qstyle.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtabbar.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtabwidget.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qrubberband.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QVBoxLayout \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qboxlayout.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayout.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qgridlayout.h \
-		UI/ui_submenubtn.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h
+		curriculumarrangement_ui.h \
+		release/moc_predefs.h \
+		../../../QT596/5.9.6/mingw53_32/bin/moc.exe
+	D:\QT596\5.9.6\mingw53_32\bin\moc.exe $(DEFINES) --include release/moc_predefs.h -ID:/QT596/5.9.6/mingw53_32/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/QT596/5.9.6/mingw53_32/include -ID:/QT596/5.9.6/mingw53_32/include/QtWidgets -ID:/QT596/5.9.6/mingw53_32/include/QtGui -ID:/QT596/5.9.6/mingw53_32/include/QtANGLE -ID:/QT596/5.9.6/mingw53_32/include/QtNetwork -ID:/QT596/5.9.6/mingw53_32/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward curriculumarrangement_ui.h -o release\moc_curriculumarrangement_ui.cpp
+
+compiler_moc_source_make_all:
+compiler_moc_source_clean:
+compiler_uic_make_all: UI/ui_zhkuclientmain.h UI/ui_zhkuloginwidget.h UI/ui_submenuwidget.h UI/ui_submenubtn.h UI/ui_submenubtn.h UI/ui_curriculumarrangement_ui.h UI/ui_functable.h
+compiler_uic_clean:
+	-$(DEL_FILE) UI\ui_zhkuclientmain.h UI\ui_zhkuloginwidget.h UI\ui_submenuwidget.h UI\ui_submenubtn.h UI\ui_submenubtn.h UI\ui_curriculumarrangement_ui.h UI\ui_functable.h
+UI/ui_zhkuclientmain.h: zhkuclientmain.ui \
+		../../../QT596/5.9.6/mingw53_32/bin/uic.exe
 	D:\QT596\5.9.6\mingw53_32\bin\uic.exe zhkuclientmain.ui -o UI\ui_zhkuclientmain.h
 
 UI/ui_zhkuloginwidget.h: zhkuloginwidget.ui \
@@ -1513,6 +1475,14 @@ UI/ui_submenubtn.h: submenubtn.ui \
 UI/ui_submenubtn.h: submenubtn.ui \
 		../../../QT596/5.9.6/mingw53_32/bin/uic.exe
 	D:\QT596\5.9.6\mingw53_32\bin\uic.exe submenubtn.ui -o UI\ui_submenubtn.h
+
+UI/ui_curriculumarrangement_ui.h: curriculumarrangement_ui.ui \
+		../../../QT596/5.9.6/mingw53_32/bin/uic.exe
+	D:\QT596\5.9.6\mingw53_32\bin\uic.exe curriculumarrangement_ui.ui -o UI\ui_curriculumarrangement_ui.h
+
+UI/ui_functable.h: functable.ui \
+		../../../QT596/5.9.6/mingw53_32/bin/uic.exe
+	D:\QT596\5.9.6\mingw53_32\bin\uic.exe functable.ui -o UI\ui_functable.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1810,6 +1780,7 @@ release/main.o: main.cpp zhkuclientmain.h \
 		zhkuloginwidget.h \
 		functable.h \
 		submenuwidget.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qaction.h \
@@ -1844,10 +1815,9 @@ release/main.o: main.cpp zhkuclientmain.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h
+		UI/ui_functable.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
+		curriculumarrangement_ui.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/zhkuclientmain.o: zhkuclientmain.cpp zhkuclientmain.h \
@@ -2134,6 +2104,7 @@ release/zhkuclientmain.o: zhkuclientmain.cpp zhkuclientmain.h \
 		zhkuloginwidget.h \
 		functable.h \
 		submenuwidget.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qaction.h \
@@ -2168,15 +2139,13 @@ release/zhkuclientmain.o: zhkuclientmain.cpp zhkuclientmain.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h \
+		UI/ui_functable.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
+		curriculumarrangement_ui.h \
 		UI/ui_zhkuclientmain.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QFrame \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QScrollArea \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qscrollarea.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/QDebug \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QMenu \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qmenu.h
@@ -2998,6 +2967,7 @@ release/functable.o: functable.cpp functable.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
 		submenuwidget.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/QVariant \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
@@ -3040,15 +3010,16 @@ release/functable.o: functable.cpp functable.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		submenubtn.h \
+		UI/ui_functable.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QSpacerItem \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/QMouseEvent \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/QPainter \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpainter.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtextoption.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpen.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\functable.o functable.cpp
 
@@ -3153,6 +3124,7 @@ release/submenuwidget.o: submenuwidget.cpp submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/qfiledevice.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
+		submenubtn.h \
 		UI/ui_submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtCore/QVariant \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
@@ -3190,7 +3162,8 @@ release/submenuwidget.o: submenuwidget.cpp submenuwidget.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qboxlayout.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayout.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qgridlayout.h
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\submenuwidget.o submenuwidget.cpp
 
 release/submenubtn.o: submenubtn.cpp submenubtn.h \
@@ -3334,10 +3307,173 @@ release/submenubtn.o: submenubtn.cpp submenubtn.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qrubberband.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/QMouseEvent \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/QPainter \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpainter.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpen.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\submenubtn.o submenubtn.cpp
+
+release/curriculumarrangement_ui.o: curriculumarrangement_ui.cpp curriculumarrangement_ui.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qwidget.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtguiglobal.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qglobal.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qconfig.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qtcore-config.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qsystemdetection.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qprocessordetection.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcompilerdetection.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qtypeinfo.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qsysinfo.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qlogging.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qflags.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qatomic.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qbasicatomic.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qatomic_bootstrap.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qgenericatomic.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qatomic_cxx11.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qatomic_msvc.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qglobalstatic.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmutex.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qnumeric.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qversiontagging.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtgui-config.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtwidgets-config.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobjectdefs.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qnamespace.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobject.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qstring.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qchar.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qbytearray.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qrefcount.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qarraydata.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qstringbuilder.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qlist.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qalgorithms.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qiterator.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qhashfunctions.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qpair.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qbytearraylist.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qstringlist.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qregexp.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qstringmatcher.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcoreevent.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qscopedpointer.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmetatype.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qvarlengtharray.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcontainerfwd.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qobject_impl.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmargins.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpaintdevice.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qrect.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qsize.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qpoint.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpalette.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qcolor.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qrgb.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qrgba64.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qbrush.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qvector.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qmatrix.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpolygon.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qregion.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qdatastream.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qiodevice.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qline.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtransform.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpainterpath.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qimage.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpixelformat.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpixmap.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qsharedpointer.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qshareddata.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qhash.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qsharedpointer_impl.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qfont.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qfontmetrics.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qfontinfo.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qsizepolicy.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qcursor.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qkeysequence.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qevent.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qvariant.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qmap.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qdebug.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qtextstream.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qlocale.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qset.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qurl.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qurlquery.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qfile.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qfiledevice.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvector2d.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtouchdevice.h \
+		UI/ui_curriculumarrangement_ui.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/QVariant \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QAction \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qaction.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qicon.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qactiongroup.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QApplication \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qapplication.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qguiapplication.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QButtonGroup \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QCheckBox \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qcheckbox.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QComboBox \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qcombobox.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qtabwidget.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QHeaderView \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qheaderview.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QLineEdit \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qlineedit.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qpen.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtGui/qtextoption.h \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QPushButton \
 		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qabstractbutton.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\submenubtn.o submenubtn.cpp
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QRadioButton \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qradiobutton.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QScrollArea \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/qscrollarea.h \
+		../../../QT596/5.9.6/mingw53_32/include/QtWidgets/QVBoxLayout
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\curriculumarrangement_ui.o curriculumarrangement_ui.cpp
 
 release/qrc_loginassets.o: release/qrc_loginassets.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\qrc_loginassets.o release\qrc_loginassets.cpp
@@ -3359,6 +3495,9 @@ release/moc_submenuwidget.o: release/moc_submenuwidget.cpp
 
 release/moc_submenubtn.o: release/moc_submenubtn.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_submenubtn.o release\moc_submenubtn.cpp
+
+release/moc_curriculumarrangement_ui.o: release/moc_curriculumarrangement_ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_curriculumarrangement_ui.o release\moc_curriculumarrangement_ui.cpp
 
 ####### Install
 

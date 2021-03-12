@@ -14,9 +14,9 @@ class CurriculumArrangement_Ui : public QWidget
 public:
     explicit CurriculumArrangement_Ui(QWidget *parent = 0);
     ~CurriculumArrangement_Ui();
-
-private:
     Ui::CurriculumArrangement_Ui *ui;
+private:
+
 };
 
 #endif // CURRICULUMARRANGEMENT_UI_H

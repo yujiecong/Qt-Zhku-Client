@@ -7,6 +7,8 @@
 
 #include "zhkuloginwidget.h"
 #include "functable.h"
+#include "curriculumarrangement_ui.h"
+
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -24,7 +26,7 @@ public:
 
 private slots:
     void getCurriculum();
-
+    void deleteWidget();
 
 private:
     Ui::ZhkuClientMain *ui;
@@ -37,9 +39,18 @@ private:
 
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
-
+    FuncTable *campusOnHand;
+    FuncTable *studentStatus;
+    FuncTable *cultivationScheme;
+    FuncTable *choiceLessons;
     FuncTable *curriculumArrangementTable;
-    FuncTable *studentRoll;
+    FuncTable *examinationRoll;
+    FuncTable *studentScore;
+    FuncTable *textbookInfo;
+    FuncTable *teacherComment;
+    FuncTable *otherTable;
+
+    CurriculumArrangement_Ui *currArrUi;
 
 };
 

@@ -7,6 +7,7 @@ INPUT(
 ./release\functable.o
 ./release\submenuwidget.o
 ./release\submenubtn.o
+./release\curriculumarrangement_ui.o
 ./release\qrc_loginassets.o
 ./release\moc_zhkuclientmain.o
 ./release\moc_zhkuloginwidget.o
@@ -14,4 +15,5 @@ INPUT(
 ./release\moc_functable.o
 ./release\moc_submenuwidget.o
 ./release\moc_submenubtn.o
+./release\moc_curriculumarrangement_ui.o
 );

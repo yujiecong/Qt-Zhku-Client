@@ -7,6 +7,7 @@ INPUT(
 ./debug\functable.o
 ./debug\submenuwidget.o
 ./debug\submenubtn.o
+./debug\curriculumarrangement_ui.o
 ./debug\qrc_loginassets.o
 ./debug\moc_zhkuclientmain.o
 ./debug\moc_zhkuloginwidget.o
@@ -14,4 +15,5 @@ INPUT(
 ./debug\moc_functable.o
 ./debug\moc_submenuwidget.o
 ./debug\moc_submenubtn.o
+./debug\moc_curriculumarrangement_ui.o
 );

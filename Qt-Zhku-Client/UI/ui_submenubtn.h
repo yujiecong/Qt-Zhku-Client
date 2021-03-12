@@ -31,7 +31,7 @@ public:
     {
         if (SubMenuBtn->objectName().isEmpty())
             SubMenuBtn->setObjectName(QStringLiteral("SubMenuBtn"));
-        SubMenuBtn->resize(114, 41);
+        SubMenuBtn->resize(109, 37);
         horizontalLayout = new QHBoxLayout(SubMenuBtn);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label = new QLabel(SubMenuBtn);

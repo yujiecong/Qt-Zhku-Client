@@ -16,5 +16,12 @@
         <file>assets/btnIcon/信息.svg</file>
         <file>assets/btnIcon/学生.svg</file>
         <file>assets/btnIcon/异常.svg</file>
+        <file>assets/btnIcon/成绩.svg</file>
+        <file>assets/btnIcon/考试.svg</file>
+        <file>assets/btnIcon/设置.svg</file>
+        <file>assets/btnIcon/书.svg</file>
+        <file>assets/btnIcon/选择.svg</file>
+        <file>assets/btnIcon/方案 (2).svg</file>
+        <file>assets/btnIcon/手机.svg</file>
     </qresource>
 </RCC>
