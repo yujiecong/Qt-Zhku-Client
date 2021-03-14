@@ -1,4 +1,4 @@
-#include "functable.h"
+#include "FuncTable.h"
 
 #include <QLabel>
 #include <QMouseEvent>

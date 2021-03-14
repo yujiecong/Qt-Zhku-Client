@@ -210,7 +210,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 		../../../QT596/5.9.6/mingw53_32/mkspecs/features/qt_config.prf \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/features/toolchain.prf \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/features/default_pre.prf \
@@ -389,7 +388,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 ../../../QT596/5.9.6/mingw53_32/mkspecs/features/qt_config.prf:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/win32-g++/qmake.conf:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/features/spec_post.prf:
-.qmake.stash:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/features/exclusive_builds.prf:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/features/toolchain.prf:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/features/default_pre.prf:

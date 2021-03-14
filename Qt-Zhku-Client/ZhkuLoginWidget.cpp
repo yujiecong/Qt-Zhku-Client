@@ -1,15 +1,20 @@
-#include "zhkuloginwidget.h"
+#include "ZhkuLoginWidget.h"
 #include "ui_zhkuloginwidget.h"
+
+#include <QMessageBox>
 
 ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ZhkuLoginWidget)
 {
     ui->setupUi(this);
+    ui->loginButton->setShortcut(Qt::Key_Enter);
+        ui->loginButton->setShortcut(Qt::Key_Return);
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
     show();
-//    loginInit();
+    loginInit();
 }
+
 QString ZhkuLoginWidget::xnxq=QString();
 ZhkuLoginWidget::~ZhkuLoginWidget()
 {
@@ -33,7 +38,7 @@ void ZhkuLoginWidget::getLocalXNXQ()
 void ZhkuLoginWidget::loginInit()
 {
     getLocalXNXQ();
-
+    qDebug()<<manager.cookieJar();
 
     pointerCookies=new QFile("cookies.json");
     if(pointerCookies->exists()){
@@ -47,27 +52,33 @@ void ZhkuLoginWidget::loginInit()
             QByteArray cookread=pointerCookies->readAll();
             QJsonObject json=strProcessor.qString2Json(QString(cookread));
             QNetworkCookieJar *jar=manager.cookieJar();
-            QList<QNetworkCookie> cl;
+            QList<QNetworkCookie> allcookies;
             foreach (QString k, json.keys()) {
                 QString v=json.take(k).toString();
                 QNetworkCookie c(k.toLocal8Bit(),v.toLocal8Bit());
-                cl.append(c);
+                allcookies.append(c);
             }
+
             //将cookies设置到对应url
-            jar->setCookiesFromUrl(cl,zhkuLoginHomeUrl);
-            jar->setCookiesFromUrl(cl,zhkuHomeUrl);
-            jar->setCookiesFromUrl(cl,zhkuLoginCodeUrl);
-            jar->setCookiesFromUrl(cl,zhkuTestUrl);
+            qDebug()<<allcookies;
+
+            jar->setCookiesFromUrl(allcookies,zhkuLoginHomeUrl);
+            jar->setCookiesFromUrl(allcookies,zhkuTestUrl);
+                        jar->setCookiesFromUrl(allcookies,zhkuHomeUrl);
+            jar->setCookiesFromUrl(allcookies,zhkuLoginCodeUrl);
+
             manager.setCookieJar(jar);
-            qDebug()<<manager.cookieJar()->cookiesForUrl(zhkuLoginHomeUrl);
-            qDebug()<<"successed read";
-            //            //判断cookies是否过期
+
+            // //判断cookies是否过期
             QNetworkRequest isvaildTest(zhkuTestUrl);
+            QVariant var;
+            var.setValue(allcookies);
+            isvaildTest.setHeader(QNetworkRequest::CookieHeader,var);
+
             QNetworkReply *testReply=manager.get(isvaildTest);
+
             connect(testReply,&QNetworkReply::finished,[=](){
                 QString readTest=strProcessor.gbk2Utf8(testReply->readAll());
-
-                qDebug()<<readTest;
                 if (readTest.contains(QString("无权"))){
                     qDebug()<<"cookies 已失效,请重新登录";
                     pointerCookies->remove();
@@ -79,6 +90,13 @@ void ZhkuLoginWidget::loginInit()
                     pointerCookies->remove();
                     loginInit();
                 }
+                //正选时间未开放 的bug
+
+//                else if(readTest.contains(QString("Object moved"))){
+//                    qDebug()<<"cookies 已失效,请重新登录";
+////                    pointerCookies->remove();
+////                    loginInit();
+//                }
                 else{
                     qDebug()<<"cookies仍然有效!";
                 }
@@ -179,7 +197,7 @@ void ZhkuLoginWidget::tryLogin()
             }
         }
         else{
-            qDebug()<<"有点问题的样子";
+            QMessageBox::warning(this,"登录失败","账号或密码或者验证码错误!");
             //再次调用验证码api
             getCodeImg();
         }

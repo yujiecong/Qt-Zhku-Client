@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'zhkuloginwidget.ui'
+** Form generated from reading UI file 'ZhkuLoginWidget.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.9.6
 **
@@ -280,7 +280,7 @@ public:
         loginButton->setFont(font1);
         loginButton->setStyleSheet(QLatin1String("color: rgb(43, 43, 43);\n"
 "border-radius: 10px;\n"
-"background-color: rgba(41, 230, 8, 222);"));
+"background-color: rgba(255, 255, 255, 200);"));
         loginButton->setFlat(false);
 
         verticalLayout_3->addWidget(loginButton);

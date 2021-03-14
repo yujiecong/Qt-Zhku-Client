@@ -6,6 +6,7 @@ QueryScore_Ui::QueryScore_Ui(QWidget *parent) :
     ui(new Ui::QueryScore_Ui)
 {
     ui->setupUi(this);
+    hide();
 }
 
 QueryScore_Ui::~QueryScore_Ui()

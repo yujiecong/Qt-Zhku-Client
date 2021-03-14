@@ -1,4 +1,4 @@
-#include "submenuwidget.h"
+#include "SubMenuWidget.h"
 #include "ui_submenuwidget.h"
 #include "QDebug"
 SubMenuWidget::SubMenuWidget(QWidget *parent) :

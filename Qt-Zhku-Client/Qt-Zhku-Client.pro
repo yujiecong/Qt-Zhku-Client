@@ -25,36 +25,38 @@ DEFINES += QT_DEPRECATED_WARNINGS
 UI_DIR=./UI
 SOURCES += \
         main.cpp \
-        zhkuclientmain.cpp \
-    zhkuloginwidget.cpp \
-    strprocessing.cpp \
-    getfocuslineedit.cpp \
-    functable.cpp \
-    submenuwidget.cpp \
-    submenubtn.cpp \
-    curriculumarrangement_ui.cpp \
+    ZhkuLoginWidget.cpp \
+    ZhkuClientMain.cpp \
+    SubMenuWidget.cpp \
+    SubMenuBtn.cpp \
+    StrProcessing.cpp \
+    GetFocusLineEdit.cpp \
+    FuncTable.cpp \
+    CurriculumArrangement_Ui.cpp \
+    QueryScore_Ui.cpp
 
 
 HEADERS += \
-        zhkuclientmain.h \
-    zhkuloginwidget.h \
     global.h \
-    strprocessing.h \
-    getfocuslineedit.h \
-    functable.h \
-    submenuwidget.h \
-    submenubtn.h \
-    curriculumarrangement_ui.h \
+    ZhkuLoginWidget.h \
+    ZhkuClientMain.h \
+    SubMenuWidget.h \
+    SubMenuBtn.h \
+    StrProcessing.h \
+    GetFocusLineEdit.h \
+    FuncTable.h \
+    CurriculumArrangement_ui.h \
+    QueryScore_Ui.h
 
 
 FORMS += \
-        zhkuclientmain.ui \
-    zhkuloginwidget.ui \
-    submenuwidget.ui \
-    submenubtn.ui \
-    submenubtn.ui \
-    curriculumarrangement_ui.ui \
-    functable.ui
+    ZhkuLoginWidget.ui \
+    ZhkuClientMain.ui \
+    SubMenuWidget.ui \
+    SubMenuBtn.ui \
+    FuncTable.ui \
+    CurriculumArrangement_Ui.ui \
+    QueryScore_Ui.ui
 
 RESOURCES += \
     loginassets.qrc

@@ -2,7 +2,7 @@
 #define SUBMENUWIDGET_H
 
 #include <QWidget>
-#include "submenubtn.h"
+#include "SubMenuBtn.h"
 namespace Ui {
 class SubMenuWidget;
 }

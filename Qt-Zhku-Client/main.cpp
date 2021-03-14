@@ -1,4 +1,4 @@
-#include "zhkuclientmain.h"
+#include "ZhkuClientMain.h"
 #include <QApplication>
 int main(int argc, char *argv[])
 {

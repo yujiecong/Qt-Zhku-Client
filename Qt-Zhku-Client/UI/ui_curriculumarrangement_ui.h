@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'curriculumarrangement_ui.ui'
+** Form generated from reading UI file 'CurriculumArrangement_Ui.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.9.6
 **
@@ -43,11 +43,11 @@ public:
     QLineEdit *lineEdit;
     QLabel *label_2;
     QComboBox *comboBox_2;
-    QPushButton *pushButton;
+    QPushButton *queryCurriculumBtn;
     QPushButton *pushButton_2;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QVBoxLayout *imgverticalLayout;
+    QVBoxLayout *imgVerticalLayout;
 
     void setupUi(QWidget *CurriculumArrangement_Ui)
     {
@@ -125,10 +125,10 @@ public:
 
         horizontalLayout_2->addWidget(comboBox_2);
 
-        pushButton = new QPushButton(widget_2);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        queryCurriculumBtn = new QPushButton(widget_2);
+        queryCurriculumBtn->setObjectName(QStringLiteral("queryCurriculumBtn"));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(queryCurriculumBtn);
 
         pushButton_2 = new QPushButton(widget_2);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
@@ -144,8 +144,8 @@ public:
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 813, 462));
-        imgverticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
-        imgverticalLayout->setObjectName(QStringLiteral("imgverticalLayout"));
+        imgVerticalLayout = new QVBoxLayout(scrollAreaWidgetContents);
+        imgVerticalLayout->setObjectName(QStringLiteral("imgVerticalLayout"));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout->addWidget(scrollArea);
@@ -164,7 +164,7 @@ public:
         radioButton_2->setText(QApplication::translate("CurriculumArrangement_Ui", "\346\240\274\345\274\217\344\272\214", Q_NULLPTR));
         checkBox->setText(QApplication::translate("CurriculumArrangement_Ui", "\345\221\250\346\254\241", Q_NULLPTR));
         label_2->setText(QApplication::translate("CurriculumArrangement_Ui", "\346\216\222\345\272\217", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("CurriculumArrangement_Ui", "\346\243\200\347\264\242", Q_NULLPTR));
+        queryCurriculumBtn->setText(QApplication::translate("CurriculumArrangement_Ui", "\346\243\200\347\264\242", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("CurriculumArrangement_Ui", "\346\211\223\345\215\260", Q_NULLPTR));
     } // retranslateUi
 

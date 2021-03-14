@@ -23,7 +23,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "getfocuslineedit.h"
+#include "GetFocusLineEdit.h"
 
 QT_BEGIN_NAMESPACE
 

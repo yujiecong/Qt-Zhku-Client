@@ -3,12 +3,12 @@
 
 #include <QObject>
 #include <QWidget>
-#include "submenuwidget.h"
+#include "SubMenuWidget.h"
 #include "ui_submenuwidget.h"
 #include "ui_submenubtn.h"
 #include "ui_functable.h"
 
-#include "submenubtn.h"
+#include "SubMenuBtn.h"
 
 // 主要界面的选择的一个按钮
 namespace Ui {

@@ -5,10 +5,11 @@
 #include <QStandardItemModel>
 #include <QtNetwork>
 
-#include "zhkuloginwidget.h"
-#include "functable.h"
-#include "curriculumarrangement_ui.h"
-
+#include "ZhkuLoginWidget.h"
+#include "FuncTable.h"
+#include "CurriculumArrangement_ui.h"
+#include "ui_curriculumarrangement_ui.h"
+#include "QueryScore_Ui.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -26,7 +27,7 @@ public:
 
 private slots:
     void getCurriculum();
-    void deleteWidget();
+
 
 private:
     Ui::ZhkuClientMain *ui;
@@ -51,6 +52,11 @@ private:
     FuncTable *otherTable;
 
     CurriculumArrangement_Ui *currArrUi;
+    QueryScore_Ui *queryScoreUi;
+
+    //用于 查询课程的
+         QString hiddenVaildationCode;
+         bool hidyzmStatus=1;
 
 };
 

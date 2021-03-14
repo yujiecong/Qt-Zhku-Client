@@ -1,4 +1,4 @@
-#include "strprocessing.h"
+#include "StrProcessing.h"
 
 StrProcessing::StrProcessing()
 {

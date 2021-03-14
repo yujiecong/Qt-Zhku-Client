@@ -1,4 +1,4 @@
-#include "getfocuslineedit.h"
+#include "GetFocusLineEdit.h"
 #include "QDebug"
 GetFocusLineEdit::GetFocusLineEdit(QWidget *parent):QLineEdit(parent)
 {
