@@ -37,3 +37,5 @@ QString StrProcessing::gbk2Utf8(const QByteArray &inStr)
     return g2u;
 }
 
+
+

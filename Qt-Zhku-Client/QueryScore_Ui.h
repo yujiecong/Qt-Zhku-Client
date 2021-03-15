@@ -14,9 +14,9 @@ class QueryScore_Ui : public QWidget
 public:
     explicit QueryScore_Ui(QString xnxq,QWidget *parent = 0);
     ~QueryScore_Ui();
-
-private:
     Ui::QueryScore_Ui *ui;
+private:
+
     QString xnxq;
 };
 

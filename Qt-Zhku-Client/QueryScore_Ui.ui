@@ -331,7 +331,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="queryScoreBtn">
                <property name="text">
                 <string>检索</string>
                </property>
@@ -368,6 +368,7 @@
         <height>379</height>
        </rect>
       </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3"/>
      </widget>
     </widget>
    </item>

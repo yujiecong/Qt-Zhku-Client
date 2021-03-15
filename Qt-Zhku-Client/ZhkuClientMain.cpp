@@ -13,6 +13,11 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
     ui->setupUi(this);
     init_();
 
+//    QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=&xq=&rpt=\\d{1}&rad=\\d{1}&zfx=\\d{1}&xh=\\d{12}");
+//    QString s="Stu_MyScore_Drawimg.aspx?x=15&h=2&w=845&xnxq=20191&xn=&xq=&rpt=1&rad=0&zfx=0&xh=201800003037";
+//    s.indexOf(ex);
+//    qDebug()<<ex.cap(0);
+
 
 
 }
@@ -136,7 +141,7 @@ void ZhkuClientMain::init_()
     l=QStringList()<<"修改个人密码"<<"查看个人登录日志"<<"文件下载";
     otherTable->setPix(":/assets/btnIcon/设置.svg");
     otherTable->addSubBtn(l,":/assets/btnIcon/设置.svg","");
-    QSpacerItem *item=new QSpacerItem(30,180);
+    QSpacerItem *item=new QSpacerItem(30,360);
     ui->MenuLayout->addItem(item);
     //connect all in
 
@@ -147,7 +152,7 @@ void ZhkuClientMain::init_()
 void ZhkuClientMain::getCurriculum()
 {
 
-    //这里需要拿到所有的cookies
+
     QNetworkRequest curReq(zhkuCurriculumPreUrl);
     QNetworkReply *curReply=zhkuloginManager->manager.get(curReq);
 
@@ -247,6 +252,77 @@ void ZhkuClientMain::getCurriculum()
 
 }
 
+void ZhkuClientMain::getStudentScore()
+{
+    QNetworkRequest curReq(zhkuStudentScoreUrl);
+    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    QByteArray postdata;
+    //入学以来
+    //SJ
+    postdata.append("SJ=1&");
+    //
+    postdata.append(QString("btn_search=%1&").arg(QString(strProcessor.toUrlEncode("检索"))));
+    //
+    //排序方式
+    postdata.append(QString("SelXNXQ=0&"));
+    postdata.append(QString("zfx_flag=0&"));
+    postdata.append(QString("zfx=0&"));
+
+    QNetworkReply *curReply=0;
+    curReply=    zhkuloginManager->manager.post(curReq,postdata);
+    connect(curReply,&QNetworkReply::finished,[=](){
+        QString curriUrlHtml=strProcessor.gbk2Utf8(curReply->readAll());
+        QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=&xq=&rpt=\\d{1}&rad=\\d{1}&zfx=\\d{1}&xh=\\d{12}");
+//                  Stu_MyScore_Drawimg.aspx\?x= \d{1,}&h= \d{1,}&w= \d{3,}&xnxq= \d{5}&xn=&xq=&rpt= \d{1}&rad= \d{1}&zfx= \d{1}&xh= \d{12}
+        QStringList list;
+        int pos2 = 0;
+        while ((pos2 = ex.indexIn(curriUrlHtml, pos2)) != -1)
+        {
+            list << ex.cap();                                   // 第一个捕获到的文本
+            pos2 += ex.matchedLength();             // 上一个匹配的字符串的长度
+        }
+        qDebug()<<list;
+        int i=0;
+        foreach (QString url, list) {
+            QNetworkRequest req(QString("http://jw.zhku.edu.cn/xscj/")+url);
+            QNetworkReply *urlReply=zhkuloginManager->manager.get(req);
+
+            connect(urlReply,&QNetworkReply::finished,[=](){
+                QString curriPath=QString("第%1学期的成绩.jpg").arg(QString::number(i));
+
+                QFile *scoreImgFile=new QFile(curriPath);
+                if (!scoreImgFile->open(QIODevice::WriteOnly)){
+                    delete scoreImgFile;
+                    scoreImgFile=nullptr;
+                    qDebug()<<"score File文件写入失败!";
+
+                }
+                else{
+                    QByteArray imgRaw=urlReply->readAll();
+                    scoreImgFile->write(imgRaw);
+
+
+                }
+                scoreImgFile->close();
+                urlReply->deleteLater();
+
+                //将 图片输出到 那个地方
+                QLabel *curriImg= new QLabel();
+                curriImg->setPixmap(QPixmap(curriPath));
+
+                queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
+            });
+            i++;
+        }
+        curReply->deleteLater();
+    });
+
+
+
+
+}
+
 void ZhkuClientMain::createCurriculumArrangement_Ui()
 {
     removeMyUi();
@@ -262,6 +338,7 @@ void ZhkuClientMain::createQueryScore_Ui()
     removeMyUi();
     queryScoreUi = new QueryScore_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(queryScoreUi);
+    connect(queryScoreUi->ui->queryScoreBtn,&QPushButton::clicked,this,&ZhkuClientMain::getStudentScore);
 }
 
 void ZhkuClientMain::removeMyUi()

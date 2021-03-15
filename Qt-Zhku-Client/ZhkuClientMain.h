@@ -10,6 +10,7 @@
 #include "CurriculumArrangement_ui.h"
 #include "ui_curriculumarrangement_ui.h"
 #include "QueryScore_Ui.h"
+#include "ui_QueryScore_Ui.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -27,6 +28,7 @@ public:
 
 private slots:
     void getCurriculum();
+    void getStudentScore();
     void createCurriculumArrangement_Ui();
     void createQueryScore_Ui();
 
@@ -40,6 +42,7 @@ private:
 
     QUrl zhkuCurriculumPreUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel.aspx");
     QUrl zhkuCurriculumUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel_rpt.aspx");
+    QUrl zhkuStudentScoreUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_MyScore_rpt.aspx");
 
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
