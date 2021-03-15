@@ -3,11 +3,19 @@
 
 #include <QObject>
 #include <QWidget>
-
+#include <QLabel>
+#include <QMenu>
 class ImgLabel : public QLabel
 {
+
 public:
-    ImgLabel();
+    ImgLabel(QWidget *parent=nullptr);
+    ~ImgLabel();
+    QMenu *menu;
+protected:
+    void mousePressEvent(QMouseEvent *ev);
+public slots:
+    void saveImg(QString);
 };
 
 #endif // IMGLABEL_H

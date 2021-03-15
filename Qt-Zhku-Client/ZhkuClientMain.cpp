@@ -4,7 +4,7 @@
 #include <QMenu>
 #include <QMessageBox>
 
-
+#include "ImgLabel.h"
 
 ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
     QMainWindow(parent),
@@ -237,12 +237,10 @@ void ZhkuClientMain::getCurriculum()
                     curReply->deleteLater();
 
                     //将 图片输出到 那个地方
-                    QLabel *curriImg= new QLabel();
+                    ImgLabel *curriImg= new ImgLabel();
                     curriImg->setPixmap(QPixmap(curriPath));
-                    //设置大小自适应
-                    //                curriImg->setScaledContents(1);
-
                     currArrUi->ui->imgVerticalLayout->insertWidget(0,curriImg);
+
                 });
             }
         });

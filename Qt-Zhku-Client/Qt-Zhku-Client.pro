@@ -22,7 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
+UI_DIR+=./UI
 SOURCES += \
         main.cpp \
     ZhkuLoginWidget.cpp \
@@ -33,7 +33,8 @@ SOURCES += \
     GetFocusLineEdit.cpp \
     FuncTable.cpp \
     CurriculumArrangement_Ui.cpp \
-    QueryScore_Ui.cpp
+    QueryScore_Ui.cpp \
+    ImgLabel.cpp
 
 
 HEADERS += \
@@ -46,7 +47,8 @@ HEADERS += \
     GetFocusLineEdit.h \
     FuncTable.h \
     CurriculumArrangement_ui.h \
-    QueryScore_Ui.h
+    QueryScore_Ui.h \
+    ImgLabel.h
 
 
 FORMS += \

@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -37,6 +37,9 @@
    </property>
    <item>
     <widget class="QScrollArea" name="scrollArea_2">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
      <property name="verticalScrollBarPolicy">
       <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
@@ -51,8 +54,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>793</width>
-        <height>93</height>
+        <width>795</width>
+        <height>79</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -163,7 +166,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QRadioButton" name="radioButton">
+              <widget class="QRadioButton" name="rawScore">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -176,7 +179,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="radioButton_2">
+              <widget class="QRadioButton" name="vaildScore">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -213,7 +216,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QRadioButton" name="radioButton_3">
+              <widget class="QRadioButton" name="fromFreshToNow">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -226,7 +229,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="radioButton_4">
+              <widget class="QRadioButton" name="byYear">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -239,7 +242,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="radioButton_5">
+              <widget class="QRadioButton" name="bySemester">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -281,7 +284,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QRadioButton" name="radioButton_6">
+              <widget class="QRadioButton" name="mainlyLearn">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -297,7 +300,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QRadioButton" name="radioButton_7">
+              <widget class="QRadioButton" name="otherlyLearn">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -356,6 +359,9 @@
    </item>
    <item>
     <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
@@ -364,8 +370,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>793</width>
-        <height>379</height>
+        <width>795</width>
+        <height>397</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3"/>

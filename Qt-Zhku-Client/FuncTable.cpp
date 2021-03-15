@@ -18,7 +18,7 @@ FuncTable::FuncTable(QString str, QWidget *parent) : QWidget(parent),ui(new Ui::
 void FuncTable::addSubBtn(QString s,QString pixpath,QString url)
 {
     SubMenuBtn *btn= new SubMenuBtn();
-curBtn=btn;
+    curBtn=btn;
     QPixmap pix(pixpath);
     pix.scaled(pixWidth,pixHeight,Qt::KeepAspectRatio);
 
