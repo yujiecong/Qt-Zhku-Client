@@ -24,7 +24,7 @@ ZhkuClientMain::~ZhkuClientMain()
 
 void ZhkuClientMain::init_()
 {
-
+    QStringList l;
     //全部 换成 动态加载
 
     campusOnHand=new FuncTable("掌上校园");
@@ -33,6 +33,7 @@ void ZhkuClientMain::init_()
     choiceLessons=new FuncTable("网上选课");
     curriculumArrangementTable=new FuncTable("教学安排");
     examinationRoll=new FuncTable("考试安排");
+
     studentScore=new FuncTable("学生成绩");
     textbookInfo=new FuncTable("教材信息");
     teacherComment=new FuncTable("网上评教");
@@ -78,19 +79,14 @@ void ZhkuClientMain::init_()
 
     //教学安排
 
-    currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
-    ui->frameLayout->addWidget(currArrUi);
     ui->MenuLayout->addWidget(curriculumArrangementTable);
     curriculumArrangementTable->setPix(":/assets/btnIcon/安排.svg");
     curriculumArrangementTable->addSubBtn("教学安排表",":/assets/btnIcon/会议安排.svg","");
     curriculumArrangementTable->addSubBtn("调/停课信息",":/assets/btnIcon/工作安排.svg","");
     //这里没写好
-    connect(curriculumArrangementTable->subWidget->v[0],&SubMenuBtn::clicked,[=](){
-        ui->frameLayout->takeAt(0)->widget()->hide();
-        currArrUi->show();
-    });
+    connect(curriculumArrangementTable->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createCurriculumArrangement_Ui);
 
-    connect(currArrUi->ui->queryCurriculumBtn,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
+
     ui->MenuLayout->addWidget(curriculumArrangementTable->subWidget);
     //教学安排
 
@@ -106,19 +102,16 @@ void ZhkuClientMain::init_()
     //考试安排
 
     //学生成绩
-    queryScoreUi=new QueryScore_Ui();
-    ui->frameLayout->addWidget(queryScoreUi);
+
+
     ui->MenuLayout->addWidget(studentScore);
     ui->MenuLayout->addWidget(studentScore->subWidget);
-    QStringList l=QStringList()<<"成绩管理规定"<<"重修报名"<<"获准重修\n课程/环节"<<
-                                 "查看成绩认定记录"<<"查看成绩"<<"成绩分布"<<"等级考试报名"<<"查看等级考试成绩";
+    l=QStringList()<<"成绩管理规定"<<"重修报名"<<"获准重修\n课程/环节"<<
+                     "查看成绩认定记录"<<"查看成绩"<<"成绩分布"<<"等级考试报名"<<"查看等级考试成绩";
 
     studentScore->setPix(":/assets/btnIcon/成绩.svg");
     studentScore->addSubBtn(l,":/assets/btnIcon/成绩.svg","");
-    connect(studentScore->subWidget->v[0],&SubMenuBtn::clicked,[=](){
-        ui->frameLayout->takeAt(0)->widget()->hide();
-        queryScoreUi->show();
-    });
+    connect(studentScore->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createQueryScore_Ui);
     //学生成绩
 
     //教材信息
@@ -161,16 +154,16 @@ void ZhkuClientMain::getCurriculum()
 
     //这里可以指定用阻塞形式 就不用connect嵌套了
     connect(curReply,&QNetworkReply::finished,[=](){
-//        if(hidyzmStatus){
-            QString preHtml=curReply->readAll();
-            //        qDebug()<<preHtml;
+        //        if(hidyzmStatus){
+        QString preHtml=curReply->readAll();
+        //        qDebug()<<preHtml;
 
 
-            QRegExp vaildationExp("[a-z0-9]{31,31}");
-            preHtml.indexOf(vaildationExp);
-            hiddenVaildationCode = vaildationExp.cap(0);
-            hidyzmStatus=0;
-//        }
+        QRegExp vaildationExp("[a-z0-9]{31,31}");
+        preHtml.indexOf(vaildationExp);
+        hiddenVaildationCode = vaildationExp.cap(0);
+        hidyzmStatus=0;
+        //        }
         QString randomStr="abcdefghijklmnopqrstuvwxyz1234567890";
         QString rs;
 
@@ -252,6 +245,30 @@ void ZhkuClientMain::getCurriculum()
     });
 
 
+}
+
+void ZhkuClientMain::createCurriculumArrangement_Ui()
+{
+    removeMyUi();
+    currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
+    ui->frameLayout->addWidget(currArrUi);
+    connect(currArrUi->ui->queryCurriculumBtn,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
+
+}
+
+void ZhkuClientMain::createQueryScore_Ui()
+{
+
+    removeMyUi();
+    queryScoreUi = new QueryScore_Ui(zhkuloginManager->getXnxq());
+    ui->frameLayout->addWidget(queryScoreUi);
+}
+
+void ZhkuClientMain::removeMyUi()
+{
+    QLayoutItem *it=ui->frameLayout->takeAt(0);
+    ui->frameLayout->removeItem(it);
+    it->widget()->deleteLater();
 }
 
 

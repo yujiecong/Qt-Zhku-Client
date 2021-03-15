@@ -1,7 +1,7 @@
 /********************************************************************************
-** Form generated from reading UI file 'zhkuclientmain.ui'
+** Form generated from reading UI file 'ZhkuClientMain.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.6
+** Created by: Qt User Interface Compiler version 5.9.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -16,6 +16,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QVBoxLayout>
@@ -33,12 +34,13 @@ public:
     QVBoxLayout *MenuLayout;
     QFrame *frame;
     QHBoxLayout *frameLayout;
+    QLabel *label;
 
     void setupUi(QMainWindow *ZhkuClientMain)
     {
         if (ZhkuClientMain->objectName().isEmpty())
             ZhkuClientMain->setObjectName(QStringLiteral("ZhkuClientMain"));
-        ZhkuClientMain->resize(1060, 656);
+        ZhkuClientMain->resize(973, 657);
         centralWidget = new QWidget(ZhkuClientMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -54,7 +56,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 205, 636));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 188, 637));
         scrollAreaWidgetContents->setStyleSheet(QLatin1String("QWidget#scrollAreaWidgetContents{\n"
 "background-color: rgb(0,6,56);\n"
 "}"));
@@ -75,6 +77,11 @@ public:
         frameLayout->setContentsMargins(11, 11, 11, 11);
         frameLayout->setObjectName(QStringLiteral("frameLayout"));
         frameLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(frame);
+        label->setObjectName(QStringLiteral("label"));
+
+        frameLayout->addWidget(label);
+
 
         horizontalLayout->addWidget(frame);
 
@@ -90,6 +97,7 @@ public:
     void retranslateUi(QMainWindow *ZhkuClientMain)
     {
         ZhkuClientMain->setWindowTitle(QApplication::translate("ZhkuClientMain", "ZhkuClientMain", Q_NULLPTR));
+        label->setText(QString());
     } // retranslateUi
 
 };

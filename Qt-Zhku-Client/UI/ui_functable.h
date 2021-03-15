@@ -1,7 +1,7 @@
 /********************************************************************************
-** Form generated from reading UI file 'functable.ui'
+** Form generated from reading UI file 'FuncTable.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.6
+** Created by: Qt User Interface Compiler version 5.9.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -36,14 +36,14 @@ public:
     {
         if (FuncTable->objectName().isEmpty())
             FuncTable->setObjectName(QStringLiteral("FuncTable"));
-        FuncTable->resize(160, 38);
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        FuncTable->resize(177, 38);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(FuncTable->sizePolicy().hasHeightForWidth());
         FuncTable->setSizePolicy(sizePolicy);
-        FuncTable->setMinimumSize(QSize(0, 38));
-        FuncTable->setMaximumSize(QSize(16777215, 38));
+        FuncTable->setMinimumSize(QSize(177, 0));
+        FuncTable->setMaximumSize(QSize(177, 38));
         horizontalLayout = new QHBoxLayout(FuncTable);
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -88,7 +88,7 @@ public:
 
         horizontalLayout_2->addWidget(textLabel);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(60, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer);
 

@@ -27,7 +27,10 @@ public:
 
 private slots:
     void getCurriculum();
+    void createCurriculumArrangement_Ui();
+    void createQueryScore_Ui();
 
+    void removeMyUi();
 
 private:
     Ui::ZhkuClientMain *ui;
@@ -51,12 +54,12 @@ private:
     FuncTable *teacherComment;
     FuncTable *otherTable;
 
-    CurriculumArrangement_Ui *currArrUi;
-    QueryScore_Ui *queryScoreUi;
+    CurriculumArrangement_Ui *currArrUi=0;
+    QueryScore_Ui *queryScoreUi=0;
 
     //用于 查询课程的
-         QString hiddenVaildationCode;
-         bool hidyzmStatus=1;
+    QString hiddenVaildationCode;
+    bool hidyzmStatus=1;
 
 };
 

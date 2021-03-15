@@ -12,11 +12,12 @@ class QueryScore_Ui : public QWidget
     Q_OBJECT
 
 public:
-    explicit QueryScore_Ui(QWidget *parent = 0);
+    explicit QueryScore_Ui(QString xnxq,QWidget *parent = 0);
     ~QueryScore_Ui();
 
 private:
     Ui::QueryScore_Ui *ui;
+    QString xnxq;
 };
 
 #endif // QUERYSCORE_UI_H

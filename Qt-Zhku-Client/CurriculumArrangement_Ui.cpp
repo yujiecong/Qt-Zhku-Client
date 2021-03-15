@@ -6,7 +6,7 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
     ui(new Ui::CurriculumArrangement_Ui)
 {
     ui->setupUi(this);
-    hide();
+
     //学年学期 初始化
     //十年内
     for(int i=xnxq.toInt()/10;i>xnxq.toInt()/10-5;i-=1){
