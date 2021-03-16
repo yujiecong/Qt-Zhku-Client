@@ -16,7 +16,6 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QVBoxLayout>
@@ -34,7 +33,6 @@ public:
     QVBoxLayout *MenuLayout;
     QFrame *frame;
     QHBoxLayout *frameLayout;
-    QLabel *label;
 
     void setupUi(QMainWindow *ZhkuClientMain)
     {
@@ -44,9 +42,10 @@ public:
         centralWidget = new QWidget(ZhkuClientMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
-        horizontalLayout->setSpacing(6);
+        horizontalLayout->setSpacing(0);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         scrollArea = new QScrollArea(centralWidget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -61,7 +60,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 200, 644));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 205, 662));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -88,11 +87,6 @@ public:
         frameLayout->setContentsMargins(11, 11, 11, 11);
         frameLayout->setObjectName(QStringLiteral("frameLayout"));
         frameLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(frame);
-        label->setObjectName(QStringLiteral("label"));
-
-        frameLayout->addWidget(label);
-
 
         horizontalLayout->addWidget(frame);
 
@@ -108,7 +102,6 @@ public:
     void retranslateUi(QMainWindow *ZhkuClientMain)
     {
         ZhkuClientMain->setWindowTitle(QApplication::translate("ZhkuClientMain", "ZhkuClientMain", Q_NULLPTR));
-        label->setText(QString());
     } // retranslateUi
 
 };

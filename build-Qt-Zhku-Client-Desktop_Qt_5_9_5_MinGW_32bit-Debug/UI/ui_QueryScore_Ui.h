@@ -252,10 +252,6 @@ public:
     {
         QueryScore_Ui->setWindowTitle(QApplication::translate("QueryScore_Ui", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264", Q_NULLPTR));
-        comboBox->clear();
-        comboBox->insertItems(0, QStringList()
-         << QApplication::translate("QueryScore_Ui", "2020-2021", Q_NULLPTR)
-        );
         label_3->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\346\234\237", Q_NULLPTR));
         comboBox_3->clear();
         comboBox_3->insertItems(0, QStringList()

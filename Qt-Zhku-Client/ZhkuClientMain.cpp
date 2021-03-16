@@ -202,7 +202,7 @@ void ZhkuClientMain::closeEvent(QCloseEvent *e)
         e->ignore();
         CloseDialog *cd=new CloseDialog(this);
         cd->show();
-        connect(cd,&CloseDialog::finished,[=](){
+        connect(cd,&CloseDialog::accepted,[=](){
             //拿到对应按钮
             closedMemery=cd->ui->memory->isChecked();
             if(cd->ui->toBottom->isChecked()){

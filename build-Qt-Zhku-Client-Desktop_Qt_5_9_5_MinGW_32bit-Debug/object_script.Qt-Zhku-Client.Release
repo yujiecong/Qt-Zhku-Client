@@ -10,6 +10,7 @@ INPUT(
 ./release\CurriculumArrangement_Ui.o
 ./release\QueryScore_Ui.o
 ./release\ImgLabel.o
+./release\CloseDialog.o
 ./release\qrc_loginassets.o
 ./release\moc_ZhkuLoginWidget.o
 ./release\moc_ZhkuClientMain.o
@@ -19,4 +20,5 @@ INPUT(
 ./release\moc_FuncTable.o
 ./release\moc_CurriculumArrangement_ui.o
 ./release\moc_QueryScore_Ui.o
+./release\moc_CloseDialog.o
 );

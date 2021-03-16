@@ -45,14 +45,19 @@ void ZhkuLoginWidget::loginInit()
     //取值与赋值
     QString settingsString=settings->value("settings/loginSettings").toString();
     QJsonObject sj=strProcessor.qString2Json(settingsString);
-    qDebug()<<settingsString;
+    qDebug()<<settingsString.toLocal8Bit().data();
 
     getLocalXNXQ();
 
     pointerCookies=new QFile("cookies.json");
     //如果设置了自动登录
-    autoLogin=sj["autoLogin"].toInt();
-    autoPassword=sj["autoPassword"].toInt();
+
+    qDebug()<<sj["autoLogin"].toBool();
+    autoLogin=sj["autoLogin"].toBool();
+    autoPassword=sj["autoPassword"].toBool();
+
+    qDebug()<<autoLogin<<autoPassword;
+
     if(autoPassword){
         ui->pwdInput->setText(sj["password"].toString());
     }
@@ -273,8 +278,8 @@ void ZhkuLoginWidget::writeSettings()
     settings->clear();
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     QJsonObject settingsJson;
-    settingsJson.insert("autoLogin",QString::number(ui->checkBox->isChecked()));
-    settingsJson.insert("autoPassword",QString::number(ui->checkBox_2->isChecked()));
+    settingsJson.insert("autoLogin",ui->checkBox->isChecked());
+    settingsJson.insert("autoPassword",ui->checkBox_2->isChecked());
     if(ui->checkBox_2->isChecked()){
        settingsJson.insert("password",ui->pwdInput->text());
     }
