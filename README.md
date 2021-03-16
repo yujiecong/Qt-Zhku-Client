@@ -1,4 +1,5 @@
 # Qt-Zhku-Client
+
 算法学累了，不如来写qt?
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](.)
@@ -8,17 +9,31 @@
 本仓库包含以下内容：
 
 1. 重造的一个仲恺教务客户端，原本用python写的太烂了
+2. 基于QT+爬虫形式，效率较低，没有官方API
 
-## 内容列表
+## TODO
+
+- [x] 登录功能,自动登录,保存cookies等
+- [x] 查询课表
+    - [x] 类型一
+    - [ ] 类型二
+- [x] 查询成绩，自选参数
+- [ ] 成绩分布
+- [ ] 选课
+- [ ] 考试信息
+- [ ] 空闲教室
+- [ ] 教室课表
+- [ ] 培养方案
+
+## 目录
 
 - [更新](#更新)
-- [目录](#目录)
 - [背景](#背景)
 - [安装](#安装)
 - [示例](#示例)
 - [相关仓库](#相关仓库)
 - [维护者](#维护者)
-- [如何贡献](#如何贡献)
+- [如何贡献](#如何贡献) 
 - [使用许可](#使用许可)
 
 ## 更新
@@ -56,10 +71,6 @@
     - 了解了一下qt网络接口
     - 刚好做到了构建登录请求
 
-## 目录
-
-1. 正在构建登录界面
-
 ## 背景
 
 我python学的不好，写的跟狗屎一样，所以打算用c++吸取一下经验
@@ -96,8 +107,11 @@ git clone this~
 
 非常欢迎你的加入！[提一个 Issue](./issues/new) 或者提交一个 Pull Request。
 
-
 本 Readme 遵循 [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) 行为规范。
+
+如果你喜欢作者或者帮助到了你，欢迎请小弟喝瓶可乐
+
+
 
 ### 贡献者
 
