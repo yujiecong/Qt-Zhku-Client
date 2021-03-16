@@ -2,6 +2,7 @@
 #include "ui_zhkuloginwidget.h"
 
 #include <QMessageBox>
+#include <QMouseEvent>
 
 ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     QWidget(parent),
@@ -9,7 +10,8 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->loginButton->setShortcut(Qt::Key_Enter);
-        ui->loginButton->setShortcut(Qt::Key_Return);
+    ui->loginButton->setShortcut(Qt::Key_Return);
+
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
     show();
     loginInit();
@@ -18,6 +20,7 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
 QString ZhkuLoginWidget::xnxq=QString();
 ZhkuLoginWidget::~ZhkuLoginWidget()
 {
+
     delete ui;
 }
 
@@ -37,11 +40,24 @@ void ZhkuLoginWidget::getLocalXNXQ()
 }
 void ZhkuLoginWidget::loginInit()
 {
+    QSettings *settings = new QSettings(QCoreApplication::applicationDirPath()+"/Zhku.ini",QSettings::IniFormat);
+    settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
+    //取值与赋值
+    QString settingsString=settings->value("settings/loginSettings").toString();
+    QJsonObject sj=strProcessor.qString2Json(settingsString);
+    qDebug()<<settingsString;
+
     getLocalXNXQ();
-    qDebug()<<manager.cookieJar();
 
     pointerCookies=new QFile("cookies.json");
-    if(pointerCookies->exists()){
+    //如果设置了自动登录
+    autoLogin=sj["autoLogin"].toInt();
+    autoPassword=sj["autoPassword"].toInt();
+    if(autoPassword){
+        ui->pwdInput->setText(sj["password"].toString());
+    }
+
+    if(autoLogin && pointerCookies->exists()){
         qDebug()<<"检测到本地cookies,尝试读取中";
         if(!pointerCookies->open(QIODevice::ReadOnly)){
             delete pointerCookies;
@@ -64,7 +80,7 @@ void ZhkuLoginWidget::loginInit()
 
             jar->setCookiesFromUrl(allcookies,zhkuLoginHomeUrl);
             jar->setCookiesFromUrl(allcookies,zhkuTestUrl);
-                        jar->setCookiesFromUrl(allcookies,zhkuHomeUrl);
+            jar->setCookiesFromUrl(allcookies,zhkuHomeUrl);
             jar->setCookiesFromUrl(allcookies,zhkuLoginCodeUrl);
 
             manager.setCookieJar(jar);
@@ -92,11 +108,11 @@ void ZhkuLoginWidget::loginInit()
                 }
                 //正选时间未开放 的bug
 
-//                else if(readTest.contains(QString("Object moved"))){
-//                    qDebug()<<"cookies 已失效,请重新登录";
-////                    pointerCookies->remove();
-////                    loginInit();
-//                }
+                //                else if(readTest.contains(QString("Object moved"))){
+                //                    qDebug()<<"cookies 已失效,请重新登录";
+                ////                    pointerCookies->remove();
+                ////                    loginInit();
+                //                }
                 else{
                     qDebug()<<"cookies仍然有效!";
                 }
@@ -130,6 +146,12 @@ QString ZhkuLoginWidget::getXnxq()
 void ZhkuLoginWidget::setXnxq(const QString &value)
 {
     xnxq = value;
+}
+
+void ZhkuLoginWidget::closeEvent(QCloseEvent *event)
+{
+
+    event->accept();
 }
 
 void ZhkuLoginWidget::tryLogin()
@@ -193,8 +215,9 @@ void ZhkuLoginWidget::tryLogin()
                 pointerCookies->write(strjson.toLocal8Bit());
                 pointerCookies->close();
                 qDebug()<<"cookies文件写入成功!";
-
             }
+            writeSettings();
+
         }
         else{
             QMessageBox::warning(this,"登录失败","账号或密码或者验证码错误!");
@@ -239,5 +262,23 @@ void ZhkuLoginWidget::getCodeImg()
             codeReply->deleteLater();
         });
     }
+
+}
+
+void ZhkuLoginWidget::writeSettings()
+{
+//    }
+
+    QSettings *settings = new QSettings(QCoreApplication::applicationDirPath()+"/Zhku.ini",QSettings::IniFormat);;
+    settings->clear();
+    settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
+    QJsonObject settingsJson;
+    settingsJson.insert("autoLogin",QString::number(ui->checkBox->isChecked()));
+    settingsJson.insert("autoPassword",QString::number(ui->checkBox_2->isChecked()));
+    if(ui->checkBox_2->isChecked()){
+       settingsJson.insert("password",ui->pwdInput->text());
+    }
+    settings->setValue("settings/loginSettings",QString(strProcessor.qJson2QString(settingsJson)));
+    settings->sync();
 
 }

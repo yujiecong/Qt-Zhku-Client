@@ -40,20 +40,20 @@ public:
     QComboBox *comboBox_3;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *rawScore;
+    QRadioButton *vaildScore;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_4;
-    QRadioButton *radioButton_3;
-    QRadioButton *radioButton_4;
-    QRadioButton *radioButton_5;
+    QRadioButton *fromFreshToNow;
+    QRadioButton *byYear;
+    QRadioButton *bySemester;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
-    QRadioButton *radioButton_6;
-    QRadioButton *radioButton_7;
+    QRadioButton *mainlyLearn;
+    QRadioButton *otherlyLearn;
     QWidget *widget_5;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton;
+    QPushButton *queryScoreBtn;
     QPushButton *pushButton_2;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -75,12 +75,13 @@ public:
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         scrollArea_2 = new QScrollArea(QueryScore_Ui);
         scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
+        scrollArea_2->setFrameShape(QFrame::NoFrame);
         scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 793, 93));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 795, 79));
         horizontalLayout_5 = new QHBoxLayout(scrollAreaWidgetContents_2);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         widget_2 = new QWidget(scrollAreaWidgetContents_2);
@@ -131,18 +132,18 @@ public:
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        radioButton = new QRadioButton(widget);
-        radioButton->setObjectName(QStringLiteral("radioButton"));
-        radioButton->setFont(font);
+        rawScore = new QRadioButton(widget);
+        rawScore->setObjectName(QStringLiteral("rawScore"));
+        rawScore->setFont(font);
 
-        horizontalLayout->addWidget(radioButton);
+        horizontalLayout->addWidget(rawScore);
 
-        radioButton_2 = new QRadioButton(widget);
-        radioButton_2->setObjectName(QStringLiteral("radioButton_2"));
-        radioButton_2->setFont(font);
-        radioButton_2->setChecked(true);
+        vaildScore = new QRadioButton(widget);
+        vaildScore->setObjectName(QStringLiteral("vaildScore"));
+        vaildScore->setFont(font);
+        vaildScore->setChecked(true);
 
-        horizontalLayout->addWidget(radioButton_2);
+        horizontalLayout->addWidget(vaildScore);
 
 
         horizontalLayout_2->addWidget(widget);
@@ -153,24 +154,24 @@ public:
         horizontalLayout_4->setSpacing(0);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        radioButton_3 = new QRadioButton(widget_4);
-        radioButton_3->setObjectName(QStringLiteral("radioButton_3"));
-        radioButton_3->setFont(font);
+        fromFreshToNow = new QRadioButton(widget_4);
+        fromFreshToNow->setObjectName(QStringLiteral("fromFreshToNow"));
+        fromFreshToNow->setFont(font);
 
-        horizontalLayout_4->addWidget(radioButton_3);
+        horizontalLayout_4->addWidget(fromFreshToNow);
 
-        radioButton_4 = new QRadioButton(widget_4);
-        radioButton_4->setObjectName(QStringLiteral("radioButton_4"));
-        radioButton_4->setFont(font);
+        byYear = new QRadioButton(widget_4);
+        byYear->setObjectName(QStringLiteral("byYear"));
+        byYear->setFont(font);
 
-        horizontalLayout_4->addWidget(radioButton_4);
+        horizontalLayout_4->addWidget(byYear);
 
-        radioButton_5 = new QRadioButton(widget_4);
-        radioButton_5->setObjectName(QStringLiteral("radioButton_5"));
-        radioButton_5->setFont(font);
-        radioButton_5->setChecked(true);
+        bySemester = new QRadioButton(widget_4);
+        bySemester->setObjectName(QStringLiteral("bySemester"));
+        bySemester->setFont(font);
+        bySemester->setChecked(true);
 
-        horizontalLayout_4->addWidget(radioButton_5);
+        horizontalLayout_4->addWidget(bySemester);
 
 
         horizontalLayout_2->addWidget(widget_4);
@@ -184,18 +185,18 @@ public:
         horizontalLayout_3->setSpacing(0);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        radioButton_6 = new QRadioButton(widget_3);
-        radioButton_6->setObjectName(QStringLiteral("radioButton_6"));
-        radioButton_6->setFont(font);
-        radioButton_6->setChecked(true);
+        mainlyLearn = new QRadioButton(widget_3);
+        mainlyLearn->setObjectName(QStringLiteral("mainlyLearn"));
+        mainlyLearn->setFont(font);
+        mainlyLearn->setChecked(true);
 
-        horizontalLayout_3->addWidget(radioButton_6);
+        horizontalLayout_3->addWidget(mainlyLearn);
 
-        radioButton_7 = new QRadioButton(widget_3);
-        radioButton_7->setObjectName(QStringLiteral("radioButton_7"));
-        radioButton_7->setFont(font);
+        otherlyLearn = new QRadioButton(widget_3);
+        otherlyLearn->setObjectName(QStringLiteral("otherlyLearn"));
+        otherlyLearn->setFont(font);
 
-        horizontalLayout_3->addWidget(radioButton_7);
+        horizontalLayout_3->addWidget(otherlyLearn);
 
 
         horizontalLayout_2->addWidget(widget_3);
@@ -206,10 +207,10 @@ public:
         verticalLayout_2->setSpacing(0);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget_5);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        queryScoreBtn = new QPushButton(widget_5);
+        queryScoreBtn->setObjectName(QStringLiteral("queryScoreBtn"));
 
-        verticalLayout_2->addWidget(pushButton);
+        verticalLayout_2->addWidget(queryScoreBtn);
 
         pushButton_2 = new QPushButton(widget_5);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
@@ -228,10 +229,11 @@ public:
 
         scrollArea = new QScrollArea(QueryScore_Ui);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setFrameShape(QFrame::NoFrame);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 793, 379));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 795, 397));
         verticalLayout_3 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         scrollArea->setWidget(scrollAreaWidgetContents);
@@ -239,7 +241,7 @@ public:
         verticalLayout->addWidget(scrollArea);
 
         verticalLayout->setStretch(0, 1);
-        verticalLayout->setStretch(1, 4);
+        verticalLayout->setStretch(1, 5);
 
         retranslateUi(QueryScore_Ui);
 
@@ -250,24 +252,20 @@ public:
     {
         QueryScore_Ui->setWindowTitle(QApplication::translate("QueryScore_Ui", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264", Q_NULLPTR));
-        comboBox->clear();
-        comboBox->insertItems(0, QStringList()
-         << QApplication::translate("QueryScore_Ui", "2020-2021", Q_NULLPTR)
-        );
         label_3->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\346\234\237", Q_NULLPTR));
         comboBox_3->clear();
         comboBox_3->insertItems(0, QStringList()
          << QApplication::translate("QueryScore_Ui", "\347\254\254\344\270\200\345\255\246\346\234\237", Q_NULLPTR)
          << QApplication::translate("QueryScore_Ui", "\347\254\254\344\272\214\345\255\246\346\234\237", Q_NULLPTR)
         );
-        radioButton->setText(QApplication::translate("QueryScore_Ui", "\345\216\237\345\247\213\346\210\220\347\273\251", Q_NULLPTR));
-        radioButton_2->setText(QApplication::translate("QueryScore_Ui", "\346\234\211\346\225\210\346\210\220\347\273\251", Q_NULLPTR));
-        radioButton_3->setText(QApplication::translate("QueryScore_Ui", "\345\205\245\345\255\246\344\273\245\346\235\245", Q_NULLPTR));
-        radioButton_4->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264", Q_NULLPTR));
-        radioButton_5->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\346\234\237", Q_NULLPTR));
-        radioButton_6->setText(QApplication::translate("QueryScore_Ui", "\344\270\273\344\277\256", Q_NULLPTR));
-        radioButton_7->setText(QApplication::translate("QueryScore_Ui", "\350\276\205\344\277\256", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("QueryScore_Ui", "\346\243\200\347\264\242", Q_NULLPTR));
+        rawScore->setText(QApplication::translate("QueryScore_Ui", "\345\216\237\345\247\213\346\210\220\347\273\251", Q_NULLPTR));
+        vaildScore->setText(QApplication::translate("QueryScore_Ui", "\346\234\211\346\225\210\346\210\220\347\273\251", Q_NULLPTR));
+        fromFreshToNow->setText(QApplication::translate("QueryScore_Ui", "\345\205\245\345\255\246\344\273\245\346\235\245", Q_NULLPTR));
+        byYear->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264", Q_NULLPTR));
+        bySemester->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\346\234\237", Q_NULLPTR));
+        mainlyLearn->setText(QApplication::translate("QueryScore_Ui", "\344\270\273\344\277\256", Q_NULLPTR));
+        otherlyLearn->setText(QApplication::translate("QueryScore_Ui", "\350\276\205\344\277\256", Q_NULLPTR));
+        queryScoreBtn->setText(QApplication::translate("QueryScore_Ui", "\346\243\200\347\264\242", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("QueryScore_Ui", "\346\211\223\345\215\260", Q_NULLPTR));
     } // retranslateUi
 

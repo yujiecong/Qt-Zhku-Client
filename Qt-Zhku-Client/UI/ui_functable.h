@@ -42,8 +42,8 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(FuncTable->sizePolicy().hasHeightForWidth());
         FuncTable->setSizePolicy(sizePolicy);
-        FuncTable->setMinimumSize(QSize(180, 40));
-        FuncTable->setMaximumSize(QSize(180, 40));
+        FuncTable->setMinimumSize(QSize(0, 40));
+        FuncTable->setMaximumSize(QSize(16777215, 40));
         horizontalLayout = new QHBoxLayout(FuncTable);
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));

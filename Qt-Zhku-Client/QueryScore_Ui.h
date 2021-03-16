@@ -15,6 +15,10 @@ public:
     explicit QueryScore_Ui(QString xnxq,QWidget *parent = 0);
     ~QueryScore_Ui();
     Ui::QueryScore_Ui *ui;
+        int byWhat=2;
+        bool scoreType=1;
+        bool learnType=0;
+    QString xnxq;
 private slots:
     void on_fromFreshToNow_clicked();
 
@@ -27,10 +31,7 @@ private slots:
     void on_otherlyLearn_clicked();
 
 private:
-    bool scoreType=1;
-    bool learnType=0;
-    QString xnxq;
-    qint8 byWhat;
+
 };
 
 #endif // QUERYSCORE_UI_H

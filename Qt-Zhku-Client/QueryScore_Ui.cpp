@@ -9,7 +9,7 @@ QueryScore_Ui::QueryScore_Ui(QString xnxq, QWidget *parent) :
 
     for(int i=xnxq.toInt()/10;i>xnxq.toInt()/10-5;i--){
 
-         ui->comboBox->addItem(QString("%1-%2").arg(i).arg(i+1));
+         ui->comboBox->addItem(QString("%1").arg(i));
     }
     connect(ui->rawScore,&QRadioButton::clicked,[=](){
         if(ui->rawScore->isChecked()){
@@ -19,9 +19,6 @@ QueryScore_Ui::QueryScore_Ui(QString xnxq, QWidget *parent) :
             scoreType=1;
         }
     });
-
-
-
 
 
 }
@@ -39,6 +36,7 @@ void QueryScore_Ui::on_fromFreshToNow_clicked()
 void QueryScore_Ui::on_byYear_clicked()
 {
     byWhat=1;
+    ui->comboBox_3->setEnabled(0);
 }
 
 void QueryScore_Ui::on_bySemester_clicked()

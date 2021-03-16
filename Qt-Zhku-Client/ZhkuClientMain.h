@@ -3,6 +3,7 @@
 #include "global.h"
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include <QSystemTrayIcon>
 #include <QtNetwork>
 
 #include "ZhkuLoginWidget.h"
@@ -24,7 +25,9 @@ public:
     explicit ZhkuClientMain(QWidget *parent = 0);
     ~ZhkuClientMain();
     void init_();
-
+    void initSysTaryIcon();
+protected:
+    void closeEvent(QCloseEvent *e);
 
 private slots:
     void getCurriculum();
@@ -63,6 +66,10 @@ private:
     //用于 查询课程的
     QString hiddenVaildationCode;
     bool hidyzmStatus=1;
+
+    QSystemTrayIcon *sysTrayIcon=nullptr;
+    //托盘bool
+    bool closedMemery=0;
 
 };
 

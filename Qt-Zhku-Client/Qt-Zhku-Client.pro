@@ -34,7 +34,8 @@ SOURCES += \
     FuncTable.cpp \
     CurriculumArrangement_Ui.cpp \
     QueryScore_Ui.cpp \
-    ImgLabel.cpp
+    ImgLabel.cpp \
+    CloseDialog.cpp
 
 
 HEADERS += \
@@ -48,7 +49,8 @@ HEADERS += \
     FuncTable.h \
     CurriculumArrangement_ui.h \
     QueryScore_Ui.h \
-    ImgLabel.h
+    ImgLabel.h \
+    CloseDialog.h
 
 
 FORMS += \
@@ -58,7 +60,11 @@ FORMS += \
     SubMenuBtn.ui \
     FuncTable.ui \
     CurriculumArrangement_Ui.ui \
-    QueryScore_Ui.ui
+    QueryScore_Ui.ui \
+    closedialog.ui \
+    CloseDialog.ui
 
 RESOURCES += \
     loginassets.qrc
+
+DISTFILES +=

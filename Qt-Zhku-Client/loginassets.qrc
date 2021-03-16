@@ -23,5 +23,7 @@
         <file>assets/btnIcon/选择.svg</file>
         <file>assets/btnIcon/方案 (2).svg</file>
         <file>assets/btnIcon/手机.svg</file>
+        <file>assets/zhkuImg/logo.jpg</file>
+        <file>assets/zhkuImg/close.jpg</file>
     </qresource>
 </RCC>

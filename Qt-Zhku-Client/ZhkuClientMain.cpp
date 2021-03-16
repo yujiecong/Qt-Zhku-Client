@@ -3,21 +3,21 @@
 #include <QDebug>
 #include <QMenu>
 #include <QMessageBox>
+#include <QMouseEvent>
+#include <QSystemTrayIcon>
 
+#include "CloseDialog.h"
+#include "ui_closedialog.h"
 #include "ImgLabel.h"
-
+#define VERSION "0.0.1"
 ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ZhkuClientMain)
 {
     ui->setupUi(this);
     init_();
-
-//    QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=&xq=&rpt=\\d{1}&rad=\\d{1}&zfx=\\d{1}&xh=\\d{12}");
-//    QString s="Stu_MyScore_Drawimg.aspx?x=15&h=2&w=845&xnxq=20191&xn=&xq=&rpt=1&rad=0&zfx=0&xh=201800003037";
-//    s.indexOf(ex);
-//    qDebug()<<ex.cap(0);
-
+    ImgLabel *l=new ImgLabel();
+    ui->frameLayout->addWidget(l);
 
 
 }
@@ -148,6 +148,80 @@ void ZhkuClientMain::init_()
 
 }
 
+void ZhkuClientMain::initSysTaryIcon()
+{
+    if(sysTrayIcon==nullptr){
+        sysTrayIcon = new QSystemTrayIcon(this);
+        sysTrayIcon->setIcon(QIcon(":/assets/zhkuImg/logo.jpg"));//设置托盘图标的icon
+        sysTrayIcon->show();//展示系统托盘图片
+
+        QMenu *menuTray = new QMenu;
+        QAction *actQuit = new QAction(tr("退出"), menuTray);
+        menuTray->addAction(actQuit);
+        sysTrayIcon->setContextMenu(menuTray);
+        sysTrayIcon->setToolTip(tr("zhku教务客户端"));
+        sysTrayIcon->showMessage("提示", QString("zhku教务客户端:version_%1").arg(VERSION),QSystemTrayIcon::Information, 10000);
+
+        connect(sysTrayIcon,&QSystemTrayIcon::activated,[=](QSystemTrayIcon::ActivationReason reason){
+            switch(reason)
+            {
+            case QSystemTrayIcon::Trigger://单击
+            case QSystemTrayIcon::DoubleClick://双击
+            {
+                if (isHidden())
+                {
+                    show();
+                }
+                else
+                {
+                    Qt::WindowStates winStatus = Qt::WindowNoState;
+                    if (windowState() & Qt::WindowMaximized)
+                    {
+                        winStatus = Qt::WindowMaximized;
+                    }
+                    setWindowState(Qt::WindowActive | winStatus);
+                    activateWindow();
+                    raise();
+
+                }
+                break;
+            }
+            default:
+                break;
+            }
+        });
+        connect(actQuit, SIGNAL(triggered()), qApp, SLOT(quit()));
+    }
+
+
+}
+
+void ZhkuClientMain::closeEvent(QCloseEvent *e)
+{
+    if(!closedMemery){
+        e->ignore();
+        CloseDialog *cd=new CloseDialog(this);
+        cd->show();
+        connect(cd,&CloseDialog::finished,[=](){
+            //拿到对应按钮
+            closedMemery=cd->ui->memory->isChecked();
+            if(cd->ui->toBottom->isChecked()){
+                //隐藏后调用托盘
+                hide();
+                initSysTaryIcon();
+            }
+            else{
+                qApp->quit();
+            }
+
+        });
+    }
+    else{
+        hide();
+        e->ignore();
+    }
+}
+
 
 void ZhkuClientMain::getCurriculum()
 {
@@ -256,23 +330,53 @@ void ZhkuClientMain::getStudentScore()
     curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
 
     QByteArray postdata;
-    //入学以来
-    //SJ
-    postdata.append("SJ=1&");
+    //原始成绩 start SJ=0
+    //    SelXNXQ
+    //这个参数 决定了 打印的类型
+    //    0代表 入学以来
+    //    1代表学年
+    //    2代表学期
+
+    //    sel_xq代表学期,选择 SELXNXQ=1 后 也就是选择学年查询 这个参数会消失
+    // sel_xn 代表学年
+
+    //选择入学以来那么没有 sel_xq _xn
+
+    //    其他参数相同
+
+    //原始成绩end
+
+    //SJ决定 原始成绩还是有效成绩
+    //    SJ=1为有效成绩
+    //    其他参数不变
+    //    zfx_flag代表 主修还是辅修
+    postdata.append(QString("SelXNXQ=%1&").arg(queryScoreUi->byWhat));
+    if(queryScoreUi->byWhat==0){
+
+    }
+    else if(queryScoreUi->byWhat==1){
+        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->ui->comboBox->currentText()));
+    }
+    else{
+        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->ui->comboBox->currentText()));
+        postdata.append(QString("sel_xq=%1&").arg(queryScoreUi->ui->comboBox_3->currentIndex()));
+    }
+    postdata.append(QString("SJ=%1&").arg(queryScoreUi->scoreType));
     //
-    postdata.append(QString("btn_search=%1&").arg(QString(strProcessor.toUrlEncode("检索"))));
+    postdata.append(QString("btn_search=%BC%EC%CB%F7&"));
     //
     //排序方式
-    postdata.append(QString("SelXNXQ=0&"));
-    postdata.append(QString("zfx_flag=0&"));
+
+    postdata.append(QString("zfx_flag=%1&").arg(queryScoreUi->learnType));
     postdata.append(QString("zfx=0&"));
 
+    qDebug()<<postdata;
     QNetworkReply *curReply=0;
     curReply=    zhkuloginManager->manager.post(curReq,postdata);
     connect(curReply,&QNetworkReply::finished,[=](){
         QString curriUrlHtml=strProcessor.gbk2Utf8(curReply->readAll());
-        QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=&xq=&rpt=\\d{1}&rad=\\d{1}&zfx=\\d{1}&xh=\\d{12}");
-//                  Stu_MyScore_Drawimg.aspx\?x= \d{1,}&h= \d{1,}&w= \d{3,}&xnxq= \d{5}&xn=&xq=&rpt= \d{1}&rad= \d{1}&zfx= \d{1}&xh= \d{12}
+        QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=\\d{0,4}&xq=\\d{0,1}&rpt=\\d&rad=\\d&zfx=\\d&xh=\\d{12}");
+        //                  Stu_MyScore_Drawimg.aspx\?x= \d{1,}&h= \d{1,}&w= \d{3,}&xnxq= \d{5}&xn=&xq=&rpt= \d{1}&rad= \d{1}&zfx= \d{1}&xh= \d{12}
         QStringList list;
         int pos2 = 0;
         while ((pos2 = ex.indexIn(curriUrlHtml, pos2)) != -1)
@@ -281,44 +385,54 @@ void ZhkuClientMain::getStudentScore()
             pos2 += ex.matchedLength();             // 上一个匹配的字符串的长度
         }
         qDebug()<<list;
-        int i=0;
+        //自动保存
         foreach (QString url, list) {
             QNetworkRequest req(QString("http://jw.zhku.edu.cn/xscj/")+url);
             QNetworkReply *urlReply=zhkuloginManager->manager.get(req);
 
             connect(urlReply,&QNetworkReply::finished,[=](){
-                QString curriPath=QString("第%1学期的成绩.jpg").arg(QString::number(i));
 
-                QFile *scoreImgFile=new QFile(curriPath);
-                if (!scoreImgFile->open(QIODevice::WriteOnly)){
-                    delete scoreImgFile;
-                    scoreImgFile=nullptr;
-                    qDebug()<<"score File文件写入失败!";
-
+                QByteArray imgRaw=urlReply->readAll();
+                ImgLabel *curriImg= new ImgLabel();
+                QPixmap px;
+                if(px.loadFromData(imgRaw)){
+                    curriImg->setPixmap(px);
+                    queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
                 }
                 else{
-                    QByteArray imgRaw=urlReply->readAll();
-                    scoreImgFile->write(imgRaw);
-
-
+                    QMessageBox::warning(this,"图片加载错误!","请检查错误");
                 }
-                scoreImgFile->close();
+
+                //自动保存
+                //                QString curriPath=QString("第%1学期的成绩.jpg").arg(QString::number(i));
+                //                QFile *scoreImgFile=new QFile(curriPath);
+                //                if (!scoreImgFile->open(QIODevice::WriteOnly)){
+                //                    delete scoreImgFile;
+                //                    scoreImgFile=nullptr;
+                //                    qDebug()<<"score File文件写入失败!";
+
+                //                }
+                //                else{
+                //                    QByteArray imgRaw=urlReply->readAll();
+                //                    ImgLabel *curriImg= new ImgLabel();
+                //                    curriImg->setPixmap(QPixmap(curriPath));
+
+                //                    queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
+
+                //                    scoreImgFile->write(imgRaw);
+                //                scoreImgFile->close();
+
+                //自动保存
+                //                //将 图片输出到 那个地方
+                //                ImgLabel *curriImg= new ImgLabel();
+                //                curriImg->setPixmap(QPixmap(curriPath));
+
+                //                queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
                 urlReply->deleteLater();
-
-                //将 图片输出到 那个地方
-                QLabel *curriImg= new QLabel();
-                curriImg->setPixmap(QPixmap(curriPath));
-
-                queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
             });
-            i++;
         }
         curReply->deleteLater();
     });
-
-
-
-
 }
 
 void ZhkuClientMain::createCurriculumArrangement_Ui()
