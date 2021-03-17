@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1036</width>
-    <height>664</height>
+    <width>1024</width>
+    <height>637</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
     <property name="spacing">
-     <number>0</number>
+     <number>10</number>
     </property>
     <property name="leftMargin">
      <number>0</number>
@@ -38,6 +38,12 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>210</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -58,8 +64,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>205</width>
-         <height>662</height>
+         <width>208</width>
+         <height>635</height>
         </rect>
        </property>
        <property name="sizePolicy">

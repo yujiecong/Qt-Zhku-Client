@@ -35,7 +35,9 @@ SOURCES += \
     CurriculumArrangement_Ui.cpp \
     QueryScore_Ui.cpp \
     ImgLabel.cpp \
-    CloseDialog.cpp
+    CloseDialog.cpp \
+    ScoreDistubing_ui.cpp \
+    UserAvater.cpp
 
 
 HEADERS += \
@@ -50,7 +52,9 @@ HEADERS += \
     CurriculumArrangement_ui.h \
     QueryScore_Ui.h \
     ImgLabel.h \
-    CloseDialog.h
+    CloseDialog.h \
+    ScoreDistubing_ui.h \
+    UserAvater.h
 
 
 FORMS += \
@@ -62,7 +66,9 @@ FORMS += \
     CurriculumArrangement_Ui.ui \
     QueryScore_Ui.ui \
     closedialog.ui \
-    CloseDialog.ui
+    CloseDialog.ui \
+    ScoreDistubing_ui.ui \
+    UserAvater.ui
 
 RESOURCES += \
     loginassets.qrc

@@ -27,5 +27,6 @@
         <file>assets/zhkuImg/close.jpg</file>
         <file>assets/btnIcon/垃圾箱.svg</file>
         <file>assets/btnIcon/警告.svg</file>
+        <file>assets/user_img/问号.svg</file>
     </qresource>
 </RCC>

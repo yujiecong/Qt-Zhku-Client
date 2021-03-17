@@ -12,6 +12,9 @@
 #include "ui_curriculumarrangement_ui.h"
 #include "QueryScore_Ui.h"
 #include "ui_QueryScore_Ui.h"
+
+#include "ScoreDistubing_ui.h"
+#include "ui_ScoreDistubing_ui.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -32,8 +35,11 @@ protected:
 private slots:
     void getCurriculum();
     void getStudentScore();
+    void getDistributedScore();
+
     void createCurriculumArrangement_Ui();
     void createQueryScore_Ui();
+    void createDistributedScore_Ui();
 
     void removeMyUi();
 
@@ -46,6 +52,7 @@ private:
     QUrl zhkuCurriculumPreUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel.aspx");
     QUrl zhkuCurriculumUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel_rpt.aspx");
     QUrl zhkuStudentScoreUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_MyScore_rpt.aspx");
+    QUrl zhkuScoreDisUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_cjfb_rpt.aspx");
 
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
@@ -62,11 +69,11 @@ private:
 
     CurriculumArrangement_Ui *currArrUi=0;
     QueryScore_Ui *queryScoreUi=0;
+    ScoreDistubing_Ui *distributedScoreUi=0;
 
     //用于 查询课程的
     QString hiddenVaildationCode;
     bool hidyzmStatus=1;
-
     QSystemTrayIcon *sysTrayIcon=nullptr;
     //托盘bool
     bool closedMemery=0;

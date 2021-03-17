@@ -117,6 +117,7 @@ void ZhkuClientMain::init_()
     studentScore->setPix(":/assets/btnIcon/成绩.svg");
     studentScore->addSubBtn(l,":/assets/btnIcon/成绩.svg","");
     connect(studentScore->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createQueryScore_Ui);
+        connect(studentScore->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createDistributedScore_Ui);
     //学生成绩
 
     //教材信息
@@ -435,12 +436,41 @@ void ZhkuClientMain::getStudentScore()
     });
 }
 
+void ZhkuClientMain::getDistributedScore()
+{
+    QNetworkRequest curReq(zhkuScoreDisUrl);
+    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    QByteArray postdata;
+    postdata.append(QString("SelXNXQ=%1&").arg(distributedScoreUi->byWhat));
+    if(distributedScoreUi->byWhat==0){
+
+    }
+    else if(distributedScoreUi->byWhat==1){
+        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->ui->comboBox->currentText()));
+    }
+    else{
+        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->ui->comboBox->currentText()));
+        postdata.append(QString("sel_xq=%1&").arg(distributedScoreUi->ui->comboBox_3->currentIndex()));
+    }
+    postdata.append(QString("submit=%BC%EC%CB%F7&"));
+
+    qDebug()<<postdata;
+    QNetworkReply *curReply=0;
+    curReply=    zhkuloginManager->manager.post(curReq,postdata);
+    connect(curReply,&QNetworkReply::finished,[=](){
+        distributedScoreUi->ui->textBrowser->setHtml(strProcessor.gbk2Utf8(curReply->readAll()));
+        curReply->deleteLater();
+
+    });
+}
+
 void ZhkuClientMain::createCurriculumArrangement_Ui()
 {
     removeMyUi();
     currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(currArrUi);
-    connect(currArrUi->ui->queryCurriculumBtn,&QPushButton::clicked,this,&ZhkuClientMain::getCurriculum);
+    connect(currArrUi->ui->queryCurriculumBtn,&QPushButton::clicked,this,&ZhkuClientMain::getDistributedScore);
 
 }
 
@@ -451,6 +481,14 @@ void ZhkuClientMain::createQueryScore_Ui()
     queryScoreUi = new QueryScore_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(queryScoreUi);
     connect(queryScoreUi->ui->queryScoreBtn,&QPushButton::clicked,this,&ZhkuClientMain::getStudentScore);
+}
+
+void ZhkuClientMain::createDistributedScore_Ui()
+{
+    removeMyUi();
+    distributedScoreUi = new ScoreDistubing_Ui(zhkuloginManager->getXnxq());
+    ui->frameLayout->addWidget(distributedScoreUi);
+    connect(distributedScoreUi,&ScoreDistubing_Ui::queryDis,this,&ZhkuClientMain::getDistributedScore);
 }
 
 void ZhkuClientMain::removeMyUi()

@@ -26,6 +26,5 @@ void CloseDialog::paintEvent(QPaintEvent *e)
     rect.setWidth(rect.width() - 1);
     rect.setHeight(rect.height() - 1);
     painter.drawRoundedRect(rect, 35, 35);
-
     QDialog::paintEvent(e);
 }
