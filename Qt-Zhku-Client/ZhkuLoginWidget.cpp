@@ -17,7 +17,6 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     loginInit();
 }
 
-QString ZhkuLoginWidget::xnxq=QString();
 ZhkuLoginWidget::~ZhkuLoginWidget()
 {
 
@@ -60,9 +59,11 @@ void ZhkuLoginWidget::loginInit()
 
     if(autoPassword){
         ui->pwdInput->setText(sj["password"].toString());
+        ui->checkBox_2->setChecked(1);
     }
 
     if(autoLogin && pointerCookies->exists()){
+        ui->checkBox->setChecked(1);
         qDebug()<<"检测到本地cookies,尝试读取中";
         if(!pointerCookies->open(QIODevice::ReadOnly)){
             delete pointerCookies;
@@ -81,7 +82,7 @@ void ZhkuLoginWidget::loginInit()
             }
 
             //将cookies设置到对应url
-            qDebug()<<allcookies;
+//            qDebug()<<allcookies;
 
             jar->setCookiesFromUrl(allcookies,zhkuLoginHomeUrl);
             jar->setCookiesFromUrl(allcookies,zhkuTestUrl);
@@ -120,6 +121,7 @@ void ZhkuLoginWidget::loginInit()
                 //                }
                 else{
                     qDebug()<<"cookies仍然有效!";
+                      emit loginSuccessed();
                 }
                 testReply->deleteLater();
                 pointerCookies->close();
@@ -164,13 +166,13 @@ void ZhkuLoginWidget::tryLogin()
 
     QString pwd=ui->pwdInput->text();
     QString acc=ui->accountInput->text();
-    qDebug()<<pwd<<acc;
+
     QString md5_1=strProcessor.getMd5(acc+strProcessor.getMd5(pwd).mid(0,30).toUpper()+"11347").mid(0,30).toUpper();
 
     QString code=ui->codeInput->text();
-    qDebug()<<code;
+
     QString md5_2=strProcessor.getMd5(strProcessor.getMd5(code.toUpper()).mid(0,30).toUpper()+"11347").mid(0,30).toUpper();
-    qDebug()<<md5_2;
+
 
 
     QNetworkRequest loginReq(zhkuLoginHomeUrl);
@@ -193,7 +195,7 @@ void ZhkuLoginWidget::tryLogin()
     postdata.append("txt_mm_lxpd=&");
     postdata.append("txt_psasas="+strProcessor.toUrlEncode("����������"));
 
-    qDebug()<<postdata;
+
 
     QNetworkReply *loginReply=manager.post(loginReq,postdata);
 
@@ -222,6 +224,7 @@ void ZhkuLoginWidget::tryLogin()
                 qDebug()<<"cookies文件写入成功!";
             }
             writeSettings();
+            emit loginSuccessed();
 
         }
         else{

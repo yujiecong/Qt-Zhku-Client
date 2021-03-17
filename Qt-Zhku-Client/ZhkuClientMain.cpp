@@ -27,10 +27,19 @@ ZhkuClientMain::~ZhkuClientMain()
     delete ui;
 }
 
+void ZhkuClientMain::init_Connection()
+{
+    connect(zhkuloginManager,&ZhkuLoginWidget::loginSuccessed,this,&ZhkuClientMain::getUserInfo);
+}
+
 void ZhkuClientMain::init_()
 {
+
+    init_Connection();
+
     QStringList l;
     //全部 换成 动态加载
+
 
     campusOnHand=new FuncTable("掌上校园");
     studentStatus=new FuncTable("学生学籍");
@@ -144,7 +153,6 @@ void ZhkuClientMain::init_()
     otherTable->addSubBtn(l,":/assets/btnIcon/设置.svg","");
     QSpacerItem *item=new QSpacerItem(30,360);
     ui->MenuLayout->addItem(item);
-    //connect all in
 
 
 }
@@ -221,6 +229,50 @@ void ZhkuClientMain::closeEvent(QCloseEvent *e)
         hide();
         e->ignore();
     }
+}
+
+void ZhkuClientMain::getUserInfo()
+{
+    userAvater=new UserAvater();
+    QNetworkRequest bannerReq(zhkuMainNavigatorUrl);
+    QNetworkReply *rep=zhkuloginManager->manager.get(bannerReq);
+    connect(rep,&QNetworkReply::finished,[=](){
+       QString html=strProcessor.gbk2Utf8(rep->readAll());
+       QRegExp weekEx("\\d{4}年\\d{,2}月\\d{,2}日&nbsp;.{3,3}");
+       html.indexOf(weekEx);
+       QString weekInfo=weekEx.cap();
+
+       QRegExp dateEx("\\d{4}-\\d{4}学年第[一二]学期&nbsp;第&nbsp;.{,}周");
+       html.indexOf(dateEx);
+       QString dateInfo=dateEx.cap();
+
+       QRegExp onlineEx("\\d{1,4}&nbsp;</span>");
+       html.indexOf(onlineEx);
+       QString onlineInfo=onlineEx.cap();
+
+       //好像没有算上自己
+
+
+       userAvater->setCurWeek(weekInfo.replace("&nbsp;"," "));
+       userAvater->setOnline(onlineInfo.replace("&nbsp;</span>","").toInt());
+       userAvater->setDate(dateInfo.replace("&nbsp;",""));
+       rep->deleteLater();
+    });
+
+    QNetworkRequest footReq(zhkuFootUrl);
+    rep=zhkuloginManager->manager.get(footReq);
+    connect(rep,&QNetworkReply::finished,[=](){
+        QString html=strProcessor.gbk2Utf8(rep->readAll());
+        QRegExp nameEx(".{,2}：\\[\\d{,12}\\][\u4e00-\u9fa5]{,4}");
+        html.indexOf(nameEx);
+        QString name_id=nameEx.cap();
+        userAvater->setName(name_id);
+        rep->deleteLater();
+    });
+
+    ui->MenuLayout->insertWidget(0,userAvater);
+
+
 }
 
 

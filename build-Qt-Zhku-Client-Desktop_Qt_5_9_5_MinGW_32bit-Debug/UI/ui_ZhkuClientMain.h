@@ -38,11 +38,11 @@ public:
     {
         if (ZhkuClientMain->objectName().isEmpty())
             ZhkuClientMain->setObjectName(QStringLiteral("ZhkuClientMain"));
-        ZhkuClientMain->resize(1036, 664);
+        ZhkuClientMain->resize(1024, 637);
         centralWidget = new QWidget(ZhkuClientMain);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
-        horizontalLayout->setSpacing(0);
+        horizontalLayout->setSpacing(10);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -53,6 +53,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
         scrollArea->setSizePolicy(sizePolicy);
+        scrollArea->setMinimumSize(QSize(210, 0));
         scrollArea->setStyleSheet(QStringLiteral(""));
         scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -60,7 +61,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 205, 662));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 208, 635));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);

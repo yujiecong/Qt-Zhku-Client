@@ -11,6 +11,8 @@ INPUT(
 ./release\QueryScore_Ui.o
 ./release\ImgLabel.o
 ./release\CloseDialog.o
+./release\ScoreDistubing_ui.o
+./release\UserAvater.o
 ./release\qrc_loginassets.o
 ./release\moc_ZhkuLoginWidget.o
 ./release\moc_ZhkuClientMain.o
@@ -21,4 +23,6 @@ INPUT(
 ./release\moc_CurriculumArrangement_ui.o
 ./release\moc_QueryScore_Ui.o
 ./release\moc_CloseDialog.o
+./release\moc_ScoreDistubing_ui.o
+./release\moc_UserAvater.o
 );

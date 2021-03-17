@@ -15,6 +15,8 @@
 
 #include "ScoreDistubing_ui.h"
 #include "ui_ScoreDistubing_ui.h"
+
+#include "UserAvater.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -27,12 +29,15 @@ class ZhkuClientMain : public QMainWindow
 public:
     explicit ZhkuClientMain(QWidget *parent = 0);
     ~ZhkuClientMain();
+    void init_Connection();
     void init_();
     void initSysTaryIcon();
 protected:
     void closeEvent(QCloseEvent *e);
 
 private slots:
+    void getUserInfo();
+
     void getCurriculum();
     void getStudentScore();
     void getDistributedScore();
@@ -47,15 +52,21 @@ private:
     Ui::ZhkuClientMain *ui;
 
     QNetworkCookieJar cookie;
-
-
+    //拿到在线人数 日期等
+    QUrl zhkuMainNavigatorUrl=QUrl("http://jw.zhku.edu.cn/SYS/Main_banner.aspx");
+    //拿到学生名字学号
+    QUrl zhkuFootUrl=QUrl("http://jw.zhku.edu.cn/PUB/foot.aspx");
+    //访问课程前需要访问这个
     QUrl zhkuCurriculumPreUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel.aspx");
+    //访问课程图片 url
     QUrl zhkuCurriculumUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel_rpt.aspx");
     QUrl zhkuStudentScoreUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_MyScore_rpt.aspx");
     QUrl zhkuScoreDisUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_cjfb_rpt.aspx");
 
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
+
+    UserAvater *userAvater;
     FuncTable *campusOnHand;
     FuncTable *studentStatus;
     FuncTable *cultivationScheme;
