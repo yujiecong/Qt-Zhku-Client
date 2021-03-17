@@ -101,6 +101,7 @@ void ZhkuLoginWidget::loginInit()
 
             connect(testReply,&QNetworkReply::finished,[=](){
                 QString readTest=strProcessor.gbk2Utf8(testReply->readAll());
+                qDebug()<<readTest;
                 if (readTest.contains(QString("无权"))){
                     qDebug()<<"cookies 已失效,请重新登录";
                     pointerCookies->remove();
@@ -119,9 +120,9 @@ void ZhkuLoginWidget::loginInit()
                 ////                    pointerCookies->remove();
                 ////                    loginInit();
                 //                }
-                else{
+                else if(readTest.contains(QString("正在加载"))){
                     qDebug()<<"cookies仍然有效!";
-                      emit loginSuccessed();
+                    emit loginSuccessed();
                 }
                 testReply->deleteLater();
                 pointerCookies->close();

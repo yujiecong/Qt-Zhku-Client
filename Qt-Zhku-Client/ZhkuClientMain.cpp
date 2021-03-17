@@ -29,7 +29,7 @@ ZhkuClientMain::~ZhkuClientMain()
 
 void ZhkuClientMain::init_Connection()
 {
-    connect(zhkuloginManager,&ZhkuLoginWidget::loginSuccessed,this,&ZhkuClientMain::getUserInfo);
+    connect(zhkuloginManager,&ZhkuLoginWidget::loginSuccessed,this,&ZhkuClientMain::loginSuccessed);
 }
 
 void ZhkuClientMain::init_()
@@ -231,6 +231,15 @@ void ZhkuClientMain::closeEvent(QCloseEvent *e)
     }
 }
 
+void ZhkuClientMain::loginSuccessed()
+{
+    show();
+    zhkuloginManager->hide();
+//    ..
+    getUserInfo();
+
+}
+
 void ZhkuClientMain::getUserInfo()
 {
     userAvater=new UserAvater();
@@ -271,8 +280,6 @@ void ZhkuClientMain::getUserInfo()
     });
 
     ui->MenuLayout->insertWidget(0,userAvater);
-
-
 }
 
 

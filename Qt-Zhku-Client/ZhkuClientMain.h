@@ -36,6 +36,7 @@ protected:
     void closeEvent(QCloseEvent *e);
 
 private slots:
+    void loginSuccessed();
     void getUserInfo();
 
     void getCurriculum();
