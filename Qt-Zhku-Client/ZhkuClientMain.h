@@ -2,6 +2,7 @@
 #define ZHKUCLIENTMAIN_H
 #include "global.h"
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QStandardItemModel>
 #include <QSystemTrayIcon>
 #include <QtNetwork>
@@ -20,6 +21,7 @@ class ZhkuClientMain;
 }
 class QNetworkAccessManager;
 class QNetworkReply;
+
 class ZhkuClientMain : public QMainWindow
 {
     Q_OBJECT
@@ -32,11 +34,13 @@ public:
     void initSysTaryIcon();
 
 
-    inline QNetworkReply *getReqReply(QUrl url, QByteArray para="");
-    inline QNetworkReply *postReqReply(QUrl url,QByteArray a="");
 
-    inline QNetworkReply *getReqReply(QString url, QByteArray para="");
-    inline QNetworkReply *postReqReply(QString url,QByteArray a="");
+
+     QNetworkReply *getReqReply(QUrl url, QByteArray para="");
+      QNetworkReply *postReqReply(QUrl url,QByteArray a="");
+
+     QNetworkReply *getReqReply(QString url, QByteArray para="");
+      QNetworkReply *postReqReply(QString url,QByteArray a="");
 protected:
     void closeEvent(QCloseEvent *e);
 
@@ -48,7 +52,8 @@ private slots:
     void getStudentScore();
     void getDistributedScore();
     void getRankExam();
-    void getExamArr();
+    void getExamArr();  //获取图片
+    void getExamTurn(); //考试轮次
 
     void createCurriculumArrangement_Ui();
     void createQueryScore_Ui();
@@ -87,7 +92,7 @@ private:
     FuncTable *cultivationScheme;
     FuncTable *choiceLessons;
     FuncTable *curriculumArrangementTable;
-    FuncTable *examinationRoll;
+    FuncTable *examinationArrangement;
     FuncTable *studentScore;
     FuncTable *textbookInfo;
     FuncTable *teacherComment;

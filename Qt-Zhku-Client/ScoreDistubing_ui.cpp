@@ -46,3 +46,18 @@ void ScoreDistubing_Ui::on_queryDisBtn_clicked()
 {
     emit queryDis();
 }
+
+void ScoreDistubing_Ui::on_fromFreshToNow_clicked()
+{
+    byWhat=0;
+}
+
+void ScoreDistubing_Ui::on_byYear_clicked()
+{
+    byWhat=1;
+}
+
+void ScoreDistubing_Ui::on_bySemester_clicked()
+{
+    byWhat=2;
+}

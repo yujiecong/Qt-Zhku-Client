@@ -9,6 +9,17 @@ ExamArrangement_Ui::ExamArrangement_Ui(QString xnxq, QWidget *parent) :
     ui(new Ui::ExamArrangement_Ui)
 {
     ui->setupUi(this);
+
+    ui->comboBox->clear();
+    QString year=xnxq.mid(0,4);
+    QString  semester=xnxq.mid(4);
+    ui->comboBox->addItem(tr("%1~%2学年第一学期").arg(year).arg(year.toInt()+1));
+    if(semester.toInt()==1){
+
+        ui->comboBox->addItem(tr("%1~%2学年第二学期").arg(year).arg(year.toInt()+1));
+    }
+    xnxq=year+"0";
+
 }
 
 ExamArrangement_Ui::~ExamArrangement_Ui()
@@ -18,21 +29,61 @@ ExamArrangement_Ui::~ExamArrangement_Ui()
 
 int ExamArrangement_Ui::getlcxz()
 {
+
     return ui->comboBox_2->currentIndex();
 }
 
 QString ExamArrangement_Ui::getlc()
 {
+    return turnCode[ui->comboBox_3->currentIndex()];
+}
+
+void ExamArrangement_Ui::setCombo(QStringList l)
+{
+   ui->comboBox_3->clear();
+   ui->comboBox_3->addItem(QString(""));
+   ui->comboBox_3->addItems(l);
 
 }
 
-void ExamArrangement_Ui::on_queryCurriculumBtn_clicked()
+void ExamArrangement_Ui::insertImg(ImgLabel *img)
+{
+    ui->verticalLayout_2->addWidget(img);
+}
+
+void ExamArrangement_Ui::on_queryBtn_clicked()
 {
     emit queryExam();
 }
 
-void ExamArrangement_Ui::on_comboBox_2_currentIndexChanged(const QString &arg1)
+
+
+void ExamArrangement_Ui::on_comboBox_2_currentIndexChanged(int index)
 {
-    QNetworkRequest req(tr("http://jw.zhku.edu.cn/KSSW/Private/json_liskslc.aspx?lcxz=%1&xnxq=%2").arg(ui->comboBox_2->currentIndex()).arg(xnxq));
-    QNetworkReply rep(req)
+    emit currentIndexChanged(index);
+}
+
+QStringList ExamArrangement_Ui::getTurnCode() const
+{
+    return turnCode;
+}
+
+void ExamArrangement_Ui::setTurnCode(const QStringList &value)
+{
+    turnCode = value;
+}
+
+void ExamArrangement_Ui::on_comboBox_currentIndexChanged(int index)
+{
+    xnxq=xnxq.mid(0,4)+QString::number(index);
+}
+
+QString ExamArrangement_Ui::getXnxq() const
+{
+    return xnxq;
+}
+
+void ExamArrangement_Ui::setXnxq(const QString &value)
+{
+    xnxq = value;
 }

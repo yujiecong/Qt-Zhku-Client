@@ -31,6 +31,12 @@ signals:
 private slots:
     void on_queryDisBtn_clicked();
 
+    void on_fromFreshToNow_clicked();
+
+    void on_byYear_clicked();
+
+    void on_bySemester_clicked();
+
 private:
 
 

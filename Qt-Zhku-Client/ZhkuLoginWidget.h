@@ -39,7 +39,7 @@ private:
     QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/frame/menu.aspx");
     QString xnxq;
 
-
+    const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
     QString cookies;
 
     bool autoLogin=0;

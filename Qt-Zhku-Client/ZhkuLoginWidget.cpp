@@ -39,24 +39,24 @@ void ZhkuLoginWidget::getLocalXNXQ()
 }
 void ZhkuLoginWidget::loginInit()
 {
-    QSettings *settings = new QSettings(QCoreApplication::applicationDirPath()+"/Zhku.ini",QSettings::IniFormat);
+    QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     //取值与赋值
     QString settingsString=settings->value("settings/loginSettings").toString();
-    QJsonObject sj=strProcessor.qString2Json(settingsString);
+    QJsonObject settingsJson=strProcessor.qString2Json(settingsString);
     qDebug()<<settingsString.toLocal8Bit().data();
 
     getLocalXNXQ();
 
-    cookies=sj["cookies"].toString();
+    cookies=settingsJson["cookies"].toString();
     //如果设置了自动登录
 
 
-    autoLogin=sj["autoLogin"].toBool();
-    autoPassword=sj["autoPassword"].toBool();
+    autoLogin=settingsJson["autoLogin"].toBool();
+    autoPassword=settingsJson["autoPassword"].toBool();
 
     if(autoPassword){
-        ui->pwdInput->setText(sj["password"].toString());
+        ui->pwdInput->setText(settingsJson["password"].toString());
         ui->checkBox_2->setChecked(1);
     }
 
@@ -93,12 +93,15 @@ void ZhkuLoginWidget::loginInit()
             //                qDebug()<<readTest;
             if (loginRead.contains(QString("无权"))){
                 qDebug()<<"cookies 已失效,请重新登录";
+                 settings->remove("settings/loginSettings");
                 loginInit();
             }
             else if(loginRead.contains(QString("您被强迫下线"))){
                 qDebug()<<"cookies 显示你在别处登录!";
                 qDebug()<<"cookies 已失效,请重新登录";
+                 settings->remove("settings/loginSettings");
                 loginInit();
+
             }
             else if(loginRead.contains(QString("教学安排表"))){
                 qDebug()<<"cookies仍然有效!";
@@ -110,7 +113,7 @@ void ZhkuLoginWidget::loginInit()
 
     }
     else{
-        qDebug()<<"本地未检测到cookies";
+        qDebug()<<"本地未检测到cookies 或者cookies已经失效";
 
         //主页
         QNetworkRequest reqHome= QNetworkRequest(zhkuHomeUrl);
