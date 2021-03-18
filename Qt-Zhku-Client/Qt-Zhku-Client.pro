@@ -37,7 +37,8 @@ SOURCES += \
     ImgLabel.cpp \
     CloseDialog.cpp \
     ScoreDistubing_ui.cpp \
-    UserAvater.cpp
+    UserAvater.cpp \
+    Rankexam_Ui.cpp
 
 
 HEADERS += \
@@ -54,7 +55,8 @@ HEADERS += \
     ImgLabel.h \
     CloseDialog.h \
     ScoreDistubing_ui.h \
-    UserAvater.h
+    UserAvater.h \
+    Rankexam_Ui.h
 
 
 FORMS += \
@@ -68,7 +70,8 @@ FORMS += \
     closedialog.ui \
     CloseDialog.ui \
     ScoreDistubing_ui.ui \
-    UserAvater.ui
+    UserAvater.ui \
+    RankExam_Ui.ui
 
 RESOURCES += \
     loginassets.qrc

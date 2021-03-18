@@ -126,7 +126,8 @@ void ZhkuClientMain::init_()
     studentScore->setPix(":/assets/btnIcon/成绩.svg");
     studentScore->addSubBtn(l,":/assets/btnIcon/成绩.svg","");
     connect(studentScore->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createQueryScore_Ui);
-        connect(studentScore->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createDistributedScore_Ui);
+    connect(studentScore->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createDistributedScore_Ui);
+    connect(studentScore->subWidget->v[7],&SubMenuBtn::clicked,this,&ZhkuClientMain::createRankExam_Ui);
     //学生成绩
 
     //教材信息
@@ -235,7 +236,7 @@ void ZhkuClientMain::loginSuccessed()
 {
     show();
     zhkuloginManager->hide();
-//    ..
+    //    ..
     getUserInfo();
 
 }
@@ -246,26 +247,26 @@ void ZhkuClientMain::getUserInfo()
     QNetworkRequest bannerReq(zhkuMainNavigatorUrl);
     QNetworkReply *rep=zhkuloginManager->manager.get(bannerReq);
     connect(rep,&QNetworkReply::finished,[=](){
-       QString html=strProcessor.gbk2Utf8(rep->readAll());
-       QRegExp weekEx("\\d{4}年\\d{,2}月\\d{,2}日&nbsp;.{3,3}");
-       html.indexOf(weekEx);
-       QString weekInfo=weekEx.cap();
+        QString html=strProcessor.gbk2Utf8(rep->readAll());
+        QRegExp weekEx("\\d{4}年\\d{,2}月\\d{,2}日&nbsp;.{3,3}");
+        html.indexOf(weekEx);
+        QString weekInfo=weekEx.cap();
 
-       QRegExp dateEx("\\d{4}-\\d{4}学年第[一二]学期&nbsp;第&nbsp;.{,}周");
-       html.indexOf(dateEx);
-       QString dateInfo=dateEx.cap();
+        QRegExp dateEx("\\d{4}-\\d{4}学年第[一二]学期&nbsp;第&nbsp;.{,}周");
+        html.indexOf(dateEx);
+        QString dateInfo=dateEx.cap();
 
-       QRegExp onlineEx("\\d{1,4}&nbsp;</span>");
-       html.indexOf(onlineEx);
-       QString onlineInfo=onlineEx.cap();
+        QRegExp onlineEx("\\d{1,4}&nbsp;</span>");
+        html.indexOf(onlineEx);
+        QString onlineInfo=onlineEx.cap();
 
-       //好像没有算上自己
+        //好像没有算上自己
 
 
-       userAvater->setCurWeek(weekInfo.replace("&nbsp;"," "));
-       userAvater->setOnline(onlineInfo.replace("&nbsp;</span>","").toInt());
-       userAvater->setDate(dateInfo.replace("&nbsp;",""));
-       rep->deleteLater();
+        userAvater->setCurWeek(weekInfo.replace("&nbsp;"," "));
+        userAvater->setOnline(onlineInfo.replace("&nbsp;</span>","").toInt());
+        userAvater->setDate(dateInfo.replace("&nbsp;",""));
+        rep->deleteLater();
     });
 
     QNetworkRequest footReq(zhkuFootUrl);
@@ -311,7 +312,7 @@ void ZhkuClientMain::getCurriculum()
             int r=qrand()%randomStr.size();
             rs+=randomStr.at(r);
         }
-        QString xnxq=currArrUi->ui->comboBox->currentText();
+        QString xnxq=currArrUi->getXNXQ();
         QString md5=strProcessor.getMd5("11347"+xnxq+rs).toUpper();
 
         QByteArray postdata;
@@ -320,11 +321,11 @@ void ZhkuClientMain::getCurriculum()
         //rad =1 即类型
         postdata.append(QString("rad=%1&").arg(currArrUi->rad));
         //排序方式
-        postdata.append(QString("px=%1&").arg(currArrUi->ui->comboBox_2->currentIndex()));
+        postdata.append(QString("px=%1&").arg(currArrUi->getCurIndex()));
         //格式2
         if(currArrUi->zc_flag){
             postdata.append(QString("zc_flag=%1&").arg(currArrUi->zc_flag));
-            postdata.append(QString("zc_input=%1&").arg(currArrUi->ui->lineEdit->text()));
+            postdata.append(QString("zc_input=%1&").arg(currArrUi->getZC()));
         }
         postdata.append("txt_yzm=&");
         postdata.append("hidyzm="+hiddenVaildationCode+"&");
@@ -373,7 +374,7 @@ void ZhkuClientMain::getCurriculum()
                     //将 图片输出到 那个地方
                     ImgLabel *curriImg= new ImgLabel();
                     curriImg->setPixmap(QPixmap(curriPath));
-                    currArrUi->ui->imgVerticalLayout->insertWidget(0,curriImg);
+                    currArrUi->insertImg(curriImg);
 
                 });
             }
@@ -415,11 +416,11 @@ void ZhkuClientMain::getStudentScore()
 
     }
     else if(queryScoreUi->byWhat==1){
-        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->ui->comboBox->currentText()));
+        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->getXN()));
     }
     else{
-        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->ui->comboBox->currentText()));
-        postdata.append(QString("sel_xq=%1&").arg(queryScoreUi->ui->comboBox_3->currentIndex()));
+        postdata.append(QString("sel_xn=%1&").arg(queryScoreUi->getXN()));
+        postdata.append(QString("sel_xq=%1&").arg(queryScoreUi->getXQIndex()));
     }
     postdata.append(QString("SJ=%1&").arg(queryScoreUi->scoreType));
     //
@@ -457,7 +458,7 @@ void ZhkuClientMain::getStudentScore()
                 QPixmap px;
                 if(px.loadFromData(imgRaw)){
                     curriImg->setPixmap(px);
-                    queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
+                    queryScoreUi->insertImg(curriImg);
                 }
                 else{
                     QMessageBox::warning(this,"图片加载错误!","请检查错误");
@@ -506,22 +507,39 @@ void ZhkuClientMain::getDistributedScore()
 
     }
     else if(distributedScoreUi->byWhat==1){
-        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->ui->comboBox->currentText()));
+        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->getXN()));
     }
     else{
-        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->ui->comboBox->currentText()));
-        postdata.append(QString("sel_xq=%1&").arg(distributedScoreUi->ui->comboBox_3->currentIndex()));
+        postdata.append(QString("sel_xn=%1&").arg(distributedScoreUi->getXN()));
+        postdata.append(QString("sel_xq=%1&").arg(distributedScoreUi->getXQ()));
     }
     postdata.append(QString("submit=%BC%EC%CB%F7&"));
 
-    qDebug()<<postdata;
     QNetworkReply *curReply=0;
     curReply=    zhkuloginManager->manager.post(curReq,postdata);
     connect(curReply,&QNetworkReply::finished,[=](){
-        distributedScoreUi->ui->textBrowser->setHtml(strProcessor.gbk2Utf8(curReply->readAll()));
-        curReply->deleteLater();
+        QString html=strProcessor.gbk2Utf8(curReply->readAll());
 
+        distributedScoreUi->setHtml(html);
+        curReply->deleteLater();
     });
+
+}
+
+void ZhkuClientMain::getRankExam()
+{
+    QNetworkRequest curReq(zhkuRankExamUrl);
+    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
+    QByteArray getPara;
+    getPara.append(tr("flag=%1").arg(1/qrand()));
+
+    QNetworkReply *curReply=0;
+    curReply=    zhkuloginManager->manager.get(curReq);
+    connect(curReply,&QNetworkReply::finished,[=](){
+        QString html=strProcessor.gbk2Utf8(curReply->readAll());
+        rankExmaUi->setHtml(html);
+    });
+
 }
 
 void ZhkuClientMain::createCurriculumArrangement_Ui()
@@ -529,7 +547,7 @@ void ZhkuClientMain::createCurriculumArrangement_Ui()
     removeMyUi();
     currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(currArrUi);
-    connect(currArrUi->ui->queryCurriculumBtn,&QPushButton::clicked,this,&ZhkuClientMain::getDistributedScore);
+    connect(currArrUi,&CurriculumArrangement_Ui::queryCurri,this,&ZhkuClientMain::getDistributedScore);
 
 }
 
@@ -539,7 +557,7 @@ void ZhkuClientMain::createQueryScore_Ui()
     removeMyUi();
     queryScoreUi = new QueryScore_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(queryScoreUi);
-    connect(queryScoreUi->ui->queryScoreBtn,&QPushButton::clicked,this,&ZhkuClientMain::getStudentScore);
+    connect(queryScoreUi,&QueryScore_Ui::queryScore,this,&ZhkuClientMain::getStudentScore);
 }
 
 void ZhkuClientMain::createDistributedScore_Ui()
@@ -548,6 +566,14 @@ void ZhkuClientMain::createDistributedScore_Ui()
     distributedScoreUi = new ScoreDistubing_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(distributedScoreUi);
     connect(distributedScoreUi,&ScoreDistubing_Ui::queryDis,this,&ZhkuClientMain::getDistributedScore);
+}
+
+void ZhkuClientMain::createRankExam_Ui()
+{
+    removeMyUi();
+    rankExmaUi=new RankExam_Ui();
+    ui->frameLayout->addWidget(rankExmaUi);
+    getRankExam();
 }
 
 void ZhkuClientMain::removeMyUi()

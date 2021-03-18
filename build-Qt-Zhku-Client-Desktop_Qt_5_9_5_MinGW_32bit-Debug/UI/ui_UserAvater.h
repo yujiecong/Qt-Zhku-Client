@@ -34,8 +34,7 @@ public:
     {
         if (UserAvater->objectName().isEmpty())
             UserAvater->setObjectName(QStringLiteral("UserAvater"));
-        UserAvater->resize(146, 210);
-        UserAvater->setMaximumSize(QSize(218, 290));
+        UserAvater->resize(118, 260);
         UserAvater->setStyleSheet(QStringLiteral(""));
         verticalLayout = new QVBoxLayout(UserAvater);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -46,7 +45,7 @@ public:
         avater->setScaledContents(true);
         avater->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(avater);
+        verticalLayout->addWidget(avater, 0, Qt::AlignHCenter);
 
         name = new QLabel(UserAvater);
         name->setObjectName(QStringLiteral("name"));

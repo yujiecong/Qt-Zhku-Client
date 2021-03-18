@@ -12,3 +12,8 @@ RankExam_Ui::~RankExam_Ui()
 {
     delete ui;
 }
+
+void RankExam_Ui::setHtml(QString html) const
+{
+    ui->textBrowser->setHtml(html);
+}

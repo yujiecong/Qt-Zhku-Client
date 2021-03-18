@@ -17,6 +17,21 @@ ScoreDistubing_Ui::~ScoreDistubing_Ui()
     delete ui;
 }
 
+void ScoreDistubing_Ui::setHtml(QString &html) const
+{
+    ui->textBrowser->setHtml(html);
+}
+
+QString ScoreDistubing_Ui::getXN() const
+{
+    return ui->comboBox->currentText();
+}
+
+int ScoreDistubing_Ui::getXQ() const
+{
+    return ui->comboBox_3->currentIndex();
+}
+
 QString ScoreDistubing_Ui::getXnxq() const
 {
     return xnxq;

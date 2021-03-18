@@ -15,6 +15,8 @@ public:
     explicit RankExam_Ui(QWidget *parent = 0);
     ~RankExam_Ui();
 
+    void setHtml(QString html) const;
+
 private:
     Ui::RankExam_Ui *ui;
 };

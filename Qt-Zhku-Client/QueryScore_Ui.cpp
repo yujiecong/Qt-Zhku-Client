@@ -28,6 +28,22 @@ QueryScore_Ui::~QueryScore_Ui()
     delete ui;
 }
 
+void QueryScore_Ui::insertImg(ImgLabel *l)
+{
+    ui->verticalLayout_3->insertWidget(0,l);
+}
+
+QString QueryScore_Ui::getXN()
+{
+    return ui->comboBox->currentText();
+}
+
+int QueryScore_Ui::getXQIndex()
+{
+    return ui->comboBox_3->currentIndex();
+}
+
+
 void QueryScore_Ui::on_fromFreshToNow_clicked()
 {
     byWhat=0;
@@ -52,4 +68,9 @@ void QueryScore_Ui::on_mainlyLearn_clicked()
 void QueryScore_Ui::on_otherlyLearn_clicked()
 {
     learnType=1;
+}
+
+void QueryScore_Ui::on_queryScoreBtn_clicked()
+{
+    emit queryScore();
 }

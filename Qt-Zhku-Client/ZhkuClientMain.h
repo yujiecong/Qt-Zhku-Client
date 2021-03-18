@@ -9,12 +9,9 @@
 #include "ZhkuLoginWidget.h"
 #include "FuncTable.h"
 #include "CurriculumArrangement_ui.h"
-#include "ui_curriculumarrangement_ui.h"
 #include "QueryScore_Ui.h"
-#include "ui_QueryScore_Ui.h"
-
 #include "ScoreDistubing_ui.h"
-#include "ui_ScoreDistubing_ui.h"
+#include "Rankexam_Ui.h"
 
 #include "UserAvater.h"
 namespace Ui {
@@ -42,10 +39,12 @@ private slots:
     void getCurriculum();
     void getStudentScore();
     void getDistributedScore();
+    void getRankExam();
 
     void createCurriculumArrangement_Ui();
     void createQueryScore_Ui();
     void createDistributedScore_Ui();
+    void createRankExam_Ui();
 
     void removeMyUi();
 
@@ -61,9 +60,12 @@ private:
     QUrl zhkuCurriculumPreUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel.aspx");
     //访问课程图片 url
     QUrl zhkuCurriculumUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel_rpt.aspx");
+    //成绩url
     QUrl zhkuStudentScoreUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_MyScore_rpt.aspx");
+    //成绩分布
     QUrl zhkuScoreDisUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_cjfb_rpt.aspx");
-
+    //查看等级考试
+    QUrl zhkuRankExamUrl=QUrl("http://jw.zhku.edu.cn/xscj/private/list_xhxm.aspx");
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
 
@@ -82,7 +84,7 @@ private:
     CurriculumArrangement_Ui *currArrUi=0;
     QueryScore_Ui *queryScoreUi=0;
     ScoreDistubing_Ui *distributedScoreUi=0;
-
+    RankExam_Ui *rankExmaUi=0;
     //用于 查询课程的
     QString hiddenVaildationCode;
     bool hidyzmStatus=1;

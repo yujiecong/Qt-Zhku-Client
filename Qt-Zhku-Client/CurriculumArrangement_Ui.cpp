@@ -52,6 +52,7 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
 
     });
 
+    connect(ui->queryCurriculumBtn,&QPushButton::clicked,this,&CurriculumArrangement_Ui::queryCurri);
 
 
 }
@@ -59,4 +60,24 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
 CurriculumArrangement_Ui::~CurriculumArrangement_Ui()
 {
     delete ui;
+}
+
+void CurriculumArrangement_Ui::insertImg(ImgLabel *l)
+{
+    ui->imgVerticalLayout->insertWidget(0,l);
+}
+
+QString CurriculumArrangement_Ui::getXNXQ()
+{
+    return ui->comboBox->currentText();
+}
+
+int CurriculumArrangement_Ui::getCurIndex()
+{
+    return ui->comboBox_2->currentIndex();
+}
+
+QString CurriculumArrangement_Ui::getZC()
+{
+    return ui->lineEdit->text();
 }

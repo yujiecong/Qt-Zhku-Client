@@ -1,6 +1,8 @@
 #ifndef CURRICULUMARRANGEMENT_UI_H
 #define CURRICULUMARRANGEMENT_UI_H
 
+#include "ImgLabel.h"
+
 #include <QWidget>
 // 课表查询页面的一个 ui
 
@@ -21,7 +23,14 @@ public:
     bool rad=0;
     bool zc_flag=0;
     QString zc_input;
+
+    void insertImg(ImgLabel *l);
+    QString getXNXQ();
+    int getCurIndex();
+    QString getZC();;
 //    bool sortType;
+signals:
+    void queryCurri();
 private:
 
 };

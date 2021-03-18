@@ -14,12 +14,17 @@ class ScoreDistubing_Ui : public QWidget
 public:
     explicit ScoreDistubing_Ui(QString xnxq,QWidget *parent = 0);
     ~ScoreDistubing_Ui();
+    void setHtml(QString &html) const;
+
+    QString  getXN() const;
+    int getXQ() const;
 
     QString getXnxq() const;
     void setXnxq(const QString &value);
     Ui::ScoreDistubing_Ui *ui;
     QString xnxq;
     int byWhat=2;
+
 signals:
     void queryDis();
 

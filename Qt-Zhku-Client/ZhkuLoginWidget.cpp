@@ -100,14 +100,14 @@ void ZhkuLoginWidget::loginInit()
             QNetworkReply *testReply=manager.get(isvaildTest);
 
             connect(testReply,&QNetworkReply::finished,[=](){
-                QString readTest=strProcessor.gbk2Utf8(testReply->readAll());
-                qDebug()<<readTest;
-                if (readTest.contains(QString("无权"))){
+                QString loginRead=strProcessor.gbk2Utf8(testReply->readAll());
+//                qDebug()<<readTest;
+                if (loginRead.contains(QString("无权"))){
                     qDebug()<<"cookies 已失效,请重新登录";
                     pointerCookies->remove();
                     loginInit();
                 }
-                else if(readTest.contains(QString("您被强迫下线"))){
+                else if(loginRead.contains(QString("您被强迫下线"))){
                     qDebug()<<"cookies 显示你在别处登录!";
                     qDebug()<<"cookies 已失效,请重新登录";
                     pointerCookies->remove();
@@ -120,7 +120,7 @@ void ZhkuLoginWidget::loginInit()
                 ////                    pointerCookies->remove();
                 ////                    loginInit();
                 //                }
-                else if(readTest.contains(QString("正在加载"))){
+                else if(loginRead.contains(QString("教学安排表"))){
                     qDebug()<<"cookies仍然有效!";
                     emit loginSuccessed();
                 }

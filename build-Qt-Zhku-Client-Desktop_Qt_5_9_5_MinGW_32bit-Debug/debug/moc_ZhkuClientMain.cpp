@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ZhkuClientMain_t {
-    QByteArrayData data[10];
-    char stringdata0[166];
+    QByteArrayData data[13];
+    char stringdata0[211];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,22 +32,26 @@ struct qt_meta_stringdata_ZhkuClientMain_t {
 static const qt_meta_stringdata_ZhkuClientMain_t qt_meta_stringdata_ZhkuClientMain = {
     {
 QT_MOC_LITERAL(0, 0, 14), // "ZhkuClientMain"
-QT_MOC_LITERAL(1, 15, 11), // "getUserInfo"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 13), // "getCurriculum"
-QT_MOC_LITERAL(4, 42, 15), // "getStudentScore"
-QT_MOC_LITERAL(5, 58, 19), // "getDistributedScore"
-QT_MOC_LITERAL(6, 78, 30), // "createCurriculumArrangement_Ui"
-QT_MOC_LITERAL(7, 109, 19), // "createQueryScore_Ui"
-QT_MOC_LITERAL(8, 129, 25), // "createDistributedScore_Ui"
-QT_MOC_LITERAL(9, 155, 10) // "removeMyUi"
+QT_MOC_LITERAL(1, 15, 14), // "loginSuccessed"
+QT_MOC_LITERAL(2, 30, 0), // ""
+QT_MOC_LITERAL(3, 31, 11), // "getUserInfo"
+QT_MOC_LITERAL(4, 43, 13), // "getCurriculum"
+QT_MOC_LITERAL(5, 57, 15), // "getStudentScore"
+QT_MOC_LITERAL(6, 73, 19), // "getDistributedScore"
+QT_MOC_LITERAL(7, 93, 11), // "getRankExam"
+QT_MOC_LITERAL(8, 105, 30), // "createCurriculumArrangement_Ui"
+QT_MOC_LITERAL(9, 136, 19), // "createQueryScore_Ui"
+QT_MOC_LITERAL(10, 156, 25), // "createDistributedScore_Ui"
+QT_MOC_LITERAL(11, 182, 17), // "createRankExam_Ui"
+QT_MOC_LITERAL(12, 200, 10) // "removeMyUi"
 
     },
-    "ZhkuClientMain\0getUserInfo\0\0getCurriculum\0"
-    "getStudentScore\0getDistributedScore\0"
+    "ZhkuClientMain\0loginSuccessed\0\0"
+    "getUserInfo\0getCurriculum\0getStudentScore\0"
+    "getDistributedScore\0getRankExam\0"
     "createCurriculumArrangement_Ui\0"
     "createQueryScore_Ui\0createDistributedScore_Ui\0"
-    "removeMyUi"
+    "createRankExam_Ui\0removeMyUi"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +61,7 @@ static const uint qt_meta_data_ZhkuClientMain[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,16 +69,22 @@ static const uint qt_meta_data_ZhkuClientMain[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    0,   56,    2, 0x08 /* Private */,
-       5,    0,   57,    2, 0x08 /* Private */,
-       6,    0,   58,    2, 0x08 /* Private */,
-       7,    0,   59,    2, 0x08 /* Private */,
-       8,    0,   60,    2, 0x08 /* Private */,
-       9,    0,   61,    2, 0x08 /* Private */,
+       1,    0,   69,    2, 0x08 /* Private */,
+       3,    0,   70,    2, 0x08 /* Private */,
+       4,    0,   71,    2, 0x08 /* Private */,
+       5,    0,   72,    2, 0x08 /* Private */,
+       6,    0,   73,    2, 0x08 /* Private */,
+       7,    0,   74,    2, 0x08 /* Private */,
+       8,    0,   75,    2, 0x08 /* Private */,
+       9,    0,   76,    2, 0x08 /* Private */,
+      10,    0,   77,    2, 0x08 /* Private */,
+      11,    0,   78,    2, 0x08 /* Private */,
+      12,    0,   79,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -93,14 +103,17 @@ void ZhkuClientMain::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         ZhkuClientMain *_t = static_cast<ZhkuClientMain *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->getUserInfo(); break;
-        case 1: _t->getCurriculum(); break;
-        case 2: _t->getStudentScore(); break;
-        case 3: _t->getDistributedScore(); break;
-        case 4: _t->createCurriculumArrangement_Ui(); break;
-        case 5: _t->createQueryScore_Ui(); break;
-        case 6: _t->createDistributedScore_Ui(); break;
-        case 7: _t->removeMyUi(); break;
+        case 0: _t->loginSuccessed(); break;
+        case 1: _t->getUserInfo(); break;
+        case 2: _t->getCurriculum(); break;
+        case 3: _t->getStudentScore(); break;
+        case 4: _t->getDistributedScore(); break;
+        case 5: _t->getRankExam(); break;
+        case 6: _t->createCurriculumArrangement_Ui(); break;
+        case 7: _t->createQueryScore_Ui(); break;
+        case 8: _t->createDistributedScore_Ui(); break;
+        case 9: _t->createRankExam_Ui(); break;
+        case 10: _t->removeMyUi(); break;
         default: ;
         }
     }
@@ -132,13 +145,13 @@ int ZhkuClientMain::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 11;
     }
     return _id;
 }
