@@ -12,6 +12,7 @@
 #include "QueryScore_Ui.h"
 #include "ScoreDistubing_ui.h"
 #include "Rankexam_Ui.h"
+#include "ExamArrangement_Ui.h"
 
 #include "UserAvater.h"
 namespace Ui {
@@ -29,6 +30,13 @@ public:
     void init_Connection();
     void init_();
     void initSysTaryIcon();
+
+
+    inline QNetworkReply *getReqReply(QUrl url, QByteArray para="");
+    inline QNetworkReply *postReqReply(QUrl url,QByteArray a="");
+
+    inline QNetworkReply *getReqReply(QString url, QByteArray para="");
+    inline QNetworkReply *postReqReply(QString url,QByteArray a="");
 protected:
     void closeEvent(QCloseEvent *e);
 
@@ -40,11 +48,13 @@ private slots:
     void getStudentScore();
     void getDistributedScore();
     void getRankExam();
+    void getExamArr();
 
     void createCurriculumArrangement_Ui();
     void createQueryScore_Ui();
     void createDistributedScore_Ui();
     void createRankExam_Ui();
+    void createExamArr_Ui();
 
     void removeMyUi();
 
@@ -66,6 +76,8 @@ private:
     QUrl zhkuScoreDisUrl=QUrl("http://jw.zhku.edu.cn/xscj/Stu_cjfb_rpt.aspx");
     //查看等级考试
     QUrl zhkuRankExamUrl=QUrl("http://jw.zhku.edu.cn/xscj/private/list_xhxm.aspx");
+    //查询考试安排
+    QUrl zhkuExamUrl=QUrl("http://jw.zhku.edu.cn/KSSW/stu_ksap_rpt.aspx");
 
     ZhkuLoginWidget *zhkuloginManager=new ZhkuLoginWidget();
 
@@ -85,6 +97,8 @@ private:
     QueryScore_Ui *queryScoreUi=0;
     ScoreDistubing_Ui *distributedScoreUi=0;
     RankExam_Ui *rankExmaUi=0;
+    ExamArrangement_Ui *examArrUi=0;
+
     //用于 查询课程的
     QString hiddenVaildationCode;
     bool hidyzmStatus=1;

@@ -40,7 +40,7 @@ private:
     QString xnxq;
 
 
-    QFile *pointerCookies=nullptr;
+    QString cookies;
 
     bool autoLogin=0;
     bool autoPassword=0;

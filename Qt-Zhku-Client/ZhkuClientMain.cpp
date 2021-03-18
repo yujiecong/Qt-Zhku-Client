@@ -16,10 +16,6 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
 {
     ui->setupUi(this);
     init_();
-    ImgLabel *l=new ImgLabel();
-    ui->frameLayout->addWidget(l);
-
-
 }
 
 ZhkuClientMain::~ZhkuClientMain()
@@ -206,6 +202,26 @@ void ZhkuClientMain::initSysTaryIcon()
 
 }
 
+QNetworkReply *ZhkuClientMain::getReqReply(QUrl url,QByteArray para)
+{
+    return zhkuloginManager->manager.get(QNetworkRequest(QUrl(url.url()+para)));
+}
+
+QNetworkReply *ZhkuClientMain::postReqReply(QUrl url,QByteArray a)
+{
+    return zhkuloginManager->manager.post(QNetworkRequest(url),a);
+}
+
+QNetworkReply *ZhkuClientMain::getReqReply(QString url, QByteArray para)
+{
+    return zhkuloginManager->manager.get(QNetworkRequest(QUrl(url+para)));
+}
+
+QNetworkReply *ZhkuClientMain::postReqReply(QString url, QByteArray a)
+{
+        return zhkuloginManager->manager.post(QNetworkRequest(QUrl(url)),a);
+}
+
 void ZhkuClientMain::closeEvent(QCloseEvent *e)
 {
     if(!closedMemery){
@@ -244,8 +260,7 @@ void ZhkuClientMain::loginSuccessed()
 void ZhkuClientMain::getUserInfo()
 {
     userAvater=new UserAvater();
-    QNetworkRequest bannerReq(zhkuMainNavigatorUrl);
-    QNetworkReply *rep=zhkuloginManager->manager.get(bannerReq);
+    QNetworkReply *rep=getReqReply(zhkuMainNavigatorUrl);
     connect(rep,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(rep->readAll());
         QRegExp weekEx("\\d{4}年\\d{,2}月\\d{,2}日&nbsp;.{3,3}");
@@ -269,8 +284,7 @@ void ZhkuClientMain::getUserInfo()
         rep->deleteLater();
     });
 
-    QNetworkRequest footReq(zhkuFootUrl);
-    rep=zhkuloginManager->manager.get(footReq);
+    rep=getReqReply(zhkuFootUrl);
     connect(rep,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(rep->readAll());
         QRegExp nameEx(".{,2}：\\[\\d{,12}\\][\u4e00-\u9fa5]{,4}");
@@ -344,13 +358,11 @@ void ZhkuClientMain::getCurriculum()
             QString curriUrl;
             curriUrlHtml.indexOf(urlExp);
             curriUrl = urlExp.cap(0);
-            qDebug()<<curriUrl;
             if(curriUrl.size()==0){
                 QMessageBox::warning(this,"错误","未找到对应课表");
             }
             else{
-                QNetworkRequest curriUrlReq(QString("http://jw.zhku.edu.cn/znpk/")+curriUrl);
-                QNetworkReply *curriUrlReply=zhkuloginManager->manager.get(curriUrlReq);
+                QNetworkReply *curriUrlReply=getReqReply(QUrl(QString("http://jw.zhku.edu.cn/znpk/")+curriUrl));
                 connect(curriUrlReply,&QNetworkReply::finished,[=](){
                     QString curriPath=xnxq+"学期的课表.jpg";
                     QFile *curriculumFile=new QFile(curriPath);
@@ -363,8 +375,6 @@ void ZhkuClientMain::getCurriculum()
                     else{
                         QByteArray imgRaw=curriUrlReply->readAll();
                         curriculumFile->write(imgRaw);
-
-
                     }
                     curriculumFile->close();
                     curriUrlReply->deleteLater();
@@ -387,9 +397,6 @@ void ZhkuClientMain::getCurriculum()
 
 void ZhkuClientMain::getStudentScore()
 {
-    QNetworkRequest curReq(zhkuStudentScoreUrl);
-    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-
     QByteArray postdata;
     //原始成绩 start SJ=0
     //    SelXNXQ
@@ -431,9 +438,9 @@ void ZhkuClientMain::getStudentScore()
     postdata.append(QString("zfx_flag=%1&").arg(queryScoreUi->learnType));
     postdata.append(QString("zfx=0&"));
 
-    qDebug()<<postdata;
-    QNetworkReply *curReply=0;
-    curReply=    zhkuloginManager->manager.post(curReq,postdata);
+//    qDebug()<<postdata;
+    QNetworkReply *curReply=postReqReply(zhkuStudentScoreUrl,postdata);
+
     connect(curReply,&QNetworkReply::finished,[=](){
         QString curriUrlHtml=strProcessor.gbk2Utf8(curReply->readAll());
         QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=\\d{0,4}&xq=\\d{0,1}&rpt=\\d&rad=\\d&zfx=\\d&xh=\\d{12}");
@@ -445,14 +452,10 @@ void ZhkuClientMain::getStudentScore()
             list << ex.cap();                                   // 第一个捕获到的文本
             pos2 += ex.matchedLength();             // 上一个匹配的字符串的长度
         }
-        qDebug()<<list;
         //自动保存
         foreach (QString url, list) {
-            QNetworkRequest req(QString("http://jw.zhku.edu.cn/xscj/")+url);
-            QNetworkReply *urlReply=zhkuloginManager->manager.get(req);
-
+            QNetworkReply *urlReply=getReqReply(QString("http://jw.zhku.edu.cn/xscj/")+url);
             connect(urlReply,&QNetworkReply::finished,[=](){
-
                 QByteArray imgRaw=urlReply->readAll();
                 ImgLabel *curriImg= new ImgLabel();
                 QPixmap px;
@@ -498,8 +501,6 @@ void ZhkuClientMain::getStudentScore()
 
 void ZhkuClientMain::getDistributedScore()
 {
-    QNetworkRequest curReq(zhkuScoreDisUrl);
-    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
 
     QByteArray postdata;
     postdata.append(QString("SelXNXQ=%1&").arg(distributedScoreUi->byWhat));
@@ -515,11 +516,9 @@ void ZhkuClientMain::getDistributedScore()
     }
     postdata.append(QString("submit=%BC%EC%CB%F7&"));
 
-    QNetworkReply *curReply=0;
-    curReply=    zhkuloginManager->manager.post(curReq,postdata);
+    QNetworkReply *curReply=postReqReply(zhkuScoreDisUrl,postdata);
     connect(curReply,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(curReply->readAll());
-
         distributedScoreUi->setHtml(html);
         curReply->deleteLater();
     });
@@ -528,18 +527,37 @@ void ZhkuClientMain::getDistributedScore()
 
 void ZhkuClientMain::getRankExam()
 {
-    QNetworkRequest curReq(zhkuRankExamUrl);
-    curReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
     QByteArray getPara;
     getPara.append(tr("flag=%1").arg(1/qrand()));
-
-    QNetworkReply *curReply=0;
-    curReply=    zhkuloginManager->manager.get(curReq);
+    QNetworkReply *curReply=getReqReply(zhkuRankExamUrl,getPara);
     connect(curReply,&QNetworkReply::finished,[=](){
-        QString html=strProcessor.gbk2Utf8(curReply->readAll());
-        rankExmaUi->setHtml(html);
+        QNetworkReply *rep=getReqReply(QUrl("http://jw.zhku.edu.cn/xscj/Stu_djkscj_rpt.aspx"));
+        connect(rep,&QNetworkReply::finished,[=](){
+            rankExmaUi->setHtml(strProcessor.gbk2Utf8(rep->readAll()));
+            rep->deleteLater();
+        });
+        curReply->deleteLater();
     });
 
+}
+
+void ZhkuClientMain::getExamArr()
+{
+    QByteArray ba;
+//   sel_xnxq=20200&sel_lcxz=&sel_lc=&btnsearch=%BC%EC%CB%F7
+    ba+=tr("sel_xnxq=%1&").arg(zhkuloginManager->getXnxq());
+    ba+=tr("sel_lcxz=%1&").arg();
+    ba+=tr("sel_lc=%1&").arg();
+    ba+=tr("btnsearch=%BC%EC%CB%F7");
+    QNetworkReply *curReply=postReqReply(zhkuExamUrl);
+    connect(curReply,&QNetworkReply::finished,[=](){
+        QNetworkReply *rep=getReqReply(QUrl("http://jw.zhku.edu.cn/xscj/Stu_djkscj_rpt.aspx"));
+        connect(rep,&QNetworkReply::finished,[=](){
+            rankExmaUi->setHtml(strProcessor.gbk2Utf8(rep->readAll()));
+            rep->deleteLater();
+        });
+        curReply->deleteLater();
+    });
 }
 
 void ZhkuClientMain::createCurriculumArrangement_Ui()
@@ -576,11 +594,22 @@ void ZhkuClientMain::createRankExam_Ui()
     getRankExam();
 }
 
+void ZhkuClientMain::createExamArr_Ui()
+{
+    removeMyUi();
+    examArrUi=new ExamArrangement_Ui();
+    ui->frameLayout->addWidget(examArrUi);
+    getExamArr();
+}
+
 void ZhkuClientMain::removeMyUi()
 {
-    QLayoutItem *it=ui->frameLayout->takeAt(0);
-    ui->frameLayout->removeItem(it);
-    it->widget()->deleteLater();
+    if(ui->frameLayout->count()>0){
+        QLayoutItem *it=ui->frameLayout->takeAt(0);
+        ui->frameLayout->removeItem(it);
+        it->widget()->deleteLater();
+    }
+
 }
 
 

@@ -13,6 +13,7 @@ INPUT(
 ./debug\CloseDialog.o
 ./debug\ScoreDistubing_ui.o
 ./debug\UserAvater.o
+./debug\Rankexam_Ui.o
 ./debug\qrc_loginassets.o
 ./debug\moc_ZhkuLoginWidget.o
 ./debug\moc_ZhkuClientMain.o
@@ -25,4 +26,5 @@ INPUT(
 ./debug\moc_CloseDialog.o
 ./debug\moc_ScoreDistubing_ui.o
 ./debug\moc_UserAvater.o
+./debug\moc_Rankexam_Ui.o
 );

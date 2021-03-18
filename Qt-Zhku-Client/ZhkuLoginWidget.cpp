@@ -48,88 +48,66 @@ void ZhkuLoginWidget::loginInit()
 
     getLocalXNXQ();
 
-    pointerCookies=new QFile("cookies.json");
+    cookies=sj["cookies"].toString();
     //如果设置了自动登录
 
-    qDebug()<<sj["autoLogin"].toBool();
+
     autoLogin=sj["autoLogin"].toBool();
     autoPassword=sj["autoPassword"].toBool();
-
-    qDebug()<<autoLogin<<autoPassword;
 
     if(autoPassword){
         ui->pwdInput->setText(sj["password"].toString());
         ui->checkBox_2->setChecked(1);
     }
 
-    if(autoLogin && pointerCookies->exists()){
+    if(autoLogin && cookies!=""){
         ui->checkBox->setChecked(1);
-        qDebug()<<"检测到本地cookies,尝试读取中";
-        if(!pointerCookies->open(QIODevice::ReadOnly)){
-            delete pointerCookies;
-            pointerCookies=nullptr;
-            qDebug()<<"cookies读取失败!";
+        qDebug()<<"正在自动登录";
+
+        QJsonObject json=strProcessor.qString2Json(cookies);
+        QNetworkCookieJar *jar=manager.cookieJar();
+        QList<QNetworkCookie> allcookies;
+        foreach (QString k, json.keys()) {
+            QString v=json.take(k).toString();
+            QNetworkCookie c(k.toLocal8Bit(),v.toLocal8Bit());
+            allcookies.append(c);
         }
-        else{
-            QByteArray cookread=pointerCookies->readAll();
-            QJsonObject json=strProcessor.qString2Json(QString(cookread));
-            QNetworkCookieJar *jar=manager.cookieJar();
-            QList<QNetworkCookie> allcookies;
-            foreach (QString k, json.keys()) {
-                QString v=json.take(k).toString();
-                QNetworkCookie c(k.toLocal8Bit(),v.toLocal8Bit());
-                allcookies.append(c);
+
+        jar->setCookiesFromUrl(allcookies,zhkuLoginHomeUrl);
+        jar->setCookiesFromUrl(allcookies,zhkuTestUrl);
+        jar->setCookiesFromUrl(allcookies,zhkuHomeUrl);
+        jar->setCookiesFromUrl(allcookies,zhkuLoginCodeUrl);
+
+        manager.setCookieJar(jar);
+
+        // //判断cookies是否过期
+        QNetworkRequest isvaildTest(zhkuTestUrl);
+        QVariant var;
+        var.setValue(allcookies);
+        isvaildTest.setHeader(QNetworkRequest::CookieHeader,var);
+
+        QNetworkReply *testReply=manager.get(isvaildTest);
+
+        connect(testReply,&QNetworkReply::finished,[=](){
+            QString loginRead=strProcessor.gbk2Utf8(testReply->readAll());
+            //                qDebug()<<readTest;
+            if (loginRead.contains(QString("无权"))){
+                qDebug()<<"cookies 已失效,请重新登录";
+                loginInit();
             }
+            else if(loginRead.contains(QString("您被强迫下线"))){
+                qDebug()<<"cookies 显示你在别处登录!";
+                qDebug()<<"cookies 已失效,请重新登录";
+                loginInit();
+            }
+            else if(loginRead.contains(QString("教学安排表"))){
+                qDebug()<<"cookies仍然有效!";
+                emit loginSuccessed();
+            }
+            testReply->deleteLater();
 
-            //将cookies设置到对应url
-//            qDebug()<<allcookies;
+        });
 
-            jar->setCookiesFromUrl(allcookies,zhkuLoginHomeUrl);
-            jar->setCookiesFromUrl(allcookies,zhkuTestUrl);
-            jar->setCookiesFromUrl(allcookies,zhkuHomeUrl);
-            jar->setCookiesFromUrl(allcookies,zhkuLoginCodeUrl);
-
-            manager.setCookieJar(jar);
-
-            // //判断cookies是否过期
-            QNetworkRequest isvaildTest(zhkuTestUrl);
-            QVariant var;
-            var.setValue(allcookies);
-            isvaildTest.setHeader(QNetworkRequest::CookieHeader,var);
-
-            QNetworkReply *testReply=manager.get(isvaildTest);
-
-            connect(testReply,&QNetworkReply::finished,[=](){
-                QString loginRead=strProcessor.gbk2Utf8(testReply->readAll());
-//                qDebug()<<readTest;
-                if (loginRead.contains(QString("无权"))){
-                    qDebug()<<"cookies 已失效,请重新登录";
-                    pointerCookies->remove();
-                    loginInit();
-                }
-                else if(loginRead.contains(QString("您被强迫下线"))){
-                    qDebug()<<"cookies 显示你在别处登录!";
-                    qDebug()<<"cookies 已失效,请重新登录";
-                    pointerCookies->remove();
-                    loginInit();
-                }
-                //正选时间未开放 的bug
-
-                //                else if(readTest.contains(QString("Object moved"))){
-                //                    qDebug()<<"cookies 已失效,请重新登录";
-                ////                    pointerCookies->remove();
-                ////                    loginInit();
-                //                }
-                else if(loginRead.contains(QString("教学安排表"))){
-                    qDebug()<<"cookies仍然有效!";
-                    emit loginSuccessed();
-                }
-                testReply->deleteLater();
-                pointerCookies->close();
-            });
-
-
-        }
     }
     else{
         qDebug()<<"本地未检测到cookies";
@@ -145,6 +123,7 @@ void ZhkuLoginWidget::loginInit()
         connect(homeReply,&QNetworkReply::finished,this,&ZhkuLoginWidget::getCodeImg);
     }
 }
+
 
 QString ZhkuLoginWidget::getXnxq()
 {
@@ -208,22 +187,7 @@ void ZhkuLoginWidget::tryLogin()
             //保存cookies
             qDebug()<<"未检测到本地cookies,开始保存cookies";
             qDebug()<<manager.cookieJar()->cookiesForUrl(zhkuLoginHomeUrl);
-            if(!pointerCookies->open(QIODevice::WriteOnly)){
-                delete pointerCookies;
-                pointerCookies=nullptr;
-                qDebug()<<"cookies文件写入失败!";
-            }
-            else{
-                QList<QNetworkCookie> l=manager.cookieJar()->cookiesForUrl(zhkuLoginHomeUrl);
-                QJsonObject json;
-                foreach (QNetworkCookie c, l) {
-                    json.insert(QString(c.name()),QString(c.value()));
-                }
-                QString strjson=strProcessor.qJson2QString(json);
-                pointerCookies->write(strjson.toLocal8Bit());
-                pointerCookies->close();
-                qDebug()<<"cookies文件写入成功!";
-            }
+
             writeSettings();
             emit loginSuccessed();
 
@@ -276,18 +240,28 @@ void ZhkuLoginWidget::getCodeImg()
 
 void ZhkuLoginWidget::writeSettings()
 {
-//    }
+    //    }
+    QList<QNetworkCookie> l=manager.cookieJar()->cookiesForUrl(zhkuLoginHomeUrl);
+    QJsonObject json;
+    foreach (QNetworkCookie c, l) {
+        json.insert(QString(c.name()),QString(c.value()));
+    }
+    QString strjson=strProcessor.qJson2QString(json);
 
+    qDebug()<<"cookies文件写入成功!";
     QSettings *settings = new QSettings(QCoreApplication::applicationDirPath()+"/Zhku.ini",QSettings::IniFormat);;
     settings->clear();
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     QJsonObject settingsJson;
     settingsJson.insert("autoLogin",ui->checkBox->isChecked());
     settingsJson.insert("autoPassword",ui->checkBox_2->isChecked());
+    settingsJson.insert("cookies",strjson);
     if(ui->checkBox_2->isChecked()){
-       settingsJson.insert("password",ui->pwdInput->text());
+        settingsJson.insert("password",ui->pwdInput->text());
     }
     settings->setValue("settings/loginSettings",QString(strProcessor.qJson2QString(settingsJson)));
+
     settings->sync();
+
 
 }
