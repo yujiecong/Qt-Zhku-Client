@@ -143,7 +143,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget" native="true">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>成绩类型</string>
+            </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <property name="spacing">
               <number>0</number>
@@ -193,7 +196,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_4" native="true">
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string>成绩跨度</string>
+            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <property name="spacing">
               <number>0</number>
@@ -256,11 +262,14 @@
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_3" native="true">
+           <widget class="QGroupBox" name="groupBox_3">
             <property name="font">
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="title">
+             <string>成绩主类</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <property name="spacing">

@@ -13,6 +13,9 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     ui->loginButton->setShortcut(Qt::Key_Return);
 
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
+    setWindowTitle("仲恺教务网客户端-未登录");
+    setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
+
     show();
     loginInit();
 }
@@ -42,7 +45,7 @@ void ZhkuLoginWidget::loginInit()
     QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     //取值与赋值
-    QString settingsString=settings->value("settings/loginSettings").toString();
+    QString settingsString=settings->value(iniKey).toString();
     QJsonObject settingsJson=strProcessor.qString2Json(settingsString);
     qDebug()<<settingsString.toLocal8Bit().data();
 
@@ -93,13 +96,13 @@ void ZhkuLoginWidget::loginInit()
             //                qDebug()<<readTest;
             if (loginRead.contains(QString("无权"))){
                 qDebug()<<"cookies 已失效,请重新登录";
-                 settings->remove("settings/loginSettings");
+                 settings->remove(iniKey);
                 loginInit();
             }
             else if(loginRead.contains(QString("您被强迫下线"))){
                 qDebug()<<"cookies 显示你在别处登录!";
                 qDebug()<<"cookies 已失效,请重新登录";
-                 settings->remove("settings/loginSettings");
+                 settings->remove(iniKey);
                 loginInit();
 
             }
@@ -262,9 +265,6 @@ void ZhkuLoginWidget::writeSettings()
     if(ui->checkBox_2->isChecked()){
         settingsJson.insert("password",ui->pwdInput->text());
     }
-    settings->setValue("settings/loginSettings",QString(strProcessor.qJson2QString(settingsJson)));
-
+    settings->setValue(iniKey,QString(strProcessor.qJson2QString(settingsJson)));
     settings->sync();
-
-
 }

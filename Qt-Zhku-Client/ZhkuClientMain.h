@@ -34,13 +34,11 @@ public:
     void initSysTaryIcon();
 
 
-
-
      QNetworkReply *getReqReply(QUrl url, QByteArray para="");
-      QNetworkReply *postReqReply(QUrl url,QByteArray a="");
+      QNetworkReply *postReqReply(QUrl url, QByteArray a="");
 
      QNetworkReply *getReqReply(QString url, QByteArray para="");
-      QNetworkReply *postReqReply(QString url,QByteArray a="");
+      QNetworkReply *postReqReply(QString url, QByteArray a="");
 protected:
     void closeEvent(QCloseEvent *e);
 
@@ -48,7 +46,7 @@ private slots:
     void loginSuccessed();
     void getUserInfo();
 
-    void getCurriculum();
+    void getCurriculumArrangement();
     void getStudentScore();
     void getDistributedScore();
     void getRankExam();
@@ -72,6 +70,7 @@ private:
     //拿到学生名字学号
     QUrl zhkuFootUrl=QUrl("http://jw.zhku.edu.cn/PUB/foot.aspx");
     //访问课程前需要访问这个
+
     QUrl zhkuCurriculumPreUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel.aspx");
     //访问课程图片 url
     QUrl zhkuCurriculumUrl=QUrl("http://jw.zhku.edu.cn/znpk/Pri_StuSel_rpt.aspx");

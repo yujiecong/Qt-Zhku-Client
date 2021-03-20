@@ -52,7 +52,10 @@
        <widget class="QComboBox" name="comboBox"/>
       </item>
       <item>
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>课程格式</string>
+        </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QRadioButton" name="radioButton">
@@ -67,7 +70,7 @@
          <item>
           <widget class="QRadioButton" name="radioButton_2">
            <property name="enabled">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
            <property name="text">
             <string>格式二</string>
@@ -78,7 +81,10 @@
        </widget>
       </item>
       <item>
-       <widget class="QWidget" name="type1Widget" native="true">
+       <widget class="QGroupBox" name="type1Widget">
+        <property name="title">
+         <string>课程跨度</string>
+        </property>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QCheckBox" name="checkBox">
@@ -117,7 +123,7 @@
             </size>
            </property>
            <property name="text">
-            <string/>
+            <string>1-18</string>
            </property>
           </widget>
          </item>
@@ -179,7 +185,7 @@
         <x>0</x>
         <y>0</y>
         <width>813</width>
-        <height>458</height>
+        <height>444</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="imgVerticalLayout">

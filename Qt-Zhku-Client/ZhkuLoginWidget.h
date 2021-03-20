@@ -20,8 +20,8 @@ public:
     void getLocalXNXQ();
     void loginInit();
 
-     QString getXnxq();
-     void setXnxq(const QString &value);
+    QString getXnxq();
+    void setXnxq(const QString &value);
     QNetworkAccessManager  manager;
 protected:
     void closeEvent(QCloseEvent *event);
@@ -39,14 +39,14 @@ private:
     QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/frame/menu.aspx");
     QString xnxq;
 
-    const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
+
     QString cookies;
 
     bool autoLogin=0;
     bool autoPassword=0;
     //配置文件
-
-
+    const QString iniKey=QString("settings/loginSettings");
+    const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
 
 };
 

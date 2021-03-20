@@ -10,8 +10,9 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
     //学年学期 初始化
     //十年内
     for(int i=xnxq.toInt()/10;i>xnxq.toInt()/10-5;i-=1){
-        for (int j=0;j<2;j++){
-            ui->comboBox->addItem(QString::number(i)+QString::number(j));
+        for(int j=1;j>=0;j--){
+            ui->comboBox->addItem(QString("%1~%2学年第%3学期").arg(i).arg(i+1).arg(j==0?"一":"二"));
+            xnxqList<<QString("%1%2").arg(i).arg(j);
         }
 
     }
@@ -29,28 +30,19 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
     });
     connect(ui->checkBox,&QCheckBox::clicked,[=](){
         if(ui->checkBox->isChecked()){
-            zc_flag=0;
-            ui->lineEdit->setEnabled(0);
+            zc_flag=1;
+            ui->lineEdit->setEnabled(1);
 
         }
         else{
-            zc_flag=1;
-            ui->checkBox->setChecked(1);
+            zc_flag=0;
+            ui->lineEdit->setEnabled(0);
             ui->lineEdit->setText("1-18");
         }
     });
     //
 
-    connect(ui->checkBox,&QCheckBox::clicked,[=](){
-        if(ui->lineEdit->isEnabled()){
-            ui->lineEdit->setEnabled(0);
-        }
-        else{
-            ui->lineEdit->setEnabled(1);
 
-        }
-
-    });
 
     connect(ui->queryCurriculumBtn,&QPushButton::clicked,this,&CurriculumArrangement_Ui::queryCurri);
 
@@ -69,7 +61,7 @@ void CurriculumArrangement_Ui::insertImg(ImgLabel *l)
 
 QString CurriculumArrangement_Ui::getXNXQ()
 {
-    return ui->comboBox->currentText();
+    return xnxqList.at(ui->comboBox->currentIndex());
 }
 
 int CurriculumArrangement_Ui::getCurIndex()

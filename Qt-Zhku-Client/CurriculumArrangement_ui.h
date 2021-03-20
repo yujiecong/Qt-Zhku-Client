@@ -28,11 +28,11 @@ public:
     QString getXNXQ();
     int getCurIndex();
     QString getZC();;
-//    bool sortType;
+
 signals:
     void queryCurri();
 private:
-
+    QStringList xnxqList;
 };
 
 #endif // CURRICULUMARRANGEMENT_UI_H

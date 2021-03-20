@@ -30,6 +30,9 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
 {
     ui->setupUi(this);
     init_();
+       setWindowTitle("仲恺教务网客户端-已登录");
+       setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
+       setWindowIconText("zhku");
 
 
 }
@@ -322,20 +325,15 @@ void ZhkuClientMain::getUserInfo()
 }
 
 
-void ZhkuClientMain::getCurriculum()
+void ZhkuClientMain::getCurriculumArrangement()
 {
 
-
-    QNetworkRequest curReq(zhkuCurriculumPreUrl);
-    QNetworkReply *curReply=zhkuloginManager->manager.get(curReq);
-
+    QNetworkReply *curReply=getReqReply(zhkuCurriculumPreUrl);
 
     //这里可以指定用阻塞形式 就不用connect嵌套了
     connect(curReply,&QNetworkReply::finished,[=](){
-        //        if(hidyzmStatus){
         QString preHtml=curReply->readAll();
         //        qDebug()<<preHtml;
-
 
         QRegExp vaildationExp("[a-z0-9]{31,31}");
         preHtml.indexOf(vaildationExp);
@@ -371,14 +369,13 @@ void ZhkuClientMain::getCurriculum()
         qDebug()<<postdata;
         QString withPara=QString("?m=")+rs;
         qDebug()<<zhkuCurriculumUrl.url()+withPara;
-        QNetworkRequest curriReq(QUrl(zhkuCurriculumUrl.url()+withPara));
-        curriReq.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
 
-        QNetworkReply *curriReply=zhkuloginManager->manager.post(curriReq,postdata);
+
+        QNetworkReply *curriReply=postReqReply(zhkuCurriculumUrl.url()+withPara,postdata);
         connect(curriReply,&QNetworkReply::finished,[=](){
             QString curriUrlHtml=strProcessor.gbk2Utf8(curriReply->readAll());
             //            qDebug()<<curriUrlHtml;
-            QRegExp urlExp("Pri_StuSel_Drawimg.aspx\\?type=\\d{1}&w=\\d{,}&h=\\d{,}&xnxq=\\d{5}");
+            QRegExp urlExp("Pri_StuSel_Drawimg.aspx\\?type=\\d{1}&w=\\d{,}&h=\\d{,}&xnxq=\\d{5}&px=\\d{1}");
             QString curriUrl;
             curriUrlHtml.indexOf(urlExp);
             curriUrl = urlExp.cap(0);
@@ -386,6 +383,9 @@ void ZhkuClientMain::getCurriculum()
                 QMessageBox::warning(this,"错误","未找到对应课表");
             }
             else{
+//                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201&px=0
+//                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201
+
                 QNetworkReply *curriUrlReply=getReqReply(QUrl(QString("http://jw.zhku.edu.cn/znpk/")+curriUrl));
                 connect(curriUrlReply,&QNetworkReply::finished,[=](){
                     QString curriPath=xnxq+"学期的课表.jpg";
@@ -649,7 +649,7 @@ void ZhkuClientMain::createCurriculumArrangement_Ui()
     removeMyUi();
     currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
     ui->frameLayout->addWidget(currArrUi);
-    connect(currArrUi,&CurriculumArrangement_Ui::queryCurri,this,&ZhkuClientMain::getCurriculum);
+    connect(currArrUi,&CurriculumArrangement_Ui::queryCurri,this,&ZhkuClientMain::getCurriculumArrangement);
 
 }
 
