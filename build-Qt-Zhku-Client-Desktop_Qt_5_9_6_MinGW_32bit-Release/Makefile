@@ -135,8 +135,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_network.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_network_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_networkauth.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_networkauth_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_nfc.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_nfc_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_opengl.pri \
@@ -149,8 +147,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_positioning_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_printsupport.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_purchasing.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_purchasing_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qml.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qml_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -166,14 +162,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_remoteobjects.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_remoteobjects_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_repparser.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_repparser_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_script.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_script_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scxml.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_sensors.pri \
@@ -188,8 +176,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_svg_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_testlib.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_texttospeech.pri \
-		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_texttospeech_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_theme_support_private.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_uiplugin.pri \
 		../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_uitools.pri \
@@ -313,8 +299,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_network.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_network_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_networkauth.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_networkauth_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_nfc.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_nfc_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_opengl.pri:
@@ -327,8 +311,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_positioning_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_printsupport.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_purchasing.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_purchasing_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qml.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qml_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_qmldebug_private.pri:
@@ -344,14 +326,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quickwidgets.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_remoteobjects.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_remoteobjects_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_repparser.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_repparser_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_script.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_script_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scripttools.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scripttools_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scxml.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_scxml_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_sensors.pri:
@@ -366,8 +340,6 @@ Makefile: ../Qt-Zhku-Client/Qt-Zhku-Client.pro ../../../QT596/5.9.6/mingw53_32/m
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_svg_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_testlib.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_testlib_private.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_texttospeech.pri:
-../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_texttospeech_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_theme_support_private.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_uiplugin.pri:
 ../../../QT596/5.9.6/mingw53_32/mkspecs/modules/qt_lib_uitools.pri:

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 
+#include "MoreWidget.h"
 #include "global.h"
 namespace Ui {
 class ZhkuLoginWidget;
@@ -29,6 +30,8 @@ private slots:
     void tryLogin();
     void getCodeImg();
     void writeSettings();
+    void showMore();
+    void queryCurriculum();
 signals:
     void loginSuccessed();
 private:
@@ -38,7 +41,7 @@ private:
     QUrl zhkuLoginHomeUrl=QUrl("http://jw.zhku.edu.cn/_data/login_home.aspx");
     QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/frame/menu.aspx");
     QString xnxq;
-
+    MoreWidget *moreWidget;
 
     QString cookies;
 
@@ -48,6 +51,7 @@ private:
     const QString iniKey=QString("settings/loginSettings");
     const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
 
+     QNetworkReply* getGetReply(QString url);
 };
 
 #endif // ZHKULOGINWIDGET_H

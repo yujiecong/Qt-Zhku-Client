@@ -1,3 +1,4 @@
+#include "MoreWidget.h"
 #include "ZhkuLoginWidget.h"
 #include "ui_zhkuloginwidget.h"
 
@@ -13,6 +14,7 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     ui->loginButton->setShortcut(Qt::Key_Return);
 
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
+    connect(ui->loginButton_2,&QPushButton::clicked,this,&ZhkuLoginWidget::showMore);
     setWindowTitle("仲恺教务网客户端-未登录");
     setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
 
@@ -42,6 +44,7 @@ void ZhkuLoginWidget::getLocalXNXQ()
 }
 void ZhkuLoginWidget::loginInit()
 {
+
     QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     //取值与赋值
@@ -50,6 +53,7 @@ void ZhkuLoginWidget::loginInit()
     qDebug()<<settingsString.toLocal8Bit().data();
 
     getLocalXNXQ();
+    moreWidget =new MoreWidget(getXnxq());
 
     cookies=settingsJson["cookies"].toString();
     //如果设置了自动登录
@@ -235,7 +239,7 @@ void ZhkuLoginWidget::getCodeImg()
             pixmap.loadFromData(codeRaw);
 
             ui->codeInput->setPixmap(pixmap);
-
+            moreWidget->setImg(pixmap);
             codeImg->write(codeRaw);
             codeImg->close();
             codeReply->deleteLater();
@@ -267,4 +271,39 @@ void ZhkuLoginWidget::writeSettings()
     }
     settings->setValue(iniKey,QString(strProcessor.qJson2QString(settingsJson)));
     settings->sync();
+}
+
+void ZhkuLoginWidget::showMore()
+{
+
+    connect(moreWidget,&MoreWidget::getCodeImg,this,&ZhkuLoginWidget::getCodeImg);
+    moreWidget->show();
+}
+
+void ZhkuLoginWidget::queryCurriculum()
+{
+    QNetworkReply *rp=getGetReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel.aspx");
+    connect(rp,&QNetworkReply::finished,[=](){
+       QString html=strProcessor.gbk2Utf8(rp->readAll());
+
+       QNetworkReply *rptRp=getGetReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");
+       connect(rptRp,&QNetworkReply::finished,[=](){
+           //
+           QNetworkReply *kcRep=getGetReply(tr("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(moreWidget->getXnxq()));
+           connect(kcRep,&QNetworkReply::finished,[=](){
+               qDebug()<<strProcessor.gbk2Utf8(kcRep->readAll());
+               kcRep->deleteLater();
+           });
+           rptRp->deleteLater();
+       });
+       rp->deleteLater();
+    });
+}
+
+QNetworkReply *ZhkuLoginWidget::getGetReply(QString url)
+{
+    QUrl u(url);
+    QNetworkRequest req(u);
+    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
+    return manager.get(req);
 }

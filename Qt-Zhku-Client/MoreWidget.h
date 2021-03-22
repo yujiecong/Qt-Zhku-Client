@@ -12,11 +12,21 @@ class MoreWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit MoreWidget(QWidget *parent = 0);
+    explicit MoreWidget(QString xnxq, QWidget *parent = 0);
     ~MoreWidget();
 
+    void setImg(QPixmap &px);
+    QString getXnxq() const;
+
+signals:
+    void getCodeImg();
+private slots:
+    void on_pushButton_clicked();
 private:
     Ui::MoreWidget *ui;
+    QString xnxq;
+    QStringList xnxqList;
+
 };
 
 #endif // MOREWIDGET_H

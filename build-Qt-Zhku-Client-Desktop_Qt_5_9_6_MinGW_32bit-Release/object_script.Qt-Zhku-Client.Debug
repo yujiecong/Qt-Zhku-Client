@@ -15,6 +15,7 @@ INPUT(
 ./debug\UserAvater.o
 ./debug\Rankexam_Ui.o
 ./debug\ExamArrangement_Ui.o
+./debug\MoreWidget.o
 ./debug\qrc_loginassets.o
 ./debug\moc_ZhkuLoginWidget.o
 ./debug\moc_ZhkuClientMain.o
@@ -29,4 +30,5 @@ INPUT(
 ./debug\moc_UserAvater.o
 ./debug\moc_Rankexam_Ui.o
 ./debug\moc_ExamArrangement_Ui.o
+./debug\moc_MoreWidget.o
 );

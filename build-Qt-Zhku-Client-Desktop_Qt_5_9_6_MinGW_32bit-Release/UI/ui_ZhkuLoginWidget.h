@@ -39,7 +39,6 @@ public:
     QSpacerItem *horizontalSpacer;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
-    QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_8;
     QSpacerItem *horizontalSpacer_3;
     QLabel *logo;
@@ -60,7 +59,7 @@ public:
     QCheckBox *checkBox;
     QCheckBox *checkBox_2;
     QPushButton *loginButton;
-    QSpacerItem *verticalSpacer_5;
+    QPushButton *loginButton_2;
     QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer_2;
 
@@ -109,13 +108,9 @@ public:
 "\n"
 ""));
         verticalLayout_3 = new QVBoxLayout(widget);
-        verticalLayout_3->setSpacing(0);
+        verticalLayout_3->setSpacing(10);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(40, 0, 40, 0);
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_3);
-
+        verticalLayout_3->setContentsMargins(50, 20, 50, 20);
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(0);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
@@ -147,7 +142,7 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(15);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(-1, 5, -1, 5);
+        verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(0);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
@@ -253,7 +248,9 @@ public:
         widget_2 = new QWidget(widget);
         widget_2->setObjectName(QStringLiteral("widget_2"));
         horizontalLayout_10 = new QHBoxLayout(widget_2);
+        horizontalLayout_10->setSpacing(0);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        horizontalLayout_10->setContentsMargins(0, 0, 0, 0);
         checkBox = new QCheckBox(widget_2);
         checkBox->setObjectName(QStringLiteral("checkBox"));
         checkBox->setFont(font);
@@ -278,24 +275,42 @@ public:
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(11);
         loginButton->setFont(font1);
-        loginButton->setStyleSheet(QLatin1String("color: rgb(43, 43, 43);\n"
+        loginButton->setStyleSheet(QLatin1String("QPushButton {\n"
+"\n"
+"color: rgb(43, 43, 43);\n"
 "border-radius: 10px;\n"
-"background-color: rgba(255, 255, 255, 200);"));
-        loginButton->setFlat(false);
+"background-color: rgba(255, 255, 255, 200);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+""));
+        loginButton->setFlat(true);
 
         verticalLayout_3->addWidget(loginButton);
 
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        loginButton_2 = new QPushButton(widget);
+        loginButton_2->setObjectName(QStringLiteral("loginButton_2"));
+        loginButton_2->setMinimumSize(QSize(0, 30));
+        loginButton_2->setFont(font1);
+        loginButton_2->setStyleSheet(QLatin1String("QPushButton {\n"
+"\n"
+"color: rgb(43, 43, 43);\n"
+"border-radius: 10px;\n"
+"background-color: rgba(255, 255, 255, 200);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+""));
+        loginButton_2->setFlat(true);
 
-        verticalLayout_3->addItem(verticalSpacer_5);
+        verticalLayout_3->addWidget(loginButton_2);
 
-        verticalLayout_3->setStretch(0, 1);
-        verticalLayout_3->setStretch(1, 1);
-        verticalLayout_3->setStretch(2, 1);
-        verticalLayout_3->setStretch(3, 3);
-        verticalLayout_3->setStretch(4, 1);
-        verticalLayout_3->setStretch(5, 1);
-        verticalLayout_3->setStretch(6, 1);
 
         horizontalLayout_2->addWidget(widget);
 
@@ -338,7 +353,8 @@ public:
         codeInput->setPlaceholderText(QApplication::translate("ZhkuLoginWidget", "validation code", Q_NULLPTR));
         checkBox->setText(QApplication::translate("ZhkuLoginWidget", "\350\207\252\345\212\250\347\231\273\345\275\225", Q_NULLPTR));
         checkBox_2->setText(QApplication::translate("ZhkuLoginWidget", "\350\256\260\344\275\217\345\257\206\347\240\201", Q_NULLPTR));
-        loginButton->setText(QApplication::translate("ZhkuLoginWidget", "Login", Q_NULLPTR));
+        loginButton->setText(QApplication::translate("ZhkuLoginWidget", "\347\231\273\345\275\225", Q_NULLPTR));
+        loginButton_2->setText(QApplication::translate("ZhkuLoginWidget", "\346\233\264\345\244\232", Q_NULLPTR));
     } // retranslateUi
 
 };

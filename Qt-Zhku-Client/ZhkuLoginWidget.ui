@@ -116,35 +116,22 @@ background-color: rgba(250, 250, 250, 200);
 
 </string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,3,1,1,1">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="spacing">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="leftMargin">
-              <number>40</number>
+              <number>50</number>
              </property>
              <property name="topMargin">
-              <number>0</number>
+              <number>20</number>
              </property>
              <property name="rightMargin">
-              <number>40</number>
+              <number>50</number>
              </property>
              <property name="bottomMargin">
-              <number>0</number>
+              <number>20</number>
              </property>
-             <item>
-              <spacer name="verticalSpacer_3">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,2,0">
                <property name="spacing">
@@ -223,10 +210,10 @@ background:transparent</string>
                 <number>15</number>
                </property>
                <property name="topMargin">
-                <number>5</number>
+                <number>0</number>
                </property>
                <property name="bottomMargin">
-                <number>5</number>
+                <number>0</number>
                </property>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -455,6 +442,21 @@ border-radius: 10px;</string>
              <item>
               <widget class="QWidget" name="widget_2" native="true">
                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QCheckBox" name="checkBox">
                   <property name="font">
@@ -505,30 +507,62 @@ border-radius: 10px;</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: rgb(43, 43, 43);
+                <string notr="true">QPushButton {
+
+color: rgb(43, 43, 43);
 border-radius: 10px;
-background-color: rgba(255, 255, 255, 200);</string>
+background-color: rgba(255, 255, 255, 200);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
                </property>
                <property name="text">
-                <string>Login</string>
+                <string>登录</string>
                </property>
                <property name="flat">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
-              <spacer name="verticalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
+              <widget class="QPushButton" name="loginButton_2">
+               <property name="minimumSize">
                 <size>
-                 <width>20</width>
-                 <height>40</height>
+                 <width>0</width>
+                 <height>30</height>
                 </size>
                </property>
-              </spacer>
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+
+color: rgb(43, 43, 43);
+border-radius: 10px;
+background-color: rgba(255, 255, 255, 200);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+</string>
+               </property>
+               <property name="text">
+                <string>更多</string>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>

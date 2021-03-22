@@ -1,6 +1,6 @@
 # Qt-Zhku-Client
 
-算法学累了，不如来写qt?
+没动力了,懒得动了,看缘分更新,明明很有时间,就是懒得动,草
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](.)
 
@@ -98,6 +98,9 @@
 - [使用许可](#使用许可)
 
 ## 更新
+- 2021年3月22日19:51:56 添加 更多 页面
+    - 可用于查询课程,教师课表等
+- 2021年3月22日18:31:38 加入按钮响应样式
 - 2021年3月20日13:34:49 发布release版本
     - 可以去右边的发行版试试
     - 或者来百度云盘
@@ -167,6 +170,8 @@ git clone this~
 ```
 
 ## 示例
+
+![1616413949382](README.assets/1616413949382.png)
 
 ![1615960615564](README.assets/1615960615564.png)
 

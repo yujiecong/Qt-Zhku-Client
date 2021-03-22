@@ -39,7 +39,8 @@ SOURCES += \
     ScoreDistubing_ui.cpp \
     UserAvater.cpp \
     Rankexam_Ui.cpp \
-    ExamArrangement_Ui.cpp
+    ExamArrangement_Ui.cpp \
+    MoreWidget.cpp
 
 
 HEADERS += \
@@ -58,7 +59,8 @@ HEADERS += \
     ScoreDistubing_ui.h \
     UserAvater.h \
     Rankexam_Ui.h \
-    ExamArrangement_Ui.h
+    ExamArrangement_Ui.h \
+    MoreWidget.h
 
 
 FORMS += \
@@ -74,7 +76,8 @@ FORMS += \
     ScoreDistubing_ui.ui \
     UserAvater.ui \
     RankExam_Ui.ui \
-    ExamArrangement_Ui.ui
+    ExamArrangement_Ui.ui \
+    MoreWidget.ui
 
 RESOURCES += \
     loginassets.qrc
