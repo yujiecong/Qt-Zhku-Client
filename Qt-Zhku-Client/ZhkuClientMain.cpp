@@ -30,9 +30,9 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
 {
     ui->setupUi(this);
     init_();
-       setWindowTitle("仲恺教务网客户端-已登录");
-       setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
-       setWindowIconText("zhku");
+    setWindowTitle("仲恺教务网客户端-已登录");
+    setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
+    setWindowIconText("zhku");
 
 
 }
@@ -220,34 +220,6 @@ void ZhkuClientMain::initSysTaryIcon()
 
 }
 
-QNetworkReply *ZhkuClientMain::getReqReply(QUrl url,QByteArray para)
-{
-    QNetworkRequest req(QUrl(url.url()+para));
-    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-    return zhkuloginManager->manager.get(req);
-}
-
-QNetworkReply *ZhkuClientMain::postReqReply(QUrl url,QByteArray a)
-{
-    QNetworkRequest req(url);
-    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-    return zhkuloginManager->manager.post(req,a);
-}
-
-QNetworkReply *ZhkuClientMain::getReqReply(QString url, QByteArray para)
-{
-    QNetworkRequest req(QUrl(url+para));
-    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-    return zhkuloginManager->manager.get(req);
-}
-
-QNetworkReply *ZhkuClientMain::postReqReply(QString url, QByteArray a)
-{
-    QUrl u(url);
-    QNetworkRequest req(u);
-    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-    return zhkuloginManager->manager.post(req,a);
-}
 
 void ZhkuClientMain::closeEvent(QCloseEvent *e)
 {
@@ -383,8 +355,8 @@ void ZhkuClientMain::getCurriculumArrangement()
                 QMessageBox::warning(this,"错误","未找到对应课表");
             }
             else{
-//                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201&px=0
-//                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201
+                //                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201&px=0
+                //                http://jw.zhku.edu.cn/znpk/Pri_StuSel_Drawimg.aspx?type=2&w=928&h=120&xnxq=20201
 
                 QNetworkReply *curriUrlReply=getReqReply(QUrl(QString("http://jw.zhku.edu.cn/znpk/")+curriUrl));
                 connect(curriUrlReply,&QNetworkReply::finished,[=](){
@@ -618,23 +590,10 @@ void ZhkuClientMain::getExamTurn()
         QRegExp ex("[\u4e00-\u9fa5]{1,20}");
         QRegExp ex2("\\d{7}");
 
-        QStringList list;
-        QStringList list2;
-        list2<<QString();
-        int pos1=0;
-        int pos2 = 0;
-        while ((pos1 = ex.indexIn(html, pos1)) != -1)
-        {
-            list << ex.cap();                                   // 第一个捕获到的文本
-            pos1 += ex.matchedLength();             // 上一个匹配的字符串的长度
-            qDebug()<<pos1;
-        }
+        QStringList list=reFindAll(ex,html);
+        QStringList list2=reFindAll(ex,html);
+        list2.insert(0,QString());
 
-        while ((pos2 = ex2.indexIn(html, pos2)) != -1)
-        {
-            list2 << ex2.cap();                                   // 第一个捕获到的文本
-            pos2 += ex2.matchedLength();             // 上一个匹配的字符串的长度
-        }
 
         examArrUi->setCombo(list);
         examArrUi->setTurnCode(list2);

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ZhkuClientMain_t {
     QByteArrayData data[16];
-    char stringdata0[251];
+    char stringdata0[262];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,24 +35,24 @@ QT_MOC_LITERAL(0, 0, 14), // "ZhkuClientMain"
 QT_MOC_LITERAL(1, 15, 14), // "loginSuccessed"
 QT_MOC_LITERAL(2, 30, 0), // ""
 QT_MOC_LITERAL(3, 31, 11), // "getUserInfo"
-QT_MOC_LITERAL(4, 43, 13), // "getCurriculum"
-QT_MOC_LITERAL(5, 57, 15), // "getStudentScore"
-QT_MOC_LITERAL(6, 73, 19), // "getDistributedScore"
-QT_MOC_LITERAL(7, 93, 11), // "getRankExam"
-QT_MOC_LITERAL(8, 105, 10), // "getExamArr"
-QT_MOC_LITERAL(9, 116, 11), // "getExamTurn"
-QT_MOC_LITERAL(10, 128, 30), // "createCurriculumArrangement_Ui"
-QT_MOC_LITERAL(11, 159, 19), // "createQueryScore_Ui"
-QT_MOC_LITERAL(12, 179, 25), // "createDistributedScore_Ui"
-QT_MOC_LITERAL(13, 205, 17), // "createRankExam_Ui"
-QT_MOC_LITERAL(14, 223, 16), // "createExamArr_Ui"
-QT_MOC_LITERAL(15, 240, 10) // "removeMyUi"
+QT_MOC_LITERAL(4, 43, 24), // "getCurriculumArrangement"
+QT_MOC_LITERAL(5, 68, 15), // "getStudentScore"
+QT_MOC_LITERAL(6, 84, 19), // "getDistributedScore"
+QT_MOC_LITERAL(7, 104, 11), // "getRankExam"
+QT_MOC_LITERAL(8, 116, 10), // "getExamArr"
+QT_MOC_LITERAL(9, 127, 11), // "getExamTurn"
+QT_MOC_LITERAL(10, 139, 30), // "createCurriculumArrangement_Ui"
+QT_MOC_LITERAL(11, 170, 19), // "createQueryScore_Ui"
+QT_MOC_LITERAL(12, 190, 25), // "createDistributedScore_Ui"
+QT_MOC_LITERAL(13, 216, 17), // "createRankExam_Ui"
+QT_MOC_LITERAL(14, 234, 16), // "createExamArr_Ui"
+QT_MOC_LITERAL(15, 251, 10) // "removeMyUi"
 
     },
     "ZhkuClientMain\0loginSuccessed\0\0"
-    "getUserInfo\0getCurriculum\0getStudentScore\0"
-    "getDistributedScore\0getRankExam\0"
-    "getExamArr\0getExamTurn\0"
+    "getUserInfo\0getCurriculumArrangement\0"
+    "getStudentScore\0getDistributedScore\0"
+    "getRankExam\0getExamArr\0getExamTurn\0"
     "createCurriculumArrangement_Ui\0"
     "createQueryScore_Ui\0createDistributedScore_Ui\0"
     "createRankExam_Ui\0createExamArr_Ui\0"
@@ -116,7 +116,7 @@ void ZhkuClientMain::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->loginSuccessed(); break;
         case 1: _t->getUserInfo(); break;
-        case 2: _t->getCurriculum(); break;
+        case 2: _t->getCurriculumArrangement(); break;
         case 3: _t->getStudentScore(); break;
         case 4: _t->getDistributedScore(); break;
         case 5: _t->getRankExam(); break;

@@ -23,9 +23,10 @@ public:
 
     QString getXnxq();
     void setXnxq(const QString &value);
-    QNetworkAccessManager  manager;
+
 protected:
     void closeEvent(QCloseEvent *event);
+    void paintEvent(QPaintEvent *event);
 private slots:
     void tryLogin();
     void getCodeImg();
@@ -51,7 +52,7 @@ private:
     const QString iniKey=QString("settings/loginSettings");
     const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
 
-     QNetworkReply* getGetReply(QString url);
+//     QNetworkReply* getGetReply(QString url);
 };
 
 #endif // ZHKULOGINWIDGET_H

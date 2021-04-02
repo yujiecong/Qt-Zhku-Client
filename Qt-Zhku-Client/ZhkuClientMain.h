@@ -33,12 +33,6 @@ public:
     void init_();
     void initSysTaryIcon();
 
-
-      QNetworkReply *getReqReply(QUrl url, QByteArray para="");
-      QNetworkReply *postReqReply(QUrl url, QByteArray a="");
-
-     QNetworkReply *getReqReply(QString url, QByteArray para="");
-       QNetworkReply *postReqReply(QString url, QByteArray a="");
 protected:
     void closeEvent(QCloseEvent *e);
 

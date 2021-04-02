@@ -1,9 +1,10 @@
 #include "MoreWidget.h"
 #include "ZhkuLoginWidget.h"
 #include "ui_zhkuloginwidget.h"
-
+#include "global.h"
 #include <QMessageBox>
 #include <QMouseEvent>
+#include <QPainter>
 
 ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
     QWidget(parent),
@@ -100,13 +101,13 @@ void ZhkuLoginWidget::loginInit()
             //                qDebug()<<readTest;
             if (loginRead.contains(QString("无权"))){
                 qDebug()<<"cookies 已失效,请重新登录";
-                 settings->remove(iniKey);
+                settings->remove(iniKey);
                 loginInit();
             }
             else if(loginRead.contains(QString("您被强迫下线"))){
                 qDebug()<<"cookies 显示你在别处登录!";
                 qDebug()<<"cookies 已失效,请重新登录";
-                 settings->remove(iniKey);
+                settings->remove(iniKey);
                 loginInit();
 
             }
@@ -130,10 +131,9 @@ void ZhkuLoginWidget::loginInit()
 
         //验证码
         QNetworkReply *homeReply=manager.get(reqHome);
-        connect(homeReply,&QNetworkReply::finished,this,&ZhkuLoginWidget::getCodeImg);
+        connect(homeReply,&QNetworkReply::finished,[=](){homeReply->deleteLater();&ZhkuLoginWidget::getCodeImg;});
     }
 }
-
 
 QString ZhkuLoginWidget::getXnxq()
 {
@@ -149,6 +149,17 @@ void ZhkuLoginWidget::closeEvent(QCloseEvent *event)
 {
 
     event->accept();
+}
+
+void ZhkuLoginWidget::paintEvent(QPaintEvent *event)
+{
+    QPainter painter(this);
+    painter.setRenderHint(QPainter::Antialiasing);
+    painter.setPen(Qt::transparent);
+    QRect rect = this->rect();
+    rect.setWidth(rect.width() - 1);
+    rect.setHeight(rect.height() - 1);
+    painter.drawRoundedRect(rect, 10, 10);
 }
 
 void ZhkuLoginWidget::tryLogin()
@@ -239,7 +250,7 @@ void ZhkuLoginWidget::getCodeImg()
             pixmap.loadFromData(codeRaw);
 
             ui->codeInput->setPixmap(pixmap);
-            moreWidget->setImg(pixmap);
+
             codeImg->write(codeRaw);
             codeImg->close();
             codeReply->deleteLater();
@@ -276,34 +287,30 @@ void ZhkuLoginWidget::writeSettings()
 void ZhkuLoginWidget::showMore()
 {
 
-    connect(moreWidget,&MoreWidget::getCodeImg,this,&ZhkuLoginWidget::getCodeImg);
+
+    queryCurriculum();
+
     moreWidget->show();
 }
 
 void ZhkuLoginWidget::queryCurriculum()
 {
-    QNetworkReply *rp=getGetReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel.aspx");
+    QNetworkReply *rp=getReqReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel.aspx");
     connect(rp,&QNetworkReply::finished,[=](){
-       QString html=strProcessor.gbk2Utf8(rp->readAll());
+        QString html=strProcessor.gbk2Utf8(rp->readAll());
 
-       QNetworkReply *rptRp=getGetReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");
-       connect(rptRp,&QNetworkReply::finished,[=](){
-           //
-           QNetworkReply *kcRep=getGetReply(tr("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(moreWidget->getXnxq()));
-           connect(kcRep,&QNetworkReply::finished,[=](){
-               qDebug()<<strProcessor.gbk2Utf8(kcRep->readAll());
-               kcRep->deleteLater();
-           });
-           rptRp->deleteLater();
-       });
-       rp->deleteLater();
+        QNetworkReply *rptRp=getReqReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");
+        connect(rptRp,&QNetworkReply::finished,[=](){
+            //
+            QNetworkReply *kcRep=getReqReply(tr("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(moreWidget->getXnxq()));
+            connect(kcRep,&QNetworkReply::finished,[=](){
+                qDebug()<<strProcessor.gbk2Utf8(kcRep->readAll());
+                kcRep->deleteLater();
+            });
+            rptRp->deleteLater();
+        });
+        rp->deleteLater();
     });
 }
 
-QNetworkReply *ZhkuLoginWidget::getGetReply(QString url)
-{
-    QUrl u(url);
-    QNetworkRequest req(u);
-    req.setRawHeader("Content-Type", "application/x-www-form-urlencoded");
-    return manager.get(req);
-}
+

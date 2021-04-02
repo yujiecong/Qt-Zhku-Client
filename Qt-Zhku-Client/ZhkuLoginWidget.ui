@@ -112,6 +112,7 @@
             <property name="styleSheet">
              <string notr="true">QWidget#widget{
 background-color: rgba(250, 250, 250, 200);
+border-radius:15px;
 }
 
 </string>

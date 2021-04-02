@@ -40,7 +40,8 @@ SOURCES += \
     UserAvater.cpp \
     Rankexam_Ui.cpp \
     ExamArrangement_Ui.cpp \
-    MoreWidget.cpp
+    MoreWidget.cpp \
+    global.cpp
 
 
 HEADERS += \
