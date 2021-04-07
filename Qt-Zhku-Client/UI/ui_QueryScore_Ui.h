@@ -33,12 +33,14 @@ public:
     QScrollArea *scrollArea_2;
     QWidget *scrollAreaWidgetContents_2;
     QHBoxLayout *horizontalLayout_5;
-    QWidget *widget_2;
-    QHBoxLayout *horizontalLayout_2;
+    QGroupBox *groupBox_2;
+    QHBoxLayout *horizontalLayout_6;
     QLabel *label;
     QComboBox *comboBox;
     QLabel *label_3;
     QComboBox *comboBox_3;
+    QWidget *widget_2;
+    QHBoxLayout *horizontalLayout_2;
     QGroupBox *groupBox;
     QHBoxLayout *horizontalLayout;
     QRadioButton *rawScore;
@@ -85,12 +87,11 @@ public:
         scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 795, 79));
         horizontalLayout_5 = new QHBoxLayout(scrollAreaWidgetContents_2);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        widget_2 = new QWidget(scrollAreaWidgetContents_2);
-        widget_2->setObjectName(QStringLiteral("widget_2"));
-        horizontalLayout_2 = new QHBoxLayout(widget_2);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget_2);
+        groupBox_2 = new QGroupBox(scrollAreaWidgetContents_2);
+        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        horizontalLayout_6 = new QHBoxLayout(groupBox_2);
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        label = new QLabel(groupBox_2);
         label->setObjectName(QStringLiteral("label"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
@@ -102,31 +103,39 @@ public:
         font.setPointSize(9);
         label->setFont(font);
 
-        horizontalLayout_2->addWidget(label);
+        horizontalLayout_6->addWidget(label);
 
-        comboBox = new QComboBox(widget_2);
+        comboBox = new QComboBox(groupBox_2);
         comboBox->setObjectName(QStringLiteral("comboBox"));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(10);
         comboBox->setFont(font1);
 
-        horizontalLayout_2->addWidget(comboBox);
+        horizontalLayout_6->addWidget(comboBox);
 
-        label_3 = new QLabel(widget_2);
+        label_3 = new QLabel(groupBox_2);
         label_3->setObjectName(QStringLiteral("label_3"));
         sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy1);
         label_3->setFont(font);
 
-        horizontalLayout_2->addWidget(label_3);
+        horizontalLayout_6->addWidget(label_3);
 
-        comboBox_3 = new QComboBox(widget_2);
+        comboBox_3 = new QComboBox(groupBox_2);
         comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
         comboBox_3->setFont(font1);
 
-        horizontalLayout_2->addWidget(comboBox_3);
+        horizontalLayout_6->addWidget(comboBox_3);
 
+
+        horizontalLayout_5->addWidget(groupBox_2);
+
+        widget_2 = new QWidget(scrollAreaWidgetContents_2);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        horizontalLayout_2 = new QHBoxLayout(widget_2);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         groupBox = new QGroupBox(widget_2);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         horizontalLayout = new QHBoxLayout(groupBox);
@@ -253,6 +262,7 @@ public:
     void retranslateUi(QWidget *QueryScore_Ui)
     {
         QueryScore_Ui->setWindowTitle(QApplication::translate("QueryScore_Ui", "Form", Q_NULLPTR));
+        groupBox_2->setTitle(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264\345\255\246\346\234\237", Q_NULLPTR));
         label->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\345\271\264", Q_NULLPTR));
         label_3->setText(QApplication::translate("QueryScore_Ui", "\345\255\246\346\234\237", Q_NULLPTR));
         comboBox_3->clear();
