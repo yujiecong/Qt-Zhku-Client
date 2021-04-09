@@ -21,7 +21,7 @@ public slots:
     void changeSubBg(int pos);
 
 private:
-        int curPos=-1;
+    int curPos=-1;
 private slots:
 
 

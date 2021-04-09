@@ -4,12 +4,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-//    ZhkuClientMain w;
-    int aa=8;
-    int *p=&aa;
-    aa=(*p)++;
-    qDebug()<<aa;
-
+    a.setFont(QFont("Droid Sans Fallback",24));
+    ZhkuClientMain w;
     return a.exec();
 }

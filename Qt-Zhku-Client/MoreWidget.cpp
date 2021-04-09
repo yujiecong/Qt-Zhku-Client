@@ -160,3 +160,8 @@ void MoreWidget::on_pushButton_11_clicked()
 
 //    http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=20201&kc=
 }
+
+void MoreWidget::on_pushButton_21_clicked()
+{
+    hide();
+}

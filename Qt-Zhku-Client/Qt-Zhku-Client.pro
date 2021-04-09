@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Qt-Zhku-Client
 TEMPLATE = app
-
+CONFIG += C++11
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -41,7 +41,8 @@ SOURCES += \
     Rankexam_Ui.cpp \
     ExamArrangement_Ui.cpp \
     MoreWidget.cpp \
-    global.cpp
+    global.cpp \
+    zhkuloginwidgetbyandroid.cpp
 
 
 HEADERS += \
@@ -61,7 +62,8 @@ HEADERS += \
     UserAvater.h \
     Rankexam_Ui.h \
     ExamArrangement_Ui.h \
-    MoreWidget.h
+    MoreWidget.h \
+    zhkuloginwidgetbyandroid.h
 
 
 FORMS += \
@@ -78,9 +80,23 @@ FORMS += \
     UserAvater.ui \
     RankExam_Ui.ui \
     ExamArrangement_Ui.ui \
-    MoreWidget.ui
+    MoreWidget.ui \
+    zhkuloginwidgetbyandroid.ui
 
 RESOURCES += \
     loginassets.qrc
 
-DISTFILES +=
+DISTFILES += \
+    android/AndroidManifest.xml \
+    android/build.gradle \
+    android/gradle/wrapper/gradle-wrapper.jar \
+    android/gradle/wrapper/gradle-wrapper.jar \
+    android/gradle/wrapper/gradle-wrapper.properties \
+    android/gradle/wrapper/gradle-wrapper.properties \
+    android/gradlew \
+    android/gradlew \
+    android/gradlew.bat \
+    android/gradlew.bat \
+    android/res/values/libs.xml
+
+ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android

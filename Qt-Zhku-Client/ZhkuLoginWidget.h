@@ -7,6 +7,7 @@
 #include "global.h"
 namespace Ui {
 class ZhkuLoginWidget;
+class ZhkuLoginWidgetByAndroid;
 }
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -36,7 +37,7 @@ private slots:
 signals:
     void loginSuccessed();
 private:
-    Ui::ZhkuLoginWidget *ui;
+
     QUrl zhkuHomeUrl=QUrl("http://jw.zhku.edu.cn/home.aspx");
     QUrl zhkuLoginCodeUrl=QUrl("http://jw.zhku.edu.cn/sys/ValidateCode.aspx");
     QUrl zhkuLoginHomeUrl=QUrl("http://jw.zhku.edu.cn/_data/login_home.aspx");

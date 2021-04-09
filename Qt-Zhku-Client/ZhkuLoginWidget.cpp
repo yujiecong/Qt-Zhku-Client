@@ -1,16 +1,27 @@
 #include "MoreWidget.h"
 #include "ZhkuLoginWidget.h"
 #include "ui_zhkuloginwidget.h"
+
 #include "global.h"
+#include <QGuiApplication>
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QPainter>
-
+#include <QScreen>
+#include <ui_zhkuloginwidgetbyandroid.h>
+#if defined(Q_OS_ANDROID)
+    Ui::ZhkuLoginWidgetByAndroid *ui=new Ui::ZhkuLoginWidgetByAndroid;
+#else
+    Ui::ZhkuLoginWidget *ui=new Ui::ZhkuLoginWidget;
+#endif
 ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ZhkuLoginWidget)
+    QWidget(parent)
 {
+
     ui->setupUi(this);
+
+    QRect screenRect = QGuiApplication::primaryScreen()->geometry();
+//    ui->widget->setFixedSize(screenRect);
     ui->loginButton->setShortcut(Qt::Key_Enter);
     ui->loginButton->setShortcut(Qt::Key_Return);
 
@@ -132,6 +143,7 @@ void ZhkuLoginWidget::loginInit()
         //验证码
         QNetworkReply *homeReply=manager.get(reqHome);
         connect(homeReply,&QNetworkReply::finished,[=](){homeReply->deleteLater();&ZhkuLoginWidget::getCodeImg;});
+        getCodeImg();
     }
 }
 

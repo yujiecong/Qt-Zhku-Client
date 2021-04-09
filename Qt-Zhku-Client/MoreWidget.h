@@ -45,6 +45,8 @@ private slots:
 
     void on_pushButton_11_clicked();
 
+    void on_pushButton_21_clicked();
+
 private:
     Ui::MoreWidget *ui;
     QString xnxq;

@@ -1,32 +1,33 @@
 <RCC>
     <qresource prefix="/">
         <file>assets/login/logo.png</file>
-        <file>assets/login/password.svg</file>
-        <file>assets/login/user.svg</file>
-        <file>assets/login/validation.svg</file>
         <file>assets/login/304866.jpg</file>
         <file>assets/arrow/Arrow Circle down 2 - 24px.svg</file>
         <file>assets/arrow/Arrow Circle up 2 - 24px.svg</file>
-        <file>assets/btnIcon/安排.svg</file>
-        <file>assets/btnIcon/工作安排.svg</file>
-        <file>assets/btnIcon/会议安排.svg</file>
-        <file>assets/btnIcon/毕业.svg</file>
-        <file>assets/btnIcon/档案.svg</file>
-        <file>assets/btnIcon/管理.svg</file>
-        <file>assets/btnIcon/信息.svg</file>
-        <file>assets/btnIcon/学生.svg</file>
-        <file>assets/btnIcon/异常.svg</file>
-        <file>assets/btnIcon/成绩.svg</file>
-        <file>assets/btnIcon/考试.svg</file>
-        <file>assets/btnIcon/设置.svg</file>
-        <file>assets/btnIcon/书.svg</file>
-        <file>assets/btnIcon/选择.svg</file>
-        <file>assets/btnIcon/方案 (2).svg</file>
-        <file>assets/btnIcon/手机.svg</file>
+        <file>assets/btnIcon/book.svg</file>
         <file>assets/zhkuImg/logo.jpg</file>
         <file>assets/zhkuImg/close.jpg</file>
-        <file>assets/btnIcon/垃圾箱.svg</file>
-        <file>assets/btnIcon/警告.svg</file>
-        <file>assets/user_img/问号.svg</file>
+        <file>assets/btnIcon/archive.svg</file>
+        <file>assets/btnIcon/arrangement.svg</file>
+        <file>assets/btnIcon/arrangement2.svg</file>
+        <file>assets/btnIcon/choice.svg</file>
+        <file>assets/btnIcon/error.svg</file>
+        <file>assets/btnIcon/examination.svg</file>
+        <file>assets/btnIcon/garbage.svg</file>
+        <file>assets/btnIcon/graduation.svg</file>
+        <file>assets/btnIcon/information.svg</file>
+        <file>assets/btnIcon/meeting.svg</file>
+        <file>assets/btnIcon/phone.svg</file>
+        <file>assets/btnIcon/scheme.svg</file>
+        <file>assets/btnIcon/score.svg</file>
+        <file>assets/btnIcon/setting.svg</file>
+        <file>assets/btnIcon/students.svg</file>
+        <file>assets/btnIcon/warning.svg</file>
+        <file>assets/btnIcon/work.svg</file>
+        <file>assets/user_img/wenhao.svg</file>
+        <file>assets/login/password.png</file>
+        <file>assets/login/user.png</file>
+        <file>assets/login/validCode.png</file>
+        <file>assets/zhkuImg/bg.jpg</file>
     </qresource>
 </RCC>
