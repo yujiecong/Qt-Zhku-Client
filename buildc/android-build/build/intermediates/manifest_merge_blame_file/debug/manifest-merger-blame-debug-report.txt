@@ -9,7 +9,7 @@
 8-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:3:5-73
 9        android:minSdkVersion="21"
 9-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:3:15-41
-10        android:targetSdkVersion="29" />
+10        android:targetSdkVersion="28" />
 10-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:3:42-71
 11
 12    <!--
@@ -51,193 +51,195 @@
 34-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:148-180
 35        android:hardwareAccelerated="true"
 35-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:18-52
-36        android:label="Qt-Zhku-Client" >
-36-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:117-147
-37        <activity
-37-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:9-83:16
-38            android:name="org.qtproject.qt5.android.bindings.QtActivity"
-38-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:189-249
-39            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-39-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:19-188
-40            android:label="Qt-Zhku-Client"
-40-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:250-280
-41            android:launchMode="singleTop"
-41-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:321-351
-42            android:screenOrientation="unspecified" >
-42-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:281-320
-43            <intent-filter>
-43-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:19:13-22:29
-44                <action android:name="android.intent.action.MAIN" />
-44-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:20:17-68
-44-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:20:25-66
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:21:17-76
-46-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:21:27-74
-47            </intent-filter>
-48
-49            <!-- Application arguments -->
-50            <!-- meta-data android:name="android.app.arguments" android:value="arg1 arg2 arg3"/ -->
-51            <!-- Application arguments -->
-52
-53            <meta-data
-53-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:13-92
-54                android:name="android.app.lib_name"
-54-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:24-59
-55                android:value="Qt-Zhku-Client" />
-55-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:60-90
-56            <meta-data
-56-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:13-112
-57                android:name="android.app.qt_sources_resource_id"
-57-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:24-73
-58                android:resource="@array/qt_sources" />
-58-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:74-110
-59            <meta-data
-59-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:13-87
-60                android:name="android.app.repository"
-60-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:24-61
-61                android:value="default" />
-61-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:62-85
-62            <meta-data
-62-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:13-106
-63                android:name="android.app.qt_libs_resource_id"
-63-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:24-70
-64                android:resource="@array/qt_libs" />
-64-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:71-104
-65            <meta-data
-65-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:13-116
-66                android:name="android.app.bundled_libs_resource_id"
-66-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:24-75
-67                android:resource="@array/bundled_libs" />
-67-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:76-114
-68            <!-- Deploy Qt libs as part of package -->
-69            <meta-data
-69-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:13-91
-70                android:name="android.app.bundle_local_qt_libs"
-70-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:24-71
-71                android:value="1" />
-71-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:72-89
-72
-73            <!-- Run with local libs -->
-74            <meta-data
-74-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:13-88
-75                android:name="android.app.use_local_qt_libs"
-75-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:24-68
-76                android:value="1" />
-76-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:69-86
-77            <meta-data
-77-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:13-100
-78                android:name="android.app.libs_prefix"
-78-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:24-62
-79                android:value="/data/local/tmp/qt/" />
-79-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:63-98
-80            <meta-data
-80-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:13-122
-81                android:name="android.app.load_local_libs_resource_id"
-81-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:24-78
-82                android:resource="@array/load_local_libs" />
-82-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:79-120
-83            <meta-data
-83-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:13-126
-84                android:name="android.app.load_local_jars"
-84-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:24-66
-85                android:value="jar/QtAndroid.jar:jar/QtAndroidBearer.jar" />
-85-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:67-124
-86            <meta-data
-86-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:13-89
-87                android:name="android.app.static_init_classes"
-87-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:24-70
-88                android:value="" />
-88-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:71-87
-89            <!-- Used to specify custom system library path to run with local system libs -->
-90            <!-- <meta-data android:name="android.app.system_libs_prefix" android:value="/system/lib/"/> -->
-91            <!-- Messages maps -->
-92            <meta-data
-92-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:13-122
-93                android:name="android.app.ministro_not_found_msg"
-93-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:71-120
-94                android:value="@string/ministro_not_found_msg" />
-94-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:24-70
-95            <meta-data
-95-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:13-116
-96                android:name="android.app.ministro_needed_msg"
-96-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:68-114
-97                android:value="@string/ministro_needed_msg" />
-97-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:24-67
-98            <meta-data
-98-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:13-108
-99                android:name="android.app.fatal_error_msg"
-99-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:64-106
-100                android:value="@string/fatal_error_msg" />
-100-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:24-63
-101            <meta-data
-101-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:13-132
-102                android:name="android.app.unsupported_android_version"
-102-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:76-130
-103                android:value="@string/unsupported_android_version" />
-103-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:24-75
-104            <!-- Messages maps -->
-105
+36        android:icon="@drawable/icon"
+36-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:181-210
+37        android:label="Qt-Zhku-Client" >
+37-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:117-147
+38        <activity
+38-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:9-83:16
+39            android:name="org.qtproject.qt5.android.bindings.QtActivity"
+39-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:189-249
+40            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+40-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:19-188
+41            android:label="仲恺教务网安卓端"
+41-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:250-274
+42            android:launchMode="singleTop"
+42-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:315-345
+43            android:screenOrientation="unspecified" >
+43-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:275-314
+44            <intent-filter>
+44-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:19:13-22:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:20:17-68
+45-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:20:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:21:17-76
+47-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:21:27-74
+48            </intent-filter>
+49
+50            <!-- Application arguments -->
+51            <!-- meta-data android:name="android.app.arguments" android:value="arg1 arg2 arg3"/ -->
+52            <!-- Application arguments -->
+53
+54            <meta-data
+54-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:13-92
+55                android:name="android.app.lib_name"
+55-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:24-59
+56                android:value="Qt-Zhku-Client" />
+56-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:28:60-90
+57            <meta-data
+57-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:13-112
+58                android:name="android.app.qt_sources_resource_id"
+58-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:24-73
+59                android:resource="@array/qt_sources" />
+59-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:29:74-110
+60            <meta-data
+60-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:13-87
+61                android:name="android.app.repository"
+61-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:24-61
+62                android:value="default" />
+62-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:30:62-85
+63            <meta-data
+63-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:13-106
+64                android:name="android.app.qt_libs_resource_id"
+64-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:24-70
+65                android:resource="@array/qt_libs" />
+65-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:31:71-104
+66            <meta-data
+66-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:13-116
+67                android:name="android.app.bundled_libs_resource_id"
+67-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:24-75
+68                android:resource="@array/bundled_libs" />
+68-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:32:76-114
+69            <!-- Deploy Qt libs as part of package -->
+70            <meta-data
+70-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:13-91
+71                android:name="android.app.bundle_local_qt_libs"
+71-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:24-71
+72                android:value="1" />
+72-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:34:72-89
+73
+74            <!-- Run with local libs -->
+75            <meta-data
+75-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:13-88
+76                android:name="android.app.use_local_qt_libs"
+76-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:24-68
+77                android:value="1" />
+77-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:37:69-86
+78            <meta-data
+78-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:13-100
+79                android:name="android.app.libs_prefix"
+79-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:24-62
+80                android:value="/data/local/tmp/qt/" />
+80-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:38:63-98
+81            <meta-data
+81-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:13-122
+82                android:name="android.app.load_local_libs_resource_id"
+82-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:24-78
+83                android:resource="@array/load_local_libs" />
+83-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:39:79-120
+84            <meta-data
+84-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:13-126
+85                android:name="android.app.load_local_jars"
+85-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:24-66
+86                android:value="jar/QtAndroid.jar:jar/QtAndroidBearer.jar" />
+86-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:40:67-124
+87            <meta-data
+87-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:13-89
+88                android:name="android.app.static_init_classes"
+88-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:24-70
+89                android:value="" />
+89-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:41:71-87
+90            <!-- Used to specify custom system library path to run with local system libs -->
+91            <!-- <meta-data android:name="android.app.system_libs_prefix" android:value="/system/lib/"/> -->
+92            <!-- Messages maps -->
+93            <meta-data
+93-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:13-122
+94                android:name="android.app.ministro_not_found_msg"
+94-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:71-120
+95                android:value="@string/ministro_not_found_msg" />
+95-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:45:24-70
+96            <meta-data
+96-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:13-116
+97                android:name="android.app.ministro_needed_msg"
+97-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:68-114
+98                android:value="@string/ministro_needed_msg" />
+98-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:46:24-67
+99            <meta-data
+99-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:13-108
+100                android:name="android.app.fatal_error_msg"
+100-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:64-106
+101                android:value="@string/fatal_error_msg" />
+101-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:47:24-63
+102            <meta-data
+102-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:13-132
+103                android:name="android.app.unsupported_android_version"
+103-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:76-130
+104                android:value="@string/unsupported_android_version" />
+104-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:48:24-75
+105            <!-- Messages maps -->
 106
-107            <!-- Splash screen -->
-108            <!--
-109                 Orientation-specific (portrait/landscape) data is checked first. If not available for current orientation,
-110                 then android.app.splash_screen_drawable. For best results, use together with splash_screen_sticky and
-111                 use hideSplashScreen() with a fade-out animation from Qt Android Extras to hide the splash screen when you
-112                 are done populating your window with content.
-113            -->
-114            <!-- meta-data android:name="android.app.splash_screen_drawable_portrait" android:resource="@drawable/logo_portrait" / -->
-115            <!-- meta-data android:name="android.app.splash_screen_drawable_landscape" android:resource="@drawable/logo_landscape" / -->
-116            <!-- meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/logo"/ -->
-117            <!-- meta-data android:name="android.app.splash_screen_sticky" android:value="true"/ -->
-118            <!-- Splash screen -->
-119
+107
+108            <!-- Splash screen -->
+109            <!--
+110                 Orientation-specific (portrait/landscape) data is checked first. If not available for current orientation,
+111                 then android.app.splash_screen_drawable. For best results, use together with splash_screen_sticky and
+112                 use hideSplashScreen() with a fade-out animation from Qt Android Extras to hide the splash screen when you
+113                 are done populating your window with content.
+114            -->
+115            <!-- meta-data android:name="android.app.splash_screen_drawable_portrait" android:resource="@drawable/logo_portrait" / -->
+116            <!-- meta-data android:name="android.app.splash_screen_drawable_landscape" android:resource="@drawable/logo_landscape" / -->
+117            <!-- meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/logo"/ -->
+118            <!-- meta-data android:name="android.app.splash_screen_sticky" android:value="true"/ -->
+119            <!-- Splash screen -->
 120
-121            <!-- Background running -->
-122            <!--
-123                 Warning: changing this value to true may cause unexpected crashes if the
-124                          application still try to draw after
-125                          "applicationStateChanged(Qt::ApplicationSuspended)"
-126                          signal is sent!
-127            -->
-128            <meta-data
-128-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:13-93
-129                android:name="android.app.background_running"
-129-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:24-69
-130                android:value="false" />
-130-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:70-91
-131            <!-- Background running -->
-132
+121
+122            <!-- Background running -->
+123            <!--
+124                 Warning: changing this value to true may cause unexpected crashes if the
+125                          application still try to draw after
+126                          "applicationStateChanged(Qt::ApplicationSuspended)"
+127                          signal is sent!
+128            -->
+129            <meta-data
+129-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:13-93
+130                android:name="android.app.background_running"
+130-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:24-69
+131                android:value="false" />
+131-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:67:70-91
+132            <!-- Background running -->
 133
-134            <!-- auto screen scale factor -->
-135            <meta-data
-135-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:13-99
-136                android:name="android.app.auto_screen_scale_factor"
-136-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:24-75
-137                android:value="false" />
-137-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:76-97
-138            <!-- auto screen scale factor -->
-139
+134
+135            <!-- auto screen scale factor -->
+136            <meta-data
+136-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:13-99
+137                android:name="android.app.auto_screen_scale_factor"
+137-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:24-75
+138                android:value="false" />
+138-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:71:76-97
+139            <!-- auto screen scale factor -->
 140
-141            <!-- extract android style -->
-142            <!--
-143                 available android:values :
-144                * default - In most cases this will be the same as "full", but it can also be something else if needed, e.g., for compatibility reasons
-145                * full - useful QWidget & Quick Controls 1 apps
-146                * minimal - useful for Quick Controls 2 apps, it is much faster than "full"
-147                * none - useful for apps that don't use any of the above Qt modules
-148            -->
-149            <meta-data
-149-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:13-98
-150                android:name="android.app.extract_android_style"
-150-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:24-72
-151                android:value="default" />
-151-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:73-96
-152            <!-- extract android style -->
-153        </activity>
-154
-155        <!-- For adding service(s) please check: https://wiki.qt.io/AndroidServices -->
-156
-157    </application>
-158
-159</manifest>
+141
+142            <!-- extract android style -->
+143            <!--
+144                 available android:values :
+145                * default - In most cases this will be the same as "full", but it can also be something else if needed, e.g., for compatibility reasons
+146                * full - useful QWidget & Quick Controls 1 apps
+147                * minimal - useful for Quick Controls 2 apps, it is much faster than "full"
+148                * none - useful for apps that don't use any of the above Qt modules
+149            -->
+150            <meta-data
+150-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:13-98
+151                android:name="android.app.extract_android_style"
+151-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:24-72
+152                android:value="default" />
+152-->D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:81:73-96
+153            <!-- extract android style -->
+154        </activity>
+155
+156        <!-- For adding service(s) please check: https://wiki.qt.io/AndroidServices -->
+157
+158    </application>
+159
+160</manifest>

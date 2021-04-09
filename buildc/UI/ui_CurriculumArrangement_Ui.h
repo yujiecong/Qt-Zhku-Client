@@ -32,9 +32,10 @@ public:
     QVBoxLayout *verticalLayout;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label;
-    QComboBox *comboBox;
     QGroupBox *groupBox;
+    QHBoxLayout *horizontalLayout_4;
+    QComboBox *comboBox;
+    QGroupBox *groupBox1;
     QHBoxLayout *horizontalLayout;
     QRadioButton *radioButton;
     QRadioButton *radioButton_2;
@@ -65,39 +66,36 @@ public:
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
         horizontalLayout_2 = new QHBoxLayout(widget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label = new QLabel(widget_2);
-        label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
-
-        horizontalLayout_2->addWidget(label);
-
-        comboBox = new QComboBox(widget_2);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-
-        horizontalLayout_2->addWidget(comboBox);
-
         groupBox = new QGroupBox(widget_2);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        horizontalLayout = new QHBoxLayout(groupBox);
+        horizontalLayout_4 = new QHBoxLayout(groupBox);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        comboBox = new QComboBox(groupBox);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+
+        horizontalLayout_4->addWidget(comboBox);
+
+
+        horizontalLayout_2->addWidget(groupBox);
+
+        groupBox1 = new QGroupBox(widget_2);
+        groupBox1->setObjectName(QString::fromUtf8("groupBox1"));
+        horizontalLayout = new QHBoxLayout(groupBox1);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        radioButton = new QRadioButton(groupBox);
+        radioButton = new QRadioButton(groupBox1);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
         radioButton->setChecked(true);
 
         horizontalLayout->addWidget(radioButton);
 
-        radioButton_2 = new QRadioButton(groupBox);
+        radioButton_2 = new QRadioButton(groupBox1);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
         radioButton_2->setEnabled(true);
 
         horizontalLayout->addWidget(radioButton_2);
 
 
-        horizontalLayout_2->addWidget(groupBox);
+        horizontalLayout_2->addWidget(groupBox1);
 
         type1Widget = new QGroupBox(widget_2);
         type1Widget->setObjectName(QString::fromUtf8("type1Widget"));
@@ -106,11 +104,11 @@ public:
         checkBox = new QCheckBox(type1Widget);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
         checkBox->setEnabled(true);
-        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
-        checkBox->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
+        checkBox->setSizePolicy(sizePolicy);
         checkBox->setChecked(false);
 
         horizontalLayout_3->addWidget(checkBox);
@@ -118,16 +116,19 @@ public:
         lineEdit = new QLineEdit(type1Widget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setEnabled(false);
-        sizePolicy1.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy1);
+        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
+        lineEdit->setSizePolicy(sizePolicy);
         lineEdit->setMaximumSize(QSize(50, 16777215));
 
         horizontalLayout_3->addWidget(lineEdit);
 
         label_2 = new QLabel(type1Widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy1);
 
         horizontalLayout_3->addWidget(label_2);
 
@@ -181,8 +182,8 @@ public:
     void retranslateUi(QWidget *CurriculumArrangement_Ui)
     {
         CurriculumArrangement_Ui->setWindowTitle(QCoreApplication::translate("CurriculumArrangement_Ui", "Form", nullptr));
-        label->setText(QCoreApplication::translate("CurriculumArrangement_Ui", "\345\255\246\345\271\264\345\255\246\346\234\237", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("CurriculumArrangement_Ui", "\350\257\276\347\250\213\346\240\274\345\274\217", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("CurriculumArrangement_Ui", "\345\255\246\345\271\264\345\255\246\346\234\237", nullptr));
+        groupBox1->setTitle(QCoreApplication::translate("CurriculumArrangement_Ui", "\350\257\276\347\250\213\346\240\274\345\274\217", nullptr));
         radioButton->setText(QCoreApplication::translate("CurriculumArrangement_Ui", "\346\240\274\345\274\217\344\270\200", nullptr));
         radioButton_2->setText(QCoreApplication::translate("CurriculumArrangement_Ui", "\346\240\274\345\274\217\344\272\214", nullptr));
         type1Widget->setTitle(QCoreApplication::translate("CurriculumArrangement_Ui", "\350\257\276\347\250\213\350\267\250\345\272\246", nullptr));

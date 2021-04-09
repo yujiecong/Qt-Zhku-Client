@@ -27,6 +27,7 @@ ZhkuLoginWidget::ZhkuLoginWidget(QWidget *parent) :
 
     connect(ui->loginButton,&QPushButton::clicked,this,&ZhkuLoginWidget::tryLogin);
     connect(ui->loginButton_2,&QPushButton::clicked,this,&ZhkuLoginWidget::showMore);
+
     setWindowTitle("仲恺教务网客户端-未登录");
     setWindowIcon(QIcon(":/assets/zhkuImg/logo.jpg"));
 
@@ -65,7 +66,6 @@ void ZhkuLoginWidget::loginInit()
     qDebug()<<settingsString.toLocal8Bit().data();
 
     getLocalXNXQ();
-    moreWidget =new MoreWidget(getXnxq());
 
     cookies=settingsJson["cookies"].toString();
     //如果设置了自动登录
@@ -142,8 +142,8 @@ void ZhkuLoginWidget::loginInit()
 
         //验证码
         QNetworkReply *homeReply=manager.get(reqHome);
-        connect(homeReply,&QNetworkReply::finished,[=](){homeReply->deleteLater();&ZhkuLoginWidget::getCodeImg;});
-        getCodeImg();
+        connect(homeReply,&QNetworkReply::finished,[=](){getCodeImg();homeReply->deleteLater();});
+
     }
 }
 
@@ -298,7 +298,8 @@ void ZhkuLoginWidget::writeSettings()
 
 void ZhkuLoginWidget::showMore()
 {
-
+    moreWidget =new MoreWidget(getXnxq());
+    connect(moreWidget,&MoreWidget::signalsGetCodeImg,this,&ZhkuLoginWidget::getCodeImg);
 
     queryCurriculum();
 

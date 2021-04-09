@@ -33,7 +33,7 @@ public:
     QString getXnxq() const;
 
 signals:
-
+    void signalsGetCodeImg();
 private slots:
     void on_pushButton_clicked();
     void slotsShowPage(int);

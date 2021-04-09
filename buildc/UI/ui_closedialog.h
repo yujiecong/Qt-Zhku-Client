@@ -54,7 +54,7 @@ public:
         label_3 = new QLabel(CloseDialog);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setMaximumSize(QSize(64, 64));
-        label_3->setPixmap(QPixmap(QString::fromUtf8(":/assets/btnIcon/\350\255\246\345\221\212.svg")));
+        label_3->setPixmap(QPixmap(QString::fromUtf8(":/assets/user_img/wenhao.png")));
         label_3->setScaledContents(true);
         label_3->setAlignment(Qt::AlignJustify|Qt::AlignTop);
 

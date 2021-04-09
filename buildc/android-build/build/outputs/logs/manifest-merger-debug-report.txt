@@ -55,16 +55,18 @@ ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.x
 		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:117-147
 	android:hardwareAccelerated
 		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:18-52
+	android:icon
+		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:181-210
 	android:name
 		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:17:53-116
 activity#org.qtproject.qt5.android.bindings.QtActivity
 ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:9-83:16
 	android:screenOrientation
-		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:281-320
+		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:275-314
 	android:label
-		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:250-280
+		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:250-274
 	android:launchMode
-		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:321-351
+		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:315-345
 	android:configChanges
 		ADDED from D:\ccrepository\Qt-Zhku-Client\buildc\android-build\AndroidManifest.xml:18:19-188
 	android:name

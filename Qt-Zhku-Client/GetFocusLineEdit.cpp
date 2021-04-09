@@ -17,9 +17,17 @@ void GetFocusLineEdit::setPixmap(QPixmap &pc)
 
     l->setPixmap(pc);
     pc.scaled(picWidth,picHeight,Qt::KeepAspectRatio);
-    l->setFixedSize(picWidth,picHeight);
+
 //    qDebug()<<this->x()+this->width()/2<<this->y();
-    l->move(this->width()/2-10,this->height()/2-15);
+    #if defined(Q_OS_ANDROID)
+        l->setFixedSize(picWidth*2,picHeight*3);
+        l->move(this->width()/2+picWidth/2,this->height()/2-45);
+    #else
+    l->setFixedSize(picWidth,picHeight);
+    l->move(this->width()/2,0);
+
+    #endif
+
 }
 
 

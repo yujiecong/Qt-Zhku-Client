@@ -177,11 +177,15 @@ public:
             MoreWidget->setObjectName(QString::fromUtf8("MoreWidget"));
         MoreWidget->resize(960, 614);
         horizontalLayout_2 = new QHBoxLayout(MoreWidget);
+        horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         widget = new QWidget(MoreWidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setSpacing(0);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         widget1 = new QWidget(widget);
         widget1->setObjectName(QString::fromUtf8("widget1"));
         widget1->setStyleSheet(QString::fromUtf8("background-color: rgb(31,141,218);"));
@@ -462,7 +466,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 734, 458));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 754, 476));
         verticalLayout_5 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         textBrowser = new QTextBrowser(scrollAreaWidgetContents);
@@ -588,7 +592,7 @@ public:
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 734, 461));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 754, 479));
         verticalLayout_7 = new QVBoxLayout(scrollAreaWidgetContents_2);
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         textBrowser_2 = new QTextBrowser(scrollAreaWidgetContents_2);
@@ -709,7 +713,7 @@ public:
         scrollArea_3->setWidgetResizable(true);
         scrollAreaWidgetContents_3 = new QWidget();
         scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 734, 461));
+        scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 754, 479));
         verticalLayout_10 = new QVBoxLayout(scrollAreaWidgetContents_3);
         verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
         textBrowser_3 = new QTextBrowser(scrollAreaWidgetContents_3);
@@ -847,7 +851,7 @@ public:
         scrollArea_4->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 734, 458));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 754, 476));
         verticalLayout_13 = new QVBoxLayout(scrollAreaWidgetContents_4);
         verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
         textBrowser_4 = new QTextBrowser(scrollAreaWidgetContents_4);
@@ -952,7 +956,7 @@ public:
         scrollArea_5->setWidgetResizable(true);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 734, 485));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 754, 503));
         verticalLayout_16 = new QVBoxLayout(scrollAreaWidgetContents_5);
         verticalLayout_16->setObjectName(QString::fromUtf8("verticalLayout_16"));
         textBrowser_5 = new QTextBrowser(scrollAreaWidgetContents_5);
@@ -1019,7 +1023,7 @@ public:
         pushButton_10->setText(QCoreApplication::translate("MoreWidget", "\345\210\206\351\231\242(\347\263\273)/\351\203\250\346\214\211\347\217\255\347\272\247\n"
 "\346\237\245\347\234\213\345\256\236\350\267\265\347\216\257\350\212\202\345\256\211\346\216\222", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MoreWidget", "\346\237\245\347\234\213\345\255\246\346\234\237\345\256\236\350\267\265\346\225\231\345\255\246\350\277\233\347\250\213", nullptr));
-        pushButton_21->setText(QCoreApplication::translate("MoreWidget", " \351\200\200\345\207\272", nullptr));
+        pushButton_21->setText(QCoreApplication::translate("MoreWidget", "\351\200\200\345\207\272", nullptr));
         label_3->setText(QCoreApplication::translate("MoreWidget", "  \345\255\246\345\271\264\345\255\246\346\234\237", nullptr));
         label_4->setText(QCoreApplication::translate("MoreWidget", " \350\257\276\347\250\213", nullptr));
         pushButton_12->setText(QCoreApplication::translate("MoreWidget", "\346\211\223\345\215\260", nullptr));

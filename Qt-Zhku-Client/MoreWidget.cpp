@@ -31,6 +31,11 @@ MoreWidget::~MoreWidget()
 void MoreWidget::setImg(QPixmap &px)
 {
     ui->label_6->setPixmap(px);
+    #if defined(Q_OS_ANDROID)
+        ui->label_6->setFixedSize(100,200);
+    #else
+
+#endif
 }
 
 void MoreWidget::on_pushButton_clicked()
@@ -164,4 +169,6 @@ void MoreWidget::on_pushButton_11_clicked()
 void MoreWidget::on_pushButton_21_clicked()
 {
     hide();
+    deleteLater();
+    emit signalsGetCodeImg();
 }

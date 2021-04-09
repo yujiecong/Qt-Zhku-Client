@@ -29,44 +29,37 @@ class Ui_ZhkuLoginWidgetByAndroid
 public:
     QVBoxLayout *verticalLayout_4;
     QFrame *frame;
-    QHBoxLayout *horizontalLayout_3;
-    QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *horizontalSpacer_2;
+    QWidget *inputlayout;
+    QVBoxLayout *verticalLayout_6;
+    QSpacerItem *verticalSpacer_2;
     QWidget *widget;
     QVBoxLayout *verticalLayout_3;
-    QHBoxLayout *horizontalLayout_8;
-    QSpacerItem *horizontalSpacer_3;
+    QWidget *widget_5;
+    QHBoxLayout *horizontalLayout;
     QLabel *logo;
-    QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_4;
-    QWidget *inputwidget;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label_3;
+    QWidget *widget_4;
+    QVBoxLayout *verticalLayout_5;
     QLineEdit *accountInput;
-    QHBoxLayout *horizontalLayout_6;
-    QLabel *label_4;
     QLineEdit *pwdInput;
-    QHBoxLayout *horizontalLayout_7;
-    QLabel *label_5;
     GetFocusLineEdit *codeInput;
-    QSpacerItem *verticalSpacer_3;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_10;
     QCheckBox *checkBox;
     QCheckBox *checkBox_2;
+    QWidget *widget_3;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *loginButton;
     QPushButton *loginButton_2;
-    QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer;
+    QSpacerItem *horizontalSpacer;
 
     void setupUi(QWidget *ZhkuLoginWidgetByAndroid)
     {
         if (ZhkuLoginWidgetByAndroid->objectName().isEmpty())
             ZhkuLoginWidgetByAndroid->setObjectName(QString::fromUtf8("ZhkuLoginWidgetByAndroid"));
-        ZhkuLoginWidgetByAndroid->resize(398, 590);
+        ZhkuLoginWidgetByAndroid->resize(622, 1024);
         verticalLayout_4 = new QVBoxLayout(ZhkuLoginWidgetByAndroid);
         verticalLayout_4->setSpacing(0);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
@@ -81,25 +74,21 @@ public:
 ""));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        horizontalLayout_3 = new QHBoxLayout(frame);
-        horizontalLayout_3->setSpacing(0);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(0);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2 = new QHBoxLayout(frame);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        widget = new QWidget(frame);
+        inputlayout = new QWidget(frame);
+        inputlayout->setObjectName(QString::fromUtf8("inputlayout"));
+        verticalLayout_6 = new QVBoxLayout(inputlayout);
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_6->addItem(verticalSpacer_2);
+
+        widget = new QWidget(inputlayout);
         widget->setObjectName(QString::fromUtf8("widget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -113,188 +102,147 @@ public:
 "\n"
 ""));
         verticalLayout_3 = new QVBoxLayout(widget);
-        verticalLayout_3->setSpacing(10);
+        verticalLayout_3->setSpacing(50);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_3->setContentsMargins(50, 20, 50, 20);
-        horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setSpacing(0);
-        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_8->addItem(horizontalSpacer_3);
-
-        logo = new QLabel(widget);
+        verticalLayout_3->setContentsMargins(100, 100, 100, 100);
+        widget_5 = new QWidget(widget);
+        widget_5->setObjectName(QString::fromUtf8("widget_5"));
+        sizePolicy.setHeightForWidth(widget_5->sizePolicy().hasHeightForWidth());
+        widget_5->setSizePolicy(sizePolicy);
+        widget_5->setMinimumSize(QSize(0, 150));
+        widget_5->setMaximumSize(QSize(16777215, 150));
+        horizontalLayout = new QHBoxLayout(widget_5);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(30, -1, 30, -1);
+        logo = new QLabel(widget_5);
         logo->setObjectName(QString::fromUtf8("logo"));
         sizePolicy.setHeightForWidth(logo->sizePolicy().hasHeightForWidth());
         logo->setSizePolicy(sizePolicy);
         logo->setStyleSheet(QString::fromUtf8("border-image: url(:/assets/login/logo.png);\n"
 "background:transparent"));
 
-        horizontalLayout_8->addWidget(logo);
+        horizontalLayout->addWidget(logo);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_8->addItem(horizontalSpacer_4);
+        verticalLayout_3->addWidget(widget_5);
 
-        horizontalLayout_8->setStretch(1, 2);
-
-        verticalLayout_3->addLayout(horizontalLayout_8);
-
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_4);
-
-        inputwidget = new QWidget(widget);
-        inputwidget->setObjectName(QString::fromUtf8("inputwidget"));
-        verticalLayout_2 = new QVBoxLayout(inputwidget);
-        verticalLayout_2->setSpacing(10);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(20);
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalLayout_5->setContentsMargins(10, -1, 10, -1);
-        label_3 = new QLabel(inputwidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
-        label_3->setSizePolicy(sizePolicy);
-        label_3->setMinimumSize(QSize(60, 60));
-        label_3->setMaximumSize(QSize(60, 60));
-        label_3->setStyleSheet(QString::fromUtf8("image: url(:/assets/login/user.png);"));
-
-        horizontalLayout_5->addWidget(label_3);
-
-        accountInput = new QLineEdit(inputwidget);
+        widget_4 = new QWidget(widget);
+        widget_4->setObjectName(QString::fromUtf8("widget_4"));
+        sizePolicy.setHeightForWidth(widget_4->sizePolicy().hasHeightForWidth());
+        widget_4->setSizePolicy(sizePolicy);
+        verticalLayout_5 = new QVBoxLayout(widget_4);
+        verticalLayout_5->setSpacing(30);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        accountInput = new QLineEdit(widget_4);
         accountInput->setObjectName(QString::fromUtf8("accountInput"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(accountInput->sizePolicy().hasHeightForWidth());
-        accountInput->setSizePolicy(sizePolicy1);
-        accountInput->setMinimumSize(QSize(0, 0));
+        sizePolicy.setHeightForWidth(accountInput->sizePolicy().hasHeightForWidth());
+        accountInput->setSizePolicy(sizePolicy);
+        accountInput->setMinimumSize(QSize(0, 80));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font.setPointSize(26);
+        font.setPointSize(14);
         accountInput->setFont(font);
         accountInput->setStyleSheet(QString::fromUtf8("background:transparent;\n"
 "border:none;\n"
-"border-bottom:1px solid black;\n"
-"border-radius: 10px;"));
+"border-bottom:1px solid rgba(0, 0, 0, 255);\n"
+""));
         accountInput->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        horizontalLayout_5->addWidget(accountInput);
+        verticalLayout_5->addWidget(accountInput);
 
-
-        verticalLayout_2->addLayout(horizontalLayout_5);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setSpacing(20);
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        horizontalLayout_6->setContentsMargins(10, -1, 10, -1);
-        label_4 = new QLabel(inputwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
-        label_4->setSizePolicy(sizePolicy);
-        label_4->setMinimumSize(QSize(60, 60));
-        label_4->setMaximumSize(QSize(60, 60));
-        label_4->setStyleSheet(QString::fromUtf8("image: url(:/assets/login/password.png);"));
-
-        horizontalLayout_6->addWidget(label_4);
-
-        pwdInput = new QLineEdit(inputwidget);
+        pwdInput = new QLineEdit(widget_4);
         pwdInput->setObjectName(QString::fromUtf8("pwdInput"));
-        sizePolicy1.setHeightForWidth(pwdInput->sizePolicy().hasHeightForWidth());
-        pwdInput->setSizePolicy(sizePolicy1);
+        sizePolicy.setHeightForWidth(pwdInput->sizePolicy().hasHeightForWidth());
+        pwdInput->setSizePolicy(sizePolicy);
+        pwdInput->setMinimumSize(QSize(0, 80));
         pwdInput->setFont(font);
         pwdInput->setStyleSheet(QString::fromUtf8("background:transparent;\n"
 "border:none;\n"
-"border-bottom:1px solid black;\n"
-"border-radius: 10px;"));
+"border-bottom:1px solid rgba(0, 0, 0, 255);\n"
+""));
         pwdInput->setEchoMode(QLineEdit::Password);
         pwdInput->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        horizontalLayout_6->addWidget(pwdInput);
+        verticalLayout_5->addWidget(pwdInput);
 
-
-        verticalLayout_2->addLayout(horizontalLayout_6);
-
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setSpacing(20);
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        horizontalLayout_7->setContentsMargins(10, -1, 10, -1);
-        label_5 = new QLabel(inputwidget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        sizePolicy.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
-        label_5->setSizePolicy(sizePolicy);
-        label_5->setMinimumSize(QSize(60, 60));
-        label_5->setMaximumSize(QSize(60, 60));
-        label_5->setStyleSheet(QString::fromUtf8("image: url(:/assets/login/validCode.png);"));
-
-        horizontalLayout_7->addWidget(label_5);
-
-        codeInput = new GetFocusLineEdit(inputwidget);
+        codeInput = new GetFocusLineEdit(widget_4);
         codeInput->setObjectName(QString::fromUtf8("codeInput"));
-        sizePolicy1.setHeightForWidth(codeInput->sizePolicy().hasHeightForWidth());
-        codeInput->setSizePolicy(sizePolicy1);
+        sizePolicy.setHeightForWidth(codeInput->sizePolicy().hasHeightForWidth());
+        codeInput->setSizePolicy(sizePolicy);
+        codeInput->setMinimumSize(QSize(0, 80));
         codeInput->setFont(font);
         codeInput->setStyleSheet(QString::fromUtf8("background:transparent;\n"
 "border:none;\n"
-"border-bottom:1px solid black;\n"
-"border-radius: 10px;"));
+"border-bottom:1px solid rgba(0, 0, 0, 255);\n"
+""));
         codeInput->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        horizontalLayout_7->addWidget(codeInput);
+        verticalLayout_5->addWidget(codeInput);
 
-
-        verticalLayout_2->addLayout(horizontalLayout_7);
-
-
-        verticalLayout_3->addWidget(inputwidget);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_3);
-
-        widget_2 = new QWidget(widget);
+        widget_2 = new QWidget(widget_4);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
         horizontalLayout_10 = new QHBoxLayout(widget_2);
-        horizontalLayout_10->setSpacing(0);
+        horizontalLayout_10->setSpacing(20);
         horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalLayout_10->setContentsMargins(10, 0, 10, 0);
         checkBox = new QCheckBox(widget_2);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
-        checkBox->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
+        checkBox->setSizePolicy(sizePolicy1);
         checkBox->setFont(font);
-        checkBox->setStyleSheet(QString::fromUtf8("color: rgb(43, 43, 43);"));
+        checkBox->setStyleSheet(QString::fromUtf8("\n"
+"QCheckBox{ background:transparent;color: rgb(43, 43, 43);}\n"
+"QCheckBox::indicator {width: 40px; height: 40px; }\n"
+"QCheckBox::indicator:unchecked{background:rgb(255, 255, 255);}\n"
+"\n"
+"\n"
+""));
 
         horizontalLayout_10->addWidget(checkBox);
 
         checkBox_2 = new QCheckBox(widget_2);
         checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
-        sizePolicy2.setHeightForWidth(checkBox_2->sizePolicy().hasHeightForWidth());
-        checkBox_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(checkBox_2->sizePolicy().hasHeightForWidth());
+        checkBox_2->setSizePolicy(sizePolicy1);
         checkBox_2->setFont(font);
-        checkBox_2->setStyleSheet(QString::fromUtf8("color: rgb(43, 43, 43);"));
+        checkBox_2->setStyleSheet(QString::fromUtf8("\n"
+"QCheckBox{ background:transparent;color: rgb(43, 43, 43);}\n"
+"QCheckBox::indicator {width: 40px; height: 40px; }\n"
+"QCheckBox::indicator:unchecked{background:rgb(255, 255, 255);}\n"
+"\n"
+"\n"
+""));
 
         horizontalLayout_10->addWidget(checkBox_2);
 
 
-        verticalLayout_3->addWidget(widget_2);
+        verticalLayout_5->addWidget(widget_2);
 
-        loginButton = new QPushButton(widget);
+        widget_3 = new QWidget(widget_4);
+        widget_3->setObjectName(QString::fromUtf8("widget_3"));
+        sizePolicy.setHeightForWidth(widget_3->sizePolicy().hasHeightForWidth());
+        widget_3->setSizePolicy(sizePolicy);
+        verticalLayout_2 = new QVBoxLayout(widget_3);
+        verticalLayout_2->setSpacing(20);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        loginButton = new QPushButton(widget_3);
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
         sizePolicy.setHeightForWidth(loginButton->sizePolicy().hasHeightForWidth());
         loginButton->setSizePolicy(sizePolicy);
+        loginButton->setMinimumSize(QSize(0, 70));
+        loginButton->setMaximumSize(QSize(16777215, 100));
         loginButton->setFont(font);
         loginButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "\n"
-"color: rgb(43, 43, 43);\n"
-"border-radius: 10px;\n"
-"background-color: rgba(255, 255, 255, 200);\n"
+"color: rgb(255,255,255);\n"
+"border-radius: 30px;\n"
+"background-color: rgba(249,163,150, 200);\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -304,58 +252,52 @@ public:
 ""));
         loginButton->setFlat(true);
 
-        verticalLayout_3->addWidget(loginButton);
+        verticalLayout_2->addWidget(loginButton);
 
-        loginButton_2 = new QPushButton(widget);
+
+        verticalLayout_5->addWidget(widget_3);
+
+        loginButton_2 = new QPushButton(widget_4);
         loginButton_2->setObjectName(QString::fromUtf8("loginButton_2"));
-        sizePolicy.setHeightForWidth(loginButton_2->sizePolicy().hasHeightForWidth());
-        loginButton_2->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(loginButton_2->sizePolicy().hasHeightForWidth());
+        loginButton_2->setSizePolicy(sizePolicy1);
+        loginButton_2->setMinimumSize(QSize(0, 0));
+        loginButton_2->setMaximumSize(QSize(16777215, 100));
         loginButton_2->setFont(font);
         loginButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "\n"
 "color: rgb(43, 43, 43);\n"
-"border-radius: 10px;\n"
-"background-color: rgba(255, 255, 255, 200);\n"
+"\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"\n"
 "}\n"
 ""));
         loginButton_2->setFlat(true);
 
-        verticalLayout_3->addWidget(loginButton_2);
+        verticalLayout_5->addWidget(loginButton_2);
 
-        verticalLayout_3->setStretch(0, 1);
-        verticalLayout_3->setStretch(1, 1);
-        verticalLayout_3->setStretch(2, 5);
-        verticalLayout_3->setStretch(3, 1);
-        verticalLayout_3->setStretch(4, 1);
-        verticalLayout_3->setStretch(5, 1);
-        verticalLayout_3->setStretch(6, 1);
 
-        horizontalLayout_2->addWidget(widget);
+        verticalLayout_3->addWidget(widget_4);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_2);
+        verticalLayout_6->addWidget(widget);
 
-        horizontalLayout_2->setStretch(0, 1);
-        horizontalLayout_2->setStretch(1, 5);
-        horizontalLayout_2->setStretch(2, 1);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout_6->addItem(verticalSpacer);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalLayout_6->setStretch(0, 1);
+        verticalLayout_6->setStretch(1, 1);
+        verticalLayout_6->setStretch(2, 1);
 
-        verticalLayout->addItem(verticalSpacer_2);
+        horizontalLayout_2->addWidget(inputlayout);
 
-        verticalLayout->setStretch(0, 1);
-        verticalLayout->setStretch(1, 9);
-        verticalLayout->setStretch(2, 1);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addLayout(verticalLayout);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
 
         verticalLayout_4->addWidget(frame);
@@ -370,20 +312,17 @@ public:
     {
         ZhkuLoginWidgetByAndroid->setWindowTitle(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "Form", nullptr));
         logo->setText(QString());
-        label_3->setText(QString());
         accountInput->setInputMask(QString());
         accountInput->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "201810224331", nullptr));
         accountInput->setPlaceholderText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "account", nullptr));
-        label_4->setText(QString());
         pwdInput->setText(QString());
         pwdInput->setPlaceholderText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "password", nullptr));
-        label_5->setText(QString());
         codeInput->setText(QString());
         codeInput->setPlaceholderText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "validation code", nullptr));
         checkBox->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "\350\207\252\345\212\250\347\231\273\345\275\225", nullptr));
         checkBox_2->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "\350\256\260\344\275\217\345\257\206\347\240\201", nullptr));
-        loginButton->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "\347\231\273\345\275\225", nullptr));
-        loginButton_2->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "\346\233\264\345\244\232", nullptr));
+        loginButton->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "Login", nullptr));
+        loginButton_2->setText(QCoreApplication::translate("ZhkuLoginWidgetByAndroid", "More is less", nullptr));
     } // retranslateUi
 
 };

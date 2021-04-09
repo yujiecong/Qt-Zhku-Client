@@ -4,30 +4,26 @@
         <file>assets/login/304866.jpg</file>
         <file>assets/arrow/Arrow Circle down 2 - 24px.svg</file>
         <file>assets/arrow/Arrow Circle up 2 - 24px.svg</file>
-        <file>assets/btnIcon/book.svg</file>
         <file>assets/zhkuImg/logo.jpg</file>
         <file>assets/zhkuImg/close.jpg</file>
-        <file>assets/btnIcon/archive.svg</file>
-        <file>assets/btnIcon/arrangement.svg</file>
-        <file>assets/btnIcon/arrangement2.svg</file>
-        <file>assets/btnIcon/choice.svg</file>
-        <file>assets/btnIcon/error.svg</file>
-        <file>assets/btnIcon/examination.svg</file>
-        <file>assets/btnIcon/garbage.svg</file>
-        <file>assets/btnIcon/graduation.svg</file>
-        <file>assets/btnIcon/information.svg</file>
-        <file>assets/btnIcon/meeting.svg</file>
-        <file>assets/btnIcon/phone.svg</file>
-        <file>assets/btnIcon/scheme.svg</file>
-        <file>assets/btnIcon/score.svg</file>
-        <file>assets/btnIcon/setting.svg</file>
-        <file>assets/btnIcon/students.svg</file>
-        <file>assets/btnIcon/warning.svg</file>
-        <file>assets/btnIcon/work.svg</file>
         <file>assets/user_img/wenhao.svg</file>
         <file>assets/login/password.png</file>
         <file>assets/login/user.png</file>
         <file>assets/login/validCode.png</file>
         <file>assets/zhkuImg/bg.jpg</file>
+        <file>assets/user_img/avater.png</file>
+        <file>assets/btnIcon/arrow down.png</file>
+        <file>assets/btnIcon/arrow-up.png</file>
+        <file>assets/user_img/wenhao.png</file>
+        <file>assets/btnIcon/arrange.png</file>
+        <file>assets/btnIcon/score.png</file>
+        <file>assets/btnIcon/scheme.png</file>
+        <file>assets/btnIcon/comment.png</file>
+        <file>assets/btnIcon/other.png</file>
+        <file>assets/btnIcon/campus.png</file>
+        <file>assets/btnIcon/information.png</file>
+        <file>assets/btnIcon/choice.png</file>
+        <file>assets/btnIcon/student.png</file>
+        <file>assets/btnIcon/examination.png</file>
     </qresource>
 </RCC>

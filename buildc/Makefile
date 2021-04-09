@@ -240,24 +240,20 @@ armeabi-v7a\qrc_loginassets.cpp: ..\Qt-Zhku-Client\loginassets.qrc \
 		..\Qt-Zhku-Client\assets\login\password.png \
 		..\Qt-Zhku-Client\assets\login\user.png \
 		..\Qt-Zhku-Client\assets\login\304866.jpg \
-		..\Qt-Zhku-Client\assets\btnIcon\error.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\meeting.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\work.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\arrangement2.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\archive.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\information.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\examination.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\choice.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\scheme.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\students.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\graduation.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\score.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\book.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\phone.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\setting.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\garbage.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\warning.svg \
-		..\Qt-Zhku-Client\assets\btnIcon\arrangement.svg \
+		..\Qt-Zhku-Client\assets\btnIcon\arrow\ down.png \
+		..\Qt-Zhku-Client\assets\btnIcon\examination.png \
+		..\Qt-Zhku-Client\assets\btnIcon\scheme.png \
+		..\Qt-Zhku-Client\assets\btnIcon\comment.png \
+		..\Qt-Zhku-Client\assets\btnIcon\information.png \
+		..\Qt-Zhku-Client\assets\btnIcon\campus.png \
+		..\Qt-Zhku-Client\assets\btnIcon\student.png \
+		..\Qt-Zhku-Client\assets\btnIcon\score.png \
+		..\Qt-Zhku-Client\assets\btnIcon\arrange.png \
+		..\Qt-Zhku-Client\assets\btnIcon\choice.png \
+		..\Qt-Zhku-Client\assets\btnIcon\arrow-up.png \
+		..\Qt-Zhku-Client\assets\btnIcon\other.png \
+		..\Qt-Zhku-Client\assets\user_img\avater.png \
+		..\Qt-Zhku-Client\assets\user_img\wenhao.png \
 		..\Qt-Zhku-Client\assets\user_img\wenhao.svg \
 		..\Qt-Zhku-Client\assets\zhkuImg\bg.jpg \
 		..\Qt-Zhku-Client\assets\zhkuImg\close.jpg \
@@ -882,7 +878,7 @@ armeabi-v7a\moc_ZhkuClientMain.cpp: ..\Qt-Zhku-Client\ZhkuClientMain.h \
 		..\Qt-Zhku-Client\FuncTable.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
@@ -893,12 +889,12 @@ armeabi-v7a\moc_ZhkuClientMain.cpp: ..\Qt-Zhku-Client\ZhkuClientMain.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\Qt-Zhku-Client\UI\ui_functable.h \
+		UI\ui_functable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		..\Qt-Zhku-Client\CurriculumArrangement_ui.h \
 		..\Qt-Zhku-Client\ImgLabel.h \
@@ -1022,7 +1018,7 @@ armeabi-v7a\moc_SubMenuWidget.cpp: ..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -1147,7 +1143,7 @@ armeabi-v7a\moc_SubMenuBtn.cpp: ..\Qt-Zhku-Client\SubMenuBtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -1390,7 +1386,7 @@ armeabi-v7a\moc_FuncTable.cpp: ..\Qt-Zhku-Client\FuncTable.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -1404,12 +1400,12 @@ armeabi-v7a\moc_FuncTable.cpp: ..\Qt-Zhku-Client\FuncTable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\Qt-Zhku-Client\UI\ui_functable.h \
+		UI\ui_functable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		armeabi-v7a\moc_predefs.h \
 		..\..\..\qt514\5.14.1\android\bin\moc.exe
@@ -3040,7 +3036,7 @@ armeabi-v7a\main.obj: ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuClientMai
 		..\Qt-Zhku-Client\FuncTable.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
@@ -3051,12 +3047,12 @@ armeabi-v7a\main.obj: ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuClientMai
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\Qt-Zhku-Client\UI\ui_functable.h \
+		UI\ui_functable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		..\Qt-Zhku-Client\CurriculumArrangement_ui.h \
 		..\Qt-Zhku-Client\ImgLabel.h \
@@ -3367,7 +3363,7 @@ armeabi-v7a\ZhkuLoginWidget.obj: ..\Qt-Zhku-Client\ZhkuLoginWidget.cpp ..\Qt-Zhk
 		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
 		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
 		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
-		..\Qt-Zhku-Client\UI\ui_zhkuloginwidget.h \
+		UI\ui_zhkuloginwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
@@ -3723,7 +3719,7 @@ armeabi-v7a\ZhkuClientMain.obj: ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-
 		..\Qt-Zhku-Client\FuncTable.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
@@ -3734,12 +3730,12 @@ armeabi-v7a\ZhkuClientMain.obj: ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\Qt-Zhku-Client\UI\ui_functable.h \
+		UI\ui_functable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		..\Qt-Zhku-Client\CurriculumArrangement_ui.h \
 		..\Qt-Zhku-Client\ImgLabel.h \
@@ -3752,16 +3748,22 @@ armeabi-v7a\ZhkuClientMain.obj: ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-
 		..\Qt-Zhku-Client\Rankexam_Ui.h \
 		..\Qt-Zhku-Client\ExamArrangement_Ui.h \
 		..\Qt-Zhku-Client\UserAvater.h \
-		..\Qt-Zhku-Client\UI\ui_zhkuclientmain.h \
+		UI\ui_zhkuclientmain.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QFrame \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollArea \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QDebug \
 		..\..\..\qt514\5.14.1\android\include\QtGui\QMouseEvent \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer \
 		..\Qt-Zhku-Client\CloseDialog.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QDialog \
-		..\Qt-Zhku-Client\UI\ui_closedialog.h \
+		UI\ui_closedialog.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QCheckBox \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qcheckbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractbutton.h \
@@ -3877,7 +3879,7 @@ armeabi-v7a\SubMenuWidget.obj: ..\Qt-Zhku-Client\SubMenuWidget.cpp ..\Qt-Zhku-Cl
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -4000,7 +4002,7 @@ armeabi-v7a\SubMenuBtn.obj: ..\Qt-Zhku-Client\SubMenuBtn.cpp ..\Qt-Zhku-Client\S
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -4014,7 +4016,7 @@ armeabi-v7a\SubMenuBtn.obj: ..\Qt-Zhku-Client\SubMenuBtn.cpp ..\Qt-Zhku-Client\S
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
@@ -4550,7 +4552,7 @@ armeabi-v7a\FuncTable.obj: ..\Qt-Zhku-Client\FuncTable.cpp ..\Qt-Zhku-Client\Fun
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
 		..\Qt-Zhku-Client\SubMenuBtn.h \
-		..\Qt-Zhku-Client\UI\ui_submenuwidget.h \
+		UI\ui_submenuwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -4564,12 +4566,12 @@ armeabi-v7a\FuncTable.obj: ..\Qt-Zhku-Client\FuncTable.cpp ..\Qt-Zhku-Client\Fun
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
-		..\Qt-Zhku-Client\UI\ui_submenubtn.h \
+		UI\ui_submenubtn.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\Qt-Zhku-Client\UI\ui_functable.h \
+		UI\ui_functable.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		..\..\..\qt514\5.14.1\android\include\QtGui\QMouseEvent \
 		..\..\..\qt514\5.14.1\android\include\QtGui\QPainter \
@@ -4698,7 +4700,7 @@ armeabi-v7a\CurriculumArrangement_Ui.obj: ..\Qt-Zhku-Client\CurriculumArrangemen
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
-		..\Qt-Zhku-Client\UI\ui_curriculumarrangement_ui.h \
+		UI\ui_curriculumarrangement_ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -4863,7 +4865,7 @@ armeabi-v7a\QueryScore_Ui.obj: ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Cl
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
-		..\Qt-Zhku-Client\UI\ui_QueryScore_Ui.h \
+		UI\ui_QueryScore_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5136,7 +5138,7 @@ armeabi-v7a\CloseDialog.obj: ..\Qt-Zhku-Client\CloseDialog.cpp ..\Qt-Zhku-Client
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_CloseDialog.h \
+		UI\ui_CloseDialog.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5274,7 +5276,7 @@ armeabi-v7a\ScoreDistubing_ui.obj: ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_ScoreDistubing_ui.h \
+		UI\ui_ScoreDistubing_ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5432,7 +5434,7 @@ armeabi-v7a\UserAvater.obj: ..\Qt-Zhku-Client\UserAvater.cpp ..\Qt-Zhku-Client\U
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_UserAvater.h \
+		UI\ui_UserAvater.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5560,7 +5562,7 @@ armeabi-v7a\Rankexam_Ui.obj: ..\Qt-Zhku-Client\Rankexam_Ui.cpp ..\Qt-Zhku-Client
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_RankExam_Ui.h \
+		UI\ui_RankExam_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5701,7 +5703,7 @@ armeabi-v7a\ExamArrangement_Ui.obj: ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
-		..\Qt-Zhku-Client\UI\ui_ExamArrangement_Ui.h \
+		UI\ui_ExamArrangement_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -5873,7 +5875,7 @@ armeabi-v7a\MoreWidget.obj: ..\Qt-Zhku-Client\MoreWidget.cpp ..\Qt-Zhku-Client\M
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_MoreWidget.h \
+		UI\ui_MoreWidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
@@ -6549,7 +6551,15 @@ armeabi-v7a\zhkuloginwidgetbyandroid.obj: ..\Qt-Zhku-Client\zhkuloginwidgetbyand
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qpushbutton.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
-		..\Qt-Zhku-Client\getfocuslineedit.h
+		..\Qt-Zhku-Client\getfocuslineedit.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\QScreen \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qscreen.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QRect \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSize \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSizeF \
+		..\..\..\qt514\5.14.1\android\include\QtGui\QTransform
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\zhkuloginwidgetbyandroid.obj ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.cpp
 
 armeabi-v7a\qrc_loginassets.obj: armeabi-v7a\qrc_loginassets.cpp 

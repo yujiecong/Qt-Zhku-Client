@@ -31,14 +31,15 @@ public:
     {
         if (UserAvater->objectName().isEmpty())
             UserAvater->setObjectName(QString::fromUtf8("UserAvater"));
-        UserAvater->resize(118, 260);
+        UserAvater->resize(143, 200);
+        UserAvater->setMinimumSize(QSize(0, 200));
         UserAvater->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(UserAvater);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         avater = new QLabel(UserAvater);
         avater->setObjectName(QString::fromUtf8("avater"));
         avater->setMaximumSize(QSize(64, 64));
-        avater->setPixmap(QPixmap(QString::fromUtf8(":/assets/user_img/\351\227\256\345\217\267.svg")));
+        avater->setPixmap(QPixmap(QString::fromUtf8(":/assets/user_img/avater.png")));
         avater->setScaledContents(true);
         avater->setAlignment(Qt::AlignCenter);
 
@@ -48,9 +49,12 @@ public:
         name->setObjectName(QString::fromUtf8("name"));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(9);
         name->setFont(font);
         name->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        name->setScaledContents(true);
         name->setAlignment(Qt::AlignCenter);
+        name->setWordWrap(true);
 
         verticalLayout->addWidget(name);
 
@@ -58,7 +62,9 @@ public:
         date->setObjectName(QString::fromUtf8("date"));
         date->setFont(font);
         date->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        date->setScaledContents(true);
         date->setAlignment(Qt::AlignCenter);
+        date->setWordWrap(true);
 
         verticalLayout->addWidget(date);
 
@@ -66,7 +72,9 @@ public:
         week->setObjectName(QString::fromUtf8("week"));
         week->setFont(font);
         week->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        week->setScaledContents(true);
         week->setAlignment(Qt::AlignCenter);
+        week->setWordWrap(true);
 
         verticalLayout->addWidget(week);
 
@@ -74,7 +82,9 @@ public:
         online->setObjectName(QString::fromUtf8("online"));
         online->setFont(font);
         online->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        online->setScaledContents(true);
         online->setAlignment(Qt::AlignCenter);
+        online->setWordWrap(true);
 
         verticalLayout->addWidget(online);
 

@@ -79,11 +79,11 @@ void SubMenuBtn::mousePressEvent(QMouseEvent *event)
         if(subWidget->v.size()>0){
             if(isClicked){
                   subWidget->show();
-                 ui->label_3->setPixmap(QPixmap(":/assets/arrow/Arrow Circle down 2 - 24px.svg"));
+                 ui->label_3->setPixmap(QPixmap(":/assets/btnIcon/arrow down.png"));
             }
             else{
                 subWidget->hide();
-                 ui->label_3->setPixmap(QPixmap(":/assets/arrow/Arrow Circle up 2 - 24px.svg"));
+                 ui->label_3->setPixmap(QPixmap(":/assets/btnIcon/arrow-up.png"));
             }
 
         }

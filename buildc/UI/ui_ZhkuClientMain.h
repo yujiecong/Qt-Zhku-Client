@@ -69,7 +69,7 @@ public:
 "background-color: rgb(0,6,56);\n"
 "}"));
         MenuLayout = new QVBoxLayout(scrollAreaWidgetContents);
-        MenuLayout->setSpacing(14);
+        MenuLayout->setSpacing(20);
         MenuLayout->setContentsMargins(11, 11, 11, 11);
         MenuLayout->setObjectName(QString::fromUtf8("MenuLayout"));
         scrollArea->setWidget(scrollAreaWidgetContents);

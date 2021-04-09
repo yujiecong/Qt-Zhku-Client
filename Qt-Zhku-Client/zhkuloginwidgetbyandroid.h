@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::ZhkuLoginWidgetByAndroid *ui;
+    QScreen *screen;
 };
 
 #endif // ZHKULOGINWIDGETBYANDROID_H

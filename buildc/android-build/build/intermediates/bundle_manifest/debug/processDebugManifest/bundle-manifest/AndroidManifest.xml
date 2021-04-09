@@ -7,7 +7,7 @@
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="29" />
+        android:targetSdkVersion="28" />
 
     <!--
          The following comment will be replaced upon deployment with default permissions based on the dependencies of the application.
@@ -33,11 +33,12 @@
         android:debuggable="true"
         android:extractNativeLibs="true"
         android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
         android:label="Qt-Zhku-Client" >
         <activity
             android:name="org.qtproject.qt5.android.bindings.QtActivity"
             android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-            android:label="Qt-Zhku-Client"
+            android:label="仲恺教务网安卓端"
             android:launchMode="singleTop"
             android:screenOrientation="unspecified" >
             <intent-filter>

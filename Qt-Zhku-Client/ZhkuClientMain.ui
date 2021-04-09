@@ -87,7 +87,7 @@ background-color: rgb(0,6,56);
        </property>
        <layout class="QVBoxLayout" name="MenuLayout">
         <property name="spacing">
-         <number>14</number>
+         <number>20</number>
         </property>
        </layout>
       </widget>
