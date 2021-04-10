@@ -28,7 +28,7 @@ public:
     const int pixHeight=16;
     int count=0;
 
-    void unfoldAnimation();
+    void unfoldAnimation(bool dire);
 
 protected:
     void mousePressEvent(QMouseEvent *event);

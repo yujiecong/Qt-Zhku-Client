@@ -25,5 +25,7 @@
         <file>assets/btnIcon/choice.png</file>
         <file>assets/btnIcon/student.png</file>
         <file>assets/btnIcon/examination.png</file>
+        <file>assets/arrow/down.png</file>
+        <file>assets/arrow/up.png</file>
     </qresource>
 </RCC>

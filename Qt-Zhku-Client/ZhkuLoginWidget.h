@@ -51,7 +51,7 @@ private:
     bool autoPassword=0;
     //配置文件
     const QString iniKey=QString("settings/loginSettings");
-    const QString iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
+    QString iniPath;
 
 //     QNetworkReply* getGetReply(QString url);
 };

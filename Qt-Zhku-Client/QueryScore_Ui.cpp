@@ -20,7 +20,12 @@ QueryScore_Ui::QueryScore_Ui(QString xnxq, QWidget *parent) :
         }
     });
 
+#if defined(Q_OS_ANDROID)
+    QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
 
+#else
+
+#endif
 }
 
 QueryScore_Ui::~QueryScore_Ui()

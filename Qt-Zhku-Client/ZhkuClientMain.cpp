@@ -39,7 +39,7 @@ ZhkuClientMain::ZhkuClientMain(QWidget *parent) :
 
 #if defined(Q_OS_ANDROID)
     QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
-//    ui->frame->hide();
+
 #else
 
 #endif

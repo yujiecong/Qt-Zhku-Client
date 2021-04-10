@@ -56,19 +56,32 @@ void SubMenuBtn::addSubBtn(QStringList sl, QString pixpath, QString url)
     }
 }
 
-void SubMenuBtn::unfoldAnimation()
+void SubMenuBtn::unfoldAnimation(bool dire)
 {
 //    待优化
-//    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"geometry");
+    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"geometry");
 
-//    ani->setDuration(1000);
-//    ani->setEasingCurve(QEasingCurve::OutInCirc);
-//    ani->setStartValue(QRect(0,0,0,0));
-//    qDebug()<<subWidget->rect();
-//    ani->setEndValue(subWidget->rect());
-//    ani->start();
-//    connect(ani,&QPropertyAnimation::finished,subWidget,&SubMenuWidget::show);
+    ani->setDuration(3000);
+    ani->setEasingCurve(QEasingCurve::OutInCirc);
+    if (dire){
+        subWidget->show();
+        ani->setStartValue(QRect(0,0,0,0));
+        ani->setEndValue(subWidget->rect());
+        subWidget->hide();
+    }
+    else{
 
+        ani->setStartValue(subWidget->rect());
+        ani->setEndValue(QRect(0,0,0,0));
+    }
+
+
+    if (dire)
+        connect(ani,&QPropertyAnimation::finished,subWidget,&SubMenuWidget::show);
+    else
+        connect(ani,&QPropertyAnimation::finished,subWidget,&SubMenuWidget::hide);
+
+    ani->start();
 }
 
 void SubMenuBtn::mousePressEvent(QMouseEvent *event)
@@ -78,19 +91,22 @@ void SubMenuBtn::mousePressEvent(QMouseEvent *event)
         emit clicked();
         if(subWidget->v.size()>0){
             if(isClicked){
-                  subWidget->show();
-                 ui->label_3->setPixmap(QPixmap(":/assets/btnIcon/arrow down.png"));
+
+                 unfoldAnimation(1);
+                 ui->label_3->setPixmap(QPixmap(":/assets/arrow/down.png"));
             }
             else{
-                subWidget->hide();
-                 ui->label_3->setPixmap(QPixmap(":/assets/btnIcon/arrow-up.png"));
+
+                unfoldAnimation(0);
+
+                 ui->label_3->setPixmap(QPixmap(":/assets/arrow/up.png"));
             }
 
         }
 
 
-    }
-//    QWidget::mousePressEvent(event);
+        }
+    //    QWidget::mousePressEvent(event);
 }
 
 void SubMenuBtn::paintEvent(QPaintEvent *event)

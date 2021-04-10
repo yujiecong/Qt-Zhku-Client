@@ -10,6 +10,12 @@ ScoreDistubing_Ui::ScoreDistubing_Ui(QString xnxq,QWidget *parent) :
 
          ui->comboBox->addItem(QString("%1").arg(i));
     }
+#if defined(Q_OS_ANDROID)
+    QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
+
+#else
+
+#endif
 }
 
 ScoreDistubing_Ui::~ScoreDistubing_Ui()

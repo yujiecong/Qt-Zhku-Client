@@ -19,7 +19,12 @@ ExamArrangement_Ui::ExamArrangement_Ui(QString xnxq, QWidget *parent) :
         ui->comboBox->addItem(tr("%1~%2学年第二学期").arg(year).arg(year.toInt()+1));
     }
     xnxq=year+"0";
+#if defined(Q_OS_ANDROID)
+    QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
 
+#else
+
+#endif
 }
 
 ExamArrangement_Ui::~ExamArrangement_Ui()

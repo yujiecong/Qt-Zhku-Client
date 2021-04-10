@@ -42,7 +42,12 @@ CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent)
     });
     //
 
+#if defined(Q_OS_ANDROID)
+    QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
 
+#else
+
+#endif
 
     connect(ui->queryCurriculumBtn,&QPushButton::clicked,this,&CurriculumArrangement_Ui::queryCurri);
 

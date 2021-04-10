@@ -57,8 +57,17 @@ void ZhkuLoginWidget::getLocalXNXQ()
 }
 void ZhkuLoginWidget::loginInit()
 {
+#if defined(Q_OS_ANDROID)
+    iniPath="./Zhku.ini";
+    QSettings *settings = new QSettings(iniPath, QSettings::NativeFormat);
+#else
+   iniPath=QCoreApplication::applicationDirPath()+"/Zhku.ini";
+   QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
+#endif
 
-    QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
+
+
+
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     //取值与赋值
     QString settingsString=settings->value(iniKey).toString();
@@ -282,7 +291,14 @@ void ZhkuLoginWidget::writeSettings()
     QString strjson=strProcessor.qJson2QString(json);
 
     qDebug()<<"cookies文件写入成功!";
-    QSettings *settings = new QSettings(QCoreApplication::applicationDirPath()+"/Zhku.ini",QSettings::IniFormat);;
+
+#if defined(Q_OS_ANDROID)
+    QSettings *settings = new QSettings(iniPath, QSettings::NativeFormat);
+#else
+    QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);
+#endif
+
+//    QSettings *settings = new QSettings(iniPath,QSettings::IniFormat);;
     settings->clear();
     settings->setIniCodec(QTextCodec::codecForName("UTF-8"));
     QJsonObject settingsJson;

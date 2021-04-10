@@ -612,6 +612,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_loginassets.cpp
 qrc_loginassets.cpp: loginassets.qrc \
 		../../../qt514/5.14.1/mingw73_64/bin/rcc.exe \
+		assets/arrow/up.png \
+		assets/arrow/down.png \
 		assets/arrow/Arrow\ Circle\ up\ 2\ -\ 24px.svg \
 		assets/arrow/Arrow\ Circle\ down\ 2\ -\ 24px.svg \
 		assets/login/validCode.png \
@@ -4131,9 +4133,6 @@ ZhkuClientMain.o: ZhkuClientMain.cpp ZhkuClientMain.h \
 		UserAvater.h \
 		UI/ui_zhkuclientmain.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QFrame \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QScrollArea \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qscrollarea.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
@@ -4150,6 +4149,7 @@ ZhkuClientMain.o: ZhkuClientMain.cpp ZhkuClientMain.h \
 		UI/ui_closedialog.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QCheckBox \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qcheckbox.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QDialogButtonBox \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qdialogbuttonbox.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QRadioButton \

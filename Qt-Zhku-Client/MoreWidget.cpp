@@ -34,7 +34,6 @@ void MoreWidget::setImg(QPixmap &px)
     #if defined(Q_OS_ANDROID)
         ui->label_6->setFixedSize(100,200);
     #else
-
 #endif
 }
 
