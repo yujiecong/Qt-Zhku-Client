@@ -24,6 +24,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 UI_DIR+=./UI
 SOURCES += \
+    ChoosingResult_Ui.cpp \
+    Closed_404_Ui.cpp \
+    Default_Ui.cpp \
+    Other_ChangeUserInfo_Ui.cpp \
+    StuduentId_Ui.cpp \
+    SupplementChossing_Ui.cpp \
         main.cpp \
     ZhkuLoginWidget.cpp \
     ZhkuClientMain.cpp \
@@ -46,6 +52,12 @@ SOURCES += \
 
 
 HEADERS += \
+    ChoosingResult_Ui.h \
+    Closed_404_Ui.h \
+    Default_Ui.h \
+    Other_ChangeUserInfo_Ui.h \
+    StuduentId_Ui.h \
+    SupplementChossing_Ui.h \
     global.h \
     ZhkuLoginWidget.h \
     ZhkuClientMain.h \
@@ -67,6 +79,12 @@ HEADERS += \
 
 
 FORMS += \
+    ChoosingResult_Ui.ui \
+    Closed_404_Ui.ui \
+    Default_Ui.ui \
+    Other_ChangeUserInfo_Ui.ui \
+    StuduentId_Ui.ui \
+    SupplementChossing_Ui.ui \
     ZhkuLoginWidget.ui \
     ZhkuClientMain.ui \
     SubMenuWidget.ui \

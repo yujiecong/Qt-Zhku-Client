@@ -1,5 +1,8 @@
 #include "global.h"
 QNetworkAccessManager manager;
+QString zhkuName;
+QString zhkuId;
+QString CUR_XNXQ;
 QNetworkReply *getReqReply(QUrl url,QByteArray para)
 {
     QNetworkRequest req(QUrl(url.url()+para));
@@ -44,3 +47,11 @@ QStringList reFindAll(QRegExp &ex, QString &content)
     }
     return list;
 }
+
+QString reFindOne(QRegExp &ex, QString &content)
+{
+    content.indexOf(ex);
+    return ex.cap();
+}
+
+

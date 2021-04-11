@@ -1,15 +1,15 @@
 #include "CurriculumArrangement_ui.h"
 #include "ui_curriculumarrangement_ui.h"
-
-CurriculumArrangement_Ui::CurriculumArrangement_Ui(QString xnxq,QWidget *parent) :
-    QWidget(parent),xnxq(xnxq),
+#include "global.h"
+CurriculumArrangement_Ui::CurriculumArrangement_Ui(QWidget *parent) :
+    QWidget(parent),
     ui(new Ui::CurriculumArrangement_Ui)
 {
     ui->setupUi(this);
 
     //学年学期 初始化
     //十年内
-    for(int i=xnxq.toInt()/10;i>xnxq.toInt()/10-5;i-=1){
+    for(int i=CUR_XNXQ.toInt()/10;i>CUR_XNXQ.toInt()/10-5;i-=1){
         for(int j=1;j>=0;j--){
             ui->comboBox->addItem(QString("%1~%2学年第%3学期").arg(i).arg(i+1).arg(j==0?"一":"二"));
             xnxqList<<QString("%1%2").arg(i).arg(j);

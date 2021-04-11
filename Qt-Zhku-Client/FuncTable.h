@@ -26,8 +26,8 @@ public:
     void setPix(QString url);
     //其实就是一个布局
     SubMenuWidget *subWidget=0;
-        Ui::FuncTable *ui;
-        SubMenuBtn *curBtn=0;
+    Ui::FuncTable *ui;
+    SubMenuBtn *curBtn=0;
 signals:
     void changeArrow(int);
 protected:

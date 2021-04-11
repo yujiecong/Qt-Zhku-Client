@@ -1,8 +1,8 @@
 #include "ScoreDistubing_ui.h"
 #include "ui_ScoreDistubing_ui.h"
 
-ScoreDistubing_Ui::ScoreDistubing_Ui(QString xnxq,QWidget *parent) :
-    QWidget(parent),xnxq(xnxq),
+ScoreDistubing_Ui::ScoreDistubing_Ui(QWidget *parent) :
+    QWidget(parent),
     ui(new Ui::ScoreDistubing_Ui)
 {
     ui->setupUi(this);
@@ -36,16 +36,6 @@ QString ScoreDistubing_Ui::getXN() const
 int ScoreDistubing_Ui::getXQ() const
 {
     return ui->comboBox_3->currentIndex();
-}
-
-QString ScoreDistubing_Ui::getXnxq() const
-{
-    return xnxq;
-}
-
-void ScoreDistubing_Ui::setXnxq(const QString &value)
-{
-    xnxq = value;
 }
 
 void ScoreDistubing_Ui::on_queryDisBtn_clicked()

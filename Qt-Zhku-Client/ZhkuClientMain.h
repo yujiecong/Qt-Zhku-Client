@@ -14,8 +14,11 @@
 #include "ScoreDistubing_ui.h"
 #include "Rankexam_Ui.h"
 #include "ExamArrangement_Ui.h"
-
+#include "Closed_404_Ui.h"
 #include "UserAvater.h"
+#include "Other_ChangeUserInfo_Ui.h"
+#include "Default_Ui.h"
+#include "ChoosingResult_Ui.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -29,9 +32,7 @@ class ZhkuClientMain : public QMainWindow
 public:
     explicit ZhkuClientMain(QWidget *parent = 0);
     ~ZhkuClientMain();
-    void init_Connection();
-    void init_();
-    void initSysTaryIcon();
+
 
 protected:
     void closeEvent(QCloseEvent *e);
@@ -52,7 +53,24 @@ private slots:
     void createDistributedScore_Ui();
     void createRankExam_Ui();
     void createExamArr_Ui();
-
+    void create404_Ui();
+    void createOtherChangeUserInfo_Ui();
+    void createDefault_Ui(QString url);
+    void createStudentBasicalInfo();
+    void createMinorRegistration();
+    void createMinorInformation();
+    void createRewardAndPunishmentInformation();
+    //培养方案
+    void createTheoryCourse();
+    void createPraticalPart();
+    void createGraduationDemanding();
+    //网上选课
+    void createPreChoosing();
+    void createPreChoosingResult();
+    void createChoosing();
+    void createChoosingResult();
+    void createSupplementChoosing();
+    //
     void removeMyUi();
 
 private:
@@ -96,13 +114,21 @@ private:
     ScoreDistubing_Ui *distributedScoreUi=0;
     RankExam_Ui *rankExmaUi=0;
     ExamArrangement_Ui *examArrUi=0;
+    Closed_404_Ui *closed404Ui=0;
+    Other_ChangeUserInfo_Ui *otherChangeUserInfoUi=0;
+    Default_Ui *defaultUi=0;
+    ChoosingResult_Ui *choosingUi=0;
 
-    //用于 查询课程的
+    //用于 查询更多课程的
     QString hiddenVaildationCode;
     bool hidyzmStatus=1;
     QSystemTrayIcon *sysTrayIcon=nullptr;
     //托盘bool
     bool closedMemery=0;
+
+    void init_Connection();
+    void init_();
+    void initSysTaryIcon();
 
 };
 

@@ -22,8 +22,7 @@ public:
     void getLocalXNXQ();
     void loginInit();
 
-    QString getXnxq();
-    void setXnxq(const QString &value);
+
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -42,7 +41,6 @@ private:
     QUrl zhkuLoginCodeUrl=QUrl("http://jw.zhku.edu.cn/sys/ValidateCode.aspx");
     QUrl zhkuLoginHomeUrl=QUrl("http://jw.zhku.edu.cn/_data/login_home.aspx");
     QUrl zhkuTestUrl=QUrl("http://jw.zhku.edu.cn/frame/menu.aspx");
-    QString xnxq;
     MoreWidget *moreWidget;
 
     QString cookies;

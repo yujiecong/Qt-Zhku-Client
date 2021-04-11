@@ -4,7 +4,7 @@
 #include "ImgLabel.h"
 
 #include <QWidget>
-
+#include "global.h"
 namespace Ui {
 class ExamArrangement_Ui;
 }
@@ -14,7 +14,7 @@ class ExamArrangement_Ui : public QWidget
     Q_OBJECT
 
 public:
-    explicit ExamArrangement_Ui(QString xnxq, QWidget *parent = 0);
+    explicit ExamArrangement_Ui( QWidget *parent = 0);
     ~ExamArrangement_Ui();
 
      int getlcxz();

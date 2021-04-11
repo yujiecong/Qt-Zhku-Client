@@ -26,7 +26,7 @@ public:
 
     };
 
-    explicit MoreWidget(QString xnxq, QWidget *parent = 0);
+    explicit MoreWidget(QWidget *parent = 0);
     ~MoreWidget();
 
     void setImg(QPixmap &px);
@@ -49,7 +49,7 @@ private slots:
 
 private:
     Ui::MoreWidget *ui;
-    QString xnxq;
+
     QStringList xnxqList;
     QStringList curriList;
 };

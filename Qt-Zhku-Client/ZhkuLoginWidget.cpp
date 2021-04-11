@@ -48,12 +48,12 @@ void ZhkuLoginWidget::getLocalXNXQ()
     int month = date.month();
     //可以用 ? : 的形式
     if (month>8 || month <3){
-        setXnxq(QString::number(year)+QString::number(Semester::FirstHalfSemeSter));
+        CUR_XNXQ=QString::number(year)+QString::number(Semester::FirstHalfSemeSter);
     }
     else{
-        setXnxq(xnxq=QString::number(year)+QString::number(Semester::SecondHalfSemester));
+        CUR_XNXQ=QString::number(year)+QString::number(Semester::SecondHalfSemester);
     }
-    qDebug()<<"当前学年学期为"<<xnxq;
+    qDebug()<<"当前学年学期为"<<CUR_XNXQ;
 }
 void ZhkuLoginWidget::loginInit()
 {
@@ -79,19 +79,17 @@ void ZhkuLoginWidget::loginInit()
     cookies=settingsJson["cookies"].toString();
     //如果设置了自动登录
 
-
     autoLogin=settingsJson["autoLogin"].toBool();
     autoPassword=settingsJson["autoPassword"].toBool();
 
     if(autoPassword){
+        ui->accountInput->setText(settingsJson["account"].toString());
         ui->pwdInput->setText(settingsJson["password"].toString());
         ui->checkBox_2->setChecked(1);
     }
-
     if(autoLogin && cookies!=""){
         ui->checkBox->setChecked(1);
         qDebug()<<"正在自动登录";
-
         QJsonObject json=strProcessor.qString2Json(cookies);
         QNetworkCookieJar *jar=manager.cookieJar();
         QList<QNetworkCookie> allcookies;
@@ -133,6 +131,7 @@ void ZhkuLoginWidget::loginInit()
             }
             else if(loginRead.contains(QString("教学安排表"))){
                 qDebug()<<"cookies仍然有效!";
+                zhkuId=settingsJson["account"].toString();
                 emit loginSuccessed();
             }
             testReply->deleteLater();
@@ -156,15 +155,6 @@ void ZhkuLoginWidget::loginInit()
     }
 }
 
-QString ZhkuLoginWidget::getXnxq()
-{
-    return xnxq;
-}
-
-void ZhkuLoginWidget::setXnxq(const QString &value)
-{
-    xnxq = value;
-}
 
 void ZhkuLoginWidget::closeEvent(QCloseEvent *event)
 {
@@ -306,6 +296,7 @@ void ZhkuLoginWidget::writeSettings()
     settingsJson.insert("autoPassword",ui->checkBox_2->isChecked());
     settingsJson.insert("cookies",strjson);
     if(ui->checkBox_2->isChecked()){
+        settingsJson.insert("account",ui->accountInput->text());
         settingsJson.insert("password",ui->pwdInput->text());
     }
     settings->setValue(iniKey,QString(strProcessor.qJson2QString(settingsJson)));
@@ -314,7 +305,7 @@ void ZhkuLoginWidget::writeSettings()
 
 void ZhkuLoginWidget::showMore()
 {
-    moreWidget =new MoreWidget(getXnxq());
+    moreWidget =new MoreWidget();
     connect(moreWidget,&MoreWidget::signalsGetCodeImg,this,&ZhkuLoginWidget::getCodeImg);
 
     queryCurriculum();

@@ -2,7 +2,7 @@
 #define SCOREDISTUBING_UI_H
 
 #include <QWidget>
-
+#include "global.h"
 namespace Ui {
 class ScoreDistubing_Ui;
 }
@@ -12,15 +12,14 @@ class ScoreDistubing_Ui : public QWidget
     Q_OBJECT
 
 public:
-    explicit ScoreDistubing_Ui(QString xnxq,QWidget *parent = 0);
+    explicit ScoreDistubing_Ui(QWidget *parent = 0);
     ~ScoreDistubing_Ui();
     void setHtml(QString &html) const;
 
     QString  getXN() const;
     int getXQ() const;
 
-    QString getXnxq() const;
-    void setXnxq(const QString &value);
+
     Ui::ScoreDistubing_Ui *ui;
     QString xnxq;
     int byWhat=2;

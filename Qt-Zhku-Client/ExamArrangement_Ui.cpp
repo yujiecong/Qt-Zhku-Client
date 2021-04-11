@@ -4,15 +4,15 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
-ExamArrangement_Ui::ExamArrangement_Ui(QString xnxq, QWidget *parent) :
-    QWidget(parent),xnxq(xnxq),
+ExamArrangement_Ui::ExamArrangement_Ui( QWidget *parent) :
+    QWidget(parent),
     ui(new Ui::ExamArrangement_Ui)
 {
     ui->setupUi(this);
 
     ui->comboBox->clear();
-    QString year=xnxq.mid(0,4);
-    QString  semester=xnxq.mid(4);
+    QString year=CUR_XNXQ.mid(0,4);
+    QString  semester=CUR_XNXQ.mid(4);
     ui->comboBox->addItem(tr("%1~%2学年第一学期").arg(year).arg(year.toInt()+1));
     if(semester.toInt()==1){
 

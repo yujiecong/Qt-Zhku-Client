@@ -15,10 +15,10 @@ class CurriculumArrangement_Ui : public QWidget
     Q_OBJECT
 
 public:
-    explicit CurriculumArrangement_Ui(QString ,QWidget *parent = 0);
+    explicit CurriculumArrangement_Ui(QWidget *parent = 0);
     ~CurriculumArrangement_Ui();
     Ui::CurriculumArrangement_Ui *ui;
-    QString xnxq;
+
     //在网页请求里是 rad
     bool rad=0;
     bool zc_flag=0;

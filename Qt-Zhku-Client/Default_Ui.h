@@ -14,7 +14,7 @@ class Default_Ui : public QWidget
 public:
     explicit Default_Ui(QWidget *parent = nullptr);
     ~Default_Ui();
-
+    void setHtml(QString url);
 private:
     Ui::Default_Ui *ui;
 };

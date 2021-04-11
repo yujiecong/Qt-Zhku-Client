@@ -81,7 +81,8 @@ void ZhkuClientMain::init_()
     //掌上校园
     campusOnHand->setPix(":/assets/btnIcon/campus.png");
     ui->MenuLayout->addWidget(campusOnHand);
-    ui->MenuLayout->addWidget(campusOnHand->subWidget);
+//    ui->MenuLayout->addWidget(campusOnHand->subWidget);
+//    connect(curriculumArrangementTable->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createCurriculumArrangement_Ui);
     //掌上校园
 
     //学生学籍
@@ -90,16 +91,35 @@ void ZhkuClientMain::init_()
     ui->MenuLayout->addWidget(studentStatus->subWidget);
     studentStatus->setPix(":/assets/btnIcon/student.png");
     studentStatus->addSubBtn("学籍管理规定",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->addSubBtn("学籍档案",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->curBtn->addSubBtn(QStringList()<<"基本信息"<<"辅修报名"<<"辅修信息"<<"奖惩信息",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createStudentBasicalInfo);
+    connect(studentStatus->curBtn->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::createMinorRegistration);
+    connect(studentStatus->curBtn->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::createMinorInformation);
+    connect(studentStatus->curBtn->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::createRewardAndPunishmentInformation);
+
     studentStatus->subWidget->ui->verticalLayout->addWidget(studentStatus->curBtn->subWidget);
 
     studentStatus->addSubBtn("注册信息",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->addSubBtn("学籍异动",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->curBtn->addSubBtn(QStringList()<<"学业预警"<<"申请异动"<<"预计异动信息"<<"异动信息",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+
     studentStatus->subWidget->ui->verticalLayout->addWidget(studentStatus->curBtn->subWidget);
     studentStatus->addSubBtn("毕业事宜",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->curBtn->addSubBtn(QStringList()<<"毕业进展"<<"申请提前/推迟毕业"<<"毕业审核结论",":/assets/btnIcon/student.png","");
+    connect(studentStatus->curBtn->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+
     studentStatus->subWidget->ui->verticalLayout->addWidget(studentStatus->curBtn->subWidget);
     //学生学籍
 
@@ -107,14 +127,24 @@ void ZhkuClientMain::init_()
     ui->MenuLayout->addWidget(cultivationScheme);
     ui->MenuLayout->addWidget(cultivationScheme->subWidget);
     cultivationScheme->setPix(":/assets/btnIcon/scheme.png");
-    cultivationScheme->addSubBtn(QStringList()<<"毕业学分要求"<<"实践环节"<<"理论课程",":/assets/btnIcon/scheme.png","");
+    cultivationScheme->addSubBtn(QStringList()<<"理论课程"<<"实践环节"<<"毕业学分要求",":/assets/btnIcon/scheme.png","");
+    connect(cultivationScheme->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createTheoryCourse);
+    connect(cultivationScheme->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::createPraticalPart);
+    connect(cultivationScheme->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     //培养
     //网上选课
     ui->MenuLayout->addWidget(choiceLessons);
     ui->MenuLayout->addWidget(choiceLessons->subWidget);
     choiceLessons->setPix(":/assets/btnIcon/choice.png");
-    choiceLessons->addSubBtn(QStringList()<<"预选"<<"选课管理规定"<<"预选结果"<<"正选"<<"正选结果"<<"补选"<<"退选"<<"被取消课程",":/assets/btnIcon/choice.png","");
-
+    choiceLessons->addSubBtn(QStringList()<<"选课管理规定"<<"预选"<<"预选结果"<<"正选"<<"正选结果"<<"补选"<<"退选"<<"被取消课程",":/assets/btnIcon/choice.png","");
+    connect(choiceLessons->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(choiceLessons->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::createPreChoosing);
+    connect(choiceLessons->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::createPreChoosingResult);
+    connect(choiceLessons->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::createChoosing);
+    connect(choiceLessons->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createChoosingResult);
+    connect(choiceLessons->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createSupplementChoosing);
+    connect(choiceLessons->subWidget->v[6],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(choiceLessons->subWidget->v[7],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     //网上
 
     //教学安排
@@ -122,9 +152,11 @@ void ZhkuClientMain::init_()
     ui->MenuLayout->addWidget(curriculumArrangementTable);
     curriculumArrangementTable->setPix(":/assets/btnIcon/arrange.png");
     curriculumArrangementTable->addSubBtn("教学安排表",":/assets/btnIcon/arrange.png","");
+    connect(curriculumArrangementTable->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::createCurriculumArrangement_Ui);
     curriculumArrangementTable->addSubBtn("调/停课信息",":/assets/btnIcon/arrange.png","");
+    connect(curriculumArrangementTable->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     //这里没写好
-    connect(curriculumArrangementTable->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createCurriculumArrangement_Ui);
+
     ui->MenuLayout->addWidget(curriculumArrangementTable->subWidget);
     //教学安排
 
@@ -132,11 +164,15 @@ void ZhkuClientMain::init_()
     ui->MenuLayout->addWidget(examinationArrangement);
     examinationArrangement->setPix(":/assets/btnIcon/examination.png");
     examinationArrangement->addSubBtn("考试管理规定",":/assets/btnIcon/examination.pngg","");
+        connect(examinationArrangement->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     examinationArrangement->addSubBtn("申请补考",":/assets/btnIcon/examination.png","");
+        connect(examinationArrangement->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     examinationArrangement->addSubBtn("申请缓考",":/assets/btnIcon/examination.png","");
+        connect(examinationArrangement->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     examinationArrangement->addSubBtn("考试安排表",":/assets/btnIcon/examination.png","");
+    connect(examinationArrangement->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::createExamArr_Ui);
     examinationArrangement->addSubBtn("考试通报信息",":/assets/btnIcon/examination.png","");
-    connect(examinationArrangement->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::createExamArr_Ui);
+    connect(examinationArrangement->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     ui->MenuLayout->addWidget(examinationArrangement->subWidget);
     //考试安排
 
@@ -150,8 +186,13 @@ void ZhkuClientMain::init_()
 
     studentScore->setPix(":/assets/btnIcon/score.png");
     studentScore->addSubBtn(l,":/assets/btnIcon/score.png","");
+    connect(studentScore->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentScore->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentScore->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentScore->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     connect(studentScore->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createQueryScore_Ui);
     connect(studentScore->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createDistributedScore_Ui);
+    connect(studentScore->subWidget->v[6],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     connect(studentScore->subWidget->v[7],&SubMenuBtn::clicked,this,&ZhkuClientMain::createRankExam_Ui);
     //学生成绩
 
@@ -159,8 +200,14 @@ void ZhkuClientMain::init_()
     ui->MenuLayout->addWidget(textbookInfo);
     ui->MenuLayout->addWidget(textbookInfo->subWidget);
     l=QStringList()<<"领取教材信息"<<"领取教材对账"<<"有售教材信息"<<"确认需要教材";
+
+
     textbookInfo->setPix(":/assets/btnIcon/information.png");
     textbookInfo->addSubBtn(l,":/assets/btnIcon/information.png","");
+    connect(textbookInfo->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(textbookInfo->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(textbookInfo->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(textbookInfo->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     //教材信息
 
     //网上评教
@@ -169,6 +216,10 @@ void ZhkuClientMain::init_()
     l=QStringList()<<"质量评价管理规定"<<"提交问卷调差表"<<"提交教学评价表";
     teacherComment->setPix(":/assets/btnIcon/comment.png");
     teacherComment->addSubBtn(l,":/assets/btnIcon/comment.png","");
+    connect(teacherComment->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(teacherComment->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(teacherComment->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+
     //网上评教
 
     //其他
@@ -177,6 +228,9 @@ void ZhkuClientMain::init_()
     l=QStringList()<<"修改个人密码"<<"查看个人登录日志"<<"文件下载";
     otherTable->setPix(":/assets/btnIcon/other.png");
     otherTable->addSubBtn(l,":/assets/btnIcon/other.png","");
+    connect(otherTable->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createOtherChangeUserInfo_Ui);
+    connect(otherTable->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(otherTable->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     QSpacerItem *item=new QSpacerItem(30,360);
     ui->MenuLayout->addItem(item);
 
@@ -266,7 +320,6 @@ void ZhkuClientMain::loginSuccessed()
 {
     show();
     zhkuloginManager->hide();
-    //    ..
     getUserInfo();
 
 }
@@ -289,9 +342,6 @@ void ZhkuClientMain::getUserInfo()
         html.indexOf(onlineEx);
         QString onlineInfo=onlineEx.cap();
 
-        //好像没有算上自己
-
-
         userAvater->setCurWeek(weekInfo.replace("&nbsp;"," "));
         userAvater->setOnline(onlineInfo.replace("&nbsp;</span>","").toInt());
         userAvater->setDate(dateInfo.replace("&nbsp;",""));
@@ -304,6 +354,7 @@ void ZhkuClientMain::getUserInfo()
         QRegExp nameEx(".{,2}：\\[\\d{,12}\\][\u4e00-\u9fa5]{,4}");
         html.indexOf(nameEx);
         QString name_id=nameEx.cap();
+        zhkuName=name_id;
         userAvater->setName(name_id);
         rep->deleteLater();
     });
@@ -365,9 +416,9 @@ void ZhkuClientMain::getCurriculumArrangement()
 //            Pri_StuSel_Drawimg.aspx?type=1&w=1100&h=580&xnxq=20200
 //            Pri_StuSel_Drawimg.aspx?type=1&w=1100&h=400&xnxq=20201
             QRegExp urlExp("Pri_StuSel_Drawimg.aspx\\?type=\\d{1}&w=\\d{0,4}&h=\\d{0,4}&xnxq=\\d{5}(&px=\\d{1}){0,1}");
-            QString curriUrl;
-            curriUrlHtml.indexOf(urlExp);
-            curriUrl = urlExp.cap(0);
+            QString curriUrl=reFindOne(urlExp,curriUrlHtml);
+
+
             if(curriUrl.size()==0){
                 QMessageBox::warning(this,"错误","未找到对应课表");
             }
@@ -458,13 +509,8 @@ void ZhkuClientMain::getStudentScore()
         QString curriUrlHtml=strProcessor.gbk2Utf8(curReply->readAll());
         QRegExp ex("Stu_MyScore_Drawimg.aspx\\?x=\\d{1,}&h=\\d{1,}&w=\\d{3,}&xnxq=\\d{5}&xn=\\d{0,4}&xq=\\d{0,1}&rpt=\\d&rad=\\d&zfx=\\d&xh=\\d{12}");
         //                  Stu_MyScore_Drawimg.aspx\?x= \d{1,}&h= \d{1,}&w= \d{3,}&xnxq= \d{5}&xn=&xq=&rpt= \d{1}&rad= \d{1}&zfx= \d{1}&xh= \d{12}
-        QStringList list;
-        int pos2 = 0;
-        while ((pos2 = ex.indexIn(curriUrlHtml, pos2)) != -1)
-        {
-            list << ex.cap();                                   // 第一个捕获到的文本
-            pos2 += ex.matchedLength();             // 上一个匹配的字符串的长度
-        }
+        QStringList list=reFindAll(ex,curriUrlHtml);
+
         //自动保存
         foreach (QString url, list) {
             QNetworkReply *urlReply=getReqReply(QString("http://jw.zhku.edu.cn/xscj/")+url);
@@ -480,31 +526,6 @@ void ZhkuClientMain::getStudentScore()
                     QMessageBox::warning(this,"图片加载错误!","请检查错误");
                 }
 
-                //自动保存
-                //                QString curriPath=QString("第%1学期的成绩.jpg").arg(QString::number(i));
-                //                QFile *scoreImgFile=new QFile(curriPath);
-                //                if (!scoreImgFile->open(QIODevice::WriteOnly)){
-                //                    delete scoreImgFile;
-                //                    scoreImgFile=nullptr;
-                //                    qDebug()<<"score File文件写入失败!";
-
-                //                }
-                //                else{
-                //                    QByteArray imgRaw=urlReply->readAll();
-                //                    ImgLabel *curriImg= new ImgLabel();
-                //                    curriImg->setPixmap(QPixmap(curriPath));
-
-                //                    queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
-
-                //                    scoreImgFile->write(imgRaw);
-                //                scoreImgFile->close();
-
-                //自动保存
-                //                //将 图片输出到 那个地方
-                //                ImgLabel *curriImg= new ImgLabel();
-                //                curriImg->setPixmap(QPixmap(curriPath));
-
-                //                queryScoreUi->ui->verticalLayout_3->insertWidget(0,curriImg);
                 urlReply->deleteLater();
             });
         }
@@ -574,12 +595,9 @@ void ZhkuClientMain::getExamArr()
     connect(curReply,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(curReply->readAll());
         QString url;
-
         QRegExp ex("stu_ksap_drawimg.aspx\\?w=\\d{0,4}&h=\\d{0,4}&xn=\\d{0,4}&xq=\\d{0,1}&lcdm=\\d{0,8}");
+        url=reFindOne(ex,html);
 
-        html.indexOf(ex);
-        url=ex.cap();
-        qDebug()<<url;
         QNetworkReply *imgRep=getReqReply("http://jw.zhku.edu.cn/KSSW/"+url);
         connect(imgRep,&QNetworkReply::finished,[=](){
             insertWidget2ScrollView(examArrUi,imgRep);
@@ -623,7 +641,7 @@ void ZhkuClientMain::getExamTurn()
 void ZhkuClientMain::createCurriculumArrangement_Ui()
 {
     removeMyUi();
-    currArrUi=new CurriculumArrangement_Ui(zhkuloginManager->getXnxq());
+    currArrUi=new CurriculumArrangement_Ui();
     ui->frameLayout->addWidget(currArrUi);
     connect(currArrUi,&CurriculumArrangement_Ui::queryCurri,this,&ZhkuClientMain::getCurriculumArrangement);
 
@@ -633,7 +651,7 @@ void ZhkuClientMain::createQueryScore_Ui()
 {
 
     removeMyUi();
-    queryScoreUi = new QueryScore_Ui(zhkuloginManager->getXnxq());
+    queryScoreUi = new QueryScore_Ui();
     ui->frameLayout->addWidget(queryScoreUi);
     connect(queryScoreUi,&QueryScore_Ui::queryScore,this,&ZhkuClientMain::getStudentScore);
 }
@@ -641,7 +659,7 @@ void ZhkuClientMain::createQueryScore_Ui()
 void ZhkuClientMain::createDistributedScore_Ui()
 {
     removeMyUi();
-    distributedScoreUi = new ScoreDistubing_Ui(zhkuloginManager->getXnxq());
+    distributedScoreUi = new ScoreDistubing_Ui();
     ui->frameLayout->addWidget(distributedScoreUi);
     connect(distributedScoreUi,&ScoreDistubing_Ui::queryDis,this,&ZhkuClientMain::getDistributedScore);
 }
@@ -657,11 +675,117 @@ void ZhkuClientMain::createRankExam_Ui()
 void ZhkuClientMain::createExamArr_Ui()
 {
     removeMyUi();
-    examArrUi=new ExamArrangement_Ui(zhkuloginManager->getXnxq());
+    examArrUi=new ExamArrangement_Ui();
     ui->frameLayout->addWidget(examArrUi);
     connect(examArrUi,&ExamArrangement_Ui::queryExam,this,&ZhkuClientMain::getExamArr);
     connect(examArrUi,&ExamArrangement_Ui::currentIndexChanged,this,&ZhkuClientMain::getExamTurn);
     getExamTurn();
+}
+
+void ZhkuClientMain::create404_Ui()
+{
+    removeMyUi();
+    closed404Ui=new Closed_404_Ui();
+    ui->frameLayout->addWidget(closed404Ui);
+
+}
+
+void ZhkuClientMain::createOtherChangeUserInfo_Ui()
+{
+    removeMyUi();
+    otherChangeUserInfoUi=new Other_ChangeUserInfo_Ui();
+    ui->frameLayout->addWidget(otherChangeUserInfoUi);
+
+}
+
+void ZhkuClientMain::createDefault_Ui(QString url)
+{
+    removeMyUi();
+    defaultUi=new Default_Ui();
+    defaultUi->setHtml(url);
+    ui->frameLayout->addWidget(defaultUi);
+}
+
+void ZhkuClientMain::createStudentBasicalInfo()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_MyInfo_RPT.aspx");
+}
+
+void ZhkuClientMain::createMinorRegistration()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_fxzy_bm_rpt.aspx");
+}
+
+void ZhkuClientMain::createMinorInformation()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_fxInfo.aspx");
+}
+
+void ZhkuClientMain::createRewardAndPunishmentInformation()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_xscjxx_rpt.aspx");
+}
+
+void ZhkuClientMain::createTheoryCourse()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/jxjh/Stu_byfakc_rpt.aspx");
+}
+
+void ZhkuClientMain::createPraticalPart()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/jxjh/Stu_byfahj_rpt.aspx");
+}
+
+void ZhkuClientMain::createGraduationDemanding()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/jxjh/Stu_byxfyq_rpt.aspx");
+}
+
+void ZhkuClientMain::createPreChoosing()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/wsxk/stu_xsyx.aspx");
+}
+
+void ZhkuClientMain::createPreChoosingResult()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/wsxk/stu_yxjg.aspx");
+}
+
+void ZhkuClientMain::createChoosing()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/wsxk/stu_xszx.aspx");
+}
+
+void ZhkuClientMain::createChoosingResult()
+{
+    removeMyUi();
+    choosingUi=new ChoosingResult_Ui();
+    QNetworkReply *rep=getReqReply("http://jw.zhku.edu.cn/wsxk/stu_zxjg_rpt.aspx");
+    connect(rep,&QNetworkReply::finished,[=](){
+        QString html=strProcessor.gbk2Utf8(rep->readAll());
+        choosingUi->setHtml(html);
+        ui->frameLayout->addWidget(choosingUi);
+        //获取正选结果图像
+//                  w=1083&h=80&xn=2020&xq=1&zfx=0&type=xzxjg
+        QRegExp ex("w=\\d{3,4}&h=\\d{1,4}&xn=\\d{4}&xq=\\d{1}&zfx=\\d{1}&type=xzxjg");
+        QString imgUrl;
+        QString url="http://jw.zhku.edu.cn/znpk/DrawKbimg.aspx?"+reFindOne(ex,html);
+        qDebug()<<url;
+        QNetworkReply *imgRep=getReqReply(url);
+        connect(imgRep,&QNetworkReply::finished,[=](){
+            insertWidget2ScrollView(choosingUi,imgRep);
+            imgRep->deleteLater();
+        });
+
+        rep->deleteLater();
+    });
+}
+
+void ZhkuClientMain::createSupplementChoosing()
+{
+
+
+
 }
 
 void ZhkuClientMain::removeMyUi()

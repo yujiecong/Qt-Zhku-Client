@@ -59,20 +59,20 @@ void SubMenuBtn::addSubBtn(QStringList sl, QString pixpath, QString url)
 void SubMenuBtn::unfoldAnimation(bool dire)
 {
 //    待优化
-    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"geometry");
+    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"windowOpacity");
 
-    ani->setDuration(3000);
+    ani->setDuration(1000);
     ani->setEasingCurve(QEasingCurve::OutInCirc);
     if (dire){
-        subWidget->show();
-        ani->setStartValue(QRect(0,0,0,0));
-        ani->setEndValue(subWidget->rect());
-        subWidget->hide();
+
+        ani->setStartValue(0);
+        ani->setEndValue(1);
+
     }
     else{
 
-        ani->setStartValue(subWidget->rect());
-        ani->setEndValue(QRect(0,0,0,0));
+        ani->setStartValue(1);
+        ani->setEndValue(0);
     }
 
 
@@ -92,12 +92,12 @@ void SubMenuBtn::mousePressEvent(QMouseEvent *event)
         if(subWidget->v.size()>0){
             if(isClicked){
 
-                 unfoldAnimation(1);
+                subWidget->show();
                  ui->label_3->setPixmap(QPixmap(":/assets/arrow/down.png"));
             }
             else{
 
-                unfoldAnimation(0);
+               subWidget->hide();
 
                  ui->label_3->setPixmap(QPixmap(":/assets/arrow/up.png"));
             }

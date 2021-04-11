@@ -1,6 +1,8 @@
 #ifndef CHOOSINGRESULT_UI_H
 #define CHOOSINGRESULT_UI_H
 
+#include "ImgLabel.h"
+
 #include <QWidget>
 
 namespace Ui {
@@ -14,7 +16,8 @@ class ChoosingResult_Ui : public QWidget
 public:
     explicit ChoosingResult_Ui(QWidget *parent = nullptr);
     ~ChoosingResult_Ui();
-
+    void setHtml(QString url);
+     void insertImg(ImgLabel *img);
 private:
     Ui::ChoosingResult_Ui *ui;
 };
