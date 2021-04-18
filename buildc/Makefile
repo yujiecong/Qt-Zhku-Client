@@ -51,7 +51,13 @@ OBJECTS_DIR   = armeabi-v7a\\
 
 ####### Files
 
-SOURCES       = ..\Qt-Zhku-Client\main.cpp \
+SOURCES       = ..\Qt-Zhku-Client\ChoosingResult_Ui.cpp \
+		..\Qt-Zhku-Client\Closed_404_Ui.cpp \
+		..\Qt-Zhku-Client\Default_Ui.cpp \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.cpp \
+		..\Qt-Zhku-Client\StuduentId_Ui.cpp \
+		..\Qt-Zhku-Client\SupplementChossing_Ui.cpp \
+		..\Qt-Zhku-Client\main.cpp \
 		..\Qt-Zhku-Client\ZhkuLoginWidget.cpp \
 		..\Qt-Zhku-Client\ZhkuClientMain.cpp \
 		..\Qt-Zhku-Client\SubMenuWidget.cpp \
@@ -70,6 +76,12 @@ SOURCES       = ..\Qt-Zhku-Client\main.cpp \
 		..\Qt-Zhku-Client\MoreWidget.cpp \
 		..\Qt-Zhku-Client\global.cpp \
 		..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.cpp armeabi-v7a\qrc_loginassets.cpp \
+		armeabi-v7a\moc_ChoosingResult_Ui.cpp \
+		armeabi-v7a\moc_Closed_404_Ui.cpp \
+		armeabi-v7a\moc_Default_Ui.cpp \
+		armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp \
+		armeabi-v7a\moc_StuduentId_Ui.cpp \
+		armeabi-v7a\moc_SupplementChossing_Ui.cpp \
 		armeabi-v7a\moc_ZhkuLoginWidget.cpp \
 		armeabi-v7a\moc_ZhkuClientMain.cpp \
 		armeabi-v7a\moc_SubMenuWidget.cpp \
@@ -85,7 +97,13 @@ SOURCES       = ..\Qt-Zhku-Client\main.cpp \
 		armeabi-v7a\moc_ExamArrangement_Ui.cpp \
 		armeabi-v7a\moc_MoreWidget.cpp \
 		armeabi-v7a\moc_zhkuloginwidgetbyandroid.cpp
-OBJECTS       = armeabi-v7a\main.obj \
+OBJECTS       = armeabi-v7a\ChoosingResult_Ui.obj \
+		armeabi-v7a\Closed_404_Ui.obj \
+		armeabi-v7a\Default_Ui.obj \
+		armeabi-v7a\Other_ChangeUserInfo_Ui.obj \
+		armeabi-v7a\StuduentId_Ui.obj \
+		armeabi-v7a\SupplementChossing_Ui.obj \
+		armeabi-v7a\main.obj \
 		armeabi-v7a\ZhkuLoginWidget.obj \
 		armeabi-v7a\ZhkuClientMain.obj \
 		armeabi-v7a\SubMenuWidget.obj \
@@ -105,6 +123,12 @@ OBJECTS       = armeabi-v7a\main.obj \
 		armeabi-v7a\global.obj \
 		armeabi-v7a\zhkuloginwidgetbyandroid.obj \
 		armeabi-v7a\qrc_loginassets.obj \
+		armeabi-v7a\moc_ChoosingResult_Ui.obj \
+		armeabi-v7a\moc_Closed_404_Ui.obj \
+		armeabi-v7a\moc_Default_Ui.obj \
+		armeabi-v7a\moc_Other_ChangeUserInfo_Ui.obj \
+		armeabi-v7a\moc_StuduentId_Ui.obj \
+		armeabi-v7a\moc_SupplementChossing_Ui.obj \
 		armeabi-v7a\moc_ZhkuLoginWidget.obj \
 		armeabi-v7a\moc_ZhkuClientMain.obj \
 		armeabi-v7a\moc_SubMenuWidget.obj \
@@ -130,7 +154,13 @@ DIST          = ..\Qt-Zhku-Client\android\AndroidManifest.xml \
 		..\Qt-Zhku-Client\android\gradlew \
 		..\Qt-Zhku-Client\android\gradlew.bat \
 		..\Qt-Zhku-Client\android\gradlew.bat \
-		..\Qt-Zhku-Client\android\res\values\libs.xml ..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\android\res\values\libs.xml ..\Qt-Zhku-Client\ChoosingResult_Ui.h \
+		..\Qt-Zhku-Client\Closed_404_Ui.h \
+		..\Qt-Zhku-Client\Default_Ui.h \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\Qt-Zhku-Client\StuduentId_Ui.h \
+		..\Qt-Zhku-Client\SupplementChossing_Ui.h \
+		..\Qt-Zhku-Client\global.h \
 		..\Qt-Zhku-Client\ZhkuLoginWidget.h \
 		..\Qt-Zhku-Client\ZhkuClientMain.h \
 		..\Qt-Zhku-Client\SubMenuWidget.h \
@@ -147,7 +177,13 @@ DIST          = ..\Qt-Zhku-Client\android\AndroidManifest.xml \
 		..\Qt-Zhku-Client\Rankexam_Ui.h \
 		..\Qt-Zhku-Client\ExamArrangement_Ui.h \
 		..\Qt-Zhku-Client\MoreWidget.h \
-		..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.h ..\Qt-Zhku-Client\main.cpp \
+		..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.h ..\Qt-Zhku-Client\ChoosingResult_Ui.cpp \
+		..\Qt-Zhku-Client\Closed_404_Ui.cpp \
+		..\Qt-Zhku-Client\Default_Ui.cpp \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.cpp \
+		..\Qt-Zhku-Client\StuduentId_Ui.cpp \
+		..\Qt-Zhku-Client\SupplementChossing_Ui.cpp \
+		..\Qt-Zhku-Client\main.cpp \
 		..\Qt-Zhku-Client\ZhkuLoginWidget.cpp \
 		..\Qt-Zhku-Client\ZhkuClientMain.cpp \
 		..\Qt-Zhku-Client\SubMenuWidget.cpp \
@@ -174,7 +210,7 @@ TARGET        = libQt-Zhku-Client_armeabi-v7a.so
 first: all
 ####### Build rules
 
-libQt-Zhku-Client_armeabi-v7a.so: UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h $(OBJECTS)  
+libQt-Zhku-Client_armeabi-v7a.so: UI\ui_ChoosingResult_Ui.h UI\ui_Closed_404_Ui.h UI\ui_Default_Ui.h UI\ui_Other_ChangeUserInfo_Ui.h UI\ui_StuduentId_Ui.h UI\ui_SupplementChossing_Ui.h UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) @armeabi-v7a\object_script.libQt-Zhku-Client_armeabi-v7a.so.Armeabi-v7a $(OBJCOMP) $(LIBS)
 
 qmake: FORCE
@@ -193,9 +229,9 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)\
 	$(COPY_FILE) --parents ..\Qt-Zhku-Client\loginassets.qrc $(DISTDIR)\
 	$(COPY_FILE) --parents ..\..\..\qt514\5.14.1\android\mkspecs\features\data\dummy.cpp $(DISTDIR)\
-	$(COPY_FILE) --parents ..\Qt-Zhku-Client\global.h ..\Qt-Zhku-Client\ZhkuLoginWidget.h ..\Qt-Zhku-Client\ZhkuClientMain.h ..\Qt-Zhku-Client\SubMenuWidget.h ..\Qt-Zhku-Client\SubMenuBtn.h ..\Qt-Zhku-Client\StrProcessing.h ..\Qt-Zhku-Client\GetFocusLineEdit.h ..\Qt-Zhku-Client\FuncTable.h ..\Qt-Zhku-Client\CurriculumArrangement_ui.h ..\Qt-Zhku-Client\QueryScore_Ui.h ..\Qt-Zhku-Client\ImgLabel.h ..\Qt-Zhku-Client\CloseDialog.h ..\Qt-Zhku-Client\ScoreDistubing_ui.h ..\Qt-Zhku-Client\UserAvater.h ..\Qt-Zhku-Client\Rankexam_Ui.h ..\Qt-Zhku-Client\ExamArrangement_Ui.h ..\Qt-Zhku-Client\MoreWidget.h ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.h $(DISTDIR)\
-	$(COPY_FILE) --parents ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuLoginWidget.cpp ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-Client\SubMenuWidget.cpp ..\Qt-Zhku-Client\SubMenuBtn.cpp ..\Qt-Zhku-Client\StrProcessing.cpp ..\Qt-Zhku-Client\GetFocusLineEdit.cpp ..\Qt-Zhku-Client\FuncTable.cpp ..\Qt-Zhku-Client\CurriculumArrangement_Ui.cpp ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Client\ImgLabel.cpp ..\Qt-Zhku-Client\CloseDialog.cpp ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt-Zhku-Client\UserAvater.cpp ..\Qt-Zhku-Client\Rankexam_Ui.cpp ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\Qt-Zhku-Client\MoreWidget.cpp ..\Qt-Zhku-Client\global.cpp ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.cpp $(DISTDIR)\
-	$(COPY_FILE) --parents ..\Qt-Zhku-Client\ZhkuLoginWidget.ui ..\Qt-Zhku-Client\ZhkuClientMain.ui ..\Qt-Zhku-Client\SubMenuWidget.ui ..\Qt-Zhku-Client\SubMenuBtn.ui ..\Qt-Zhku-Client\FuncTable.ui ..\Qt-Zhku-Client\CurriculumArrangement_Ui.ui ..\Qt-Zhku-Client\QueryScore_Ui.ui ..\Qt-Zhku-Client\closedialog.ui ..\Qt-Zhku-Client\CloseDialog.ui ..\Qt-Zhku-Client\ScoreDistubing_ui.ui ..\Qt-Zhku-Client\UserAvater.ui ..\Qt-Zhku-Client\RankExam_Ui.ui ..\Qt-Zhku-Client\ExamArrangement_Ui.ui ..\Qt-Zhku-Client\MoreWidget.ui ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.ui $(DISTDIR)\
+	$(COPY_FILE) --parents ..\Qt-Zhku-Client\ChoosingResult_Ui.h ..\Qt-Zhku-Client\Closed_404_Ui.h ..\Qt-Zhku-Client\Default_Ui.h ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h ..\Qt-Zhku-Client\StuduentId_Ui.h ..\Qt-Zhku-Client\SupplementChossing_Ui.h ..\Qt-Zhku-Client\global.h ..\Qt-Zhku-Client\ZhkuLoginWidget.h ..\Qt-Zhku-Client\ZhkuClientMain.h ..\Qt-Zhku-Client\SubMenuWidget.h ..\Qt-Zhku-Client\SubMenuBtn.h ..\Qt-Zhku-Client\StrProcessing.h ..\Qt-Zhku-Client\GetFocusLineEdit.h ..\Qt-Zhku-Client\FuncTable.h ..\Qt-Zhku-Client\CurriculumArrangement_ui.h ..\Qt-Zhku-Client\QueryScore_Ui.h ..\Qt-Zhku-Client\ImgLabel.h ..\Qt-Zhku-Client\CloseDialog.h ..\Qt-Zhku-Client\ScoreDistubing_ui.h ..\Qt-Zhku-Client\UserAvater.h ..\Qt-Zhku-Client\Rankexam_Ui.h ..\Qt-Zhku-Client\ExamArrangement_Ui.h ..\Qt-Zhku-Client\MoreWidget.h ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.h $(DISTDIR)\
+	$(COPY_FILE) --parents ..\Qt-Zhku-Client\ChoosingResult_Ui.cpp ..\Qt-Zhku-Client\Closed_404_Ui.cpp ..\Qt-Zhku-Client\Default_Ui.cpp ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.cpp ..\Qt-Zhku-Client\StuduentId_Ui.cpp ..\Qt-Zhku-Client\SupplementChossing_Ui.cpp ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuLoginWidget.cpp ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-Client\SubMenuWidget.cpp ..\Qt-Zhku-Client\SubMenuBtn.cpp ..\Qt-Zhku-Client\StrProcessing.cpp ..\Qt-Zhku-Client\GetFocusLineEdit.cpp ..\Qt-Zhku-Client\FuncTable.cpp ..\Qt-Zhku-Client\CurriculumArrangement_Ui.cpp ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Client\ImgLabel.cpp ..\Qt-Zhku-Client\CloseDialog.cpp ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt-Zhku-Client\UserAvater.cpp ..\Qt-Zhku-Client\Rankexam_Ui.cpp ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\Qt-Zhku-Client\MoreWidget.cpp ..\Qt-Zhku-Client\global.cpp ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.cpp $(DISTDIR)\
+	$(COPY_FILE) --parents ..\Qt-Zhku-Client\ChoosingResult_Ui.ui ..\Qt-Zhku-Client\Closed_404_Ui.ui ..\Qt-Zhku-Client\Default_Ui.ui ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.ui ..\Qt-Zhku-Client\StuduentId_Ui.ui ..\Qt-Zhku-Client\SupplementChossing_Ui.ui ..\Qt-Zhku-Client\ZhkuLoginWidget.ui ..\Qt-Zhku-Client\ZhkuClientMain.ui ..\Qt-Zhku-Client\SubMenuWidget.ui ..\Qt-Zhku-Client\SubMenuBtn.ui ..\Qt-Zhku-Client\FuncTable.ui ..\Qt-Zhku-Client\CurriculumArrangement_Ui.ui ..\Qt-Zhku-Client\QueryScore_Ui.ui ..\Qt-Zhku-Client\closedialog.ui ..\Qt-Zhku-Client\CloseDialog.ui ..\Qt-Zhku-Client\ScoreDistubing_ui.ui ..\Qt-Zhku-Client\UserAvater.ui ..\Qt-Zhku-Client\RankExam_Ui.ui ..\Qt-Zhku-Client\ExamArrangement_Ui.ui ..\Qt-Zhku-Client\MoreWidget.ui ..\Qt-Zhku-Client\zhkuloginwidgetbyandroid.ui $(DISTDIR)\
 
 
 clean: compiler_clean 
@@ -238,6 +274,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) armeabi-v7a\qrc_loginassets.cpp
 armeabi-v7a\qrc_loginassets.cpp: ..\Qt-Zhku-Client\loginassets.qrc \
 		..\..\..\qt514\5.14.1\android\bin\rcc.exe \
+		..\Qt-Zhku-Client\assets\arrow\up.png \
+		..\Qt-Zhku-Client\assets\arrow\down.png \
 		..\Qt-Zhku-Client\assets\arrow\Arrow\ Circle\ up\ 2\ -\ 24px.svg \
 		..\Qt-Zhku-Client\assets\arrow\Arrow\ Circle\ down\ 2\ -\ 24px.svg \
 		..\Qt-Zhku-Client\assets\login\validCode.png \
@@ -271,9 +309,673 @@ compiler_moc_predefs_clean:
 armeabi-v7a\moc_predefs.h: ..\..\..\qt514\5.14.1\android\mkspecs\features\data\dummy.cpp
 	D:\android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++ -target armv7a-linux-androideabi21 -fno-limit-debug-info -fPIC -fstack-protector-strong -DANDROID -O2 -mthumb -Oz -Wall -W -dM -E -o armeabi-v7a\moc_predefs.h ..\..\..\qt514\5.14.1\android\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: armeabi-v7a\moc_ZhkuLoginWidget.cpp armeabi-v7a\moc_ZhkuClientMain.cpp armeabi-v7a\moc_SubMenuWidget.cpp armeabi-v7a\moc_SubMenuBtn.cpp armeabi-v7a\moc_GetFocusLineEdit.cpp armeabi-v7a\moc_FuncTable.cpp armeabi-v7a\moc_CurriculumArrangement_ui.cpp armeabi-v7a\moc_QueryScore_Ui.cpp armeabi-v7a\moc_CloseDialog.cpp armeabi-v7a\moc_ScoreDistubing_ui.cpp armeabi-v7a\moc_UserAvater.cpp armeabi-v7a\moc_Rankexam_Ui.cpp armeabi-v7a\moc_ExamArrangement_Ui.cpp armeabi-v7a\moc_MoreWidget.cpp armeabi-v7a\moc_zhkuloginwidgetbyandroid.cpp
+compiler_moc_header_make_all: armeabi-v7a\moc_ChoosingResult_Ui.cpp armeabi-v7a\moc_Closed_404_Ui.cpp armeabi-v7a\moc_Default_Ui.cpp armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp armeabi-v7a\moc_StuduentId_Ui.cpp armeabi-v7a\moc_SupplementChossing_Ui.cpp armeabi-v7a\moc_ZhkuLoginWidget.cpp armeabi-v7a\moc_ZhkuClientMain.cpp armeabi-v7a\moc_SubMenuWidget.cpp armeabi-v7a\moc_SubMenuBtn.cpp armeabi-v7a\moc_GetFocusLineEdit.cpp armeabi-v7a\moc_FuncTable.cpp armeabi-v7a\moc_CurriculumArrangement_ui.cpp armeabi-v7a\moc_QueryScore_Ui.cpp armeabi-v7a\moc_CloseDialog.cpp armeabi-v7a\moc_ScoreDistubing_ui.cpp armeabi-v7a\moc_UserAvater.cpp armeabi-v7a\moc_Rankexam_Ui.cpp armeabi-v7a\moc_ExamArrangement_Ui.cpp armeabi-v7a\moc_MoreWidget.cpp armeabi-v7a\moc_zhkuloginwidgetbyandroid.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) armeabi-v7a\moc_ZhkuLoginWidget.cpp armeabi-v7a\moc_ZhkuClientMain.cpp armeabi-v7a\moc_SubMenuWidget.cpp armeabi-v7a\moc_SubMenuBtn.cpp armeabi-v7a\moc_GetFocusLineEdit.cpp armeabi-v7a\moc_FuncTable.cpp armeabi-v7a\moc_CurriculumArrangement_ui.cpp armeabi-v7a\moc_QueryScore_Ui.cpp armeabi-v7a\moc_CloseDialog.cpp armeabi-v7a\moc_ScoreDistubing_ui.cpp armeabi-v7a\moc_UserAvater.cpp armeabi-v7a\moc_Rankexam_Ui.cpp armeabi-v7a\moc_ExamArrangement_Ui.cpp armeabi-v7a\moc_MoreWidget.cpp armeabi-v7a\moc_zhkuloginwidgetbyandroid.cpp
+	-$(DEL_FILE) armeabi-v7a\moc_ChoosingResult_Ui.cpp armeabi-v7a\moc_Closed_404_Ui.cpp armeabi-v7a\moc_Default_Ui.cpp armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp armeabi-v7a\moc_StuduentId_Ui.cpp armeabi-v7a\moc_SupplementChossing_Ui.cpp armeabi-v7a\moc_ZhkuLoginWidget.cpp armeabi-v7a\moc_ZhkuClientMain.cpp armeabi-v7a\moc_SubMenuWidget.cpp armeabi-v7a\moc_SubMenuBtn.cpp armeabi-v7a\moc_GetFocusLineEdit.cpp armeabi-v7a\moc_FuncTable.cpp armeabi-v7a\moc_CurriculumArrangement_ui.cpp armeabi-v7a\moc_QueryScore_Ui.cpp armeabi-v7a\moc_CloseDialog.cpp armeabi-v7a\moc_ScoreDistubing_ui.cpp armeabi-v7a\moc_UserAvater.cpp armeabi-v7a\moc_Rankexam_Ui.cpp armeabi-v7a\moc_ExamArrangement_Ui.cpp armeabi-v7a\moc_MoreWidget.cpp armeabi-v7a\moc_zhkuloginwidgetbyandroid.cpp
+armeabi-v7a\moc_ChoosingResult_Ui.cpp: ..\Qt-Zhku-Client\ChoosingResult_Ui.h \
+		..\Qt-Zhku-Client\ImgLabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QMenu \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qmenu.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\ChoosingResult_Ui.h -o armeabi-v7a\moc_ChoosingResult_Ui.cpp
+
+armeabi-v7a\moc_Closed_404_Ui.cpp: ..\Qt-Zhku-Client\Closed_404_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\Closed_404_Ui.h -o armeabi-v7a\moc_Closed_404_Ui.cpp
+
+armeabi-v7a\moc_Default_Ui.cpp: ..\Qt-Zhku-Client\Default_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\Default_Ui.h -o armeabi-v7a\moc_Default_Ui.cpp
+
+armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp: ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h -o armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp
+
+armeabi-v7a\moc_StuduentId_Ui.cpp: ..\Qt-Zhku-Client\StuduentId_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\StuduentId_Ui.h -o armeabi-v7a\moc_StuduentId_Ui.cpp
+
+armeabi-v7a\moc_SupplementChossing_Ui.cpp: ..\Qt-Zhku-Client\SupplementChossing_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		armeabi-v7a\moc_predefs.h \
+		..\..\..\qt514\5.14.1\android\bin\moc.exe
+	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\SupplementChossing_Ui.h -o armeabi-v7a\moc_SupplementChossing_Ui.cpp
+
 armeabi-v7a\moc_ZhkuLoginWidget.cpp: ..\Qt-Zhku-Client\ZhkuLoginWidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
@@ -911,7 +1613,11 @@ armeabi-v7a\moc_ZhkuClientMain.cpp: ..\Qt-Zhku-Client\ZhkuClientMain.h \
 		..\Qt-Zhku-Client\ScoreDistubing_ui.h \
 		..\Qt-Zhku-Client\Rankexam_Ui.h \
 		..\Qt-Zhku-Client\ExamArrangement_Ui.h \
+		..\Qt-Zhku-Client\Closed_404_Ui.h \
 		..\Qt-Zhku-Client\UserAvater.h \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\Qt-Zhku-Client\Default_Ui.h \
+		..\Qt-Zhku-Client\ChoosingResult_Ui.h \
 		armeabi-v7a\moc_predefs.h \
 		..\..\..\qt514\5.14.1\android\bin\moc.exe
 	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\ZhkuClientMain.h -o armeabi-v7a\moc_ZhkuClientMain.cpp
@@ -1650,6 +2356,194 @@ armeabi-v7a\moc_QueryScore_Ui.cpp: ..\Qt-Zhku-Client\QueryScore_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
 		armeabi-v7a\moc_predefs.h \
 		..\..\..\qt514\5.14.1\android\bin\moc.exe
 	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\QueryScore_Ui.h -o armeabi-v7a\moc_QueryScore_Ui.cpp
@@ -1869,6 +2763,195 @@ armeabi-v7a\moc_ScoreDistubing_ui.cpp: ..\Qt-Zhku-Client\ScoreDistubing_ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
 		armeabi-v7a\moc_predefs.h \
 		..\..\..\qt514\5.14.1\android\bin\moc.exe
 	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\ScoreDistubing_ui.h -o armeabi-v7a\moc_ScoreDistubing_ui.cpp
@@ -2206,6 +3289,194 @@ armeabi-v7a\moc_ExamArrangement_Ui.cpp: ..\Qt-Zhku-Client\ExamArrangement_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
 		armeabi-v7a\moc_predefs.h \
 		..\..\..\qt514\5.14.1\android\bin\moc.exe
 	D:\qt514\5.14.1\android\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/buildc/armeabi-v7a/moc_predefs.h -ID:/qt514/5.14.1/android/mkspecs/android-clang -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/android/include -ID:/qt514/5.14.1/android/include/QtWidgets -ID:/qt514/5.14.1/android/include/QtGui -ID:/qt514/5.14.1/android/include/QtNetwork -ID:/qt514/5.14.1/android/include/QtCore -I. -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include -IF:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include ..\Qt-Zhku-Client\ExamArrangement_Ui.h -o armeabi-v7a\moc_ExamArrangement_Ui.cpp
@@ -2432,9 +3703,33 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h
+compiler_uic_make_all: UI\ui_ChoosingResult_Ui.h UI\ui_Closed_404_Ui.h UI\ui_Default_Ui.h UI\ui_Other_ChangeUserInfo_Ui.h UI\ui_StuduentId_Ui.h UI\ui_SupplementChossing_Ui.h UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h
 compiler_uic_clean:
-	-$(DEL_FILE) UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h
+	-$(DEL_FILE) UI\ui_ChoosingResult_Ui.h UI\ui_Closed_404_Ui.h UI\ui_Default_Ui.h UI\ui_Other_ChangeUserInfo_Ui.h UI\ui_StuduentId_Ui.h UI\ui_SupplementChossing_Ui.h UI\ui_ZhkuLoginWidget.h UI\ui_ZhkuClientMain.h UI\ui_SubMenuWidget.h UI\ui_SubMenuBtn.h UI\ui_FuncTable.h UI\ui_CurriculumArrangement_Ui.h UI\ui_QueryScore_Ui.h UI\ui_closedialog.h UI\ui_CloseDialog.h UI\ui_ScoreDistubing_ui.h UI\ui_UserAvater.h UI\ui_RankExam_Ui.h UI\ui_ExamArrangement_Ui.h UI\ui_MoreWidget.h UI\ui_zhkuloginwidgetbyandroid.h
+UI\ui_ChoosingResult_Ui.h: ..\Qt-Zhku-Client\ChoosingResult_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\ChoosingResult_Ui.ui -o UI\ui_ChoosingResult_Ui.h
+
+UI\ui_Closed_404_Ui.h: ..\Qt-Zhku-Client\Closed_404_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\Closed_404_Ui.ui -o UI\ui_Closed_404_Ui.h
+
+UI\ui_Default_Ui.h: ..\Qt-Zhku-Client\Default_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\Default_Ui.ui -o UI\ui_Default_Ui.h
+
+UI\ui_Other_ChangeUserInfo_Ui.h: ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.ui -o UI\ui_Other_ChangeUserInfo_Ui.h
+
+UI\ui_StuduentId_Ui.h: ..\Qt-Zhku-Client\StuduentId_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\StuduentId_Ui.ui -o UI\ui_StuduentId_Ui.h
+
+UI\ui_SupplementChossing_Ui.h: ..\Qt-Zhku-Client\SupplementChossing_Ui.ui \
+		..\..\..\qt514\5.14.1\android\bin\uic.exe
+	D:\qt514\5.14.1\android\bin\uic.exe ..\Qt-Zhku-Client\SupplementChossing_Ui.ui -o UI\ui_SupplementChossing_Ui.h
+
 UI\ui_ZhkuLoginWidget.h: ..\Qt-Zhku-Client\ZhkuLoginWidget.ui \
 		..\..\..\qt514\5.14.1\android\bin\uic.exe \
 		..\Qt-Zhku-Client\getfocuslineedit.h \
@@ -2730,6 +4025,971 @@ compiler_lex_clean:
 compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+armeabi-v7a\ChoosingResult_Ui.obj: ..\Qt-Zhku-Client\ChoosingResult_Ui.cpp ..\Qt-Zhku-Client\ChoosingResult_Ui.h \
+		..\Qt-Zhku-Client\ImgLabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QMenu \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qmenu.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
+		..\Qt-Zhku-Client\UI\ui_ChoosingResult_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollArea \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollarea.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QTextBrowser \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextbrowser.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextedit.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextdocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpen.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\ChoosingResult_Ui.obj ..\Qt-Zhku-Client\ChoosingResult_Ui.cpp
+
+armeabi-v7a\Closed_404_Ui.obj: ..\Qt-Zhku-Client\Closed_404_Ui.cpp ..\Qt-Zhku-Client\Closed_404_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\UI\ui_Closed_404_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\Closed_404_Ui.obj ..\Qt-Zhku-Client\Closed_404_Ui.cpp
+
+armeabi-v7a\Default_Ui.obj: ..\Qt-Zhku-Client\Default_Ui.cpp ..\Qt-Zhku-Client\Default_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\UI\ui_Default_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QTextBrowser \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextbrowser.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextedit.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextdocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpen.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\Default_Ui.obj ..\Qt-Zhku-Client\Default_Ui.cpp
+
+armeabi-v7a\Other_ChangeUserInfo_Ui.obj: ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.cpp ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\UI\ui_Other_ChangeUserInfo_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLabel \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlabel.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QLineEdit \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlineedit.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpen.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QPushButton \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qpushbutton.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractbutton.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\Other_ChangeUserInfo_Ui.obj ..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.cpp
+
+armeabi-v7a\StuduentId_Ui.obj: ..\Qt-Zhku-Client\StuduentId_Ui.cpp ..\Qt-Zhku-Client\StuduentId_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\UI\ui_StuduentId_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QTextBrowser \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextbrowser.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtextedit.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextdocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtextformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpen.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\StuduentId_Ui.obj ..\Qt-Zhku-Client\StuduentId_Ui.cpp
+
+armeabi-v7a\SupplementChossing_Ui.obj: ..\Qt-Zhku-Client\SupplementChossing_Ui.cpp ..\Qt-Zhku-Client\SupplementChossing_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QWidget \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtguiglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconfig.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcore-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocessordetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcompilerdetection.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypeinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsysinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlogging.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qflags.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasicatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qgenericatomic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_cxx11.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qatomic_msvc.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qglobalstatic.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmutex.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnumeric.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversiontagging.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtgui-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qnamespace.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qwindowdefs_win.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstring.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qchar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrefcount.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringliteral.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringview.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringbuilder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qalgorithms.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhashfunctions.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpair.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainertools_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpoint.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraylist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregexp.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringmatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetatype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvarlengtharray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontainerfwd.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobject_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmargins.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpaintdevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrect.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsize.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpalette.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcolor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgb.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qrgba64.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qbrush.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qmatrix.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpolygon.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qregion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatastream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qiodevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qline.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtransform.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpainterpath.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qimage.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixelformat.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qpixmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qshareddata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfont.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontmetrics.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qfontinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qsizepolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qcursor.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qkeysequence.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qevent.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariant.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdebug.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlocale.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qset.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcontiguouscache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qurlquery.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
+		..\Qt-Zhku-Client\UI\ui_SupplementChossing_Ui.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\SupplementChossing_Ui.obj ..\Qt-Zhku-Client\SupplementChossing_Ui.cpp
 
 armeabi-v7a\main.obj: ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuClientMain.h \
 		..\Qt-Zhku-Client\global.h \
@@ -3069,7 +5329,11 @@ armeabi-v7a\main.obj: ..\Qt-Zhku-Client\main.cpp ..\Qt-Zhku-Client\ZhkuClientMai
 		..\Qt-Zhku-Client\ScoreDistubing_ui.h \
 		..\Qt-Zhku-Client\Rankexam_Ui.h \
 		..\Qt-Zhku-Client\ExamArrangement_Ui.h \
+		..\Qt-Zhku-Client\Closed_404_Ui.h \
 		..\Qt-Zhku-Client\UserAvater.h \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\Qt-Zhku-Client\Default_Ui.h \
+		..\Qt-Zhku-Client\ChoosingResult_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\main.obj ..\Qt-Zhku-Client\main.cpp
 
@@ -3752,7 +6016,11 @@ armeabi-v7a\ZhkuClientMain.obj: ..\Qt-Zhku-Client\ZhkuClientMain.cpp ..\Qt-Zhku-
 		..\Qt-Zhku-Client\ScoreDistubing_ui.h \
 		..\Qt-Zhku-Client\Rankexam_Ui.h \
 		..\Qt-Zhku-Client\ExamArrangement_Ui.h \
+		..\Qt-Zhku-Client\Closed_404_Ui.h \
 		..\Qt-Zhku-Client\UserAvater.h \
+		..\Qt-Zhku-Client\Other_ChangeUserInfo_Ui.h \
+		..\Qt-Zhku-Client\Default_Ui.h \
+		..\Qt-Zhku-Client\ChoosingResult_Ui.h \
 		..\Qt-Zhku-Client\UI\ui_zhkuclientmain.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QFrame \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollArea \
@@ -4752,7 +7020,196 @@ armeabi-v7a\CurriculumArrangement_Ui.obj: ..\Qt-Zhku-Client\CurriculumArrangemen
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QSpacerItem \
-		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\CurriculumArrangement_Ui.obj ..\Qt-Zhku-Client\CurriculumArrangement_Ui.cpp
 
 armeabi-v7a\QueryScore_Ui.obj: ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Client\QueryScore_Ui.h \
@@ -4870,12 +7327,197 @@ armeabi-v7a\QueryScore_Ui.obj: ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Cl
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
-		..\Qt-Zhku-Client\UI\ui_QueryScore_Ui.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
+		..\Qt-Zhku-Client\UI\ui_QueryScore_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
@@ -4885,14 +7527,12 @@ armeabi-v7a\QueryScore_Ui.obj: ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Cl
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qstyleoption.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvalidator.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qslider.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractslider.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qstyle.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtabbar.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtabwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qrubberband.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QGroupBox \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgroupbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
@@ -4909,7 +7549,13 @@ armeabi-v7a\QueryScore_Ui.obj: ..\Qt-Zhku-Client\QueryScore_Ui.cpp ..\Qt-Zhku-Cl
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QDebug
+		..\..\..\qt514\5.14.1\android\include\QtCore\QDebug \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\QueryScore_Ui.obj ..\Qt-Zhku-Client\QueryScore_Ui.cpp
 
 armeabi-v7a\ImgLabel.obj: ..\Qt-Zhku-Client\ImgLabel.cpp ..\Qt-Zhku-Client\ImgLabel.h \
@@ -5281,12 +7927,198 @@ armeabi-v7a\ScoreDistubing_ui.obj: ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt
 		..\..\..\qt514\5.14.1\android\include\QtCore\qfiledevice.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvector2d.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtouchdevice.h \
-		..\Qt-Zhku-Client\UI\ui_ScoreDistubing_ui.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
+		..\Qt-Zhku-Client\UI\ui_ScoreDistubing_ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
@@ -5296,7 +8128,6 @@ armeabi-v7a\ScoreDistubing_ui.obj: ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qstyleoption.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvalidator.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qslider.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractslider.h \
@@ -5305,7 +8136,6 @@ armeabi-v7a\ScoreDistubing_ui.obj: ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtabwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qrubberband.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qframe.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QGroupBox \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgroupbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QHBoxLayout \
@@ -5331,7 +8161,13 @@ armeabi-v7a\ScoreDistubing_ui.obj: ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp ..\Qt
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtextcursor.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qtextformat.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qpen.h \
-		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\ScoreDistubing_ui.obj ..\Qt-Zhku-Client\ScoreDistubing_ui.cpp
 
 armeabi-v7a\UserAvater.obj: ..\Qt-Zhku-Client\UserAvater.cpp ..\Qt-Zhku-Client\UserAvater.h \
@@ -5590,7 +8426,15 @@ armeabi-v7a\Rankexam_Ui.obj: ..\Qt-Zhku-Client\Rankexam_Ui.cpp ..\Qt-Zhku-Client
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qboxlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayout.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qlayoutitem.h \
-		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgridlayout.h \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QObject \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\Rankexam_Ui.obj ..\Qt-Zhku-Client\Rankexam_Ui.cpp
 
 armeabi-v7a\ExamArrangement_Ui.obj: ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\Qt-Zhku-Client\ExamArrangement_Ui.h \
@@ -5708,12 +8552,197 @@ armeabi-v7a\ExamArrangement_Ui.obj: ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\
 		..\..\..\qt514\5.14.1\android\include\QtGui\qicon.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qaction.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qactiongroup.h \
-		..\Qt-Zhku-Client\UI\ui_ExamArrangement_Ui.h \
+		..\Qt-Zhku-Client\global.h \
+		..\Qt-Zhku-Client\StrProcessing.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetwork \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QtNetworkDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCore \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QtCoreDepends \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractnativeeventfilter.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qabstracttransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydataops.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qarraydatapointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbasictimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbitarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbuffer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qbytearraymatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcalendar.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborcommon.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\quuid.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcbormap.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcborstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfloat16.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcollator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineoption.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcommandlineparser.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qconcatenatetablesproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdeadlinetimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qelapsedtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qdiriterator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeasingcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qendian.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qeventtransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qexception.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfactoryinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfileselector.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QStringList \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfilesystemwatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfinalstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuture.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfutureinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrunnable.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresultstore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturesynchronizer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qfuturewatcher.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qhistorystate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qidentityproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qisenum.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qitemselectionmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonarray.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonvalue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsondocument.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qjsonobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibrary.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlibraryinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qversionnumber.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlinkedlist.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qlockfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qloggingcategory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmath.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmessageauthenticationcode.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmetaobject.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedata.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimedatabase.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qmimetype.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qobjectcleanuphandler.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qoperatingsystemversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qparallelanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpauseanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qplugin.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpointer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpluginloader.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qprocess.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qpropertyanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qvariantanimation.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qqueue.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qrandom.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qreadwritelock.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qresource.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsavefile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopedvaluerollback.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qscopeguard.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsequentialanimationgroup.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsettings.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsharedmemory.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignalmapper.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsignaltransition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsocketnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsortfilterproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstack.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstandardpaths.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstate.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstatemachine.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstorageinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qstringlistmodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qsystemsemaphore.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporarydir.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtemporaryfile.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextboundaryfinder.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtextcodec.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthread.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadpool.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qthreadstorage.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimeline.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimer.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtimezone.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtranslator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtransposeproxymodel.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtypetraits.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwaitcondition.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qwineventnotifier.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qxmlstream.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\qtcoreversion.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractnetworkcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
 		..\..\..\qt514\5.14.1\android\include\QtCore\QVariant \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdnslookup.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qdtls.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostaddress.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhostinfo.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhstspolicy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttp2configuration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qhttpmultipart.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QByteArray \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qlocalsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfigmanager.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkconfiguration.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookie.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QList \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkcookiejar.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdatagram.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkdiskcache.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkinterface.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkproxy.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworksession.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qocspresponse.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qpassworddigestor.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QCryptographicHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpserver.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsctpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificateextension.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcipher.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssldiffiehellmanparameters.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslellipticcurve.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QHash \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslkey.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qudpsocket.h \
+		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkversion.h \
+		..\Qt-Zhku-Client\UI\ui_ExamArrangement_Ui.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QApplication \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qcoreapplication.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qeventloop.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qdesktopwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qguiapplication.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qinputmethod.h \
@@ -5723,14 +8752,12 @@ armeabi-v7a\ExamArrangement_Ui.obj: ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qstyleoption.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\qt514\5.14.1\android\include\QtGui\qvalidator.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qregularexpression.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qslider.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractslider.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qstyle.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtabbar.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qtabwidget.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qrubberband.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qabstractitemmodel.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QFrame \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QGroupBox \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qgroupbox.h \
@@ -5747,32 +8774,12 @@ armeabi-v7a\ExamArrangement_Ui.obj: ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp ..\
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\qabstractscrollarea.h \
 		..\..\..\qt514\5.14.1\android\include\QtWidgets\QVBoxLayout \
 		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkReply \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkreply.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetworkglobal.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtnetwork-config.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QIODevice \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QString \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkRequest \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkrequest.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QSharedDataPointer \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QUrl \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\QNetworkAccessManager \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qnetworkaccessmanager.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QVector \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslConfiguration \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslconfiguration.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslsocket.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qtcpsocket.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qabstractsocket.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslerror.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslcertificate.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qcryptographichash.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\qdatetime.h \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qssl.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QFlags \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\QSslPreSharedKeyAuthenticator \
-		..\..\..\qt514\5.14.1\android\include\QtNetwork\qsslpresharedkeyauthenticator.h \
-		..\..\..\qt514\5.14.1\android\include\QtCore\QMetaType
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScroller \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscroller.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QPointF \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\QScrollerProperties \
+		..\..\..\qt514\5.14.1\android\include\QtWidgets\qscrollerproperties.h \
+		..\..\..\qt514\5.14.1\android\include\QtCore\QScopedPointer
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\ExamArrangement_Ui.obj ..\Qt-Zhku-Client\ExamArrangement_Ui.cpp
 
 armeabi-v7a\MoreWidget.obj: ..\Qt-Zhku-Client\MoreWidget.cpp ..\Qt-Zhku-Client\MoreWidget.h \
@@ -6569,6 +9576,24 @@ armeabi-v7a\zhkuloginwidgetbyandroid.obj: ..\Qt-Zhku-Client\zhkuloginwidgetbyand
 
 armeabi-v7a\qrc_loginassets.obj: armeabi-v7a\qrc_loginassets.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\qrc_loginassets.obj armeabi-v7a\qrc_loginassets.cpp
+
+armeabi-v7a\moc_ChoosingResult_Ui.obj: armeabi-v7a\moc_ChoosingResult_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_ChoosingResult_Ui.obj armeabi-v7a\moc_ChoosingResult_Ui.cpp
+
+armeabi-v7a\moc_Closed_404_Ui.obj: armeabi-v7a\moc_Closed_404_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_Closed_404_Ui.obj armeabi-v7a\moc_Closed_404_Ui.cpp
+
+armeabi-v7a\moc_Default_Ui.obj: armeabi-v7a\moc_Default_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_Default_Ui.obj armeabi-v7a\moc_Default_Ui.cpp
+
+armeabi-v7a\moc_Other_ChangeUserInfo_Ui.obj: armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_Other_ChangeUserInfo_Ui.obj armeabi-v7a\moc_Other_ChangeUserInfo_Ui.cpp
+
+armeabi-v7a\moc_StuduentId_Ui.obj: armeabi-v7a\moc_StuduentId_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_StuduentId_Ui.obj armeabi-v7a\moc_StuduentId_Ui.cpp
+
+armeabi-v7a\moc_SupplementChossing_Ui.obj: armeabi-v7a\moc_SupplementChossing_Ui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_SupplementChossing_Ui.obj armeabi-v7a\moc_SupplementChossing_Ui.cpp
 
 armeabi-v7a\moc_ZhkuLoginWidget.obj: armeabi-v7a\moc_ZhkuLoginWidget.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o armeabi-v7a\moc_ZhkuLoginWidget.obj armeabi-v7a\moc_ZhkuLoginWidget.cpp

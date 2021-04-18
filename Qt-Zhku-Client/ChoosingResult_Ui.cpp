@@ -2,7 +2,7 @@
 #include "ui_ChoosingResult_Ui.h"
 
 ChoosingResult_Ui::ChoosingResult_Ui(QWidget *parent) :
-    QWidget(parent),
+    WidgetWithHtml(parent),
     ui(new Ui::ChoosingResult_Ui)
 {
     ui->setupUi(this);

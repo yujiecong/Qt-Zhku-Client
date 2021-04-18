@@ -1,3 +1,9 @@
+armeabi-v7a/ChoosingResult_Ui.obj
+armeabi-v7a/Closed_404_Ui.obj
+armeabi-v7a/Default_Ui.obj
+armeabi-v7a/Other_ChangeUserInfo_Ui.obj
+armeabi-v7a/StuduentId_Ui.obj
+armeabi-v7a/SupplementChossing_Ui.obj
 armeabi-v7a/main.obj
 armeabi-v7a/ZhkuLoginWidget.obj
 armeabi-v7a/ZhkuClientMain.obj
@@ -18,6 +24,12 @@ armeabi-v7a/MoreWidget.obj
 armeabi-v7a/global.obj
 armeabi-v7a/zhkuloginwidgetbyandroid.obj
 armeabi-v7a/qrc_loginassets.obj
+armeabi-v7a/moc_ChoosingResult_Ui.obj
+armeabi-v7a/moc_Closed_404_Ui.obj
+armeabi-v7a/moc_Default_Ui.obj
+armeabi-v7a/moc_Other_ChangeUserInfo_Ui.obj
+armeabi-v7a/moc_StuduentId_Ui.obj
+armeabi-v7a/moc_SupplementChossing_Ui.obj
 armeabi-v7a/moc_ZhkuLoginWidget.obj
 armeabi-v7a/moc_ZhkuClientMain.obj
 armeabi-v7a/moc_SubMenuWidget.obj

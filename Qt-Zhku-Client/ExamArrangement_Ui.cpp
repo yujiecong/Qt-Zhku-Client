@@ -3,6 +3,7 @@
 
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QScroller>
 
 ExamArrangement_Ui::ExamArrangement_Ui( QWidget *parent) :
     QWidget(parent),

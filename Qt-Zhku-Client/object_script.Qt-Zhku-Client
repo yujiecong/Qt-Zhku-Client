@@ -2,6 +2,7 @@ ChoosingResult_Ui.o
 Closed_404_Ui.o
 Default_Ui.o
 Other_ChangeUserInfo_Ui.o
+RemoveChoosing_Ui.o
 StuduentId_Ui.o
 SupplementChossing_Ui.o
 main.o
@@ -22,12 +23,14 @@ Rankexam_Ui.o
 ExamArrangement_Ui.o
 MoreWidget.o
 global.o
+widgetwithhtml.o
 zhkuloginwidgetbyandroid.o
 qrc_loginassets.o
 moc_ChoosingResult_Ui.o
 moc_Closed_404_Ui.o
 moc_Default_Ui.o
 moc_Other_ChangeUserInfo_Ui.o
+moc_RemoveChoosing_Ui.o
 moc_StuduentId_Ui.o
 moc_SupplementChossing_Ui.o
 moc_ZhkuLoginWidget.o
@@ -44,4 +47,5 @@ moc_UserAvater.o
 moc_Rankexam_Ui.o
 moc_ExamArrangement_Ui.o
 moc_MoreWidget.o
+moc_widgetwithhtml.o
 moc_zhkuloginwidgetbyandroid.o

@@ -1,6 +1,9 @@
 #include "QueryScore_Ui.h"
 #include "ui_QueryScore_Ui.h"
 #include "QDebug"
+
+#include <QScroller>
+#include <QScroller>
 QueryScore_Ui::QueryScore_Ui(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::QueryScore_Ui)

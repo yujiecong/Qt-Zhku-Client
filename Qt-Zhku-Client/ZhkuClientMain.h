@@ -19,6 +19,8 @@
 #include "Other_ChangeUserInfo_Ui.h"
 #include "Default_Ui.h"
 #include "ChoosingResult_Ui.h"
+
+#include "RemoveChoosing_Ui.h"
 namespace Ui {
 class ZhkuClientMain;
 }
@@ -55,11 +57,17 @@ private slots:
     void createExamArr_Ui();
     void create404_Ui();
     void createOtherChangeUserInfo_Ui();
-    void createDefault_Ui(QString url);
-    void createStudentBasicalInfo();
-    void createMinorRegistration();
-    void createMinorInformation();
-    void createRewardAndPunishmentInformation();
+    void createDefault_Ui(QString url);// 创建基本的ui 即只有text 的
+    //学籍档案
+    void createStudentBasicalInfo();//基本信息
+    void createMinorRegistration();//辅修报名
+    void createMinorInformation();//辅修信息
+    void createRewardAndPunishmentInformation();//奖惩信息
+    //注册信息
+    void createRegisterInfo();
+    void createAcademicWarning(); //学业预警
+    void createApplicationVariation();//申请异动
+    void createPreApplicationVariation();//预计异动
     //培养方案
     void createTheoryCourse();
     void createPraticalPart();
@@ -70,6 +78,7 @@ private slots:
     void createChoosing();
     void createChoosingResult();
     void createSupplementChoosing();
+    void createRemoveChoosing(); //退选
     //
     void removeMyUi();
 
@@ -118,6 +127,7 @@ private:
     Other_ChangeUserInfo_Ui *otherChangeUserInfoUi=0;
     Default_Ui *defaultUi=0;
     ChoosingResult_Ui *choosingUi=0;
+    RemoveChoosing_Ui *removeChoosingUi=0;
 
     //用于 查询更多课程的
     QString hiddenVaildationCode;

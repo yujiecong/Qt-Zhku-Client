@@ -3,18 +3,19 @@
 
 #include <QWidget>
 #include "global.h"
+#include "widgetwithhtml.h"
 namespace Ui {
 class ScoreDistubing_Ui;
 }
 
-class ScoreDistubing_Ui : public QWidget
+class ScoreDistubing_Ui : public WidgetWithHtml
 {
     Q_OBJECT
 
 public:
     explicit ScoreDistubing_Ui(QWidget *parent = 0);
     ~ScoreDistubing_Ui();
-    void setHtml(QString &html) const;
+    void setHtml(QString html) ;
 
     QString  getXN() const;
     int getXQ() const;

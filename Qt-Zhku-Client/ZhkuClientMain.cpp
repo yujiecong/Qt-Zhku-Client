@@ -726,6 +726,26 @@ void ZhkuClientMain::createRewardAndPunishmentInformation()
     createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_xscjxx_rpt.aspx");
 }
 
+void ZhkuClientMain::createRegisterInfo()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_xszcxs.aspx");
+}
+
+void ZhkuClientMain::createAcademicWarning()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_xyyj.aspx");
+}
+
+void ZhkuClientMain::createApplicationVariation()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_ydsq.aspx");
+}
+
+void ZhkuClientMain::createPreApplicationVariation()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/xsxj/Stu_yjqdxx.aspx");
+}
+
 void ZhkuClientMain::createTheoryCourse()
 {
     createDefault_Ui("http://jw.zhku.edu.cn/jxjh/Stu_byfakc_rpt.aspx");
@@ -784,8 +804,31 @@ void ZhkuClientMain::createChoosingResult()
 void ZhkuClientMain::createSupplementChoosing()
 {
 
+}
 
+void ZhkuClientMain::createRemoveChoosing()
+{
+    removeMyUi();
+    removeChoosingUi=new RemoveChoosing_Ui();
+    QNetworkReply *rep=getReqReply("http://jw.zhku.edu.cn/wsxk/stu_txjg_rpt.aspx");
+    connect(rep,&QNetworkReply::finished,[=](){
+        QString html=strProcessor.gbk2Utf8(rep->readAll());
+        removeChoosingUi->setHtml(html);
+        ui->frameLayout->addWidget(removeChoosingUi);
+        //获取正选结果图像
+//                  w=1083&h=80&xn=2020&xq=1&zfx=0&type=xzxjg
+        QRegExp ex("w=\\d{3,4}&h=\\d{1,4}&xn=\\d{4}&xq=\\d{1}&zfx=\\d{1}&type=xzxjg");
+        QString imgUrl;
+        QString url="http://jw.zhku.edu.cn/znpk/DrawKbimg.aspx?"+reFindOne(ex,html);
 
+        QNetworkReply *imgRep=getReqReply(url);
+        connect(imgRep,&QNetworkReply::finished,[=](){
+            insertWidget2ScrollView(removeChoosingUi,imgRep);
+            imgRep->deleteLater();
+        });
+
+        rep->deleteLater();
+    });
 }
 
 void ZhkuClientMain::removeMyUi()

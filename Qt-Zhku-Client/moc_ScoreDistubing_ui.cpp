@@ -108,7 +108,7 @@ void ScoreDistubing_Ui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
 }
 
 QT_INIT_METAOBJECT const QMetaObject ScoreDistubing_Ui::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    QMetaObject::SuperData::link<WidgetWithHtml::staticMetaObject>(),
     qt_meta_stringdata_ScoreDistubing_Ui.data,
     qt_meta_data_ScoreDistubing_Ui,
     qt_static_metacall,
@@ -127,12 +127,12 @@ void *ScoreDistubing_Ui::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_ScoreDistubing_Ui.stringdata0))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return WidgetWithHtml::qt_metacast(_clname);
 }
 
 int ScoreDistubing_Ui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = WidgetWithHtml::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

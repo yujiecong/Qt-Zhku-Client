@@ -1,6 +1,10 @@
 #include "CurriculumArrangement_ui.h"
 #include "ui_curriculumarrangement_ui.h"
 #include "global.h"
+
+#include <QScroller>
+#include <QScroller>
+#include <QScroller>
 CurriculumArrangement_Ui::CurriculumArrangement_Ui(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CurriculumArrangement_Ui)

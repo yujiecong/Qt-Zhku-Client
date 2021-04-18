@@ -1,17 +1,16 @@
 #include "Rankexam_Ui.h"
 #include "ui_RankExam_Ui.h"
 
+#include <QScroller>
+
+
+
 RankExam_Ui::RankExam_Ui(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::RankExam_Ui)
 {
     ui->setupUi(this);
-#if defined(Q_OS_ANDROID)
-    QScroller::grabGesture(ui->scrollArea,QScroller::TouchGesture);
 
-#else
-
-#endif
 }
 
 RankExam_Ui::~RankExam_Ui()

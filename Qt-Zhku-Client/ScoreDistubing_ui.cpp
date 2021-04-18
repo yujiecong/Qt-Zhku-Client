@@ -1,8 +1,10 @@
 #include "ScoreDistubing_ui.h"
 #include "ui_ScoreDistubing_ui.h"
 
+#include <QScroller>
+
 ScoreDistubing_Ui::ScoreDistubing_Ui(QWidget *parent) :
-    QWidget(parent),
+    WidgetWithHtml(parent),
     ui(new Ui::ScoreDistubing_Ui)
 {
     ui->setupUi(this);
@@ -23,7 +25,7 @@ ScoreDistubing_Ui::~ScoreDistubing_Ui()
     delete ui;
 }
 
-void ScoreDistubing_Ui::setHtml(QString &html) const
+void ScoreDistubing_Ui::setHtml(QString html)
 {
     ui->textBrowser->setHtml(html);
 }

@@ -28,6 +28,7 @@ SOURCES += \
     Closed_404_Ui.cpp \
     Default_Ui.cpp \
     Other_ChangeUserInfo_Ui.cpp \
+    RemoveChoosing_Ui.cpp \
     StuduentId_Ui.cpp \
     SupplementChossing_Ui.cpp \
         main.cpp \
@@ -48,6 +49,7 @@ SOURCES += \
     ExamArrangement_Ui.cpp \
     MoreWidget.cpp \
     global.cpp \
+    widgetwithhtml.cpp \
     zhkuloginwidgetbyandroid.cpp
 
 
@@ -56,6 +58,7 @@ HEADERS += \
     Closed_404_Ui.h \
     Default_Ui.h \
     Other_ChangeUserInfo_Ui.h \
+    RemoveChoosing_Ui.h \
     StuduentId_Ui.h \
     SupplementChossing_Ui.h \
     global.h \
@@ -75,6 +78,7 @@ HEADERS += \
     Rankexam_Ui.h \
     ExamArrangement_Ui.h \
     MoreWidget.h \
+    widgetwithhtml.h \
     zhkuloginwidgetbyandroid.h
 
 
@@ -83,6 +87,7 @@ FORMS += \
     Closed_404_Ui.ui \
     Default_Ui.ui \
     Other_ChangeUserInfo_Ui.ui \
+    RemoveChoosing_Ui.ui \
     StuduentId_Ui.ui \
     SupplementChossing_Ui.ui \
     ZhkuLoginWidget.ui \

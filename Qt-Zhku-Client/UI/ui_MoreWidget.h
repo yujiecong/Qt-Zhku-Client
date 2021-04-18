@@ -1002,7 +1002,7 @@ public:
         pushButton_8->setDefault(false);
         pushButton_10->setDefault(false);
         pushButton_9->setDefault(false);
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MoreWidget);

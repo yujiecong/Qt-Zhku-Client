@@ -1,13 +1,15 @@
 #ifndef DEFAULT_UI_H
 #define DEFAULT_UI_H
 
+#include "widgetwithhtml.h"
+
 #include <QWidget>
 
 namespace Ui {
 class Default_Ui;
 }
 
-class Default_Ui : public QWidget
+class Default_Ui : public WidgetWithHtml
 {
     Q_OBJECT
 
