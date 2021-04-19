@@ -107,9 +107,9 @@ void ZhkuClientMain::init_()
     studentStatus->addSubBtn("学籍异动",":/assets/btnIcon/student.png","");
     connect(studentStatus->curBtn,&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     studentStatus->curBtn->addSubBtn(QStringList()<<"学业预警"<<"申请异动"<<"预计异动信息"<<"异动信息",":/assets/btnIcon/student.png","");
-    connect(studentStatus->curBtn->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
-    connect(studentStatus->curBtn->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
-    connect(studentStatus->curBtn->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(studentStatus->curBtn->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createAcademicWarning);
+    connect(studentStatus->curBtn->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::createApplicationVariation);
+    connect(studentStatus->curBtn->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::createPreApplicationVariation);
     connect(studentStatus->curBtn->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
 
     studentStatus->subWidget->ui->verticalLayout->addWidget(studentStatus->curBtn->subWidget);
@@ -143,8 +143,8 @@ void ZhkuClientMain::init_()
     connect(choiceLessons->subWidget->v[3],&SubMenuBtn::clicked,this,&ZhkuClientMain::createChoosing);
     connect(choiceLessons->subWidget->v[4],&SubMenuBtn::clicked,this,&ZhkuClientMain::createChoosingResult);
     connect(choiceLessons->subWidget->v[5],&SubMenuBtn::clicked,this,&ZhkuClientMain::createSupplementChoosing);
-    connect(choiceLessons->subWidget->v[6],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
-    connect(choiceLessons->subWidget->v[7],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
+    connect(choiceLessons->subWidget->v[6],&SubMenuBtn::clicked,this,&ZhkuClientMain::createRemoveChoosing);
+    connect(choiceLessons->subWidget->v[7],&SubMenuBtn::clicked,this,&ZhkuClientMain::createCanceledChoosing);
     //网上
 
     //教学安排
@@ -803,7 +803,9 @@ void ZhkuClientMain::createChoosingResult()
 
 void ZhkuClientMain::createSupplementChoosing()
 {
-
+    removeMyUi();
+    supplemntChoosingUi=new SupplementChossing_Ui();
+    ui->frameLayout->addWidget(supplemntChoosingUi);
 }
 
 void ZhkuClientMain::createRemoveChoosing()
@@ -815,10 +817,11 @@ void ZhkuClientMain::createRemoveChoosing()
         QString html=strProcessor.gbk2Utf8(rep->readAll());
         removeChoosingUi->setHtml(html);
         ui->frameLayout->addWidget(removeChoosingUi);
-        //获取正选结果图像
+        //获取目前的正选结果图像
 //                  w=1083&h=80&xn=2020&xq=1&zfx=0&type=xzxjg
         QRegExp ex("w=\\d{3,4}&h=\\d{1,4}&xn=\\d{4}&xq=\\d{1}&zfx=\\d{1}&type=xzxjg");
         QString imgUrl;
+
         QString url="http://jw.zhku.edu.cn/znpk/DrawKbimg.aspx?"+reFindOne(ex,html);
 
         QNetworkReply *imgRep=getReqReply(url);
@@ -829,6 +832,11 @@ void ZhkuClientMain::createRemoveChoosing()
 
         rep->deleteLater();
     });
+}
+
+void ZhkuClientMain::createCanceledChoosing()
+{
+    createDefault_Ui("http://jw.zhku.edu.cn/wsxk/stu_bqxkc_rpt.aspx");
 }
 
 void ZhkuClientMain::removeMyUi()

@@ -32,6 +32,8 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         textBrowser = new QTextBrowser(Default_Ui);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setOverwriteMode(true);
+        textBrowser->setOpenExternalLinks(true);
 
         horizontalLayout->addWidget(textBrowser);
 

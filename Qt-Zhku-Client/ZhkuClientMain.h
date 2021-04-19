@@ -19,7 +19,7 @@
 #include "Other_ChangeUserInfo_Ui.h"
 #include "Default_Ui.h"
 #include "ChoosingResult_Ui.h"
-
+#include "SupplementChossing_Ui.h"
 #include "RemoveChoosing_Ui.h"
 namespace Ui {
 class ZhkuClientMain;
@@ -79,6 +79,7 @@ private slots:
     void createChoosingResult();
     void createSupplementChoosing();
     void createRemoveChoosing(); //退选
+    void createCanceledChoosing();//被取消课程
     //
     void removeMyUi();
 
@@ -127,6 +128,7 @@ private:
     Other_ChangeUserInfo_Ui *otherChangeUserInfoUi=0;
     Default_Ui *defaultUi=0;
     ChoosingResult_Ui *choosingUi=0;
+    SupplementChossing_Ui *supplemntChoosingUi=0;
     RemoveChoosing_Ui *removeChoosingUi=0;
 
     //用于 查询更多课程的
