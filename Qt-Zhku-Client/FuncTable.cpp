@@ -3,6 +3,8 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QPropertyAnimation>
+#include <QTimer>
 
 #include <QPushButton>
 #include "QDebug"
@@ -12,6 +14,7 @@ FuncTable::FuncTable(QString str, QWidget *parent) : QWidget(parent),ui(new Ui::
     ui->setupUi(this);
     subWidget=new SubMenuWidget();
     ui->textLabel->setText(str);
+    ui->arrowLabel->setPixmap(QPixmap(":/assets/arrow/up.png"));
 
 }
 
@@ -64,11 +67,18 @@ void FuncTable::mousePressEvent(QMouseEvent *event)
         if(isClicked){
             //展开下面的按钮
             subWidget->show();
-            ui->arrowLabel->setPixmap(QPixmap(":/assets/arrow/Arrow Circle down 2 - 24px.svg"));
+//            _max=subWidget->geometry();
+//            qDebug()<<_max;
+//            unfoldAnimation(1);
+//            QTimer::singleShot(1,[=](){});
+
+            ui->arrowLabel->setPixmap(QPixmap(":/assets/arrow/down.png"));
         }
         else{
-            subWidget->hide();
-            ui->arrowLabel->setPixmap(QPixmap(":/assets/arrow/Arrow Circle up 2 - 24px.svg"));
+
+//            unfoldAnimation(0);
+                subWidget->hide();
+            ui->arrowLabel->setPixmap(QPixmap(":/assets/arrow/up.png"));
         }
 
         repaint();
@@ -92,5 +102,37 @@ void FuncTable::paintEvent(QPaintEvent *event)
     }
 
     QWidget::paintEvent(event);
+}
+
+void FuncTable::unfoldAnimation(bool dire)
+{
+
+    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"geometry");
+//    ani->setParent(this);
+
+    ani->setDuration(500);
+//    ani->setEasingCurve(QEasingCurve::InOutQuad);
+
+
+    if (dire){
+        ani->setStartValue(QRect(_max.x(),_max.y(),_max.width(),0));
+        ani->setEndValue(_max);
+    }
+    else{
+        ani->setStartValue(_max);
+        ani->setEndValue(QRect(_max.x(),_max.y(),_max.width(),0));
+    }
+
+
+    if (dire)
+
+        connect(ani,&QPropertyAnimation::finished,[=](){
+             qDebug()<<subWidget->geometry();
+        });
+    else
+        connect(ani,&QPropertyAnimation::finished,[=](){subWidget->hide();});
+
+    ani->start();
+
 }
 

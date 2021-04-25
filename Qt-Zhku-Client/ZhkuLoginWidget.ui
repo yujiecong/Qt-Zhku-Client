@@ -35,7 +35,8 @@
    <item>
     <widget class="QFrame" name="frame">
      <property name="styleSheet">
-      <string notr="true">QFrame#frame{border-image: url(:/assets/login/304866.jpg);}
+      <string notr="true">QFrame#frame{border-image: url(:/assets/login/2043696.jpg);}
+
 
 
 </string>

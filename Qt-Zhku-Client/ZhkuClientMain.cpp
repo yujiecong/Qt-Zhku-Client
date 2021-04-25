@@ -55,6 +55,7 @@ ZhkuClientMain::~ZhkuClientMain()
 void ZhkuClientMain::init_Connection()
 {
     connect(zhkuloginManager,&ZhkuLoginWidget::loginSuccessed,this,&ZhkuClientMain::loginSuccessed);
+
 }
 
 void ZhkuClientMain::init_()
@@ -77,6 +78,9 @@ void ZhkuClientMain::init_()
     textbookInfo=new FuncTable("教材信息");
     teacherComment=new FuncTable("网上评教");
     otherTable=new FuncTable("其他");
+
+
+
 
     //掌上校园
     campusOnHand->setPix(":/assets/btnIcon/campus.png");
@@ -231,9 +235,8 @@ void ZhkuClientMain::init_()
     connect(otherTable->subWidget->v[0],&SubMenuBtn::clicked,this,&ZhkuClientMain::createOtherChangeUserInfo_Ui);
     connect(otherTable->subWidget->v[1],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
     connect(otherTable->subWidget->v[2],&SubMenuBtn::clicked,this,&ZhkuClientMain::create404_Ui);
-    QSpacerItem *item=new QSpacerItem(30,360);
-    ui->MenuLayout->addItem(item);
-
+//    QSpacerItem *item=new QSpacerItem(30,360);
+//    ui->MenuLayout->addItem(item);
 
 }
 
@@ -245,10 +248,10 @@ void ZhkuClientMain::initSysTaryIcon()
         sysTrayIcon->show();//展示系统托盘图片
 
         QMenu *menuTray = new QMenu;
-        QAction *actQuit = new QAction(tr("退出"), menuTray);
+        QAction *actQuit = new QAction(QString("退出"), menuTray);
         menuTray->addAction(actQuit);
         sysTrayIcon->setContextMenu(menuTray);
-        sysTrayIcon->setToolTip(tr("zhku教务客户端"));
+        sysTrayIcon->setToolTip(QString("zhku教务客户端"));
         sysTrayIcon->showMessage("提示", QString("zhku教务客户端:version_%1").arg(VERSION),QSystemTrayIcon::Information, 10000);
 
         connect(sysTrayIcon,&QSystemTrayIcon::activated,[=](QSystemTrayIcon::ActivationReason reason){
@@ -320,13 +323,15 @@ void ZhkuClientMain::loginSuccessed()
 {
     show();
     zhkuloginManager->hide();
-    getUserInfo();
+
+        getUserInfo();
 
 }
 
 void ZhkuClientMain::getUserInfo()
 {
     userAvater=new UserAvater();
+    connect(userAvater,&UserAvater::exit,[=](){zhkuloginManager->show();hide();userAvater->deleteLater();zhkuloginManager->getCodeImg();});
     QNetworkReply *rep=getReqReply(zhkuMainNavigatorUrl);
     connect(rep,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(rep->readAll());
@@ -562,7 +567,7 @@ void ZhkuClientMain::getDistributedScore()
 void ZhkuClientMain::getRankExam()
 {
     QByteArray getPara;
-    getPara.append(tr("flag=%1").arg(1/qrand()));
+    getPara.append(QString("flag=%1").arg(1/qrand()));
     QNetworkReply *curReply=getReqReply(zhkuRankExamUrl,getPara);
     connect(curReply,&QNetworkReply::finished,[=](){
         QNetworkReply *rep=getReqReply(QUrl("http://jw.zhku.edu.cn/xscj/Stu_djkscj_rpt.aspx"));
@@ -579,7 +584,7 @@ void ZhkuClientMain::getExamArr()
 {
     QByteArray ba;
     //   sel_xnxq=20200&sel_lcxz=&sel_lc=&btnsearch=%BC%EC%CB%F7
-    ba+=tr("sel_xnxq=%1&").arg(examArrUi->getXnxq());
+    ba+=QString("sel_xnxq=%1&").arg(examArrUi->getXnxq());
     QString lcxz;
     if(examArrUi->getlcxz()==0){
 
@@ -587,9 +592,9 @@ void ZhkuClientMain::getExamArr()
     else{
         lcxz=QString::number(examArrUi->getlcxz());
     }
-    ba+=tr("sel_lcxz=%1&").arg(lcxz);
-    ba+=tr("sel_lc=%1&").arg(examArrUi->getlc());
-    ba+=tr("btnsearch=%BC%EC%CB%F7");
+    ba+=QString("sel_lcxz=%1&").arg(lcxz);
+    ba+=QString("sel_lc=%1&").arg(examArrUi->getlc());
+    ba+=QString("btnsearch=%BC%EC%CB%F7");
     qDebug()<<ba;
     QNetworkReply *curReply=postReqReply(zhkuExamUrl,ba);
     connect(curReply,&QNetworkReply::finished,[=](){
@@ -617,7 +622,7 @@ void ZhkuClientMain::getExamTurn()
     else{
         lcxz=QString::number(idx);
     }
-    QString url=tr("http://jw.zhku.edu.cn/KSSW/Private/json_liskslc.aspx?lcxz=%1&xnxq=%2").arg(lcxz).arg(examArrUi->getXnxq());
+    QString url=QString("http://jw.zhku.edu.cn/KSSW/Private/json_liskslc.aspx?lcxz=%1&xnxq=%2").arg(lcxz).arg(examArrUi->getXnxq());
     QNetworkReply *r=getReqReply(url);
     connect(r,&QNetworkReply::finished,[=](){
         QString html=strProcessor.gbk2Utf8(r->readAll());

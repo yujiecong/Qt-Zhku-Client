@@ -21,15 +21,15 @@ public:
 
     void getLocalXNXQ();
     void loginInit();
-
-
+public slots:
+    void getCodeImg();
 
 protected:
     void closeEvent(QCloseEvent *event);
     void paintEvent(QPaintEvent *event);
 private slots:
     void tryLogin();
-    void getCodeImg();
+
     void writeSettings();
     void showMore();
     void queryCurriculum();

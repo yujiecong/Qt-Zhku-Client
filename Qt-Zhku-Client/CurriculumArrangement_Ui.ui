@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
-    <height>516</height>
+    <width>704</width>
+    <height>493</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -180,8 +180,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>813</width>
-        <height>444</height>
+        <width>702</width>
+        <height>421</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="imgVerticalLayout">
@@ -200,19 +200,6 @@
        <property name="bottomMargin">
         <number>50</number>
        </property>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
     </widget>

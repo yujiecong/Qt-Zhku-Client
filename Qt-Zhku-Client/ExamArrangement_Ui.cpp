@@ -14,10 +14,10 @@ ExamArrangement_Ui::ExamArrangement_Ui( QWidget *parent) :
     ui->comboBox->clear();
     QString year=CUR_XNXQ.mid(0,4);
     QString  semester=CUR_XNXQ.mid(4);
-    ui->comboBox->addItem(tr("%1~%2学年第一学期").arg(year).arg(year.toInt()+1));
+    ui->comboBox->addItem(QString("%1~%2学年第一学期").arg(year).arg(year.toInt()+1));
     if(semester.toInt()==1){
 
-        ui->comboBox->addItem(tr("%1~%2学年第二学期").arg(year).arg(year.toInt()+1));
+        ui->comboBox->addItem(QString("%1~%2学年第二学期").arg(year).arg(year.toInt()+1));
     }
     xnxq=year+"0";
 #if defined(Q_OS_ANDROID)

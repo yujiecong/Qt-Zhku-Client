@@ -1,19 +1,11 @@
 <RCC>
     <qresource prefix="/">
         <file>assets/login/logo.png</file>
-        <file>assets/login/304866.jpg</file>
-        <file>assets/arrow/Arrow Circle down 2 - 24px.svg</file>
-        <file>assets/arrow/Arrow Circle up 2 - 24px.svg</file>
         <file>assets/zhkuImg/logo.jpg</file>
-        <file>assets/zhkuImg/close.jpg</file>
-        <file>assets/user_img/wenhao.svg</file>
         <file>assets/login/password.png</file>
         <file>assets/login/user.png</file>
         <file>assets/login/validCode.png</file>
-        <file>assets/zhkuImg/bg.jpg</file>
         <file>assets/user_img/avater.png</file>
-        <file>assets/btnIcon/arrow down.png</file>
-        <file>assets/btnIcon/arrow-up.png</file>
         <file>assets/user_img/wenhao.png</file>
         <file>assets/btnIcon/arrange.png</file>
         <file>assets/btnIcon/score.png</file>
@@ -27,5 +19,8 @@
         <file>assets/btnIcon/examination.png</file>
         <file>assets/arrow/down.png</file>
         <file>assets/arrow/up.png</file>
+        <file>assets/login/2043696.jpg</file>
+        <file>assets/btnIcon/right.png</file>
+        <file>assets/btnIcon/wrong.png</file>
     </qresource>
 </RCC>

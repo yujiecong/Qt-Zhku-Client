@@ -10,7 +10,8 @@
 #include <QScreen>
 #include <ui_zhkuloginwidgetbyandroid.h>
 #if defined(Q_OS_ANDROID)
-    Ui::ZhkuLoginWidgetByAndroid *ui=new Ui::ZhkuLoginWidgetByAndroid;
+//    Ui::ZhkuLoginWidgetByAndroid *ui=new Ui::ZhkuLoginWidgetByAndroid;
+    Ui::ZhkuLoginWidget *ui=new Ui::ZhkuLoginWidget;
 #else
     Ui::ZhkuLoginWidget *ui=new Ui::ZhkuLoginWidget;
 #endif
@@ -183,6 +184,13 @@ void ZhkuLoginWidget::tryLogin()
 
     QString code=ui->codeInput->text();
 
+
+
+
+    if (pwd.isEmpty() || acc.isEmpty() || code.isEmpty()){
+        QMessageBox::warning(this,"警告","输入不能为空!");
+        return;
+    }
     QString md5_2=strProcessor.getMd5(strProcessor.getMd5(code.toUpper()).mid(0,30).toUpper()+"11347").mid(0,30).toUpper();
 
 
@@ -208,9 +216,14 @@ void ZhkuLoginWidget::tryLogin()
     postdata.append("txt_psasas="+strProcessor.toUrlEncode("����������"));
 
 
-
     QNetworkReply *loginReply=manager.post(loginReq,postdata);
 
+    QPropertyAnimation *ani=new QPropertyAnimation (ui->loginButton,"geometry");
+    ani->setStartValue(ui->loginButton->geometry());
+    ani->setEndValue(QRect(ui->loginButton->x()+ui->loginButton->width()/2-ui->loginButton->height()/2,ui->loginButton->y(),ui->loginButton->height(),ui->loginButton->height()));
+    ani->setDuration(500);
+    ani->setEasingCurve(QEasingCurve::OutInCirc);
+    ui->loginButton->setText("");
 
     connect(loginReply,&QNetworkReply::finished,[=](){
         QString loginHtml=strProcessor.gbk2Utf8(loginReply->readAll());
@@ -221,17 +234,33 @@ void ZhkuLoginWidget::tryLogin()
             qDebug()<<manager.cookieJar()->cookiesForUrl(zhkuLoginHomeUrl);
 
             writeSettings();
-            emit loginSuccessed();
+            //
+            connect(ani,&QPropertyAnimation::finished,[=](){
+                ui->loginButton->setIcon(QIcon(":/assets/btnIcon/right.png"));
+                ui->loginButton->setText("登录成功");
+                QTimer::singleShot(500,[=](){emit loginSuccessed();});
+                ani->deleteLater();
+            });
+            ani->start();
+
 
         }
         else{
-            QMessageBox::warning(this,"登录失败","账号或密码或者验证码错误!");
+            connect(ani,&QPropertyAnimation::finished,[=](){
+                ui->loginButton->setIcon(QIcon(":/assets/btnIcon/wrong.png"));
+                ui->loginButton->setText("账号或密码或者验证码错误!");
+                ani->deleteLater();
+            });
+            ani->start();
+
+//            QMessageBox::warning(this,"登录失败","账号或密码或者验证码错误!");
             //再次调用验证码api
             getCodeImg();
         }
 
         loginReply->deleteLater();
     });
+
 
 }
 
@@ -322,7 +351,7 @@ void ZhkuLoginWidget::queryCurriculum()
         QNetworkReply *rptRp=getReqReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");
         connect(rptRp,&QNetworkReply::finished,[=](){
             //
-            QNetworkReply *kcRep=getReqReply(tr("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(moreWidget->getXnxq()));
+            QNetworkReply *kcRep=getReqReply(QString("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(moreWidget->getXnxq()));
             connect(kcRep,&QNetworkReply::finished,[=](){
                 qDebug()<<strProcessor.gbk2Utf8(kcRep->readAll());
                 kcRep->deleteLater();

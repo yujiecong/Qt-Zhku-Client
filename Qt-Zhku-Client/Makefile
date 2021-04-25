@@ -667,8 +667,8 @@ qrc_loginassets.cpp: loginassets.qrc \
 		assets/login/validCode.png \
 		assets/login/logo.png \
 		assets/login/password.png \
+		assets/login/2043696.jpg \
 		assets/login/user.png \
-		assets/login/304866.jpg \
 		assets/btnIcon/arrow\ down.png \
 		assets/btnIcon/examination.png \
 		assets/btnIcon/scheme.png \
@@ -929,10 +929,11 @@ moc_Closed_404_Ui.cpp: Closed_404_Ui.h \
 
 moc_Default_Ui.cpp: Default_Ui.h \
 		widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -954,14 +955,7 @@ moc_Default_Ui.cpp: Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -989,6 +983,14 @@ moc_Default_Ui.cpp: Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -1033,6 +1035,14 @@ moc_Default_Ui.cpp: Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		moc_predefs.h \
 		../../../qt514/5.14.1/mingw73_64/bin/moc.exe
 	D:\qt514\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client/moc_predefs.h -ID:/qt514/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/mingw73_64/include -ID:/qt514/5.14.1/mingw73_64/include/QtWidgets -ID:/qt514/5.14.1/mingw73_64/include/QtGui -ID:/qt514/5.14.1/mingw73_64/include/QtANGLE -ID:/qt514/5.14.1/mingw73_64/include/QtNetwork -ID:/qt514/5.14.1/mingw73_64/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward Default_Ui.h -o moc_Default_Ui.cpp
@@ -1148,10 +1158,11 @@ moc_Other_ChangeUserInfo_Ui.cpp: Other_ChangeUserInfo_Ui.h \
 
 moc_RemoveChoosing_Ui.cpp: RemoveChoosing_Ui.h \
 		widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -1173,14 +1184,7 @@ moc_RemoveChoosing_Ui.cpp: RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -1208,6 +1212,14 @@ moc_RemoveChoosing_Ui.cpp: RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -1252,6 +1264,14 @@ moc_RemoveChoosing_Ui.cpp: RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		moc_predefs.h \
 		../../../qt514/5.14.1/mingw73_64/bin/moc.exe
 	D:\qt514\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client/moc_predefs.h -ID:/qt514/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/mingw73_64/include -ID:/qt514/5.14.1/mingw73_64/include/QtWidgets -ID:/qt514/5.14.1/mingw73_64/include/QtGui -ID:/qt514/5.14.1/mingw73_64/include/QtANGLE -ID:/qt514/5.14.1/mingw73_64/include/QtNetwork -ID:/qt514/5.14.1/mingw73_64/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward RemoveChoosing_Ui.h -o moc_RemoveChoosing_Ui.cpp
@@ -2117,6 +2137,7 @@ moc_ZhkuClientMain.cpp: ZhkuClientMain.h \
 		Other_ChangeUserInfo_Ui.h \
 		Default_Ui.h \
 		ChoosingResult_Ui.h \
+		SupplementChossing_Ui.h \
 		RemoveChoosing_Ui.h \
 		moc_predefs.h \
 		../../../qt514/5.14.1/mingw73_64/bin/moc.exe
@@ -3453,6 +3474,15 @@ moc_ScoreDistubing_ui.cpp: ScoreDistubing_ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtNetwork/qudpsocket.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtNetwork/qtnetworkversion.h \
 		widgetwithhtml.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		moc_predefs.h \
 		../../../qt514/5.14.1/mingw73_64/bin/moc.exe
 	D:\qt514\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client/moc_predefs.h -ID:/qt514/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/mingw73_64/include -ID:/qt514/5.14.1/mingw73_64/include/QtWidgets -ID:/qt514/5.14.1/mingw73_64/include/QtGui -ID:/qt514/5.14.1/mingw73_64/include/QtANGLE -ID:/qt514/5.14.1/mingw73_64/include/QtNetwork -ID:/qt514/5.14.1/mingw73_64/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ScoreDistubing_ui.h -o moc_ScoreDistubing_ui.cpp
@@ -4092,10 +4122,11 @@ moc_MoreWidget.cpp: MoreWidget.h \
 	D:\qt514\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client/moc_predefs.h -ID:/qt514/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/mingw73_64/include -ID:/qt514/5.14.1/mingw73_64/include/QtWidgets -ID:/qt514/5.14.1/mingw73_64/include/QtGui -ID:/qt514/5.14.1/mingw73_64/include/QtANGLE -ID:/qt514/5.14.1/mingw73_64/include/QtNetwork -ID:/qt514/5.14.1/mingw73_64/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward MoreWidget.h -o moc_MoreWidget.cpp
 
 moc_widgetwithhtml.cpp: widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -4117,14 +4148,7 @@ moc_widgetwithhtml.cpp: widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -4152,6 +4176,14 @@ moc_widgetwithhtml.cpp: widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -4196,6 +4228,14 @@ moc_widgetwithhtml.cpp: widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		moc_predefs.h \
 		../../../qt514/5.14.1/mingw73_64/bin/moc.exe
 	D:\qt514\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client/moc_predefs.h -ID:/qt514/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/ccrepository/Qt-Zhku-Client/Qt-Zhku-Client -ID:/qt514/5.14.1/mingw73_64/include -ID:/qt514/5.14.1/mingw73_64/include/QtWidgets -ID:/qt514/5.14.1/mingw73_64/include/QtGui -ID:/qt514/5.14.1/mingw73_64/include/QtANGLE -ID:/qt514/5.14.1/mingw73_64/include/QtNetwork -ID:/qt514/5.14.1/mingw73_64/include/QtCore -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/QT596/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/QT596/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward widgetwithhtml.h -o moc_widgetwithhtml.cpp
@@ -4911,10 +4951,11 @@ Closed_404_Ui.o: Closed_404_Ui.cpp Closed_404_Ui.h \
 
 Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -4936,14 +4977,7 @@ Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -4971,6 +5005,14 @@ Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -5015,6 +5057,14 @@ Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		UI/ui_Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/QVariant \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QApplication \
@@ -5033,7 +5083,6 @@ Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtextbrowser.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtextedit.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextdocument.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
@@ -5086,7 +5135,6 @@ Default_Ui.o: Default_Ui.cpp Default_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qexception.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfactoryinterface.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfileselector.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/QStringList \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfilesystemwatcher.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfinalstate.h \
@@ -5364,10 +5412,11 @@ Other_ChangeUserInfo_Ui.o: Other_ChangeUserInfo_Ui.cpp Other_ChangeUserInfo_Ui.h
 
 RemoveChoosing_Ui.o: RemoveChoosing_Ui.cpp RemoveChoosing_Ui.h \
 		widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -5389,14 +5438,7 @@ RemoveChoosing_Ui.o: RemoveChoosing_Ui.cpp RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -5424,6 +5466,14 @@ RemoveChoosing_Ui.o: RemoveChoosing_Ui.cpp RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -5468,7 +5518,39 @@ RemoveChoosing_Ui.o: RemoveChoosing_Ui.cpp RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
-		UI/ui_RemoveChoosing_Ui.h
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
+		UI/ui_RemoveChoosing_Ui.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QVariant \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QApplication \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QScrollArea \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qscrollarea.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QTextBrowser \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtextbrowser.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtextedit.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextdocument.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpen.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QVBoxLayout \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o RemoveChoosing_Ui.o RemoveChoosing_Ui.cpp
 
 StuduentId_Ui.o: StuduentId_Ui.cpp StuduentId_Ui.h \
@@ -5715,7 +5797,37 @@ SupplementChossing_Ui.o: SupplementChossing_Ui.cpp SupplementChossing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qinputmethod.h
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QComboBox \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qcombobox.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qstyleoption.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvalidator.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qregularexpression.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qslider.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractslider.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qstyle.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtabbar.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtabwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qrubberband.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QGroupBox \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qgroupbox.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QHBoxLayout \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QSpacerItem \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o SupplementChossing_Ui.o SupplementChossing_Ui.cpp
 
 main.o: main.cpp ZhkuClientMain.h \
@@ -6062,6 +6174,7 @@ main.o: main.cpp ZhkuClientMain.h \
 		Other_ChangeUserInfo_Ui.h \
 		Default_Ui.h \
 		ChoosingResult_Ui.h \
+		SupplementChossing_Ui.h \
 		RemoveChoosing_Ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
@@ -6751,6 +6864,7 @@ ZhkuClientMain.o: ZhkuClientMain.cpp ZhkuClientMain.h \
 		Other_ChangeUserInfo_Ui.h \
 		Default_Ui.h \
 		ChoosingResult_Ui.h \
+		SupplementChossing_Ui.h \
 		RemoveChoosing_Ui.h \
 		UI/ui_zhkuclientmain.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QFrame \
@@ -8848,6 +8962,15 @@ ScoreDistubing_ui.o: ScoreDistubing_ui.cpp ScoreDistubing_ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtNetwork/qudpsocket.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtNetwork/qtnetworkversion.h \
 		widgetwithhtml.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		UI/ui_ScoreDistubing_ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QApplication \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
@@ -8860,14 +8983,12 @@ ScoreDistubing_ui.o: ScoreDistubing_ui.cpp ScoreDistubing_ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qstyleoption.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvalidator.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qslider.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractslider.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qstyle.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtabbar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtabwidget.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qrubberband.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QGroupBox \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qgroupbox.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QHBoxLayout \
@@ -8875,8 +8996,6 @@ ScoreDistubing_ui.o: ScoreDistubing_ui.cpp ScoreDistubing_ui.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
@@ -10159,10 +10278,11 @@ global.o: global.cpp global.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o global.o global.cpp
 
 widgetwithhtml.o: widgetwithhtml.cpp widgetwithhtml.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		ImgLabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/QObject \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qglobal.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qconfig.h \
@@ -10184,14 +10304,7 @@ widgetwithhtml.o: widgetwithhtml.cpp widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmutex.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnumeric.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qversiontagging.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qnamespace.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qstring.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qchar.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qbytearray.h \
@@ -10219,6 +10332,14 @@ widgetwithhtml.o: widgetwithhtml.cpp widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qvarlengtharray.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qcontainerfwd.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qobject_impl.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QWidget \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qwidget.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtguiglobal.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtgui-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qwindowdefs_win.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qmargins.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qpaintdevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qrect.h \
@@ -10262,7 +10383,15 @@ widgetwithhtml.o: widgetwithhtml.cpp widgetwithhtml.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfile.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtCore/qfiledevice.h \
 		../../../qt514/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
-		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/QMenu \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qmenu.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qaction.h \
+		../../../qt514/5.14.1/mingw73_64/include/QtWidgets/qactiongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o widgetwithhtml.o widgetwithhtml.cpp
 
 zhkuloginwidgetbyandroid.o: zhkuloginwidgetbyandroid.cpp zhkuloginwidgetbyandroid.h \

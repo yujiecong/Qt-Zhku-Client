@@ -1,3 +1,4 @@
+
 #include "ScoreDistubing_ui.h"
 #include "ui_ScoreDistubing_ui.h"
 
@@ -8,7 +9,7 @@ ScoreDistubing_Ui::ScoreDistubing_Ui(QWidget *parent) :
     ui(new Ui::ScoreDistubing_Ui)
 {
     ui->setupUi(this);
-    for(int i=xnxq.toInt()/10;i>xnxq.toInt()/10-5;i--){
+    for(int i=CUR_XNXQ.toInt()/10;i>CUR_XNXQ.toInt()/10-5;i--){
 
          ui->comboBox->addItem(QString("%1").arg(i));
     }

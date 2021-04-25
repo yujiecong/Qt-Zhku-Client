@@ -12,6 +12,7 @@ SubMenuBtn::SubMenuBtn(QWidget *parent) :
     ui->setupUi(this);
     subWidget=new SubMenuWidget();
     ui->label_3->hide();
+    ui->label_3->setPixmap(QPixmap(":/assets/arrow/up.png"));
 }
 
 SubMenuBtn::~SubMenuBtn()
@@ -22,10 +23,10 @@ SubMenuBtn::~SubMenuBtn()
 void SubMenuBtn::addSubBtn(QString s, QString pixpath, QString url)
 {
     SubMenuBtn *btn= new SubMenuBtn();
-
+   ui->label_3->show();
     QPixmap pix(pixpath);
     pix.scaled(pixWidth,pixHeight,Qt::KeepAspectRatio);
-    ui->label_3->show();
+
     btn->ui->label->setPixmap(pix);
     btn->pos=count++;
     btn->ui->label_2->setText(s);
@@ -40,39 +41,26 @@ void SubMenuBtn::addSubBtn(QStringList sl, QString pixpath, QString url)
 {
     ui->label_3->show();
     foreach (QString s, sl) {
-        SubMenuBtn *btn= new SubMenuBtn();
-
-        QPixmap pix(pixpath);
-        pix.scaled(pixWidth,pixHeight,Qt::KeepAspectRatio);
-
-        btn->ui->label->setPixmap(pix);
-        btn->pos=count++;
-        btn->ui->label_2->setText(s);
-
-        subWidget->ui->verticalLayout->addWidget(btn);
-        subWidget->v.append(btn);
-
-        connect(btn,&SubMenuBtn::changedBg,subWidget,&SubMenuWidget::changeSubBg);
+        addSubBtn(s,pixpath,url);
     }
 }
 
 void SubMenuBtn::unfoldAnimation(bool dire)
 {
 //    待优化
-    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"windowOpacity");
+    QPropertyAnimation *ani=new QPropertyAnimation(subWidget,"geometry");
 
     ani->setDuration(1000);
     ani->setEasingCurve(QEasingCurve::OutInCirc);
     if (dire){
 
-        ani->setStartValue(0);
-        ani->setEndValue(1);
+        ani->setStartValue(QRect(0,0,subWidget->width(),0));
+        ani->setEndValue(QRect(0,0,subWidget->width(),subWidget->height()));
 
     }
     else{
-
-        ani->setStartValue(1);
-        ani->setEndValue(0);
+        ani->setStartValue(subWidget->rect());
+        ani->setEndValue(QRect(0,0,subWidget->width(),0));
     }
 
 
@@ -86,19 +74,22 @@ void SubMenuBtn::unfoldAnimation(bool dire)
 
 void SubMenuBtn::mousePressEvent(QMouseEvent *event)
 {
+
     if(event->button()==Qt::LeftButton){
         emit changedBg(pos);
         emit clicked();
+
         if(subWidget->v.size()>0){
             if(isClicked){
 
                 subWidget->show();
+//                unfoldAnimation(1);
                  ui->label_3->setPixmap(QPixmap(":/assets/arrow/down.png"));
             }
             else{
 
-               subWidget->hide();
-
+//                unfoldAnimation(0);
+                 subWidget->hide();
                  ui->label_3->setPixmap(QPixmap(":/assets/arrow/up.png"));
             }
 
@@ -106,7 +97,7 @@ void SubMenuBtn::mousePressEvent(QMouseEvent *event)
 
 
         }
-    //    QWidget::mousePressEvent(event);
+        QWidget::mousePressEvent(event);
 }
 
 void SubMenuBtn::paintEvent(QPaintEvent *event)

@@ -26,8 +26,14 @@ public:
 
     QString getDate() const;
     void setDate(const QString &value);
+
+signals:
+    void exit();
 protected:
     void paintEvent(QPaintEvent *event);
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::UserAvater *ui;
 

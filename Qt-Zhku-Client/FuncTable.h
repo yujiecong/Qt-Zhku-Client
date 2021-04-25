@@ -39,6 +39,8 @@ private:
     const int pixWidth=16;
     const int pixHeight=16;
     int count=0;
+    QRect _max;
+    void unfoldAnimation(bool dire);
 
 
 

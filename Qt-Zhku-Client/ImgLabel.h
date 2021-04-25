@@ -14,6 +14,7 @@ public:
     QMenu *menu;
 protected:
     void mousePressEvent(QMouseEvent *ev);
+
 public slots:
     void saveImg(QString);
 };

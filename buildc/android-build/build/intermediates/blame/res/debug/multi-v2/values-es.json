@@ -4,7 +4,7 @@
             "outputFile": "D:\\ccrepository\\Qt-Zhku-Client\\buildc\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
-                    "source": "D:\\qt514\\5.14.1\\android\\src\\android\\java\\res\\values-es\\strings.xml",
+                    "source": "D:\\qt5142\\5.14.2\\android\\src\\android\\java\\res\\values-es\\strings.xml",
                     "from": {
                         "startLines": "4,3,2,5",
                         "startColumns": "4,4,4,4",

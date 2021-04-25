@@ -119,6 +119,7 @@ private:
     FuncTable *teacherComment;
     FuncTable *otherTable;
 
+
     CurriculumArrangement_Ui *currArrUi=0;
     QueryScore_Ui *queryScoreUi=0;
     ScoreDistubing_Ui *distributedScoreUi=0;

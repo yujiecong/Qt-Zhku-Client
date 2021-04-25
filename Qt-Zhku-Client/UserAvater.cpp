@@ -69,3 +69,8 @@ void UserAvater::paintEvent(QPaintEvent *event)
     painter.fillRect(this->rect(), QColor(255, 255, 255, 80));  //QColor最后一个参数80代表背景的透明度
     QWidget::paintEvent(event);
 }
+
+void UserAvater::on_pushButton_clicked()
+{
+    emit exit();
+}

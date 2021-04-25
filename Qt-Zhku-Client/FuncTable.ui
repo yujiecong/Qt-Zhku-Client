@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>180</width>
-    <height>40</height>
+    <width>176</width>
+    <height>45</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>0</width>
-    <height>40</height>
+    <height>45</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>40</height>
+    <height>20</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -95,7 +95,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="loginassets.qrc">:/assets/btnIcon/安排.svg</pixmap>
+         <pixmap>:/assets/btnIcon/安排.svg</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -155,7 +155,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="loginassets.qrc">:/assets/arrow/Arrow Circle up 2 - 24px.svg</pixmap>
+         <pixmap>:/assets/arrow/Arrow Circle up 2 - 24px.svg</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -167,8 +167,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="loginassets.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

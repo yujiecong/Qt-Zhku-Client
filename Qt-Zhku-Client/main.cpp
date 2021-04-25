@@ -4,10 +4,18 @@
 #include "global.h"
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-//    a.setFont(QFont("Droid Sans Fallback",24));
-    ZhkuClientMain w;
-    //                  w=1083&h=80&xn=2020&xq=1&zfx=0&type=xzxjg
 
-    return a.exec();
+
+
+#if defined(Q_OS_ANDROID)
+    #if (QT_VERSION > QT_VERSION_CHECK(5,6,0))
+        QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    #endif
+#endif
+
+        QApplication a(argc, argv);
+        ZhkuClientMain w;
+        return a.exec();
+
+
 }

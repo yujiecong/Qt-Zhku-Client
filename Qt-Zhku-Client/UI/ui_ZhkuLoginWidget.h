@@ -74,7 +74,8 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         frame = new QFrame(ZhkuLoginWidget);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setStyleSheet(QString::fromUtf8("QFrame#frame{border-image: url(:/assets/login/304866.jpg);}\n"
+        frame->setStyleSheet(QString::fromUtf8("QFrame#frame{border-image: url(:/assets/login/2043696.jpg);}\n"
+"\n"
 "\n"
 "\n"
 ""));

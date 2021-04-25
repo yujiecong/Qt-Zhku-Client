@@ -31,10 +31,7 @@ MoreWidget::~MoreWidget()
 void MoreWidget::setImg(QPixmap &px)
 {
     ui->label_6->setPixmap(px);
-    #if defined(Q_OS_ANDROID)
-        ui->label_6->setFixedSize(100,200);
-    #else
-#endif
+
 }
 
 void MoreWidget::on_pushButton_clicked()
@@ -49,7 +46,7 @@ void MoreWidget::on_pushButton_clicked()
        //访问课程
         //更新cookies
        getReqReply("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");
-       QNetworkReply *curriculumList=getReqReply(tr("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(getXnxq()));
+       QNetworkReply *curriculumList=getReqReply(QString("http://jw.zhku.edu.cn/ZNPK/Private/List_XNXQKC.aspx?xnxq=%1").arg(getXnxq()));
        connect(curriculumList,&QNetworkReply::finished,[=](){
            QString html=strProcessor.gbk2Utf8(curriculumList->readAll());
            //写一个正则匹配出来
@@ -140,7 +137,7 @@ void MoreWidget::on_pushButton_11_clicked()
     QString validation=ui->lineEdit_2->text();
     QByteArray data;
 
-    data.append(tr("Sel_XNXQ=%1&Sel_KC=%2&gs=%3&txt_yzm=%4").arg(getXnxq()).arg(code).arg(type).arg(validation));
+    data.append(QString("Sel_XNXQ=%1&Sel_KC=%2&gs=%3&txt_yzm=%4").arg(getXnxq()).arg(code).arg(type).arg(validation));
 
 
     QUrl u("http://jw.zhku.edu.cn/ZNPK/KBFB_LessonSel_rpt.aspx");

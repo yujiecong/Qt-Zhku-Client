@@ -4,23 +4,6 @@
             "outputFile": "D:\\ccrepository\\Qt-Zhku-Client\\buildc\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\qt514\\5.14.1\\android\\src\\android\\java\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "5,4,3,6",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "324,201,88,433",
-                        "endColumns": "107,121,111,97",
-                        "endOffsets": "427,318,195,526"
-                    },
-                    "to": {
-                        "startLines": "18,19,20,21",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "704,812,934,1046",
-                        "endColumns": "107,121,111,97",
-                        "endOffsets": "807,929,1041,1139"
-                    }
-                },
-                {
                     "source": "D:\\ccrepository\\Qt-Zhku-Client\\buildc\\android-build\\res\\values\\libs.xml",
                     "from": {
                         "startLines": "9,21,13,2",
@@ -37,6 +20,23 @@
                         "endLines": "4,7,14,17",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "104,282,583,699"
+                    }
+                },
+                {
+                    "source": "D:\\qt5142\\5.14.2\\android\\src\\android\\java\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "5,4,3,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "324,201,88,433",
+                        "endColumns": "107,121,111,97",
+                        "endOffsets": "427,318,195,526"
+                    },
+                    "to": {
+                        "startLines": "18,19,20,21",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "704,812,934,1046",
+                        "endColumns": "107,121,111,97",
+                        "endOffsets": "807,929,1041,1139"
                     }
                 }
             ]

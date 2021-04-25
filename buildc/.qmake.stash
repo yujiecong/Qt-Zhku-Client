@@ -14,11 +14,11 @@ QMAKE_CXX.COMPILER_MACROS = \
     QMAKE_GCC_MINOR_VERSION \
     QMAKE_GCC_PATCH_VERSION
 QMAKE_CXX.INCDIRS = \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include/c++ \
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/include \
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/include
 QMAKE_CXX.LIBDIRS = \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9 \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/x86_64-w64-mingw32/lib \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib \
-    F:/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/x86_64-w64-mingw32/sys-root/mingw/lib
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9 \
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/x86_64-w64-mingw32/lib \
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib \
+    D:/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/x86_64-w64-mingw32/sys-root/mingw/lib
